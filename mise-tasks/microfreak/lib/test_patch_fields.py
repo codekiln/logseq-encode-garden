@@ -51,6 +51,16 @@ class ConversionTests(unittest.TestCase):
             self.assertAlmostEqual(P.arp_bpm(stored), bpm, delta=0.2)
         self.assertEqual(P.arp_raw(120), 13500)
 
+    def test_modulation_switches_read_and_write_by_name(self):
+        self.assertEqual(P.display('LFO.Retrig', 32767, 2)['value'], 'Legato')
+        self.assertEqual(P.display('Kbd.Veloc', 32767, 1)['value'], 'Velocity')
+        self.assertEqual(P.display('EG2.Snap', 1, 1)['value'], 'Off')
+        self.assertEqual(P.setting('Mat.KyMdSrc', 'Random'), ('choice', 1))
+        self.assertEqual(P.setting('EG2.Legato', True), ('choice', 1))
+        self.assertEqual(P.setting('LFO.Retrig', 'legato'), ('choice', 2))
+        with self.assertRaises(ValueError):
+            P.setting('Kbd.Veloc', 'pressure')
+
     def test_add_display_leaves_unknown_fields_alone(self):
         fields = [{'name': 'VCO.BendRng', 'descriptor': 24, 'value_le_unsigned': 16384},
                   {'name': 'VCF.Cutoff', 'descriptor': 0, 'value_le_unsigned': 100}]

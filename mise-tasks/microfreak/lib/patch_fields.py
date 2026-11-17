@@ -23,6 +23,16 @@ SYNC_GLIDE = {3: '1/32', 4: '1/16T', 5: '1/16', 6: '1/8T', 7: '1/8', 8: '1/4T', 
 SYNC_GLIDE_BEATS = {'1/32': 1 / 8, '1/16T': 1 / 6, '1/16': 1 / 4, '1/8T': 1 / 3, '1/8': 1 / 2,
                     '1/4T': 2 / 3, '1/4': 1, '1/2': 2}
 PARAPHONIC_MODES = {0: 'Paraphonic', 2: 'Chord', 3: 'Unison'}
+# Choice fields whose every stored choice was played and told apart.
+CHOICES = {
+    'EG2.Legato': ('Off', 'On'),
+    'EG2.Snap': ('Off', 'On'),
+    'LFO.Retrig': ('Off', 'On', 'Legato'),
+    'Kbd.Veloc': ('Aftertouch', 'Velocity'),
+    'Mat.KyMdSrc': ('Linear', 'Random'),
+}
+LABELS = {'EG2.Legato': 'Envelope Legato', 'EG2.Snap': 'Envelope Snap', 'LFO.Retrig': 'LFO Retrig',
+          'Kbd.Veloc': 'Press Mode', 'Mat.KyMdSrc': 'Key/Arp Mode'}
 # Level of C4 against choice 12, measured in 0.5 dB steps. Choices 9 and 10 played alike.
 PRESET_VOLUME_DB = (-5.5, -5.0, -4.5, -4.0, -3.5, -3.0, -2.5, -2.0, -1.5, -1.0, -1.0, -0.5, 0.0,
                     0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0)
@@ -114,6 +124,11 @@ def _glide(raw, context):
 def display(name, raw, descriptor, context=None):
     """The panel value of one stored field, or None when no conversion is known."""
     context = context or {}
+    if name in CHOICES:
+        n = choice(raw, descriptor)
+        names = CHOICES[name]
+        return {'value': names[n] if n < len(names) else None, 'unit': LABELS[name],
+                'text': names[n] if n < len(names) else f'unknown choice {n}'}
     if name == 'VCO.BendRng':
         n = choice(raw, descriptor)
         return {'value': n, 'unit': 'semitones', 'text': f'±{n} semitones'}
@@ -163,6 +178,12 @@ def add_display(interpretations, fields):
 
 def setting(name, value):
     """What microfreak:probe stores for a panel value of one field."""
+    if name in CHOICES:
+        names = [n.lower() for n in CHOICES[name]]
+        text = {True: 'on', False: 'off'}.get(value, str(value)).lower() if isinstance(value, bool) else str(value).lower()
+        if text not in names:
+            raise ValueError(f'{LABELS[name]} takes one of {", ".join(CHOICES[name])}')
+        return ('choice', names.index(text))
     if name == 'VCO.BendRng':
         if not isinstance(value, int) or not 0 <= value <= 24:
             raise ValueError('Bend range runs from 0 to 24 semitones')
