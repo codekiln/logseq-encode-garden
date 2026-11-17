@@ -263,6 +263,9 @@ def inspect(path, slot=None, interpret_fw5=False, sequence=False):
             },
             **semantics.interpret_fields(result['fields']),
         }
+        import patch_fields
+        result['interpretations']['evidence_sources']['measured_on_instrument'] = patch_fields.EVIDENCE
+        patch_fields.add_display(result['interpretations']['fields'], result['fields'])
     if sequence:
         import sequence as sequence_module
         try:
