@@ -85,6 +85,9 @@ class ScriptTests(unittest.TestCase):
                                                      'over': 1.0, 'steps': 4}]}, channel=0)
         self.assertEqual([round(t, 2) for t, _, _ in compiled], [1.0, 1.25, 1.5, 1.75, 2.0])
         self.assertEqual([m[2] for _, m, _ in compiled], [0, 32, 64, 95, 127])
+        pressure = probe.compile_script({'events': [{'t': 0, 'pressure': 0, 'to': 127, 'over': 1.0,
+                                                     'steps': 3}]}, channel=0)
+        self.assertEqual([label for _, _, label in pressure], ['pressure 0', 'pressure 42', 'pressure 85', 'pressure 127'])
 
 
 @unittest.skipIf(np is None, 'numpy is not installed; run mise run microfreak:test')
@@ -106,6 +109,18 @@ class AnalysisTests(unittest.TestCase):
         self.assertLess(abs(notes[0]['cents_from_note']), 5)
         self.assertLess(notes[0]['onset_latency_ms'], 40)
         self.assertAlmostEqual(notes[0]['peak_db'], -20.5, delta=2)
+
+    def test_a_quiet_tail_stays_out_of_the_note_summary(self):
+        t = np.arange(int(1.0 * self.SR)) / self.SR
+        decaying = self.tone(261.63, 1.0, 0.1) * np.exp(-t / 0.08)
+        noise = np.random.default_rng(3).normal(0, 1e-4, len(decaying))
+        audio = np.concatenate([np.zeros(int(0.2 * self.SR)), decaying + noise])
+        rows = probe.frames(audio, self.SR)
+        compiled = probe.compile_script({'events': [{'t': 0.2, 'on': 'C4'}, {'t': 1.2, 'off': 'C4'}]}, 0)
+        note = probe.summarize_notes(rows, [0.2, 1.2], compiled)[0]
+        # Five harmonics at 1/h around C4 put the centroid near 570 Hz.
+        self.assertAlmostEqual(note['centroid_hz_median'], 570, delta=40)
+        self.assertLess(note['midi_max'] - note['midi_min'], 0.2)
 
 
 if __name__ == '__main__':
