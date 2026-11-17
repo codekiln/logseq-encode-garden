@@ -61,6 +61,13 @@ class ConversionTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             P.setting('Kbd.Veloc', 'pressure')
 
+    def test_scale_and_root_follow_the_guide_order(self):
+        self.assertEqual(P.display('Kbd.Scale', 8192, 8)['value'], 'Major')
+        self.assertEqual(P.display('Kbd.Scale', 32767, 8)['value'], 'Pentatonic')
+        self.assertEqual(P.display('Kbd.Root', round(2 * 32767 / 11), 11)['value'], 'D')
+        self.assertEqual(P.setting('Kbd.Scale', 'harmonic minor'), ('choice', 4))
+        self.assertEqual(P.setting('Kbd.Root', 'Bb'), ('choice', 10))
+
     def test_add_display_leaves_unknown_fields_alone(self):
         fields = [{'name': 'VCO.BendRng', 'descriptor': 24, 'value_le_unsigned': 16384},
                   {'name': 'VCF.Cutoff', 'descriptor': 0, 'value_le_unsigned': 100}]
