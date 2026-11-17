@@ -30,9 +30,14 @@ CHOICES = {
     'LFO.Retrig': ('Off', 'On', 'Legato'),
     'Kbd.Veloc': ('Aftertouch', 'Velocity'),
     'Mat.KyMdSrc': ('Linear', 'Random'),
+    'Kbd.Scale': ('Global', 'Off', 'Major', 'Minor', 'Harmonic Minor', 'Dorian', 'Mixolydian',
+                  'Blues', 'Pentatonic'),
+    'Kbd.Root': ('C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'),
 }
 LABELS = {'EG2.Legato': 'Envelope Legato', 'EG2.Snap': 'Envelope Snap', 'LFO.Retrig': 'LFO Retrig',
-          'Kbd.Veloc': 'Press Mode', 'Mat.KyMdSrc': 'Key/Arp Mode'}
+          'Kbd.Veloc': 'Press Mode', 'Mat.KyMdSrc': 'Key/Arp Mode', 'Kbd.Scale': 'Scale',
+          'Kbd.Root': 'Root Note'}
+FLATS = {'db': 'c#', 'eb': 'd#', 'gb': 'f#', 'ab': 'g#', 'bb': 'a#'}
 # Level of C4 against choice 12, measured in 0.5 dB steps. Choices 9 and 10 played alike.
 PRESET_VOLUME_DB = (-5.5, -5.0, -4.5, -4.0, -3.5, -3.0, -2.5, -2.0, -1.5, -1.0, -1.0, -0.5, 0.0,
                     0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0)
@@ -181,6 +186,8 @@ def setting(name, value):
     if name in CHOICES:
         names = [n.lower() for n in CHOICES[name]]
         text = {True: 'on', False: 'off'}.get(value, str(value)).lower() if isinstance(value, bool) else str(value).lower()
+        if name == 'Kbd.Root':
+            text = FLATS.get(text, text)
         if text not in names:
             raise ValueError(f'{LABELS[name]} takes one of {", ".join(CHOICES[name])}')
         return ('choice', names.index(text))

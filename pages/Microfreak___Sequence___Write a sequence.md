@@ -58,7 +58,7 @@ see-also:: [[Microfreak/Sequence/Storage]], [[Microfreak/Sequence/Research]], [[
 			  ```
 			- After about five seconds it prints the empty slots as ranges, such as `{"slots_read": "1-512", "empty_count": 94, "empty": ["325-329", "340-349", "383", "403-430", "447-480", "497-512"]}`. `--first` and `--last` read part of the range.
 			- The base gives the sound. The new preset keeps every setting of the base except the ones under What the write changes, below. Pass `--base` a slot number, which the task reads and leaves unchanged, or a `.bin` file from `microfreak:download`; with a file, the preview needs no instrument.
-			- Use the base I name. Otherwise use slot 358, [[Microfreak/Preset/358 20241116.1]]: Basic Waves, paraphony on, no glide or pitch modulation, one step per sixteenth. Every check behind this page used it. A base whose pitch moves still stores and sends the right notes, but the audio check reads them off pitch: with [[Microfreak/Preset/382 Anit]] as the base, held notes read a semitone sharp.
+			- Use the base I name. Otherwise use slot 358, [[Microfreak/Preset/358 20241116.1]]: Basic Waves, paraphony on, no glide or pitch modulation, one step per sixteenth. Every check behind this page used it. A base whose pitch moves still stores and sends the right notes, but the audio check reads them off pitch: with [[Microfreak/Preset/382 Anit]] as the base, held notes read a semitone sharp. A base whose Scale is set ([[Microfreak/Patch/Storage]]) sounds each note outside the scale as a scale note, while MIDI out still sends the stored note.
 		- ### 5. Preview
 			- Without `--slot`, `write-sequence` reads the base, prints what it would store and changes nothing:
 			- ```sh
