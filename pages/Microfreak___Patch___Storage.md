@@ -40,11 +40,26 @@ see-also:: [[Microfreak/Patch/Research]], [[Microfreak/CLI/Probe a patch]], [[Mi
 			- What drives the matrix's PRESSURE source. 0 is Aftertouch: channel pressure changes it and velocity does not. 1 is Velocity: each note's velocity sets it and channel pressure does not.
 		- ### Key/Arp Mode: `Mat.KyMdSrc`
 			- What the matrix's KEY/ARP source sends. 0 is Linear: the played key, with C4 at zero, higher keys positive and lower keys negative. 1 is Random: a new random value for each note, whatever the key.
+	- ## Scale
+		- ### Scale: `Kbd.Scale`
+			- Descriptor 8, in the guide's order ([[Microfreak/UG/15 Using Scales]]): 0 Global, 1 Off, 2 Major, 3 Minor, 4 Harmonic Minor, 5 Dorian, 6 Mixolydian, 7 Blues, 8 Pentatonic, which is the minor pentatonic C, E♭, F, G, B♭. Global follows the global scale setting, which played unquantized on my MicroFreak.
+			- The scale changes the notes the MicroFreak sounds: notes arriving over MIDI and notes the sequencer plays. MIDI out still sends the stored notes, so `microfreak:verify-sequence` matches on MIDI while the audio hears the scale's notes.
+			- A note in the scale plays as written. In the seven-note scales a note outside the scale plays as the scale's note with the same letter name, reading a black key as the white key below it: on D major, C plays C♯ and F plays F♯; on C minor, E plays E♭, A plays A♭ and B plays B♭; a C♯, D♯, F♯, G♯ or A♯ outside the scale plays the scale's C, D, F, G or A.
+			- Blues and Pentatonic do not follow that rule. What each note from C to B played as, on root C:
+				- Major: C C D D E F F G G A A B.
+				- Minor: C C D E♭ E♭ F F G A♭ A♭ B♭ B♭.
+				- Harmonic Minor: C C D E♭ E♭ F F G A♭ A♭ A♭ B.
+				- Dorian: C C D E♭ E♭ F F G G A B♭ B♭.
+				- Mixolydian: C C D D E F F G G A B♭ B♭.
+				- Blues: C C C E♭ E♭ F F♯ F♯ F♯ G B♭ B♭.
+				- Pentatonic: C C C E♭ E♭ F F G G G B♭ B♭.
+				- Blues on D: C C D D D F F G G♯ G♯ G♯ A.
+		- ### Root Note: `Kbd.Root`
+			- Descriptor 11. 0 to 11 are C, C♯, D, D♯, E, F, F♯, G, G♯, A, A♯ and B. Major on D played C♯ C♯ D D E F♯ F♯ G G A A B for C to B, and Minor on A played the same as Major on C.
 	- ## Preset Volume: `Gen.PrstVol`
 		- Descriptor 24; the panel's −12 to +12 is the stored choice minus 12. Each step changes the level by 0.5 dB, except that 9 and 10 (−3 and −2) play at the same level. From 0 to 24 the level spans 11.5 dB: −5.5 dB to +6.0 dB around choice 12.
 	- ## Arp/Seq rate: `Arp.Rate`
 		- The free-running tempo of the arpeggiator and sequencer, and the tempo Sync glide follows. BPM = 30 + stored value ÷ 150, up to 240: 13500 is 120 BPM. The stored value is not a 0–1 fraction, so a write gives `raw:` (BPM − 30) × 150.
 		- The arpeggiator only runs on its own tempo when the global Clock Source is Internal. On USB it waits for clock from the Mac.
 	- ## Still unmeasured
-		- Scale and root: `Kbd.Scale`, `Kbd.Root` ([#452](https://github.com/codekiln/logseq-encode-garden/issues/452)).
 		- Modulation matrix amounts and `Mat.Assign1`–`3` ([#453](https://github.com/codekiln/logseq-encode-garden/issues/453)).
