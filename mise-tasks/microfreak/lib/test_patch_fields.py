@@ -90,10 +90,21 @@ class ConversionTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             P.setting('Mat.Assign1', 'VCO.Type')
 
+    def test_times_and_cutoff_between_measured_points(self):
+        self.assertAlmostEqual(P.display('EG2.Attack', round(0.5 * 32767), 0)['value'], 0.561, places=2)
+        decay = P.display('EG2.DecRel', round(0.3 * 32767), 0)
+        self.assertAlmostEqual(decay['value'], 0.49, places=2)
+        self.assertAlmostEqual(decay['release_seconds_to_minus_20_db'], 0.341, places=2)
+        self.assertEqual(P.display('VCF.Cutoff', round(0.6 * 32767), 0)['value'], 1240)
+        self.assertIsNone(P.display('VCF.Cutoff', round(0.95 * 32767), 0))
+        self.assertAlmostEqual(P.value_for(1240, P.CUTOFF_POINTS, 'Cutoffs', 'Hz'), 0.6)
+        self.assertEqual(P.display('Arp.Range', 32767, 3)['value'], 4)
+        self.assertEqual(P.display('LFO.Div', round(6 * 32767 / 12), 12)['value'], '1/4')
+
     def test_add_display_leaves_unknown_fields_alone(self):
         fields = [{'name': 'VCO.BendRng', 'descriptor': 24, 'value_le_unsigned': 16384},
-                  {'name': 'VCF.Cutoff', 'descriptor': 0, 'value_le_unsigned': 100}]
-        items = P.add_display([{'name': 'VCO.BendRng'}, {'name': 'VCF.Cutoff'}], fields)
+                  {'name': 'VCO.Param1', 'descriptor': 238, 'value_le_unsigned': 100}]
+        items = P.add_display([{'name': 'VCO.BendRng'}, {'name': 'VCO.Param1'}], fields)
         self.assertEqual(items[0]['display']['value'], 12)
         self.assertNotIn('display', items[1])
 

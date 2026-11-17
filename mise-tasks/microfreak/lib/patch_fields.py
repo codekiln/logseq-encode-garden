@@ -39,7 +39,21 @@ CHOICES = {
     'EG2.Mode': ('Off', 'On'),
     'Kbd.Octave': ('-3', '-2', '-1', '0', '+1', '+2', '+3'),
     'LFO.Sync': ('Off', 'On'),
+    'Arp.Dir': ('Up', 'Order', 'Random', 'Pattern'),
+    'Arp.Enable': ('Off', 'On'),
+    'LFO.Div': ('8 bars', '4 bars', '2 bars', '1 bar', '1/2', '1/2T', '1/4', '1/4T', '1/8', '1/8T',
+                '1/16', '1/16T', '1/32'),
 }
+# Envelope times on slot 359's Basic Waves sound, seconds:
+# attack to 90 % of full level, decay with sustain 0 to 20 dB down,
+# release after the note ends with sustain 1 to 20 dB down.
+ATTACK_POINTS = ((0.1, 0.031), (0.2, 0.061), (0.3, 0.141), (0.4, 0.291), (0.5, 0.561),
+                 (0.6, 1.031), (0.7, 1.801))
+DECAY_POINTS = ((0.1, 0.11), (0.2, 0.27), (0.3, 0.49), (0.4, 0.78), (0.5, 1.17), (0.6, 1.71),
+                (0.7, 2.5))
+RELEASE_POINTS = ((0.1, 0.071), (0.2, 0.181), (0.3, 0.341), (0.4, 0.581), (0.5, 0.921))
+# Low-pass cutoff, Hz at -3 dB, from a sawtooth's harmonics with resonance 0.
+CUTOFF_POINTS = ((0.3, 140), (0.4, 300), (0.5, 580), (0.6, 1240), (0.7, 2720), (0.8, 6460))
 # Free-running LFO rate (LFO.Sync off): stored value and the vibrato rate heard.
 LFO_RATE_POINTS = ((0.1, 0.143), (0.2, 0.239), (0.3, 0.521), (0.4, 1.074), (0.5, 2.246),
                    (0.6, 4.785), (0.7, 10.254), (0.75, 14.974), (0.8, 21.908))
@@ -50,6 +64,21 @@ def _log_interp(x, points):
         if x0 <= x <= x1:
             return math.exp(math.log(y0) + (x - x0) / (x1 - x0) * (math.log(y1) - math.log(y0)))
     return None
+
+
+def value_for(target, points, label, unit):
+    """The stored value whose measured result is `target`, between measured points."""
+    ys = [y for _, y in points]
+    if not min(ys) <= target <= max(ys):
+        raise ValueError(f'{label} from {min(ys)} to {max(ys)} {unit} were measured; '
+                         f'give a 0-1 value outside them')
+    for (x0, y0), (x1, y1) in zip(points, points[1:]):
+        if y0 <= target <= y1:
+            return x0 + (math.log(target) - math.log(y0)) / (math.log(y1) - math.log(y0)) * (x1 - x0)
+
+
+def measured(stored, points):
+    return _log_interp(stored, points)
 
 
 def lfo_hz(stored):
@@ -68,7 +97,8 @@ LABELS = {'EG2.Legato': 'Envelope Legato', 'EG2.Snap': 'Envelope Snap', 'LFO.Ret
           'Kbd.Veloc': 'Press Mode', 'Mat.KyMdSrc': 'Key/Arp Mode', 'Kbd.Scale': 'Scale',
           'Kbd.Root': 'Root Note', 'VCF.Type': 'Filter Type', 'LFO.Shape': 'LFO Shape',
           'EG1.Mode': 'Cycling Envelope Mode', 'EG2.Mode': 'Amp Mod', 'Kbd.Octave': 'Keyboard Octave',
-          'LFO.Sync': 'LFO Sync'}
+          'LFO.Sync': 'LFO Sync', 'Arp.Dir': 'Arp direction', 'Arp.Enable': 'Arpeggiator',
+          'LFO.Div': 'LFO sync division'}
 FLATS = {'db': 'c#', 'eb': 'd#', 'gb': 'f#', 'ab': 'g#', 'bb': 'a#'}
 # Level of C4 against choice 12, measured in 0.5 dB steps. Choices 9 and 10 played alike.
 PRESET_VOLUME_DB = (-5.5, -5.0, -4.5, -4.0, -3.5, -3.0, -2.5, -2.0, -1.5, -1.0, -1.0, -0.5, 0.0,
@@ -234,6 +264,32 @@ def display(name, raw, descriptor, context=None):
         field = destination_field(raw)
         return {'value': field, 'unit': 'destination', 'destination_id': f'0x{raw:04x}',
                 'heard': raw in HEARD_DESTINATIONS, 'text': field or f'0x{raw:04x}'}
+    if name == 'Arp.Range':
+        n = choice(raw, descriptor) + 1
+        return {'value': n, 'unit': 'octaves', 'text': f'{n} octave' + ('s' if n > 1 else '')}
+    if name == 'Arp.Swing':
+        n = choice(raw, descriptor) + 50
+        return {'value': n, 'unit': 'percent', 'text': f'{n}%'}
+    if name == 'Arp.Div':
+        import sequence
+        return {'value': sequence.division_from_raw(raw), 'unit': 'note division',
+                'text': sequence.division_from_raw(raw)}
+    for field, points, what in (('EG2.Attack', ATTACK_POINTS, 'to full'),
+                                ('EG2.DecRel', DECAY_POINTS, 'decay to -20 dB'),
+                                ('VCF.Cutoff', CUTOFF_POINTS, None)):
+        if name == field:
+            x = raw / FULL
+            y = measured(x, points)
+            if y is None:
+                return None
+            if field == 'VCF.Cutoff':
+                return {'value': round(y), 'unit': 'Hz at -3 dB (low-pass)', 'text': f'{x:.3f} (about {y:.3g} Hz)'}
+            out = {'value': round(y, 3), 'unit': f'seconds {what}', 'text': f'{x:.3f} (about {y:.2g} s {what})'}
+            if field == 'EG2.DecRel':
+                release = measured(x, RELEASE_POINTS)
+                if release is not None:
+                    out['release_seconds_to_minus_20_db'] = round(release, 3)
+            return out
     if name == 'LFO.Rate':
         sync = context.get('LFO.Sync')
         if sync is not None and choice(sync, 1) == 1:
@@ -299,6 +355,17 @@ def setting(name, value):
         return ('raw', chord_raw(value))
     if name == 'Arp.Rate':
         return ('raw', arp_raw(float(value)))
+    if name == 'Arp.Range':
+        if value not in (1, 2, 3, 4):
+            raise ValueError('The arpeggio range is 1 to 4 octaves')
+        return ('choice', value - 1)
+    if name == 'Arp.Swing':
+        if not 50 <= value <= 75:
+            raise ValueError('Swing runs from 50 to 75 percent')
+        return ('choice', round(value) - 50)
+    if name == 'Arp.Div':
+        import sequence
+        return ('raw', sequence.division_to_raw(value))
     if name.startswith('Mat.Assign'):
         ids = destination_ids()
         if value not in ids:

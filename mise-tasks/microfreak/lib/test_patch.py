@@ -14,8 +14,9 @@ SECTIONS = {
             ('FallSlp', 0, 16383), ('Amount', 0, 0)],
     'Kbd': [('Glide', 0, 0), ('Octave', 6, 16384), ('Veloc', 1, 0), ('GlMode', 2, 0), ('PresAmp', 10, 0),
             ('Scale', 8, 0), ('Root', 11, 0)],
-    'Arp': [('Div', 10, 22937), ('Rate', 0, 13500), ('SeqOn', 1, 0)],
-    'LFO': [('Shape', 5, 0), ('Rate', 0, 16384), ('Sync', 1, 0), ('Retrig', 2, 0)],
+    'Arp': [('Enable', 1, 0), ('Range', 3, 0), ('Div', 10, 22937), ('Rate', 0, 13500), ('Swing', 25, 0),
+            ('Dir', 3, 0), ('SeqOn', 1, 0)],
+    'LFO': [('Shape', 5, 0), ('Div', 12, 0), ('Rate', 0, 16384), ('Sync', 1, 0), ('Retrig', 2, 0)],
     'EG2': [('Mode', 1, 32767), ('Attack', 0, 0), ('DecRel', 0, 9000), ('Sustain', 0, 32767), ('Legato', 1, 0),
             ('Snap', 1, 1)],
     'Gen': [('Parafon', 1, 0), ('PrstVol', 24, 16384), ('UniSprd', 233, 1985), ('UniCnt', 2, 32767),
@@ -106,6 +107,46 @@ class PatchTests(unittest.TestCase):
         self.assertEqual(changed['LFO.Rate'][1], 'about 4.78 Hz')
         new, _ = patch.prepare({'lfo': {'rate': 0.3, 'sync': 'on'}}, base)
         self.assertEqual(values(new)['LFO.Sync'], 32767)
+
+    def test_start_plain_comes_first_and_the_description_wins(self):
+        base, _ = patch.prepare({'fields': {'Co3.EG1': 1.0, 'Gen.Parafon': 1}, 'filter': {'type': 'HPF'}}, self.base)
+        new, _ = patch.prepare({'start': 'plain', 'filter': {'cutoff': 0.3}}, base)
+        v = values(new)
+        self.assertEqual(v['Co3.EG1'], 0)
+        self.assertEqual(v['Gen.Parafon'], 0)
+        self.assertEqual(v['VCF.Type'], 0)
+        self.assertEqual(v['VCF.Cutoff'], round(0.3 * 32767))
+        self.assertEqual(v['VCO.Param1'], 16384)
+        with self.assertRaises(ValueError):
+            patch.prepare({'start': 'init'}, self.base)
+
+    def test_filter_amount_survives_a_matrix(self):
+        new, _ = patch.prepare({'envelope': {'filter_amount': 0.2},
+                                'matrix': [{'source': 'LFO', 'destination': 'Pitch', 'amount': 0.01}]}, self.base)
+        v = values(new)
+        self.assertEqual(v['Co4.EG2'], round(0.2 * 32767))
+        self.assertEqual(v['Co1.LFO'], round(0.01 * 32767))
+
+    def test_times_hertz_and_arpeggiator(self):
+        new, changed = patch.prepare({'envelope': {'attack_seconds': 0.561, 'decay_seconds': 0.49},
+                                      'filter': {'cutoff_hz': 580},
+                                      'lfo': {'division': '1/8T'},
+                                      'arp': {'on': True, 'direction': 'Order', 'octaves': 2, 'swing': 62,
+                                              'division': '1/16'}}, self.base)
+        v = values(new)
+        self.assertAlmostEqual(v['EG2.Attack'] / 32767, 0.5, places=3)
+        self.assertAlmostEqual(v['EG2.DecRel'] / 32767, 0.3, places=3)
+        self.assertAlmostEqual(v['VCF.Cutoff'] / 32767, 0.5, places=3)
+        self.assertEqual(v['LFO.Div'], round(9 * 32767 / 12))
+        self.assertEqual(v['LFO.Sync'], 32767)
+        self.assertEqual((v['Arp.Enable'], v['Arp.SeqOn']), (32767, 0))
+        self.assertEqual(v['Arp.Dir'], round(32767 / 3))
+        self.assertEqual(v['Arp.Range'], round(32767 / 3))
+        self.assertEqual(v['Arp.Swing'], round(12 * 32767 / 25))
+        self.assertEqual(changed['Arp.Swing'][1], '62%')
+        self.assertIn('about 580 Hz', changed['VCF.Cutoff'][1])
+        with self.assertRaises(ValueError):
+            patch.prepare({'filter': {'cutoff_hz': 20}}, self.base)
 
     def test_sequence_and_unknown_keys(self):
         new, changed = patch.prepare({'sequence': {'length': 4, 'patterns': {'A': {'steps': [{'notes': ['C4']}]}}}},
