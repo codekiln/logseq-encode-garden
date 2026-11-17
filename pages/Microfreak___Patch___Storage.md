@@ -56,6 +56,16 @@ see-also:: [[Microfreak/Patch/Research]], [[Microfreak/CLI/Probe a patch]], [[Mi
 				- Blues on D: C C D D D F F G G♯ G♯ G♯ A.
 		- ### Root Note: `Kbd.Root`
 			- Descriptor 11. 0 to 11 are C, C♯, D, D♯, E, F, F♯, G, G♯, A, A♯ and B. Major on D played C♯ C♯ D D E F♯ F♯ G G A A B for C to B, and Minor on A played the same as Major on C.
+	- ## Panel switches
+		- Heard on [[2026-11-17 Tue]], in the order [MicroFreak Reader](https://github.com/francoisgeorgy/microfreak-reader/blob/master/src/model/index.js) gives:
+			- `VCF.Type`: 0 low-pass, 1 band-pass, 2 high-pass.
+			- `EG1.Mode`, the Cycling Envelope: 0 Env (runs once from each note), 1 Run (runs freely), 2 Loop (loops from each note).
+			- `EG2.Mode`, Amp Mod: 1 on, the envelope shapes loudness; 0 off.
+			- `LFO.Shape`: 0 sine, 1 triangle, 2 rising saw, 3 square, 4 random stepped, 5 random gliding.
+			- `LFO.Sync`: 0 runs at `LFO.Rate`; 1 follows the tempo and ignores `LFO.Rate`.
+			- `Kbd.Octave`: descriptor 6, −3 to +3. It shifts only the MicroFreak's own keys: notes sent over MIDI sounded as sent at every value.
+	- ## LFO rate: `LFO.Rate`
+		- With `LFO.Sync` off, the rate roughly doubles for every 0.1 of stored value from 0.3 up. Measured: 0.1 → 0.14 Hz, 0.2 → 0.24 Hz, 0.3 → 0.52 Hz, 0.4 → 1.07 Hz, 0.5 → 2.25 Hz, 0.6 → 4.79 Hz, 0.7 → 10.3 Hz, 0.75 → 15.0 Hz, 0.8 → 21.9 Hz. `lib/patch_fields.py` interpolates between these points; faster rates were not measured.
 	- ## Modulation matrix
 		- The matrix ([[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations]]) stores one amount per crossing as `CoN.ROW`. The column number is the destination: `Co1` Pitch, `Co2` Wave, `Co3` Timbre, `Co4` Cutoff, and `Co5`–`Co7` Assign 1–3. The row is the source: `EG1` the Cycling Envelope, `EG2` the Envelope, `LFO`, `Xpr` Pressure and `Key` Key/Arp.
 		- An amount is −1 to 1, stored as a signed value over 32767. `Co2` did what assigning `VCO.Param1` did, and `Co3` what assigning `VCO.Param2` did.
@@ -71,5 +81,5 @@ see-also:: [[Microfreak/Patch/Research]], [[Microfreak/CLI/Probe a patch]], [[Mi
 		- The free-running tempo of the arpeggiator and sequencer, and the tempo Sync glide follows. BPM = 30 + stored value ÷ 150, up to 240: 13500 is 120 BPM. The stored value is not a 0–1 fraction, so a write gives `raw:` (BPM − 30) × 150.
 		- The arpeggiator only runs on its own tempo when the global Clock Source is Internal. On USB it waits for clock from the Mac.
 	- ## Still unmeasured
-		- Times, rates and frequencies of the continuous controls: envelope and Cycling Envelope times, LFO rate in hertz, filter cutoff in hertz, and the oscillator controls of each model.
+		- Times, rates and frequencies of the continuous controls: envelope and Cycling Envelope times, LFO rates above 0.8, the tempo-synced LFO divisions in `LFO.Div`, filter cutoff in hertz, and the oscillator controls of each model.
 		- `Gen.Chord` 1, `Gen.PolyCnt`, `Kbd.Hold`, the arpeggiator's `Arp.Dir`, `Arp.Range`, `Arp.Swing`, `Arp.Spice` and `Arp.Dice`, and the vocoder's `Voc.HissMod` and `Voc.HissVol`.
