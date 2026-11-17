@@ -3,9 +3,10 @@ see-also:: [[Microfreak/Sequence/Write a sequence]], [[Microfreak/Sequence/Resea
 - # How a preset stores its sequence
 	- A preset keeps sequencer patterns A and B at fixed positions after its named parameters. Each pattern holds 64 steps, whatever the sequence length, followed by a short pattern trailer. The length, gate length and smoothing are named parameters that both patterns share.
 	- `mise run microfreak:inspect FILE --sequence` adds the decoded patterns to the inspector's JSON. `mise run microfreak:write-sequence` writes a sequence description into a preset and uploads it, using [lib/sequence.py](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/sequence.py). [[Microfreak/Sequence/Write a sequence]] describes the description format, the tasks and how to check a slot on the instrument.
+	- [[Microfreak/Sequence/Research]] records the uploads and playback runs behind each field below.
 	- The layout follows [Freakout's sequence parser](https://github.com/kmorrill/freakout/blob/main/src/minifreak_patch/microfreak_sequence.py) and its [firmware notes](https://github.com/kmorrill/freakout/blob/main/docs/microfreak-firmware-notes.md), which say the instrument saves `0x824` values of Sequence A/B state with each preset: two patterns of 1042.
 	- ## Where the patterns sit
-		- Positions count in the 4088 values that a preset's 4672 transferred values expand to, as described in [PARAMETERS.md](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md).
+		- Positions count in the 4088 values that a preset's 4672 transferred values expand to, as [[Microfreak/CLI/Inspect a preset]] describes.
 		- 0 up to the root's `0x20`: named parameters. They ended between 1027 and 1188 in the 23 presets read on [[2026-11-16 Mon]]. `0xFF` and leftover fragments fill the rest up to 1979.
 		- 1980–3003: pattern A's 64 step records of 16 values each. 3004–3021: pattern A's trailer.
 		- 3022–4045: pattern B's step records. 4046–4063: pattern B's trailer.
@@ -27,8 +28,8 @@ see-also:: [[Microfreak/Sequence/Write a sequence]], [[Microfreak/Sequence/Resea
 		- 13, modulation presence: bit 0 set means track 1 holds a value on this step, through bit 3 for track 4. A step without the bit sends nothing for that track.
 		- 14–15: zero in the presets read. Setting them to 7 and 9 changed nothing heard.
 	- ## Pattern trailer
-		- 0–7, modulation-track destinations: four little-endian ids, one per track, `FFFF` for an unused track. `0x0101` sent CC 23 (filter cutoff) and `0x0602` sent CC 106 (envelope decay). The other ids in the decoder's table come from Freakout's [live-parameter map](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/freakout_live_map.py) and were not played here.
-		- 8, gate copy: equals the gate length in percent in every preset read, but playback ignores it. With `Seq.GateLen` at 90% and this value at 20, notes lasted 5 of 6 clocks; with `Seq.GateLen` at 20% and this value at 90, 1 of 6 clocks. Freakout reports that this value shortened the gate; on this instrument the named parameter decided.
+		- 0–7, modulation-track destinations: four little-endian ids, one per track, `FFFF` for an unused track. `0x0101` sent CC 23 (filter cutoff) and `0x0602` sent CC 106 (envelope decay). The other ids in the decoder's table come from Freakout's [live-parameter map](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/freakout_live_map.py) and are untried on my MicroFreak.
+		- 8, gate copy: equals the gate length in percent in every preset read, but playback ignores it. With `Seq.GateLen` at 90% and this value at 20, notes lasted 5 of 6 clocks; with `Seq.GateLen` at 20% and this value at 90, 1 of 6 clocks. Freakout reports that this value shortened the gate; on my MicroFreak the named parameter decided.
 		- 9, length copy: equals the sequence length in every preset read. With `Seq.Length` at 8 and this value at 16, the pattern looped every 8 steps. Setting it to 0 changed nothing heard. Freakout found the same.
 		- 10 and 11: in factory presets, 10 is 0 in A and 1 in B, and 11 is 1 in exactly one of the two patterns. Swapping both between A and B left pattern A playing A's steps, so neither picks the pattern that plays.
 		- 16, in use: `0xA5` in a pattern that holds steps, `0xFF` in an erased one. Pattern A with all its steps and `0xFF` here played nothing.
@@ -44,21 +45,6 @@ see-also:: [[Microfreak/Sequence/Write a sequence]], [[Microfreak/Sequence/Resea
 			- 9830 → `1/4`, 24. 13107 → `1/4T`, 16. 16384 → `1/8`, 12. 19660 → `1/8T`, 8.
 			- 22937 → `1/16`, 6. 26214 → `1/16T`, 4. 29490 → `1/32`, 3. 32767 → `1/32T`, 2.
 			- `Arp.Sync` off did not change this: slots 5, 35 and 113 store it off and played 1/16 at 6 clocks, as [[Microfreak/CLI/Audition a sequence]] records.
-	- ## How the playback was checked
-		- Each experiment preset started from [[Microfreak/Preset/382 Anit]], a preset with the sequencer on and paraphony on. `lib/sequence.py` wrote the steps, sometimes followed by a direct edit of one value, and [[Microfreak/CLI/Upload a preset]] wrote the result to a slot from 330 to 339 and read it back unchanged.
-		- A script then selected the slot (CC 0 bank select, program change), turned the global Arp/Seq MIDI Out setting on (SysEx operation `0x42`, code `0x2B`), sent MIDI Start and 24-per-quarter-note clock at 240 BPM, recorded the notes and CCs the MicroFreak sent back, sent Stop and set Arp/Seq MIDI Out back to off. Clock Source (code `0x2E`) was already USB. [#434 Audition a MicroFreak slot's sequence](https://github.com/codekiln/logseq-encode-garden/issues/434) builds the same procedure into a task.
-		- Before any upload, playing [[Microfreak/Preset/382 Anit]], [[Microfreak/Preset/113 D3 Chords]], [[Microfreak/Preset/005 MotivSeq]] and [[Microfreak/Preset/035 FM Seq]] sent the notes, chords and velocities the decoder reads from their downloads.
-		- Experiments on [[2026-11-16 Mon]], one slot each:
-			- 330: a 16-step pattern A with single notes, a rest, a four-note chord with four velocities, and three kinds of tie. Everything played as listed under Step record, and step 17 started the loop again.
-			- 331 and 333: gate and length copies against `Seq.GateLen` and `Seq.Length`.
-			- 332: pattern A marked erased with its steps in place.
-			- 334: two modulation tracks with smoothing off.
-			- 335: status 3, empty voice 1, a note only in voice 4, velocities 0 and 200, non-zero reserved values.
-			- 336: 64 steps with notes 36–99 and velocities 1–64. All 64 played in order, then looped.
-			- 337: trailer values 10 and 11 swapped between the patterns.
-			- 338: a voice gap, a tie into a different note, and a tie across the loop.
-			- 339: [[Microfreak/Preset/003 Trance]] with `Arp.SeqOn` on.
-		- For [#444 Close the gaps the fresh-agent test of the MicroFreak sequence workflow found](https://github.com/codekiln/logseq-encode-garden/issues/444), slots 485–489 and 491–496 each held a copy of [[Microfreak/Preset/358 20241116.1]] with the 4-step pattern C4 D4 E4 F4 and one `Arp.Div` value. Each was uploaded, read back unchanged, and played at 180 BPM while the clocks the MicroFreak echoed were counted between its note-ons. Every interval in each run equalled the clocks listed under Settings shared by both patterns, and the notes came in order: 496 `1`, 485 `1/2`, 486 `1/2T`, 487 `1/4`, 488 `1/4T`, 489 `1/8`, 491 `1/8T`, 492 `1/16`, 493 `1/16T`, 494 `1/32`, 495 `1/32T`.
 	- ## Open questions
 		- Playing pattern B from the Mac. A preset always starts with pattern A after a program change, even when A is erased and B holds steps ([[Microfreak/Preset/395 26.06.25]] stayed silent). Song Select, CCs 1–119 sent one at a time during playback (except 32 and 64), swapping trailer values 10 and 11, and the global settings listed in [[Microfreak/Sequence/Research]] did not switch to B. Pattern B data written here played as described once moved to pattern A's place, and downloads hold it unchanged. Pressing B on the panel plays it in its own place, as [[Microfreak/Sequence/Write a sequence]] describes.
 		- What trailer values 10 and 11 record. Pattern identity kept through a copy, and the pattern selected when the preset was saved, fit the factory data but are untested.
