@@ -56,10 +56,20 @@ see-also:: [[Microfreak/Patch/Research]], [[Microfreak/CLI/Probe a patch]], [[Mi
 				- Blues on D: C C D D D F F G G♯ G♯ G♯ A.
 		- ### Root Note: `Kbd.Root`
 			- Descriptor 11. 0 to 11 are C, C♯, D, D♯, E, F, F♯, G, G♯, A, A♯ and B. Major on D played C♯ C♯ D D E F♯ F♯ G G A A B for C to B, and Minor on A played the same as Major on C.
+	- ## Modulation matrix
+		- The matrix ([[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations]]) stores one amount per crossing as `CoN.ROW`. The column number is the destination: `Co1` Pitch, `Co2` Wave, `Co3` Timbre, `Co4` Cutoff, and `Co5`–`Co7` Assign 1–3. The row is the source: `EG1` the Cycling Envelope, `EG2` the Envelope, `LFO`, `Xpr` Pressure and `Key` Key/Arp.
+		- An amount is −1 to 1, stored as a signed value over 32767. `Co2` did what assigning `VCO.Param1` did, and `Co3` what assigning `VCO.Param2` did.
+		- On Pitch, 1.0 is 48 semitones, four octaves, at the source's full value: 0.25 is an octave, 0.02 about one semitone, and a negative amount bends down. Full channel pressure counts as 127/128. Pressure into Pitch at 1.0 stopped rising near B6.
+		- ### Assign destinations: `Mat.Assign1`–`Mat.Assign3`
+			- Each stores the destination id of the parameter its Assign column modulates. The sequencer's modulation tracks use the same ids ([[Microfreak/Sequence/Storage]]).
+			- A destination id has four hex digits: the first two name a section and the last two a field in it. Sections: 0x00 oscillator (`VCO`), 0x01 filter (`VCF`), 0x02 Cycling Envelope (`EG1`), 0x03 keyboard (`Kbd`), 0x04 arpeggiator (`Arp`), 0x05 `LFO`, 0x06 Envelope (`EG2`), 0x07 general (`Gen`), 0x09 matrix settings (`Mat`), 0x0A–0x10 the matrix columns `Co1`–`Co7`, 0x12 `Seq` and 0x13 `Voc`. [Freakout's live map](https://github.com/kmorrill/freakout/blob/main/src/minifreak_patch/microfreak_live_map.py) lists two or three addresses per field; the destination id is the one in the field's own section, such as 0x0101 for `VCF.Cutoff`. `lib/patch_fields.py` builds the full list.
+			- Heard on the instrument: 0x0001 Wave, 0x0003 Timbre, 0x0005 Shape, 0x0101 Cutoff, 0x0102 Resonance, 0x0300 Glide, 0x0502 LFO Rate, 0x0602 Envelope Decay, 0x0603 Envelope Sustain, 0x0705 Unison Spread and 0x0A02, the LFO → Pitch amount. 0x0F0E, Freakout's other address for cutoff, did nothing.
+			- An Assign column aimed at a matrix amount adds to it: with LFO → Pitch stored at 0 and Pressure → Assign 1 at 0.05 aimed at 0x0A02, full pressure gave the vibrato that an LFO → Pitch amount of 0.05 gives.
 	- ## Preset Volume: `Gen.PrstVol`
 		- Descriptor 24; the panel's −12 to +12 is the stored choice minus 12. Each step changes the level by 0.5 dB, except that 9 and 10 (−3 and −2) play at the same level. From 0 to 24 the level spans 11.5 dB: −5.5 dB to +6.0 dB around choice 12.
 	- ## Arp/Seq rate: `Arp.Rate`
 		- The free-running tempo of the arpeggiator and sequencer, and the tempo Sync glide follows. BPM = 30 + stored value ÷ 150, up to 240: 13500 is 120 BPM. The stored value is not a 0–1 fraction, so a write gives `raw:` (BPM − 30) × 150.
 		- The arpeggiator only runs on its own tempo when the global Clock Source is Internal. On USB it waits for clock from the Mac.
 	- ## Still unmeasured
-		- Modulation matrix amounts and `Mat.Assign1`–`3` ([#453](https://github.com/codekiln/logseq-encode-garden/issues/453)).
+		- Times, rates and frequencies of the continuous controls: envelope and Cycling Envelope times, LFO rate in hertz, filter cutoff in hertz, and the oscillator controls of each model.
+		- `Gen.Chord` 1, `Gen.PolyCnt`, `Kbd.Hold`, the arpeggiator's `Arp.Dir`, `Arp.Range`, `Arp.Swing`, `Arp.Spice` and `Arp.Dice`, and the vocoder's `Voc.HissMod` and `Voc.HissVol`.

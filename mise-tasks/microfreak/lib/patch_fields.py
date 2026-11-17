@@ -46,6 +46,35 @@ CHORD_CENTRE = 0x4000
 ARP_BPM_RANGE = (30.0, 240.0)
 
 
+# The matrix: Co1-Co7 are its columns, EG1/EG2/LFO/Xpr/Key its rows (source).
+MATRIX_COLUMNS = {1: 'Pitch', 2: 'Wave', 3: 'Timbre', 4: 'Cutoff', 5: 'Assign 1', 6: 'Assign 2', 7: 'Assign 3'}
+MATRIX_ROWS = {'EG1': 'CycEnv', 'EG2': 'Envelope', 'LFO': 'LFO', 'Xpr': 'Pressure', 'Key': 'Key/Arp'}
+PITCH_SEMITONES_PER_AMOUNT = 48
+# A destination id, as Mat.Assign1-3 and the sequencer's modulation tracks store
+# it, is four hex digits: a section, then a field within it.
+DESTINATION_SECTIONS = {'VCO': 0x00, 'VCF': 0x01, 'EG1': 0x02, 'Kbd': 0x03, 'Arp': 0x04, 'LFO': 0x05,
+                        'EG2': 0x06, 'Gen': 0x07, 'Mat': 0x09, 'Seq': 0x12, 'Voc': 0x13,
+                        **{f'Co{n}': 0x09 + n for n in range(1, 8)}}
+# Destination ids heard doing what their field does on the instrument.
+HEARD_DESTINATIONS = {0x0001, 0x0003, 0x0005, 0x0101, 0x0102, 0x0300, 0x0502, 0x0602, 0x0603, 0x0705, 0x0A02}
+
+
+def destination_ids():
+    """{field: destination id} from Freakout's live map, one id per field."""
+    import freakout_live_map
+    ids = {}
+    for field, addresses in freakout_live_map.MICROFREAK_STRUCTURED_LIVE_WORDS.items():
+        section = DESTINATION_SECTIONS.get(field.partition('.')[0])
+        match = [a for a in addresses if a >> 8 == section]
+        if len(match) == 1:
+            ids[field] = match[0]
+    return ids
+
+
+def destination_field(value):
+    return {v: k for k, v in destination_ids().items()}.get(value)
+
+
 def choice(raw, descriptor):
     return round(raw * descriptor / FULL)
 
@@ -161,6 +190,18 @@ def display(name, raw, descriptor, context=None):
     if name.startswith('Gen.ChOffs'):
         n = chord_offset(raw)
         return {'value': n, 'unit': 'semitones', 'text': 'unused' if n is None else f'{n:+d}'}
+    group, _, row = name.partition('.')
+    if group.startswith('Co') and group[2:].isdigit() and row in MATRIX_ROWS:
+        amount = round((raw - 0x10000 if raw >= 0x8000 else raw) / FULL, 4)
+        out = {'value': amount, 'unit': 'amount', 'source': MATRIX_ROWS[row],
+               'destination': MATRIX_COLUMNS[int(group[2:])], 'text': f'{amount:+.3f}'}
+        if group == 'Co1':
+            out['semitones_at_full_source'] = round(amount * PITCH_SEMITONES_PER_AMOUNT, 2)
+        return out
+    if name.startswith('Mat.Assign'):
+        field = destination_field(raw)
+        return {'value': field, 'unit': 'destination', 'destination_id': f'0x{raw:04x}',
+                'heard': raw in HEARD_DESTINATIONS, 'text': field or f'0x{raw:04x}'}
     if name == 'Arp.Rate':
         bpm = round(arp_bpm(raw), 2)
         return {'value': bpm, 'unit': 'BPM', 'text': f'{bpm:g} BPM'}
@@ -216,6 +257,16 @@ def setting(name, value):
         return ('raw', chord_raw(value))
     if name == 'Arp.Rate':
         return ('raw', arp_raw(float(value)))
+    if name.startswith('Mat.Assign'):
+        ids = destination_ids()
+        if value not in ids:
+            raise ValueError(f'No destination id known for {value!r}')
+        return ('raw', ids[value])
+    group, _, row = name.partition('.')
+    if group.startswith('Co') and row in MATRIX_ROWS:
+        if not -1 <= float(value) <= 1:
+            raise ValueError('A matrix amount runs from -1 to 1')
+        return ('decimal', float(value))
     raise ValueError(f'No measured conversion for {name}')
 
 
