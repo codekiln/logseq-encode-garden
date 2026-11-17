@@ -1,7 +1,7 @@
 see-also:: [[Microfreak/Sequence/Research]]
 - # Preset metadata over USB
-	- Direct preset renaming is feasible through MIDI SysEx over USB. Elektroid implements the write sequence; the garden already has Python/RtMidi readers and full-preset backup support.
-	- Investigation date: [[2026-10-03 Sat]]. Source inspection establishes write feasibility; [[Microfreak/CLI/Validation/26-10-03 slot 397]] records successful hardware reads. [[Microfreak/CLI/Upload a preset]] records the first hardware writes, on [[2026-11-16 Mon]].
+	- Renaming a preset over USB with MIDI SysEx should work. Elektroid implements the write sequence, and the garden already has Python/RtMidi readers and full-preset backups.
+	- I looked into this on [[2026-10-03 Sat]] by reading Elektroid's source, which shows the writes can work. [[Microfreak/CLI/Validation/26-10-03 slot 397]] records the first successful reads from the instrument, and [[Microfreak/CLI/Upload a preset]] the first writes, on [[2026-11-16 Mon]].
 	- ## Existing implementation
 		- [Elektroid MicroFreak connector](https://github.com/dagargo/elektroid/blob/7806ecafda5fbed214e0e0c4f48a92ead52bdc73/src/connectors/microfreak.c) provides preset listing, renaming, downloading and uploading. Its preset operation tables do not implement deletion.
 		- [Garden preset inventory and reconciliation](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/sync.py) reads saved names, categories and initialized status using python-rtmidi. Its writes update garden pages; it does not write presets to the instrument.
@@ -23,7 +23,7 @@ see-also:: [[Microfreak/Sequence/Research]]
 		- Notes, tags and provenance: retain these in the garden. The inspected header and connector expose no arbitrary text metadata fields for these annotations.
 	- ## Proposed CLI
 		- Extend the garden's Python/RtMidi code with list, show, rename, update-category, backup and restore commands. Add copy/import and reset after the upload and initialized-preset paths have been tested.
-		- Example command shapes: `microfreak list --json`, `microfreak rename 395 "Evening Pad"`, `microfreak update 395 --category Pad`. These are proposed interfaces, not installed commands.
+		- Proposed commands, none of them installed yet: `microfreak list --json`, `microfreak rename 395 "Evening Pad"`, `microfreak update 395 --category Pad`.
 		- Before changing a populated slot, capture a complete backup and show the proposed metadata changes. After writing, download the preset again and check the requested metadata and unchanged sound data. Preserve backups for explicit restoration after a partial failure.
 		- For bulk changes, use an explicit slot-to-change manifest and verify each completed slot. A failed transfer should report the uncertain slot and stop further writes; it should not blindly repeat a write.
 		- Reconcile garden metadata after successful device verification. The existing sync script identifies presets by slot and name, so a rename can retire the old page and create a new page; preserving notes through a device rename needs an explicit migration path.
@@ -39,10 +39,10 @@ see-also:: [[Microfreak/Sequence/Research]]
 		- Future creative naming: associate a representative audio excerpt with each captured patch, generate candidate names with an audio-capable model, and select a name before applying it to the device. The excerpt's patch association must be recorded; filenames such as `mf1` or `mf ALL` alone do not establish which saved preset produced the audio.
 		- Retain the episode/date identity in garden metadata and export filenames when a creative device name uses the limited display space. Decide whether the preferred device display is the convention-based name, the creative name, or a compact combination before implementing automatic naming.
 		- Audio-model selection and naming quality have not been evaluated. An excerpt records a performance, effects and recording conditions as well as the patch, so suggested names describe the recorded sound rather than proving a unique preset identity.
-		- The local GitP script `gitp-tools/gitp_tools/rename_tmf_to_gitp.py` currently replaces `GitP` with `GitP` in filesystem names and text content. It does not implement a TMF-to-GitP conversion or device communication. It was inspected without execution.
+		- The local GitP script `gitp-tools/gitp_tools/rename_tmf_to_gitp.py` currently replaces `GitP` with `GitP` in filesystem names and text content. It does not implement a TMF-to-GitP conversion or device communication. I read it without running it.
 	- ## Device validation
-		- Test against the connected instrument's firmware. The inspected Elektroid connector requires firmware major version 5; this is an implementation constraint, not proof that other versions cannot support the protocol.
+		- Test against the firmware on my MicroFreak. Elektroid's connector requires firmware major version 5. That limit comes from Elektroid's code, and other firmware versions may support the protocol too.
 		- [[Microfreak/UG/04 Presets/02 Save Presets]] describes name/category editing and saving on the instrument. [[Microfreak/UG/14 Config/01 Utility & MCC/02 Global]] documents Mem Protect: Off permits overwrites, Factory Only protects factory presets, and On protects all presets.
 		- Use a backed-up test slot to validate rename, category changes, restoration and initialized-slot handling. Verify the displayed result and persistence after reconnecting or restarting the instrument, as well as unchanged sound data after metadata edits.
 		- Close MIDI Control Center during testing to avoid competing SysEx transactions. The garden reader already recommends this when a response times out.
-		- USB renaming does not require controlling MIDI Control Center's UI. The remaining uncertainty is behavior on the connected instrument, especially category-only writes, resets and active-preset refresh.
+		- Renaming over USB needs no MIDI Control Center. What I still need to learn is how my MicroFreak handles category-only writes, resets and refreshing the active preset.
