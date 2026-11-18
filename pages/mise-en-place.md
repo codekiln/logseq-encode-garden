@@ -1,3 +1,5 @@
+logseq-entity:: [[Logseq/Entity/Term]]
+
 - The term "mise-en-place," a French phrase meaning "put in place," has its roots in the culinary world and refers to the preparation and organization of ingredients and tools before cooking. This concept emphasizes the importance of a systematic approach in the kitchen, allowing chefs to work efficiently and effectively.
 - ## history of term
 	- The origins of mise-en-place date back to 19th-century France, where formal culinary training and professional kitchens began to emerge. One of the earliest recorded references to the principles behind mise-en-place can be tied to chefs such as Auguste Escoffier. Escoffier, often referred to as the father of modern cuisine, standardized many cooking practices in his seminal works, including "Le Guide Culinaire," published in 1903. Escoffier's emphasis on organization and preparation—principles that are integral to mise-en-place—helped shape modern culinary education and kitchen operations.
