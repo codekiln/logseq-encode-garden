@@ -1,0 +1,4 @@
+- 10 - Mt Saint Michel + Saint Michaels Mount
+	- [[My Notes]]
+		- in the last few moments, the "fencepost echo" effect sucks the ears into another dimension.
+		- it was a favorite moment, decades ago, and still sparks fly when that cheese grater pulls the mutes down, in a PCM-like effect.

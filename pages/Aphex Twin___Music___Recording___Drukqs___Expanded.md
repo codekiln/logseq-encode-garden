@@ -21,6 +21,8 @@ logseq-created-time-year:: [[20/2/6]]
 		- 08 - Cock/ver10
 		- 09 - Avril 14th
 		- 10 - Mt Saint Michel + Saint Michaels Mount
+		  id:: 6afd80e0-e2a9-4fc5-8d0b-46df2dbf62c2
+			- [[Aphex Twin/Music/Recording/Drukqs/Expanded/10-Mt-Saint-Michel-Saint-Michaels-Mount]]
 		- 11 - Gwarek2
 		- 12 - Orban Eq Trx 4
 		- 13 - Aussois

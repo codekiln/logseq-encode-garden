@@ -1,0 +1,3 @@
+- [[2026-11-18 Wed]]
+	- yesterday, noticed that [[Aphex Twin/Music/Recording/Drukqs/Expanded]] was out; listened once on airpods, watching the sunset.
+	- this AM, listened once on [[Campfire Audio/Solaris]] and had that moment of oblivion near the end of [[Aphex Twin/Music/Recording/Drukqs/Expanded/10-Mt-Saint-Michel-Saint-Michaels-Mount]].
