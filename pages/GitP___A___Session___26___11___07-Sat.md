@@ -30,7 +30,7 @@ date-created:: [[2026-11-07 Sat]]
 					  formerly planned for [[Macbook/Port/Headphone]] to receive the have a different audio out than the ceremonial listeners.
 					- deemed complex; removed. maybe if it did not require two pairs of headphones.
 						- [[Zoom H5]] will *play* audio out loud if headphones are not attached
-							- TODO [[Ghost Gardener]] file [[Logseq/Entity/Question]]s about [[Zoom H5/Mode/Audio Interface]] mode
+							- TODO [[Ghost Gardener]] file [[Logseq/Entity/Question]]s about [[Zoom H5/UI/Mode/4-Audio-Interface]] mode
 								- TODO how can the [[Zoom H5]] be configured to *not* play audio out when headphones are detached
 		- ### theory - `1, 2, 4, 8`
 			- plan - invoke a 15-based **sequential** raga of `1 + 2 + 4 + 8`

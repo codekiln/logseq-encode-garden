@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Audio/Connector/Q/What is the difference between a line out port and a headphone port, and how do they differ on the Zoom H5?]], [[Audio/Connector/RCA/Stereo]]
 
-- # How can I record [[Zoom H5/Port/Line Out]] on a [[Macbook]] or an [[iPhone]] while monitoring on [[Zoom H5/Port/Headphone]], with the USB port already given to [[Zoom H5/Mode/Audio Interface/iPad]]?
+- # How can I record [[Zoom H5/Port/Line Out]] on a [[Macbook]] or an [[iPhone]] while monitoring on [[Zoom H5/Port/Headphone]], with the USB port already given to an [[iPad]] in [[Zoom H5/UI/Mode/4-Audio-Interface/1-Stereo]]?
 	- ## [[AI Answer]]
 		- **Short answer:** the recorder side already works — both output jacks are live at once and their levels are set independently, so the H5 can feed a second device while the headphones stay under their own control. The obstacle sits entirely on the receiving end. Neither a MacBook's 3.5 mm jack nor a Lightning port will take a stereo line-level signal; both offer a **mono, mic-level** input and nothing else. Stereo therefore costs one small USB device — but it can be a 65 g dongle rather than a second interface in the [[Focusrite/Saffire]] sense.
 		- ### What the H5 already does for free

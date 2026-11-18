@@ -5,7 +5,7 @@ time-created::  1200 ET
 
 - # Public Improv Session with [[Ableton/Note]] and [[Microfreak]]
 	- ## Summary
-		- [[2026-09-23 Wed]] over lunch, I practiced performing in public with a new configuration: [[Microfreak]], [[iPad]], [[Ableton/Note]], [[Zoom H5/Mode/Audio Interface/iPad]], and [[IK Multimedia/iLoud Micro Monitors]]s.
+		- [[2026-09-23 Wed]] over lunch, I practiced performing in public with a new configuration: [[Microfreak]], [[iPad]], [[Ableton/Note]], [[Zoom H5/UI/Mode/4-Audio-Interface/1-Stereo]], and [[IK Multimedia/iLoud Micro Monitors]]s.
 		- **Recording**: [Fallinter 01.m4q](https://drive.google.com/file/d/1IxrQ_DcqDW3nyN8wQyvMIZmtochXyrzB/view)
 	- ## Session - [[My Notes]]
 		- ### Preparation
