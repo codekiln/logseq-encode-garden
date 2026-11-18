@@ -36,5 +36,7 @@ see-also:: [[Zoom H5/UG]]
 		- ### Bottom
 			- [[Zoom H5/UI/Area/4-Bottom/1-Input-1-Jack]]
 			- [[Zoom H5/UI/Area/4-Bottom/2-Input-2-Jack]]
+	- ## Logical Modes of the UI
+		- [[Zoom H5/UI/Mode/4-Audio-Interface]]
 	- ## Source
 		- [[Zoom H5/UG/03 Parts]]
