@@ -27,6 +27,7 @@ see-also:: [[Package Management]], [[Software/Composition/Analysis]], [[Dependen
 		- [[PyPoetry]] — `poetry.lock`; see [[PyPoetry/Concept/How to handle Monorepos in Poetry vs uv]] for how it compares to `uv.lock` in a monorepo.
 		- [[cargo]] — `Cargo.lock`; applications check it in, while libraries often leave it out so downstream consumers resolve their own versions.
 		- [[Nix]] — `flake.lock`, pinning the exact revision of every flake input, including [[Nix/Package/Registry]] itself, rather than just individual package versions.
+		- [[GitHub/Action]] — `.github/workflows/actions.lock`, written by [[gh-actions-lock]], pins every action a repository's workflows use, transitive ones included, to a commit SHA; `gh actions-lock --verify` fails CI when the lockfile is incomplete.
 	- ## Misconceptions
 		- "A lockfile and a manifest are redundant" — **False**; the manifest states acceptable ranges, the lockfile states the one resolution actually chosen. Deleting the lockfile and reinstalling can silently change versions.
 		- "Lockfiles are only for applications" — **Ecosystem-dependent**; library authors often skip committing one (e.g. `Cargo.lock` for a library crate) so consumers resolve against their own constraints, while applications and services almost always commit one.

@@ -5,5 +5,6 @@ alias:: [[GitHub CLI Extensions]], [[gh extension]]
 	- ## Extensions
 		- [[gh-dash]]
 		- [[gh-aw]]
+		- [[gh-actions-lock]]
 		- [[GitHub/CLI/Extension/gh-sub-issue]]
 		- [[GitHub/CLI/Extension/gh-issue-dependency]]
