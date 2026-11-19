@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/Hardware/Connector/Audio]]
+
+- # XLR Connector
+	- ## Overview
+		- A round, latching connector with three pins that carries one [[Audio/Balanced]] audio signal. It is the standard connector for microphones and for line connections between pro gear.
+		- The 3-pin version is the audio one. 4-, 5- and more-pin versions exist for intercom, DMX lighting and stereo, and don't mate with it.
+	- ## Physical Specifications
+		- About 19 mm across, with a metal shell around the pins.
+		- A latch on the female connector locks the male in place. Pressing the release tab frees it.
+		- Pin 1 is longer than pins 2 and 3, so ground connects first when a plug goes in.
+	- ## Pin Configuration
+		- **Pin 1** — ground and cable shield.
+		- **Pin 2** — hot, the signal in its normal polarity.
+		- **Pin 3** — cold, the signal in reverse polarity.
+		- [[Audio/Phantom Power]] rides on pins 2 and 3 together, with pin 1 as its return.
+	- ## Common Use Cases
+		- Mic inputs on mixers, recorders and audio interfaces. Signal flows from the male connector on the mic into the female socket on the input.
+		- Balanced line outputs on larger mixers and powered speakers.
+		- The output of a [[Audio/DI Box]].
+	- ## Compatibility
+		- A combo jack takes either an XLR plug or a 1/4" [[Audio/Connector/Phone/TRS/6.35mm]] plug in one socket, as on [[Zoom H5/UI/Area/4-Bottom/1-Input-1-Jack]].
+		- XLR-to-TRS cables keep the balanced wiring: tip to pin 2, ring to pin 3, sleeve to pin 1.

@@ -4,17 +4,17 @@ vendor-url:: https://www.behringer.com/en/products/0601-AHU
 - # XENYX 802S
 	- An 8-input analog mixer with a stereo USB streaming interface, +48 V phantom power on its two mic inputs, 3-band EQ and one FX send.
 	- ## Channels
-		- **Ch 1 and 2** — mono, each an XLR mic input or a balanced 1/4" TRS line input, one at a time.
-		- **Ch 3/4, 5/6, 7/8** — stereo, balanced 1/4" TRS L/R. A plug in the L jack alone makes the channel mono.
+		- **Ch 1 and 2** — mono, each an [[Audio/Connector/XLR]] mic input or a [[Audio/Balanced]] 1/4" TRS line input, one at a time.
+		- **Ch 3/4, 5/6, 7/8** — stereo, [[Audio/Balanced]] 1/4" TRS L/R, at line level ([[Audio/Signal Level]]). A plug in the L jack alone makes the channel mono.
 		- **USB return** — lands on ch 7/8 while no jack is plugged in there.
-		- No Hi-Z instrument input is listed. The maker's hook-up diagram runs a bass guitar through a DI box.
-		- **Mic preamp** — gain +10 to +60 dB, EIN 132 dB A-weighted, THD+N 0.005%.
-		- **Phantom** — one switch puts +48 V on both XLR inputs.
+		- No [[Audio/Hi-Z]] instrument input is listed. The maker's hook-up diagram runs a bass guitar through a [[Audio/DI Box]].
+		- **[[Audio/Mic Preamp]]** — gain +10 to +60 dB, [[Audio/EIN]] 132 dB A-weighted, THD+N 0.005%.
+		- **[[Audio/Phantom Power]]** — one switch puts +48 V on both XLR inputs.
 	- ## Channel Strip
-		- **Mono channels** — GAIN, 3-band EQ, FX, PAN, LEVEL and a CLIP LED.
+		- **Mono channels** — GAIN, 3-band [[Audio/Effect/EQ]], FX, PAN, LEVEL and a CLIP LED.
 			- EQ: Low 80 Hz, Mid 2.5 kHz, High 12 kHz, each ±15 dB.
 		- **Stereo channels** — FX, BAL and LEVEL, with no EQ.
-		- **FX** — each channel feeds one mono, post-fader FX bus out the FX SEND jack, up to +15 dB. There is no dedicated FX return: a stereo channel brings the effect back.
+		- **FX** — an [[Audio/Aux Send]]: each channel feeds one mono, post-fader FX bus out the FX SEND jack, up to +15 dB. There is no dedicated FX return: a stereo channel brings the effect back.
 		- No compressor and no internal effects.
 	- ## Outputs and Monitoring
 		- **MAIN MIX** — sets the main L/R outputs.
@@ -23,18 +23,18 @@ vendor-url:: https://www.behringer.com/en/products/0601-AHU
 		- **STREAM TO MONITOR/PHONES** — sends the same to the phones and monitor outputs only, keeping it out of the main mix.
 		- **Meter** — 4 segments.
 	- ## USB Audio Interface
-		- [[USB/Connector/Ref/USB-B]], UAC2 class compliant.
+		- [[USB/Connector/Ref/USB-B]], class compliant with [[USB/UAC]] 2.0.
 		- 2 in, 2 out at 48 kHz / 16-bit.
 		- The computer hears the main mix. Its playback comes back on ch 7/8.
 		- Behringer describes no loopback or multitrack mode.
 	- ## Connectors
-		- XLR — 2 × mic input.
-		- [[Audio/Connector/Phone/TRS/6.35mm]] — 2 × mono line input, 3 × stereo input pair, MAIN L/R, MONITOR L/R and FX SEND (all impedance-balanced), and PHONES.
+		- [[Audio/Connector/XLR]] — 2 × mic input.
+		- [[Audio/Connector/Phone/TRS/6.35mm]] — 2 × mono line input, 3 × stereo input pair, MAIN L/R, MONITOR L/R and FX SEND (all impedance-[[Audio/Balanced]]), and PHONES.
 		- [[Audio/Connector/RCA/Stereo]] — STREAM IN and STREAM OUT. STREAM OUT carries the main mix at a lower level.
 		- [[USB/Connector/Ref/USB-B]] — audio interface.
 		- DC power input and a power switch.
 	- ## Electrical
-		- **Line inputs** — max +21 dBu. Mono: gain −10 to +40 dB, 22 kΩ balanced.
+		- **Line inputs** — max +21 [[Audio/dBu]]. Mono: gain −10 to +40 dB, 22 kΩ balanced.
 		- **STREAM IN / OUT** — max +10 dBu.
 		- **Main, monitor, FX outputs** — 120 Ω, max +21 dBu.
 		- **Phones** — +19 dBu into 150 Ω.

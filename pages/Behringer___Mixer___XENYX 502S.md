@@ -4,17 +4,17 @@ vendor-url:: https://www.behringer.com/en/products/0601-AHT
 - # XENYX 502S
 	- A 5-input analog mixer with a stereo USB streaming interface, one mic input and 2-band EQ.
 	- ## Channels
-		- **Ch 1** — mono, an XLR mic input or a balanced 1/4" TRS line input, one at a time.
-		- **Ch 2/3 and 4/5** — stereo, balanced 1/4" TRS L/R.
+		- **Ch 1** — mono, an [[Audio/Connector/XLR]] mic input or a [[Audio/Balanced]] 1/4" TRS line input, one at a time.
+		- **Ch 2/3 and 4/5** — stereo, [[Audio/Balanced]] 1/4" TRS L/R, at line level ([[Audio/Signal Level]]).
 		- **USB return** — lands on ch 4/5 while no jack is plugged in there.
-		- No Hi-Z instrument input is listed.
-		- **Mic preamp** — gain +10 to +60 dB, EIN 132 dB A-weighted, THD+N 0.005%.
-		- **Phantom** — none. The XLR input suits a dynamic mic.
+		- No [[Audio/Hi-Z]] instrument input is listed.
+		- **[[Audio/Mic Preamp]]** — gain +10 to +60 dB, [[Audio/EIN]] 132 dB A-weighted, THD+N 0.005%.
+		- **[[Audio/Phantom Power]]** — none. The XLR input suits a dynamic mic, or a condenser through an external phantom supply.
 	- ## Channel Strip
-		- **Ch 1** — GAIN, 2-band EQ, PAN, LEVEL and a CLIP LED.
+		- **Ch 1** — GAIN, 2-band [[Audio/Effect/EQ]], PAN, LEVEL and a CLIP LED.
 			- EQ: Low 80 Hz, High 12 kHz, each ±15 dB.
 		- **Stereo channels** — BAL and LEVEL.
-		- No FX send, no compressor and no internal effects.
+		- No FX [[Audio/Aux Send]], no compressor and no internal effects.
 	- ## Outputs and Monitoring
 		- **MAIN MIX** — sets the main L/R outputs.
 		- **PHONES/MONITOR** — sets the headphones. The 502S has no MONITOR outputs.
@@ -22,18 +22,18 @@ vendor-url:: https://www.behringer.com/en/products/0601-AHT
 		- **STREAM TO MONITOR/PHONES** — sends the same to the phones only, keeping it out of the main mix.
 		- **Meter** — 4 segments.
 	- ## USB Audio Interface
-		- [[USB/Connector/Ref/USB-B]], UAC2 class compliant.
+		- [[USB/Connector/Ref/USB-B]], class compliant with [[USB/UAC]] 2.0.
 		- 2 in, 2 out at 48 kHz / 16-bit.
 		- The computer hears the main mix. Its playback comes back on ch 4/5.
 		- Behringer describes no loopback or multitrack mode.
 	- ## Connectors
-		- XLR — 1 × mic input.
-		- [[Audio/Connector/Phone/TRS/6.35mm]] — 1 × mono line input, 2 × stereo input pair, MAIN L/R (impedance-balanced), and PHONES.
+		- [[Audio/Connector/XLR]] — 1 × mic input.
+		- [[Audio/Connector/Phone/TRS/6.35mm]] — 1 × mono line input, 2 × stereo input pair, MAIN L/R (impedance-[[Audio/Balanced]]), and PHONES.
 		- [[Audio/Connector/RCA/Stereo]] — STREAM IN and STREAM OUT.
 		- [[USB/Connector/Ref/USB-B]] — audio interface.
 		- DC power input and a power switch.
 	- ## Electrical
-		- Same mic, line, stream, main and phones figures as the [[Behringer/Mixer/XENYX 802S]], including −109 dBu main mix noise.
+		- Same mic, line, stream, main and phones figures as the [[Behringer/Mixer/XENYX 802S]], including −109 [[Audio/dBu]] main mix noise.
 	- ## Power
 		- External adaptor, 100–240 V in, 18 V DC 1.0 A out, the same as the 802S's.
 		- 8 W consumption.
