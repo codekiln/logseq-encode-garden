@@ -8,26 +8,28 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 		- Row 1, column 2 (purple)
 			- **Message:** CC 114, channel 16. Moved from CC 116 on [[2026-11-19 Thu]], which it shared with the Set Locator pad.
 			- **Behavior:** [[Launchpad/Custom/Mode/Pad Mode]] Momentary; on value 127, off value 0.
-			- **Controls:** intended for [[Ableton/Live/UI/Control Bar/Button/Stop]].
+			- **Controls:** [[Ableton/Live/UI/Control Bar/Button/Stop]].
 		- Row 1, column 3 (magenta)
 			- **Message:** CC 119, channel 16.
 			- **Behavior:** Toggle; on value 127, off value 0.
-			- **Controls:** [[Launchpad/Custom/Mode/1 Arrangement]] maps this CC to [[Ableton/Live/UI/Control Bar/Button/Arrangement Record]].
+			- **Controls:** [[Ableton/Live/UI/Control Bar/Button/Arrangement Record]] (Global Record in Live's MIDI Mappings list).
 		- Row 1, column 6 (cyan)
 			- **Message:** CC 117, channel 16.
 			- **Behavior:** Trigger; value 127.
-			- **Controls:** [[Launchpad/Custom/Mode/1 Arrangement]] maps this CC to Previous Locator.
+			- **Controls:** Previous Locator.
 		- Row 1, column 7 (yellow)
 			- **Message:** CC 116, channel 16.
 			- **Behavior:** Trigger; value 127.
-			- **Controls:** [[Launchpad/Custom/Mode/1 Arrangement]] maps this CC to [[Ableton/Live/UI/Arrangement View/Button/Set Locator]].
+			- **Controls:** [[Ableton/Live/UI/Arrangement View/Button/Set Locator]] (Add Locator in Live's MIDI Mappings list).
 		- Row 1, column 8 (blue)
 			- **Message:** CC 118, channel 16.
 			- **Behavior:** Trigger; value 127.
-			- **Controls:** [[Launchpad/Custom/Mode/1 Arrangement]] maps this CC to Next Locator.
+			- **Controls:** Next Locator.
 		- Row 2, all 8 pads (green)
 			- **Message:** CC 115, channel 16.
 			- **Behavior:** Horizontal Bipolar Fader across the row.
-			- **Controls:** not documented yet.
+			- **Controls:** the crossfader ([[Ableton/Live/UG/18 Mixing/05 Using Live's Crossfader]]), listed as Master | Mixer, Crossfader Center in Live's MIDI Mappings list.
 	- ## Mode settings
 		- On colour: white.
+	- ## Live mappings
+		- The Controls lines above come from the MIDI mappings saved in the `26.11.18-Wed` Live Set on [[2026-11-19 Thu]], read from its `.als` file ([[Ableton/File/.als]]).
