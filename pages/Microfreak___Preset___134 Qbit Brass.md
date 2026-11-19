@@ -42,6 +42,9 @@ preset-synth-file-sha256:: 913909de7e897290264ed0bc80f0b59312191f4a7afbd742f8d5c
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: on.
+	- ## Performance and session context
+		- The main envelope opens the low-pass filter as it pulls V.Analog Wave down. Listen for the change in color as a held note swells and settles. The cycling envelope also moves Timbre during a held note.
+		- The spoken introduction identifies Qbit Brass in [[GitP/A/Session/26/11/18-Wed]]. The October capture documents the factory settings. The recording combines separate audio takes with panning and reverb.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- [[Microfreak/CLI/Inspect a preset]] preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.
