@@ -8,7 +8,12 @@ logseq-entity:: [[Logseq/Entity/Software/Project]]
 	- Engines: GitHub Copilot, [[Claude/Code]], [[Codex]], Google Gemini, and Pi.
 	- Agent jobs run read-only and sandboxed by default. Writes back to GitHub go through separate `safe-outputs` jobs with scoped permissions.
 	- Suited to tasks that need judgment, such as issue triage, pull request review, CI failure investigation, and keeping docs current. Builds, tests, and deploys stay in ordinary Actions workflows.
-	- Install with `gh extension install github/gh-aw`.
 	- Written in [[Go]].
 	- Reading guide: [[gh-aw/Blog/26/01/Welcome to Peli's Agent Factory]] introduces GitHub Next's 100+ workflows and its 19-part Meet the Workflows tour.
 	- Work notes: I reviewed a colleague's draft pull request that proposed reusable gh-aw workflows ([[2026-11-05 Thu]]) and wrote up [what I found](https://claude.ai/artifact/QQQXyNRzMtfV2NY9Ao681f) and [where else gh-aw could run](https://claude.ai/artifact/WAJwWgGkWCP9QvmZnweLV1) as Claude artifacts. Ticket HUB-555 tracks the work; the ticket, the pull request, and the team's reference page are in my work garden.
+	- ## Install
+		- ~~~bash
+		  gh extension install github/gh-aw
+		  ~~~
+		- Installed here: v1.0.1, checked [[2026-11-19 Thu]] with `gh extension list`.
+		- Declared in the dotfiles at `chezmoi/dot_config/gh/extensions.txt` by [codekiln/dotfiles#208](https://github.com/codekiln/dotfiles/pull/208), alongside [[gh-actions-lock]] and [[gh-dash]].
