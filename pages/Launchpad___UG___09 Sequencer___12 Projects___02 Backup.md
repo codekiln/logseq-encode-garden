@@ -3,4 +3,4 @@ up:: [[Launchpad/UG/09 Sequencer/12 Projects]]
 prev:: [[Launchpad/UG/09 Sequencer/12 Projects/01 Save]]
 
 - # 9.12.2 Backing up your Projects
-	- [Novation Components]([[Novation/Components]]) can back up [Projects]([[Launchpad/Project]]) online. It is available in a Web MIDI browser or as a standalone download from the Novation Customer Portal.
+	- [[Novation/Components]] can back up [[Launchpad/Project]]s online. It is available in a Web MIDI browser or as a standalone download from the Novation Customer Portal.

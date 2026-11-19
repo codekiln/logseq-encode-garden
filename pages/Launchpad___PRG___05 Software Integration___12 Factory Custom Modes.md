@@ -8,4 +8,4 @@ prev:: [[Launchpad/PRG/05 Software Integration/11 Programmer Layout]]
 		- ![Custom Mode 7 layout](../assets/.remote/logseq-encode-garden/Launchpad___PRG___05-Software-Integration___12-Factory-Custom-Modes___Asset___Custom-Mode-7.png)
 	- Custom Mode 8 uses the Programmer grid numbering, notes 11-88.
 		- ![Custom Mode 8 layout](../assets/.remote/logseq-encode-garden/Launchpad___PRG___05-Software-Integration___12-Factory-Custom-Modes___Asset___Custom-Mode-8.png)
-	- The figures label only the 8x8 grid in both modes. Changing these mappings requires [Novation Components]([[Novation/Components]]), per [[Launchpad/PRG/04 Controlling the Surface]]. See also [[Launchpad/UG/08 Custom Modes/02 Default Custom Modes]].
+	- The figures label only the 8x8 grid in both modes. Changing these mappings requires [[Novation/Components]], per [[Launchpad/PRG/04 Controlling the Surface]]. See also [[Launchpad/UG/08 Custom Modes/02 Default Custom Modes]].

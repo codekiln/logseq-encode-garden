@@ -1,7 +1,7 @@
 - # Novation Launchpad Pro Mk3
 	- ## Firmware
-		- Firmware **1.2.2** installed on [[2026-10-24 Sat]] via [Novation Components]([[Novation/Components]]).
+		- Firmware **1.2.2** installed on [[2026-10-24 Sat]] via [[Novation/Components]].
 		- ### 1.2.2 release notes
 			- Fixed aftertouch sensitivity settings having no effect.
 			- Fixed a restart triggered by receiving a MIDI Stop message during a scene change.
-			- Source: Launchpad Pro MK3 firmware 1.2.2 technical release notes in [Novation Components]([[Novation/Components]]).
+			- Source: Launchpad Pro MK3 firmware 1.2.2 technical release notes in [[Novation/Components]].
