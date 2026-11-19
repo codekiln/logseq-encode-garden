@@ -2,9 +2,9 @@ logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Launchpad/UG/09 Sequencer/12 Projects]]
 
 - # What are [[Novation/Launchpad/Pro/Mk3]] "packs"?
-	- Seen in the Projects tab of Novation Components at `components.novationmusic.com/launchpad-pro-mk3/projects`, with **New Pack**, **My Packs**, **Novation Packs**, **Get Pack from Launchpad Pro [MK3]**, **Create Pack** and **Upload Pack**.
+	- Seen in the Projects tab of [Novation Components]([[Novation/Components]]) at `components.novationmusic.com/launchpad-pro-mk3/projects`, with **New Pack**, **My Packs**, **Novation Packs**, **Get Pack from Launchpad Pro [MK3]**, **Create Pack** and **Upload Pack**.
 	- ## [[AI Answer]]
-		- **Short answer:** a pack is how Novation Components handles the Launchpad Pro's sequencer Projects as one set. **Get Pack** reads the Projects off the device in one go, and the set can be saved to your Novation account or your computer. This comes from a search summary of Novation's [Launchpad Pro Mk3 Components guide](https://support.novationmusic.com/hc/en-gb/articles/4411807448850-Launchpad-Pro-Mk3-Components-guide); the page itself refused automated fetches, so it has not been read word for word.
+		- **Short answer:** a pack is how Novation Components handles the Launchpad Pro's sequencer [Projects]([[Launchpad/Project]]) as one set. **Get Pack** reads the Projects off the device in one go, and the set can be saved to your Novation account or your computer. This comes from a search summary of Novation's [Launchpad Pro Mk3 Components guide](https://support.novationmusic.com/hc/en-gb/articles/4411807448850-Launchpad-Pro-Mk3-Components-guide); the page itself refused automated fetches, so it has not been read word for word.
 		- **What goes in it:** Projects. A Project stores the sequencer's Patterns, Scenes, scale and root, track types and track MIDI channels, and the device has 64 Project slots ([[Launchpad/UG/09 Sequencer/12 Projects]]). The user guide says Components can back up Projects online ([[Launchpad/UG/09 Sequencer/12 Projects/02 Backup]]).
 		- **The buttons, read from the screenshot:**
 			- **Get Pack from Launchpad Pro [MK3]** — copy the device's current Projects into Components.

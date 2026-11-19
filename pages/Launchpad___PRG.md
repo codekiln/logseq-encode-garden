@@ -9,7 +9,7 @@ logseq-entity:: [[Logseq/Entity/Book]], [[Logseq/Entity/Series]]
 		- ### Sequencer Projects and Custom Modes
 			- The guide documents no SysEx for sequencer Project, Pattern, Scene, or step data, no Custom Mode upload or download, and no Project backup or restore. A full-text search of the PDF finds "Projects" and "Patterns" only as names in the layout list (p. 7).
 			- Select Layout can switch the surface to Sequencer Projects (`0Dh`), Sequencer Patterns (`0Eh`), Custom Mode (`03h`, pages 0-7), and Custom mode Settings (`13h`) (p. 7). Those messages change only what the surface shows; they do not read or write Project, Pattern, or Custom Mode contents.
-			- The guide says Custom Mode MIDI mappings are edited in Novation Components (p. 8). The User Guide also names Components for Project backup: [[Launchpad/UG/09 Sequencer/12 Projects/02 Backup]].
+			- The guide says Custom Mode MIDI mappings are edited in [Novation Components]([[Novation/Components]]) (p. 8). The User Guide also names Components for [Project]([[Launchpad/Project]]) backup: [[Launchpad/UG/09 Sequencer/12 Projects/02 Backup]].
 			- MIDI can still light pads in a Custom Mode that has no On Colour (p. 8). Factory Custom Modes 7 and 8 are set up for this (p. 20).
 	- ## Chapters
 		- [[Launchpad/PRG/01 About this Guide]]

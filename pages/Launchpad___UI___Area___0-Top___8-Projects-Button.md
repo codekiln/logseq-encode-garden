@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/UI/Control]]
 up:: [[Launchpad/UI/Area/0-Top]]
 
 - # Projects button
-	- Opens Projects view, where sequencer projects are saved and loaded.
+	- Opens Projects view, where sequencer [Projects]([[Launchpad/Project]]) are saved and loaded.
 	- ## Gestures
 		- [[Launchpad/UI/Area/0-Top/8-Projects-Button/Shift/Save]]
 	- ## Remote control

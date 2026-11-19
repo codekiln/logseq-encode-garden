@@ -9,4 +9,4 @@ next:: [[Launchpad/UG/01 Introduction/02 In the Box]]
 	- **Chord Mode:** explore, build, save, and play chords from the grid.
 	- **Note and Scale Modes:** play melodies and chords in key; Drum Mode maps a drum rack to the grid.
 	- **MIDI connections:** MIDI In, Out 1, and Out 2/Thru connect external equipment.
-	- **Custom Modes:** eight editable MIDI layouts made with Novation Components.
+	- **Custom Modes:** eight editable MIDI layouts made with [Novation Components]([[Novation/Components]]).

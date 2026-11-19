@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Launchpad/PRG]], [[Launchpad/Custom/1/Arrangement]]
 
-- # Can I define [[Launchpad]] sequencer Projects programmatically, or do I have to use Novation Components?
+- # Can I define [[Launchpad]] sequencer [Projects]([[Launchpad/Project]]) programmatically, or do I have to use [Novation Components]([[Novation/Components]])?
 	- ## [[AI Answer]]
 		- **Short answer:** there is no documented way to write a Project from code. Novation Components is the only official editor. But a Project travels as a SysEx file, so you can send a Project file you already have without Components; building one from scratch means reverse-engineering an undocumented format.
 		- [[Answer/Official]] from the [Launchpad Pro Mk3 Components guide](https://support.novationmusic.com/hc/en-gb/articles/4411807448850-Launchpad-Pro-Mk3-Components-guide) and [[Launchpad/PRG]]:
