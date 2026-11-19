@@ -1,8 +1,8 @@
-- # UI Control Kind
+# UI Control Kind
 	- A proposal for describing how a [[Logseq/Entity/UI/Control]] changes its value, apart from the protocol that carries it. Not yet a preference.
 	- ## Two separate questions
 		- **Form** — what the control is physically or on screen: knob, button, pad, fader, field. The `<Kind>` segment of a control's page name records the form, in the product's own word.
-		- **Behavior** — what happens to the value when the control is operated. The same form can behave in different ways: a Launchpad pad can be a toggle, a momentary button or a trigger, as in [[Launchpad/Custom/Mode/1 Arrangement]].
+		- **Behavior** — what happens to the value when the control is operated. The same form can behave in different ways: a Launchpad pad can be a toggle, a momentary button or a trigger, as in [[Launchpad/Custom/1/Arrangement]].
 		- MIDI is one way to carry a control's value to another device. A behavior describes the control itself; a MIDI CC number or a MIDI mapping goes under the control's **Remote control** block.
 	- ## Proposed behaviors
 		- ### Buttons

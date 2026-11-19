@@ -1,3 +1,6 @@
+logseq-entity:: [[Logseq/Entity/Launchpad/Custom/Mode]]
+launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-mk3/custom-modes/780760
+
 - # Arrangement
 	- [[Launchpad]] Custom Mode **1** for controlling Arrangement Record in [[Ableton/Live]].
 	- ## Pad
@@ -16,6 +19,6 @@
 		- The top row in Custom Mode 1 has Arrangement Record, Set Locator, Previous Locator, and Next Locator from left to right.
 		- Arrangement Record keeps its red Toggle pad on channel 16, CC119. Set Locator is yellow CC116; Previous Locator is cyan CC117; Next Locator is blue CC118. Locator pads use Trigger behavior, sending 127 on each press.
 		- The Set control adds a locator at the current position. At an existing locator, the same control deletes it. Previous and Next jump between Arrangement locators and follow Live’s launch quantization during playback.
-		- [Download the mode with locator controls](../assets/Launchpad___Custom___Mode___1%20Arrangement___With%20Locators.syx) · [Original Arrangement Record mode](../assets/Launchpad___Custom___Mode___1%20Arrangement___Before%20Locators.syx). Upload a mode in Novation Components and send it to slot 1 to restore it.
+		- [Download the mode with locator controls](../assets/Launchpad___Custom___1___Arrangement___With%20Locators.syx) · [Original Arrangement Record mode](../assets/Launchpad___Custom___1___Arrangement___Before%20Locators.syx). Upload a mode in Novation Components and send it to slot 1 to restore it.
 		- [[GitP/A/Template/Pattern A and B]] saves the corresponding Live MIDI mappings.
 		- [Ableton Live 11 locator controls](https://www.ableton.com/en/live-manual/11/arrangement-view/#launching-the-arrangement-with-locators).

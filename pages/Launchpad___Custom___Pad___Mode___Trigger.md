@@ -1,0 +1,1 @@
+- **Trigger Mode** — sends one set value on each press.

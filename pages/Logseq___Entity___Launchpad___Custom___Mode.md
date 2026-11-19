@@ -3,15 +3,16 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 - # Launchpad Custom Mode
 	- In this garden, **Launchpad Custom Mode** pages document one Custom Mode built in [Novation Components](https://components.novationmusic.com/) for the [[Novation/Launchpad/Pro/Mk3]]: what each pad sends, how it behaves, and what it controls.
 	- ## Examples
-		- [[Launchpad/Custom/Mode/1 Arrangement]]
-		- [[Launchpad/Custom/Mode/1 Ableton Ctrl]]
+		- [[Launchpad/Custom/1/Arrangement]]
+		- [[Launchpad/Custom/1/Ableton-Ctrl]]
 	- ## When a page is a Launchpad Custom Mode
 		- The page's subject is one named mode from the Components "My Custom Modes" list, which can be sent to one of the Launchpad's Custom Mode slots ([[Launchpad/UG/08 Custom Modes]]).
-		- Not this entity: the factory Custom Modes described in [[Launchpad/UG/11 Appendix/01 Default MIDI Mappings]], or pages about a Custom Mode setting in general, such as [[Launchpad/Custom/Mode/Pad Mode]].
+		- Not this entity: the factory Custom Modes described in [[Launchpad/UG/11 Appendix/01 Default MIDI Mappings]], or pages about a Custom Mode setting in general, such as [[Launchpad/Custom/Pad/Mode]].
 	- ## Naming
-		- `Launchpad/Custom/Mode/<Name>`, where `<Name>` is the mode's name in Components, as written there. A leading number in that name is part of the name, as in `1 Ableton Ctrl`.
+		- `Launchpad/Custom/<Slot>/<Name>`. `<Slot>` is the Custom Mode slot the mode is made for, 1 to 8, which is also the leading number in its Components name. `<Name>` is the rest of the Components name with its words joined by hyphens: Components' `1 Ableton Ctrl` is `Launchpad/Custom/1/Ableton-Ctrl`.
+		- [[Launchpad/Custom]] explains the slots and lists the modes made for each.
 	- ## Finding and deduplicating
-		- Search `pages/Launchpad___Custom___Mode___*` and the mode's name. Two Components modes with the same name get one page each only if both are in use; otherwise update the existing page.
+		- Search `pages/Launchpad___Custom___*` and the mode's name. Two Components modes with the same name get one page each only if both are in use; otherwise update the existing page.
 	- ## Frontmatter
 		- `logseq-entity:: [[Logseq/Entity/Launchpad/Custom/Mode]]`
 		- `launchpad-custom-mode-url::` — the mode's address in Components, such as `https://components.novationmusic.com/launchpad-pro-mk3/custom-modes/786076`.
@@ -21,7 +22,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- `## Pads` — one child per assigned pad or button, giving:
 			- **Position** — grid row and column counted from 1 at the top left, or the button's [[Launchpad/UI]] page for an edge button.
 			- **Message** — note, CC number or Program Change, and MIDI channel.
-			- **Behavior** — the [[Launchpad/Custom/Mode/Pad Mode]] value, with on and off values.
+			- **Behavior** — the [[Launchpad/Custom/Pad/Mode]] value, with on and off values.
 			- **Colour** — the pad's colour as Components names or shows it.
 			- **Controls** — the [[Logseq/Entity/UI/Control]] page it is mapped to in Live, such as [[Ableton/Live/UI/Control Bar/Button/Stop]], and the Live Set or template that holds the mapping.
 		- `## Mode settings` — the shared on colour and anything set in Components' Custom Mode Settings.

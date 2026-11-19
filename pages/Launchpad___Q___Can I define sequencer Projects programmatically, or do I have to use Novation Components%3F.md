@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-see-also:: [[Launchpad/PRG]], [[Launchpad/Custom/Mode/1 Arrangement]]
+see-also:: [[Launchpad/PRG]], [[Launchpad/Custom/1/Arrangement]]
 
 - # Can I define [[Launchpad]] sequencer Projects programmatically, or do I have to use Novation Components?
 	- ## [[AI Answer]]
@@ -11,5 +11,5 @@ see-also:: [[Launchpad/PRG]], [[Launchpad/Custom/Mode/1 Arrangement]]
 		- **What that leaves you, programmatically:**
 			- **Replaying a saved Project — likely works.** Components runs over Web MIDI and the file is SysEx, so sending that file from another SysEx tool (`sendmidi`, Python `mido`, SysEx Librarian) should reproduce what Components sends. This is an inference; nobody in the garden has tested it yet.
 			- **Generating a Project from data — undocumented.** A search found no public spec or community reverse-engineering of the Project format. You would capture several `.syx` exports that differ by one step and diff the bytes.
-			- **Custom Modes are the precedent.** Their Components export is also undocumented SysEx with the `F0 00 20 29 02 0E` header, yet readable: the `.syx` files on [[Launchpad/Custom/Mode/1 Arrangement]] show the mode name in plain ASCII followed by one short record per control. Project files would need the same byte-level reading.
+			- **Custom Modes are the precedent.** Their Components export is also undocumented SysEx with the `F0 00 20 29 02 0E` header, yet readable: the `.syx` files on [[Launchpad/Custom/1/Arrangement]] show the mode name in plain ASCII followed by one short record per control. Project files would need the same byte-level reading.
 		- **Still open:** whether the device accepts a Project `.syx` from a tool other than Components, and the byte layout of a Project. A test: get one Project out of Components, send it back to an empty slot with `sendmidi`, and check the slot on the device.

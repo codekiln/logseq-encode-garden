@@ -7,7 +7,7 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 	- ## Pads
 		- Row 1, column 2 (purple)
 			- **Message:** CC 114, channel 16. Moved from CC 116 on [[2026-11-19 Thu]], which it shared with the Set Locator pad.
-			- **Behavior:** [[Launchpad/Custom/Mode/Pad Mode]] Momentary; on value 127, off value 0.
+			- **Behavior:** [[Launchpad/Custom/Pad/Mode]] Momentary; on value 127, off value 0.
 			- **Controls:** [[Ableton/Live/UI/Control Bar/Button/Stop]].
 		- Row 1, column 3 (magenta)
 			- **Message:** CC 119, channel 16.

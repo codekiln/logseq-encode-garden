@@ -5,7 +5,7 @@ up:: [[Launchpad/UI/Area/4-Bottom/1-Track-Select]]
 	- In [Session mode]([[Launchpad/UI/Mode/1-Session]]), selects the track shown in grid column 1. When Record Arm, Mute or Solo is chosen in the [Track Control row]([[Launchpad/UI/Area/4-Bottom/2-Track-Control]]), the button turns that state on or off for the track. When Stop Clip is chosen, it stops the track's playing clip at the end of the phrase.
 		- Hold [Fixed Length]([[Launchpad/UI/Area/1-Left/6-Fixed-Length-Button]]) briefly until the Track Select buttons pulse blue, then press this button to limit new recordings to one bar.
 	- In [Custom mode]([[Launchpad/UI/Mode/4-Custom]]), selects Custom Mode 1. Its factory layout is eight vertical faders on CC 7–14.
-		- [[Launchpad/Custom/Mode/1 Arrangement]] is a Custom Mode 1 layout for Arrangement Record and locators in Ableton Live.
+		- [[Launchpad/Custom/1/Arrangement]] is a Custom Mode 1 layout for Arrangement Record and locators in Ableton Live.
 	- In [Sequencer mode]([[Launchpad/UI/Mode/5-Sequencer]]), selects [Track 1]([[Launchpad/UI/Mode/5-Sequencer/Track/1-Orange]]). The button lights orange, the same color as the track's Play Area.
 		- In Patterns View, hold [Print to Clip]([[Launchpad/UI/Area/3-Right/8-Print-to-Clip-Button]]) and press this button to print Track 1's selected Pattern or chain to an Ableton Live clip slot.
 		- In [Projects View]([[Launchpad/UI/Area/0-Top/8-Projects-Button]]), while saving to a different slot, chooses a Project color.

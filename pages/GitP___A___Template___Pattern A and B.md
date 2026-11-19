@@ -1,5 +1,5 @@
-- # Pattern A and B
-	- A live-looping setup for [[GitP/A]] in [[Ableton/Live]], with paired audio and MIDI tracks for Pattern A and Pattern B, a full performance capture, commentary, and the [[Launchpad/Custom/Mode/1 Arrangement]] controls.
+# Pattern A and B
+	- A live-looping setup for [[GitP/A]] in [[Ableton/Live]], with paired audio and MIDI tracks for Pattern A and Pattern B, a full performance capture, commentary, and the [[Launchpad/Custom/1/Arrangement]] controls.
 	- Record an audio loop alongside its MIDI in Session View. Arrangement Record captures launched clips on the timeline; the performance capture tracks preserve the combined signal.
 	- ## Recording routes
 		- Pattern A and Pattern B audio use external input 3 and feed Performance Audio. Their MIDI feeds Performance MIDI; Performance MIDI has no hardware output, so recorded loops do not replay into the MicroFreak.
