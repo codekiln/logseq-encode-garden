@@ -1,5 +1,8 @@
+next:: [[GitP/A/Log/26/11/19-Thu]]
+
 - [[2026-11-18 Wed]]
 	- ## on [[mise-en-place]]
+	  collapsed:: true
 		- last night before bed, 
 		  confronted significant 
 		  resistance in dark 
@@ -25,3 +28,7 @@
 						  by always choosing multitrack mode;
 						  then ableton sets should always use track 3 in
 						  for the [[Microfreak]] audio in
+	- ## evening session
+		- on [[Microfreak/Preset/134 Qbit Brass]]
+		- not inspired
+		- used

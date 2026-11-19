@@ -11,9 +11,10 @@ preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/06
 preset-synth-microfreak-parameter-payload-sha256:: 89104f4b6a88d0f5aeb238ee6f601ab2526ddafe1926834a5afb5f219958766c
 preset-synth-file:: [Qbit Brass — October 25 slot 134 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___134-Qbit-Brass___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 913909de7e897290264ed0bc80f0b59312191f4a7afbd742f8d5c7e1c39edcbf
+
 - # Notes
 	- ## Saved export and provenance
-		- Saved export: read from the device's slot 134 over USB on October 25, 2026 with `mise run microfreak:download --slot 134`. Two consecutive reads returned the same file.
+		- Saved export: read from the device's slot 134 over USB on October 25, 2026 with `mise run microfreak:download --slot 134`.
 		- The parameter payload matches the MIDI Control Center archives Factory 2.0, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 2.0 slot 110, Factory 2.1 slot 212, Factory 3.0 slot 212, Factory 6.0 slot 227). Comparison used `mise run microfreak:compare`.
 		- [Download the slot 134 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___134-Qbit-Brass___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/134 Qbit Brass/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
