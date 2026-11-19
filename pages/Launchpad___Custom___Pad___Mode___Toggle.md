@@ -1,1 +1,2 @@
-- **Toggle Mode** — each press switches between the on value and the off value, so the pad stays on until pressed again.
+- **Toggle Mode** — each press switches between the on value and the off value, so the pad stays on until pressed again. Like [[Launchpad/Custom/Pad/Mode/Momentary]], it has distinct on and off [[MIDI/CC]] values.
+-

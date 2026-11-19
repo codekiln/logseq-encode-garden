@@ -1,1 +1,1 @@
-- **Momentary Mode** — sends the on value when the pad is pressed and the off value when it is released. The pad is on only while held.
+- **Momentary Mode** — sends the on value when the pad is pressed and the off value when it is released. The pad is on only while held. Like [[Launchpad/Custom/Pad/Mode/Toggle]], it has distinct on and off [[MIDI/CC]] values.

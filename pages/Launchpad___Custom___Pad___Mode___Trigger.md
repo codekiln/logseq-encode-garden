@@ -1,1 +1,1 @@
-- **Trigger Mode** — sends one set value on each press.
+- **Trigger Mode** — sends one set value on each press. Only has an `On` MIDI CC value, no off.
