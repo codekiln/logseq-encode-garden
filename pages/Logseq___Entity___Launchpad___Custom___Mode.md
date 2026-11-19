@@ -14,8 +14,8 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Finding and deduplicating
 		- Search `pages/Launchpad___Custom___*` and the mode's name. Two Components modes with the same name get one page each only if both are in use; otherwise update the existing page.
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Launchpad/Custom/Mode]]`
-		- `launchpad-custom-mode-url::` — the mode's address in Components, such as `https://components.novationmusic.com/launchpad-pro-mk3/custom-modes/786076`.
+		- Set `logseq-entity` to [[Logseq/Entity/Launchpad/Custom/Mode]].
+		- Set `launchpad-custom-mode-url` to the mode's [address in Components](https://components.novationmusic.com/launchpad-pro-mk3/custom-modes/786076).
 		- Shared conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- H1 with the mode's name, then one sentence on what the mode is for.
