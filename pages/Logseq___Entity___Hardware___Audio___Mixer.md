@@ -1,0 +1,26 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Audio Mixer
+	- In this garden, **Audio Mixer** pages model one mixing-console model: the channels it takes, what each channel can shape, where the mix goes out, and the connectors on its panels.
+	- ## What counts as an instance
+		- A named model from a named maker: an analog or digital mixer, including one with a built-in USB audio interface.
+		- Not this type: a USB audio interface with no mixing controls, or the mixer inside a DAW, such as [[Ableton/Live/UG/03 Live Concepts/14 The Mixer]].
+	- ## Naming
+		- `Maker/Mixer/<Model>`, following the creator-namespace rule on [[Logseq/Pref/Page/Name]]: [[Behringer/Mixer/XENYX 802S]].
+		- The model keeps the maker's series name and capitalization. A revision with a suffix, such as the USB `S` models, gets its own page apart from the model without it.
+	- ## Frontmatter
+		- The page carries `logseq-entity:: [[Logseq/Entity/Hardware/Audio/Mixer]]`. A mixer that was bought adds [[Logseq/Entity/Purchase]] after it and takes that type's properties too.
+		- `vendor-url::` — the maker's page for the model.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- H1 is the model name as the maker writes it, then one sentence on what it is.
+		- **Channels** — each input channel, what it accepts, and its preamp.
+		- **Channel Strip** — the gain, EQ, sends, pan and level controls each channel carries.
+		- **Outputs and Monitoring** — main mix, sends and phones.
+		- **USB Audio Interface** — when present: connector, channels each way, sample rate and bit depth, and what the computer hears.
+		- **Connectors** — one link per [[Logseq/Entity/Hardware/Connector/Audio]] instance on the panels.
+		- **Dimensions** and **In the Box** as the maker states them.
+		- **Compared** — how the model differs from its nearest siblings.
+		- Figures come from the maker's own product page or manual.
+	- ## Examples in this garden
+		- [[Behringer/Mixer/XENYX 802S]], [[Behringer/Mixer/XENYX 502S]].
