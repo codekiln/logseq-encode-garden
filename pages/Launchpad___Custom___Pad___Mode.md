@@ -1,7 +1,7 @@
 up:: [[Launchpad/UG/08 Custom Modes]]
 
 - # Pad mode
-	- Setting in [Novation Components](https://components.novationmusic.com/)' Custom Mode editor that decides what a pad sends when it is pressed and released. It appears in the pad's side panel, above the CC number, on value, off value and MIDI channel.
+	- Pad mode determines the behavior of a pad button in [[Novation/Components]] custom modes: what the pad sends when it is pressed and when it is released. It appears in the pad's side panel in the Custom Mode editor, above the CC number, on value, off value and MIDI channel.
 	- The Launchpad Pro manual describes the three behaviours: a pad "can toggle, trigger, or act momentarily" ([[Launchpad/UG/08 Custom Modes/04 Set Up a Custom Mode]]).
 	- ## Values
 		- {{embed [[Launchpad/Custom/Pad/Mode/Momentary]]}}
