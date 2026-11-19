@@ -6,7 +6,7 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 	- Every control sends a MIDI CC on channel 16. Grid rows 3 to 8, three pads in row 1 and all edge buttons have nothing assigned.
 	- ## Pads
 		- Row 1, column 2 (purple)
-			- **Message:** CC 116, channel 16.
+			- **Message:** CC 114, channel 16. Moved from CC 116 on [[2026-11-19 Thu]], which it shared with the Set Locator pad.
 			- **Behavior:** [[Launchpad/Custom/Mode/Pad Mode]] Momentary; on value 127, off value 0.
 			- **Controls:** intended for [[Ableton/Live/UI/Control Bar/Button/Stop]].
 		- Row 1, column 3 (magenta)
