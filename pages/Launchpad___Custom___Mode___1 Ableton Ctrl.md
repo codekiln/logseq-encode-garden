@@ -2,11 +2,32 @@ logseq-entity:: [[Logseq/Entity/Launchpad/Custom/Mode]]
 launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-mk3/custom-modes/786076
 
 - # 1 Ableton Ctrl
-	- [[Launchpad]] Custom Mode for controlling [[Ableton/Live]]'s transport and other controls from the grid.
+	- [[Launchpad]] Custom Mode for controlling [[Ableton/Live]]'s transport, Arrangement Record and locators from the top of the grid, with one fader below them.
+	- Every control sends a MIDI CC on channel 16. Grid rows 3 to 8, three pads in row 1 and all edge buttons have nothing assigned.
 	- ## Pads
-		- Grid row 1, column 2 (purple)
+		- Row 1, column 2 (purple)
 			- **Message:** CC 116, channel 16.
 			- **Behavior:** [[Launchpad/Custom/Mode/Pad Mode]] Momentary; on value 127, off value 0.
-		- Grid row 1 has more coloured pads at columns 3 (magenta), 6 (cyan), 7 (yellow) and 8 (blue), and all of row 2 is green. Their messages are not documented yet.
+			- **Controls:** intended for [[Ableton/Live/UI/Control Bar/Button/Stop]].
+		- Row 1, column 3 (magenta)
+			- **Message:** CC 119, channel 16.
+			- **Behavior:** Toggle; on value 127, off value 0.
+			- **Controls:** [[Launchpad/Custom/Mode/1 Arrangement]] maps this CC to [[Ableton/Live/UI/Control Bar/Button/Arrangement Record]].
+		- Row 1, column 6 (cyan)
+			- **Message:** CC 117, channel 16.
+			- **Behavior:** Trigger; value 127.
+			- **Controls:** [[Launchpad/Custom/Mode/1 Arrangement]] maps this CC to Previous Locator.
+		- Row 1, column 7 (yellow)
+			- **Message:** CC 116, channel 16.
+			- **Behavior:** Trigger; value 127.
+			- **Controls:** [[Launchpad/Custom/Mode/1 Arrangement]] maps this CC to [[Ableton/Live/UI/Arrangement View/Button/Set Locator]].
+		- Row 1, column 8 (blue)
+			- **Message:** CC 118, channel 16.
+			- **Behavior:** Trigger; value 127.
+			- **Controls:** [[Launchpad/Custom/Mode/1 Arrangement]] maps this CC to Next Locator.
+		- Row 2, all 8 pads (green)
+			- **Message:** CC 115, channel 16.
+			- **Behavior:** Horizontal Bipolar Fader across the row.
+			- **Controls:** not documented yet.
 	- ## Mode settings
 		- On colour: white.
