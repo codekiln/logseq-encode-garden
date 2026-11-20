@@ -1,0 +1,45 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+tags:: [[Diataxis/Concept]]
+see-also:: [[Logseq/Entity/MIDI/Port]]
+
+- # MIDI Message
+	- ## Overview
+		- A [[MIDI]] message is one instruction sent from one device to another: play this note, move this knob, switch to that preset, keep this tempo. A MIDI connection carries nothing but a stream of these messages, and no audio.
+		- Messages fall into two families. **Channel messages** carry one of 16 channel numbers, so a receiver can listen to some channels and ignore the rest. **System messages** carry no channel and reach every device on the cable or port.
+	- ## Context
+		- MIDI 1.0 was published in 1983 for 5-pin DIN cables. Its message set has changed little since, and USB and network connections carry the same messages.
+		- MIDI 2.0, adopted in 2020, defines a new packet format with finer resolution. The instruments in this garden, the [[Microfreak]] and the Launchpad Pro MK3, speak MIDI 1.0.
+	- ## Key Principles
+		- **A status value, then data.** Each message opens with a status value from 80h to FFh that names the message type, and for a channel message the channel too. Zero, one or two data values from 0 to 127 follow. That range is why so many MIDI settings stop at 127.
+		- **Channels count from 1 in menus and from 0 in the message.** The last hex digit of the status value is the channel: 90h is Note On on channel 1, 9Fh is Note On on channel 16.
+		- **Two data values make a finer range.** Where 128 steps is too coarse, MIDI pairs two values into a range of 0–16,383. [[MIDI/Pitch Bend]] always does this, and [[MIDI/CC]] can.
+	- ## Mechanism
+		- ### Channel voice messages
+			- [[MIDI/Note]] — Note On (90h–9Fh) and Note Off (80h–8Fh): which key, and how hard.
+			- [[MIDI/Aftertouch]] — pressure on a key after it bottoms out, per key (A0h–AFh) or one value for the channel (D0h–DFh).
+			- [[MIDI/CC]] — Control Change (B0h–BFh): a controller number and its value, for knobs, faders and pedals.
+			- [[MIDI/Program Change]] — (C0h–CFh): select preset 0–127.
+			- [[MIDI/Pitch Bend]] — (E0h–EFh): the bend wheel's position, 0–16,383.
+		- ### Channel mode messages
+			- Control Change numbers 120–127 change how a channel behaves rather than a sound parameter: All Sound Off, Reset All Controllers, Local Control, All Notes Off, and the Omni, Mono and Poly modes. [[MIDI/CC]] lists them.
+		- ### System common messages
+			- [[MIDI/SysEx]] — System Exclusive (F0h … F7h): a message of any length whose content a manufacturer defines, used for preset dumps, firmware and device-specific commands.
+			- Song Position Pointer (F2h) — where in the song to resume, counted in sixteenth notes. See [[MIDI/Clock]].
+			- MIDI Time Code Quarter Frame (F1h), Song Select (F3h) and Tune Request (F6h) complete the group.
+		- ### System real-time messages
+			- [[MIDI/Clock]] — Timing Clock (F8h), 24 per quarter note, with Start (FAh), Continue (FBh) and Stop (FCh).
+			- Active Sensing (FEh) — an optional signal that the connection is alive. A receiver that has heard one and then hears nothing for 300 ms turns its voices off.
+			- Reset (FFh) — returns every receiver to its power-up state.
+			- Real-time messages may arrive in the middle of other messages, including a long SysEx dump, so the clock stays steady.
+	- ## Examples
+		- The Launchpad Pro MK3 sends Note On with velocity 0 as its Note Off ([[Launchpad/PRG/03 MIDI]]).
+		- The MicroFreak's Filter knob sends CC 23 ([[Microfreak/UG/17 Ext Gear/09 MIDI CC Control]]).
+		- Renaming a MicroFreak preset over USB takes SysEx messages, then a Program Change to select the renamed preset ([[Microfreak/CLI/Preset metadata over USB]]).
+		- Ableton Live sends Clock and Song Position Pointer to keep external gear in time ([[Ableton/Live/UG/37 Sync with Link Tempo Follower and MIDI/03 Synchronizing via MIDI]]).
+	- ## Misconceptions
+		- **MIDI is not audio.** A MIDI file or clip holds instructions. The sound comes from whatever instrument receives them.
+		- **Not every control is a CC.** Pitch bend, aftertouch and program change are message types of their own, so a mapping that listens for CCs doesn't see them.
+		- **MPE is not a new message type.** MIDI Polyphonic Expression gives each sounding note its own channel, so channel-wide messages such as Pitch Bend, Channel Pressure and CC 74 shape one note at a time.
+	- ## Source
+		- [Summary of MIDI 1.0 Messages](https://midi.org/summary-of-midi-1-0-messages), MIDI Association
+		- [MIDI 1.0 Control Change Messages](https://midi.org/midi-1-0-control-change-messages), MIDI Association
