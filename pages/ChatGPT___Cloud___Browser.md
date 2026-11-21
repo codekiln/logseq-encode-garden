@@ -1,5 +1,4 @@
 logseq-entity:: [[Logseq/Entity/Software/Feature]]
-
 - # [ChatGPT cloud browser](https://help.openai.com/en/articles/20001280-using-cloud-browser-in-chatgpt)
 	- A web browser that [[ChatGPT/Work]] runs on a remote computer, so a task can read pages, click, fill in forms and finish steps on public and signed-in websites while the person is away. ChatGPT decides when to use it, and may use a connected app instead.
 	- ## History
@@ -7,11 +6,11 @@ logseq-entity:: [[Logseq/Entity/Software/Feature]]
 		- ChatGPT Work launched on 2026-07-09, and the same [release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) entry retired ChatGPT Atlas, the local Mac browser, as of 2026-08-09.
 		- Signing in to websites arrived on 2026-08-25, for [[ChatGPT/Plus]] and [[ChatGPT/Pro]].
 	- ## Parts
-		- **Plans** — paid plans except [[ChatGPT/Free]] and [[ChatGPT/Go]]; website sign-in is limited to Plus and Pro, per the 2026-08-25 release notes.
+		- **Plans** — paid plans except [[ChatGPT/Free]] and [[ChatGPT/Go]]; OpenAI documents website sign-in on web and mobile for Plus and Pro in its [browser guide](https://learn.chatgpt.com/docs/browser).
 		- **Takeover** — ChatGPT asks the person to take over the browser on a phone or computer when it gets stuck, and the person can ask for a takeover link at any time. The [[iPhone]] app supports Work, sign-in and takeover.
 		- **Confirmations** — ChatGPT asks in chat before a payment, booking or other hard-to-reverse action.
 		- **Website access** — Settings > Cloud browser offers "Always ask" (the default), "Auto approve" and "Always allow", plus per-site allow and block lists.
-		- **Secure sign-in form** — at a login page the task pauses and shows a form for the username, password and any one-time code. A separate review model checks the request for phishing first. The model never sees the credentials, and ChatGPT does not store them.
+		- **Secure sign-in form** — at a login page the task pauses and shows a form for the username, password and any one-time code. A separate review model checks the request for phishing first. The model cannot see the username or password, and ChatGPT does not store them. The iPhone app supports compatible password managers in this form.
 		- **Browser data** — the cloud browser keeps its own cookies and stays signed in until a session expires. Clear it under Settings > Cloud browser > Browser data > Cookies.
 	- ## Limits
 		- It uses none of the person's own browser data: saved passwords, cookies, extensions or existing sign-ins.

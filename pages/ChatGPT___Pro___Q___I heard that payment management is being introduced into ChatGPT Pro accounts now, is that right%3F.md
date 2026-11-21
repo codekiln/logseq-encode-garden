@@ -1,8 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-
 - # I heard that [[Pay/ment/Manage/ment]] is being introduced into [[ChatGPT/Pro]] accounts now, is that right?
 	- ## [[AI Answer]]
-		- **Short answer:** yes, in the US. OpenAI announced [[ChatGPT/Wallet]] on 2026-11-13.
-		- [[Answer/Official]] from the [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes), 2026-11-13: "Wallet is rolling out gradually in dots to ChatGPT Pro subscribers age 18 or older in the United States."
-		- Cards must be eligible US-issued American Express, Chase, Mastercard or Visa cards. The rollout is gradual, so an eligible account may not have it yet ([Making purchases with ChatGPT Wallet](https://help.openai.com/en/articles/20001654-making-purchases-with-chatgpt-wallet)).
-		- [Introducing ChatGPT Wallet](https://openai.com/index/introducing-chatgpt-wallet/) says OpenAI will expand availability, and names no other tiers, countries or dates.
+		- **Yes.** [[ChatGPT/Wallet]] began rolling out in November 2026 to adult US [[ChatGPT/Pro]] subscribers with an eligible US-issued card and a US billing address. Look for Wallet in Settings or ask your dot to help add a card. [OpenAI Wallet guide](https://help.openai.com/en/articles/20001654-making-purchases-with-chatgpt-wallet)
+		- Your dot can submit supported purchases after you approve each one with Face ID or Touch ID. OpenAI describes standing authorization within spending limits as a future possibility. [Wallet announcement](https://openai.com/index/introducing-chatgpt-wallet/)
