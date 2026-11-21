@@ -1,0 +1,27 @@
+logseq-entity:: [[Logseq/Entity/Software/Feature]]
+
+- # [ChatGPT cloud browser](https://help.openai.com/en/articles/20001280-using-cloud-browser-in-chatgpt)
+	- A web browser that [[ChatGPT/Work]] runs on a remote computer, so a task can read pages, click, fill in forms and finish steps on public and signed-in websites while the person is away. ChatGPT decides when to use it, and may use a connected app instead.
+	- ## History
+		- It replaced the "virtual browser" of ChatGPT agent, which OpenAI's [ChatGPT agent help page](https://help.openai.com/en/articles/11752874-chatgpt-agent) now marks as no longer available.
+		- ChatGPT Work launched on 2026-07-09, and the same [release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) entry retired ChatGPT Atlas, the local Mac browser, as of 2026-08-09.
+		- Signing in to websites arrived on 2026-08-25, for [[ChatGPT/Plus]] and [[ChatGPT/Pro]].
+	- ## Parts
+		- **Plans** — paid plans except [[ChatGPT/Free]] and [[ChatGPT/Go]]; website sign-in is limited to Plus and Pro, per the 2026-08-25 release notes.
+		- **Takeover** — ChatGPT asks the person to take over the browser on a phone or computer when it gets stuck, and the person can ask for a takeover link at any time. The [[iPhone]] app supports Work, sign-in and takeover.
+		- **Confirmations** — ChatGPT asks in chat before a payment, booking or other hard-to-reverse action.
+		- **Website access** — Settings > Cloud browser offers "Always ask" (the default), "Auto approve" and "Always allow", plus per-site allow and block lists.
+		- **Secure sign-in form** — at a login page the task pauses and shows a form for the username, password and any one-time code. A separate review model checks the request for phishing first. The model never sees the credentials, and ChatGPT does not store them.
+		- **Browser data** — the cloud browser keeps its own cookies and stays signed in until a session expires. Clear it under Settings > Cloud browser > Browser data > Cookies.
+	- ## Limits
+		- It uses none of the person's own browser data: saved passwords, cookies, extensions or existing sign-ins.
+		- Websites may block automated browsers, and some sign-in or payment steps may need the person to finish them.
+		- OpenAI's guidance: never paste passwords, codes or payment details into the chat.
+	- ## Neighbors
+		- The desktop app's [built-in browser](https://help.openai.com/en/articles/20001277-using-the-built-in-browser-in-the-chatgpt-desktop-app) runs locally on macOS and Windows and supports autofill, password managers and extensions.
+		- The ChatGPT browser extension for Chrome works inside the person's own Chrome profile.
+	- ## Questions
+		- [[ChatGPT/Cloud/Browser/Q/Does it have any password management or credential management?]]
+		- [[ChatGPT/Cloud/Browser/Q/Can we install a Chrome extension like 1Password?]]
+		- [[ChatGPT/Cloud/Browser/Q/How can we sign in with passkeys?]]
+		- [[ChatGPT/Cloud/Browser/Q/How can I use the cloud browser to pay a bill from an iPhone in a way that's both more secure and more convenient for a human than having the human pay it in a browser?]]

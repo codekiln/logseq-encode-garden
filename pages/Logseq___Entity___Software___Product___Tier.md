@@ -20,4 +20,4 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- H1: a Markdown link to the vendor's page for the tier when one is known, otherwise the tier's full name, such as `- # ChatGPT Enterprise`.
 		- Lean bullets on what the tier gives and who sells or grants it. Prices, usage limits and model lists change often, so put a date and a source link on each one.
 	- ## Examples in this garden
-		- [[ChatGPT/Enterprise]] and [[Anthropic/Product/Claude/Max]].
+		- [[ChatGPT/Enterprise]], [[ChatGPT/Plus]], [[ChatGPT/Pro]] and [[Anthropic/Product/Claude/Max]].

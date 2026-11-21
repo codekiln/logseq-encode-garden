@@ -16,3 +16,4 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Child bullets say what the feature does, its parts and limits, and where the garden touches it.
 	- ## Examples in this garden
 		- [[Claude/Managed Agents/Vault]]
+		- [[ChatGPT/Cloud/Browser]]
