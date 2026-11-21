@@ -3,7 +3,7 @@ see-also:: [[Credential/Manage/ment]]
 
 - # Does [[ChatGPT/Cloud/Browser]] have any [[Password Management]] or [[Credential/Manage/ment]]?
 	- ## [[AI Answer]]
-		- **Short answer:** it has no password store. It has a secure sign-in form and keeps signed-in sessions.
+		- **Short answer:** it has no password store. When a site asks you to log in, ChatGPT shows you a form in its app; what you type goes to the website without the model seeing it. The site then stays logged in until the session expires or you clear it.
 		- [[Answer/Official]] from [Using cloud browser in ChatGPT](https://help.openai.com/en/articles/20001280-using-cloud-browser-in-chatgpt): "Credentials entered through the secure form go directly to the remote browser. The username and password entered there are not visible to the model, and ChatGPT does not store those sign-in credentials." A review model checks each sign-in request for phishing before the form appears.
 		- The session cookies stay in the cloud browser "until it expires"; clear them under Settings > Cloud browser > Browser data > Cookies. A saved session can open the account without the password or second factor, so clearing it after a sensitive task is worth the step.
 		- The 2026-08-25 [release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) say the browser "supports the use of password managers", without naming any. Whether iOS AutoFill or [[1Password]] fills the secure form is unverified.
