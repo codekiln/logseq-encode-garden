@@ -23,8 +23,9 @@ The episode has one H1 title, a first-child description, and a direct MP3 media
 embed: `![Episode recording](https://…mp3)`. Keep the recording's asset page for
 file metadata and its download URL. Record graph edits in today's journal.
 
-Convert the exported WAV to MP3 without changing the source WAV. The WAV stays
-on the Mac: give it no asset page and don't track it with DVC. Upload the MP3 to
+Convert the exported WAV to MP3 without changing the source WAV. The WAV
+shouldn't be tracked in an asset page or tracked with DVC because this garden's
+policy is to only publish smaller assets. Upload the MP3 to
 B2 using the garden's configured credentials and page-derived asset filename.
 Verify uploaded bytes and media metadata against the local MP3.
 
