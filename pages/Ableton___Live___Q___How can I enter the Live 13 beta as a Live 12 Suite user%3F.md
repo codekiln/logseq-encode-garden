@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 
 - # How can I enter the [[Ableton/Live]] 13 beta as a Live 12 Suite user?
+	- ## [[My Notes]]
+		- [[2026-11-22 Sun]] applied through [Ableton Beta Program](https://www.ableton.com/en/beta/) and was put on a waiting list:
+			- > You're on a waiting list for upcoming free slots in the Live 13 Public Beta testing. We will open the doors in regular intervals and let the next batch of people enter, to ensure a steady influx of new testers and fresh pairs of ears and eyes.
 	- ## [[AI Answer]]
 		- [[Answer/Official]] from [Ableton Beta Program](https://www.ableton.com/en/beta/)
 		- **Short answer:** apply on Ableton's Centercode portal. A Live 12 Suite license qualifies, but seats are limited, so applying does not guarantee a place.
