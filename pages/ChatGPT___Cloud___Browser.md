@@ -17,7 +17,7 @@ logseq-entity:: [[Logseq/Entity/Software/Feature]]
 		- Websites may block automated browsers, and some sign-in or payment steps may need the person to finish them.
 		- OpenAI's guidance: never paste passwords, codes or payment details into the chat.
 	- ## Neighbors
-		- The desktop app's [built-in browser](https://help.openai.com/en/articles/20001277-using-the-built-in-browser-in-the-chatgpt-desktop-app) runs locally on macOS and Windows and supports autofill, password managers and extensions.
+		- [[ChatGPT/App/Desktop/Browser]], the desktop app's built-in browser, runs locally on macOS and Windows and supports autofill, password managers and extensions.
 		- The ChatGPT browser extension for Chrome works inside the person's own Chrome profile.
 	- ## Questions
 		- [[ChatGPT/Cloud/Browser/Q/Does it have any password management or credential management?]]
