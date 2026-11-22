@@ -7,7 +7,7 @@ tags:: [[Question]]
 		- [[AI/Response]]
 		- **Short answer:** **No built-in SRS.** Obsidian core has no spaced repetition or flashcard functionality. The dominant community plugin is [[Obsidian/Plugin/Spaced Repetition]] (`obsidian-spaced-repetition` by st3v3nmw), which supports multiple card formats and uses SM-2. A newer alternative, [[Obsidian/Plugin/Recall]], uses the [[FSRS]] algorithm. Anki-bridge plugins exist for those who prefer the Anki ecosystem.
 		- ### Built-in support
-			- **None.** Obsidian's core app has no [[Flashcard/Spaced Repetition System|SRS]] or flashcard feature.
+			- **None.** Obsidian's core app has no [[Flashcard/Spaced Repetition System]] or flashcard feature.
 		- ### Community plugins
 			- #### 1. [[Obsidian/Plugin/Spaced Repetition]] (most popular)
 				- Algorithm: **SM-2** (same family as Anki's default scheduler)
@@ -18,7 +18,7 @@ tags:: [[Question]]
 				- Also supports **whole-note review** — a note itself is scheduled for revisit on a decay curve
 				- Review UI lives in Obsidian's sidebar panel
 			- #### 2. [[Obsidian/Plugin/Recall]]
-				- Algorithm: **[[FSRS]]** ([[Flashcard/Spaced Repetition System/Free|Free Spaced Repetition Scheduler]]) — a more modern, better-calibrated algorithm than SM-2
+				- Algorithm: **[[FSRS]]** ([[Flashcard/Spaced Repetition System/Free]]) — a more modern, better-calibrated algorithm than SM-2
 				- Supports note-level and card-level scheduling
 			- #### 3. Flashcards (reuseman)
 				- Plugin ID: `flashcards-obsidian`

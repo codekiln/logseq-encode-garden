@@ -3,7 +3,7 @@ see-also:: [[Flashcard/Spaced Repetition System]]
 tags:: [[Obsidian/Plugin]]
 
 - # [Spaced Repetition](https://github.com/st3v3nmw/obsidian-spaced-repetition)
-	- [[Obsidian]] community plugin for [[Flashcard/Spaced Repetition System|spaced repetition]] review of flashcards and notes; uses the SM-2 scheduling algorithm.
+	- [[Obsidian]] community plugin for [[Flashcard/Spaced Repetition System]] review of flashcards and notes; uses the SM-2 scheduling algorithm.
 	- Plugin ID: `obsidian-spaced-repetition` · Author: st3v3nmw · License: MIT
 	- ## Card formats
 		- **Single-line:** `Question :: Answer` in a note tagged `#flashcards`

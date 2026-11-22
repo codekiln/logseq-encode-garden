@@ -11,3 +11,8 @@ pre-commit:
     normalize-whitespace:
       run: mise run text:fix-invisible {staged_files}
       stage_fixed: true
+    # Logseq reads [[Target|Label]] as one page name and makes a stub page for it.
+    logseq-wikilink-labels:
+      glob: "*.md"
+      run: mise run logseq:fix-wikilink-labels {staged_files}
+      stage_fixed: true
