@@ -1,7 +1,8 @@
-logseq-entity:: [[Logseq/Entity/Question]]
+tags:: [[Idea]]
+date-created:: [[2026-11-22 Sun]]
 see-also:: [[git/hook]], [[Logseq/mise/Task/fix-wikilink-labels]]
 
-- # How can a team declare checks per technology once and have every repository that uses that technology enforce them?
+- # Declare checks per technology once, and enforce them in every repository that uses the technology
 	- ## Problem
 		- Most checks belong to a technology rather than to a repository. A Logseq graph should have its labeled wikilinks rewritten before commit. A Rust crate should pass `cargo fmt` and `clippy`. An OpenSpec directory should pass strict validation.
 		- Today each repository wires its checks into its own [[lefthook]] config by hand. Nothing records the rule "a repository with a Logseq graph runs these hooks", so the rule lives only in whoever remembers to copy it.
@@ -17,7 +18,7 @@ see-also:: [[git/hook]], [[Logseq/mise/Task/fix-wikilink-labels]]
 		- A change to the central declaration takes effect in every repository that uses the technology.
 	- ## Relation to clilint
 		- [[Person/codekiln/GitHub/clilint]] pairs a written standard with a checker that scores conformance. A per-technology expectation is the same shape one level up: the standard says what a repository using a technology should run, and the checker reports which repositories fall short.
-	- ## Candidates to research
+	- ## Technologies to research
 		- [[lefthook]] remote configs, with `lefthook-local.yml` for per-repository overrides
 		- [[hk]], whose Pkl configs can amend a shared base
 		- Trunk Check, which turns on linters for the languages it detects in a repository
