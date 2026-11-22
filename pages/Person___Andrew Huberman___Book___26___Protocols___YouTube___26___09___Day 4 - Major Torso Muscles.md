@@ -14,6 +14,7 @@ logseq-created-time-year:: [[20/2/6]]
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=UEU6NYLRi6o}}
 			- ### {{youtube-timestamp 0}} Torso day overview
+			  id:: 5c071123-09d0-4b90-9dbe-8805c5725b0e
 			  collapsed:: true
 				- Transcript
 				  collapsed:: true
@@ -63,6 +64,7 @@ logseq-created-time-year:: [[20/2/6]]
 				- {{youtube-timestamp 195}}
 					- [[Person/Andrew Huberman]]
 						- > the other classic in my mind, critical one that's also very useful for a number of other reasons is the dip. Once you're at the top, then I like to bend my knees lower, press up, leaning forward somewhat to target the lower pack and mid pack shoulders front of the shoulder, side of the shoulder and triceps, of course. I really like this movement. Once you can hit 12 to 15 repetitions with body weight or maybe even 10, you could add weight. So that you hit failure earlier between six and eight repetitions. Let's say you do that by holding a dumbbell between your feet. It's the easiest one to set up for, but I find it to be the most awkward one. Well, it's to do like so. So you could do it like so. Some people, including myself, refer to it as kind of an upper body squat, especially when done weighted because it works so many muscles. You also have to tighten your core. It's a great movement. L ([Readwise](https://read.readwise.io/read/01m72new6kt2g9vk2btdwc6dp0))
+						- > I would say the other classic in my mind, critical one that's also very useful for a number of other reasons is the dip. Once you're at the top, then I like to bend my knees lower, press up, leaning forward somewhat to target the lower pack and mid pack, shoulders, front of the shoulder, side of the shoulder, and triceps, of course. I really like this movement. Once you can hit 12 to 15 repetitions with body weight, or maybe even 10, you could add weight. So that you hit failure earlier between six and eight repetitions. Let's say you do that by holding a dumbbell between your feet. It's the easiest one to set up for, but I find it to be the most awkward one. Well, it's to do like so. So you could do it like so. Some people, including myself, refer to it as kind of an upper body squat, especially when done weighted because it works so many muscles. You also have to tighten your core. It's a great movement. ([Readwise](https://readwise.io/open/1074421713))
 				- Transcript
 				  collapsed:: true
 					- [[Person/Andrew Huberman]]

@@ -6,7 +6,7 @@ logseq-created-time-year:: [[20/2/6]]
 	- Speaker: [[Person/Andrew Huberman]]
 	- Channel: [Andrew Huberman](https://www.youtube.com/@hubermanlab) · 13:35 · unlisted
 	- Book: [[Person/Andrew Huberman/Book/26/Protocols]], Chapter Two: Exercise
-	- Reader: [Saved copy](https://read.readwise.io/read/01m6brm2w9vbdpc0n1h0s4ccb2)
+	- Reader: [Highlighted copy](https://read.readwise.io/read/01m6brm2w9vbdpc0n1h0s4ccb2)
 	- ## About
 		- Leg day of the Chapter Two resistance training program: quadriceps, hamstrings, glutes, and calves. Each muscle group gets compound movements first, then isolation movements.
 		- Sets, reps, and weights are in the book; the video shows form. A work set goes to failure, meaning the point where the movement can no longer be done in good form.
@@ -14,6 +14,7 @@ logseq-created-time-year:: [[20/2/6]]
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=CbEFgDFQBvk}}
 			- ### {{youtube-timestamp 0}} Leg day overview
+			  id:: 1cf1b3c9-2029-44d6-8b84-d7073d465886
 			  collapsed:: true
 				- Transcript
 				  collapsed:: true
@@ -80,8 +81,10 @@ logseq-created-time-year:: [[20/2/6]]
 						- {{youtube-timestamp 303}} I'm fortunate to have one, but they're very-- most gyms don't have them, but they're terrific. OK, isolation movements for quadriceps.
 			- ### {{youtube-timestamp 312}} [[Exercise/Body/Strength/Leg Extension]]
 			  id:: 843d11c2-d24a-4087-a63d-62e3988ede89
-			  collapsed:: true
 				- Isolation movement for the quadriceps. Start each rep by lifting the weight a centimeter so the muscle is under tension, squeeze at the top, and lower without setting the weight down between reps.
+				- {{youtube-timestamp 347}}
+					- [[Person/Andrew Huberman]]
+						- > Lowering, I prefer not to set the weight down in between reps, so the tension is on it the whole time. And I would do my set until failure, as described in the chapter failure being the inability to continue the movement in good form any longer. So I try to not use momentum, pause at the top and really squeeze the quadriceps, lower it under control, and so on. ([Readwise](https://readwise.io/open/1075974277))
 				- Transcript
 				  collapsed:: true
 					- [[Person/Andrew Huberman]]

@@ -16,6 +16,7 @@ logseq-created-time-year:: [[20/2/6]]
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=IzpGEk-2th4}}
 			- ### {{youtube-timestamp 0}} Shoulders and arms overview
+			  id:: bb069050-34b2-4805-81f5-5bbe2ab80ee7
 			  collapsed:: true
 				- Transcript
 				  collapsed:: true
