@@ -101,6 +101,7 @@ def main():
         prepare(args.source, args.output)
     elif args.action == "add":
         destination = asset(args.page)
+        mounts.check_compressed(destination.name)
         if args.source.suffix != destination.suffix:
             raise ValueError("source extension must match the page format")
         if not args.source.is_file():

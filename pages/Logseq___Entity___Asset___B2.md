@@ -11,5 +11,6 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- The body uses the usable remote URL. The URL already identifies the bucket and filename; separate properties would repeat them.
 	- ## Uploading and backing up
 		- Uploading makes a file available at its remote location. Publication through a website or podcast feed is a separate step in that site's workflow.
+		- This garden's bucket is public, and so are the DVC backups in it. Large uncompressed files such as WAV, AIFF and FLAC stay out of it: add a compressed copy, such as an MP3, instead. [[Asset/mise/Task/add]] refuses those formats.
 		- DVC maintains checksums and restoration metadata separately. A DVC push backs up a tracked file; a named B2 upload supplies the URL used by its asset page.
 		- [[Asset/mise/Task/add]] tracks the page-named working file; [[Asset/mise/Task/push]] backs it up and [[Asset/mise/Task/fetch]] restores it. [[GitP/mise/Task/media/upload]] uploads and verifies the named object used by the page.

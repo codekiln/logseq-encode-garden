@@ -8,9 +8,10 @@ source-link:: https://github.com/codekiln/logseq-encode-garden/blob/codex/dvc-as
 	- ## Invocation
 		- Run from the garden checkout. The page argument is its logical name, without wikilink brackets.
 			- ~~~sh
-			  mise run asset:add -- /path/to/lesson.wav Course/Asset/Audio/Lesson/wav
+			  mise run asset:add -- /path/to/lesson.mp3 Course/Asset/Audio/Lesson/mp3
 			  ~~~
 		- [[Logseq/Entity/Asset]] defines page-derived filenames and valid names.
+		- Refuses WAV, AIFF and FLAC files, as [[Logseq/Entity/Asset/B2]] describes.
 	- ## Files and access
 		- Creates a working copy and metadata. An existing working copy is updated by passing that same working path as SOURCE; a different source cannot replace it.
 		- Mise supplies Python and uv; the asset package pins DVC and its S3 client. The Git checkout supplies `.dvc/config` and the `assets` fnox profile. Linked worktrees use the main checkout’s encrypted fnox cache.

@@ -46,6 +46,16 @@ class Folder(unittest.TestCase):
                 assets.asset("Course/Asset/Diagram/png")
 
 
+class Uncompressed(unittest.TestCase):
+    def test_add_refuses_uncompressed_audio(self):
+        with tempfile.TemporaryDirectory() as temp, patch.object(assets, "dvc") as dvc:
+            source = Path(temp) / "lesson.wav"
+            source.write_bytes(b"RIFF")
+            with patch.object(sys, "argv", ["assets.py", "add", str(source), "Course/Asset/Audio/Lesson/wav"]), self.assertRaisesRegex(ValueError, "uncompressed audio"):
+                assets.main()
+            dvc.assert_not_called()
+
+
 class Credentials(unittest.TestCase):
     def test_missing_cache_stops_before_fnox(self):
         with tempfile.TemporaryDirectory() as temp, patch.object(assets, "ROOT", Path(temp)), patch.object(assets.subprocess, "check_output", return_value=str(Path(temp) / ".git")), patch.object(assets.subprocess, "run") as run:
