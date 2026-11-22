@@ -6,7 +6,7 @@ logseq-entity:: [[Logseq/Entity/Person]]
 		- Creator of the [[Person/Tiago Forte/PARA]] method (Projects, Areas, Resources, Archives) for organizing digital life
 		- Pioneer of the [[Second Brain]] framework for personal knowledge management
 		- Author of [[Book/Building a Second Brain]] (2022)
-		- Known for the concept of [[Intermediate Work Product|Intermediate Packets]] — reusable creative building blocks captured and reused across projects
+		- Known for the concept of Intermediate Packets ([[Intermediate Work Product]]) — reusable creative building blocks captured and reused across projects
 	- ## Online Presence
 		- [Forte Labs Blog](https://fortelabs.com/blog/)
 		- [fortelabs.com](https://fortelabs.com)

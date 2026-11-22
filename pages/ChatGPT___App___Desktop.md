@@ -5,4 +5,4 @@ logseq-entity:: [[Logseq/Entity/Software/Project]]
 	- The app contains [[ChatGPT/Chat]] and [[ChatGPT/Work]] within its general-purpose ChatGPT side, with [[Codex]] as its coding-oriented side.
 	- [[ChatGPT/App/Desktop/Browser]] is its built-in web browser.
 	- [[ChatGPT/App/Desktop/Concept/Chat, Work, and Codex]] explains the names and how the experiences relate.
-	- [[OpenAI/ChatGPT/Enterprise and Edu release notes|ChatGPT Enterprise and Edu release notes]] track updates across the app's Enterprise and Edu surfaces.
+	- [[OpenAI/ChatGPT/Enterprise and Edu release notes]] track updates across the app's Enterprise and Edu surfaces.

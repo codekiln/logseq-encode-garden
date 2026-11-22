@@ -12,7 +12,7 @@ tags:: [[Tool]], [[EdTech/Acronym]], [[EdTech/Co/RusticiSoftware]], [[cmi5]]
 			- Confirm that LMSs and learning tools conform to the cmi5 specification
 			- Encourage widespread adoption of cmi5 and xAPI by offering a testable standard
 	- ## 🔧 Key Capabilities
-		- **Launch and validate AUs ([[cmi5/AU|Assignable Units]])** in a simulated [[LMS]] environment
+		- **Launch and validate Assignable Units ([[cmi5/AU]])** in a simulated [[LMS]] environment
 		- **Run tests** against LMS implementations to ensure they handle cmi5 correctly
 		- **Evaluate xAPI statements** to confirm correct structure and sequencing
 		- **Generate logs** and reports for debugging and certification efforts

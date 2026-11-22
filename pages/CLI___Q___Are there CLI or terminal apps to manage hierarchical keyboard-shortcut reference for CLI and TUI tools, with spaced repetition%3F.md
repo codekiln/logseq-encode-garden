@@ -3,7 +3,7 @@ see-also:: [[Learning/Idea/26/03/Terminal toolbelt learning/Proto Session/26/03/
 via:: [[2026-04-01 Wed]]
 
 - # Are there CLI or terminal apps to manage hierarchical keyboard-shortcut reference for CLI and TUI tools, with spaced repetition?
-	- Context (from [[CLI/Craftsperson|CLI craftspeople]] workflow): tools like [[Lazygit]] expose different bindings per pane and inside modals; [[nvim]] adds many custom maps in [[dotfiles]]. Looking for something versioned with dotfiles, not only [[Logseq]] Keyshort + flashcards.
+	- Context (from [[CLI/Craftsperson]] workflow): tools like [[Lazygit]] expose different bindings per pane and inside modals; [[nvim]] adds many custom maps in [[dotfiles]]. Looking for something versioned with dotfiles, not only [[Logseq]] Keyshort + flashcards.
 	- ## Answer
 		- [[AI/Response]]
 			- **No single mainstream tool** appears to cover “every CLI/TUI app + hierarchical contexts + built-in SRS + auto-sync from live configs (e.g. Neovim)” end-to-end. Practical setups combine **lookup** layers (cheatsheets, generated docs) with **SRS** layers (markdown decks, Anki, or terminal drill CLIs), all kept under git in your dotfiles.
