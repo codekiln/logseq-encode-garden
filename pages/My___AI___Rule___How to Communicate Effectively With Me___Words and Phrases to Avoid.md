@@ -60,6 +60,14 @@
 	- ## Don't use the word "gate" as a metaphor
 	  collapsed:: true
 		- Today, Opus 5 said "The gate judges on text the graph produced." This was meaningless to me. Again, specific and explicit
+	- ## "Give" -> the operation you mean
+	  collapsed:: true
+		- "Give the folder a label after the tax year, such as FY27 Taxes" reads fine, because the label becomes part of the folder. An asset page is a separate page, and DVC tracking is a command. When "give" replaces an operation, name the operation: create a page, run `dvc add`.
+		- "Give it no X" and "it gets no X" are worse. The reader has to picture X and then take it away.
+		- When the sentence states an exception, state the reason with it, as [[My/AI/Rule/State the Positive]] asks.
+		- [[Example]]
+			- Before: "Convert the exported WAV to MP3 without changing the source WAV. The WAV stays on the Mac: give it no asset page and don't track it with DVC."
+			- After: "Convert the exported WAV to MP3 without changing the source WAV. The WAV shouldn't be tracked in an asset page or tracked with DVC because this garden's policy is to only publish smaller assets."
 - # [[My/Pref/Writing/Seek Inclusive Language]]
 	- ## Master / Slave
 	  collapsed:: true
