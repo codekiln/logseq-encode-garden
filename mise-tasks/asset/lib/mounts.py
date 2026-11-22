@@ -8,6 +8,14 @@ PAGE = "https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Asset__
 OWNING = {"path", "bucket", "dvc"}
 BORROWING = {"path", "public", "source"}
 KEYS = OWNING | BORROWING
+# Large uncompressed audio a mount must not hold; publish a compressed copy such as an MP3 instead.
+UNCOMPRESSED = (".wav", ".aif", ".aiff", ".flac")
+
+
+def check_compressed(file):
+    """Raise MountError when file names large uncompressed audio."""
+    if file.lower().endswith(UNCOMPRESSED):
+        raise MountError(f"{file} is uncompressed audio; add a compressed copy, such as an MP3, instead")
 
 
 class MountError(ValueError):
@@ -63,7 +71,8 @@ def public_links(text, mounts, page):
     """Return text with each link into ../assets/.remote/<mount>/ pointing at the mount's public URL.
 
     Leaves inline code and fenced code unchanged. Raises MountError, naming the page and the file,
-    when a link points into a mount that asset-mounts.toml does not declare or that has no public URL."""
+    when a link points into a mount that asset-mounts.toml does not declare or that has no public URL,
+    or links uncompressed audio."""
 
     def swap(match):
         start, name, file = match.groups()
@@ -72,6 +81,8 @@ def public_links(text, mounts, page):
             raise MountError(f"{page} links {name}/{file}, but asset-mounts.toml declares no mounts.{name}")
         if "public" not in mount:
             raise MountError(f"{page} links {name}/{file}, but mounts.{name} has no public URL")
+        if file.lower().split("#")[0].split("?")[0].endswith(UNCOMPRESSED):
+            raise MountError(f"{page} links {name}/{file}, which is uncompressed audio; link a compressed copy, such as an MP3")
         # A file linked in angle brackets may hold spaces, which a URL cannot.
         return f"{start}{mount['public']}/{file.replace(' ', '%20')}"
 

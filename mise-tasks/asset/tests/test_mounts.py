@@ -98,6 +98,8 @@ class PublicLinks(unittest.TestCase):
         cases = {
             "pages/A.md links other/C.png, but asset-mounts.toml declares no mounts.other": "[c](../assets/.remote/other/C.png)",
             "pages/A.md links private/D.png, but mounts.private has no public URL": "[d](../assets/.remote/private/D.png)",
+            "pages/A.md links g/E.wav, which is uncompressed audio": "[e](../assets/.remote/g/E.wav)",
+            "pages/A.md links g/F.AIFF, which is uncompressed audio": "![f](<../assets/.remote/g/F.AIFF>)",
         }
         for message, text in cases.items():
             with self.subTest(message=message), self.assertRaisesRegex(mounts.MountError, message):
