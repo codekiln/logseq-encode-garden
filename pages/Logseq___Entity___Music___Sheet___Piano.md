@@ -1,0 +1,12 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Piano Sheet Music
+	- In this garden, **Piano Sheet Music** pages model a particular notated piano edition of a musical work, including an arrangement or transcription.
+	- ## Identity
+		- Use `<Work>/Sheet/Piano/<Edition>`, where the edition distinguishes the publication or arrangement. Copies and encodings of the same edition share one page.
+		- Compare the printed title, credit, publication and opening measures before merging editions.
+	- ## Credits
+		- Use `work::` for the underlying [[Logseq/Entity/Music/Work]], `arranged-by::` for the credited arranger, and `transcribed-by::` when the edition credits a transcriber. Preserve printed composer and lyricist credits when their person pages are unavailable.
+		- Cite the publication and printed pages when known. An album or a songbook title alone does not establish an arrangement credit.
+	- ## Files
+		- Link the scan and MusicXML as renditions of the edition. Private files use relative links into a private [[Asset/Mount]] in the garden that owns them.
+		- Record whether MusicXML is machine-recognized, proofread or ready for performance. Check repeats, endings, key and time signatures, both hands and pedal marks against the edition.

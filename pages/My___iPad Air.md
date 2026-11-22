@@ -1,0 +1,2 @@
+- # My iPad Air
+	- Apple iPad Air (5th generation). The Liquid Retina display measures 10.9 inches diagonally. [Apple technical specifications](https://support.apple.com/en-us/111887)
