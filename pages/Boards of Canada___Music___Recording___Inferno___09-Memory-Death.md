@@ -1,0 +1,5 @@
+- 09 - Memory Death
+	- Track 9 of [[Boards of Canada/Music/Recording/Inferno]], 2:37.
+	- [[My Notes]]
+		- [[2026-11-22 Sun]] small samples of buzzing flies, and a beep like a hospital heart monitor.
+	- [Paste's review](https://www.pastemagazine.com/music/boards-of-canada/an-air-of-finality-looms-over-boards-of-canadas-inferno) hears the same beep: "The faint beeping sounds on “Memory Death” patter about the stereo field like an EKG machine, and choral synth pads soon enter the mix like voices from another world, at once calming and disorienting."

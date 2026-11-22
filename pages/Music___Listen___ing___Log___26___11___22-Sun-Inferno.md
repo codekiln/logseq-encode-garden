@@ -1,0 +1,3 @@
+- [[2026-11-22 Sun]]
+	- listening to [[Boards of Canada]]'s new album [[Boards of Canada/Music/Recording/Inferno]].
+	- in [[Boards of Canada/Music/Recording/Inferno/09-Memory-Death]], noticed little samples of flies and a beep from a heart monitor.
