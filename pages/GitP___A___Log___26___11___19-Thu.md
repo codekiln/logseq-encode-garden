@@ -1,4 +1,5 @@
 prev:: [[GitP/A/Log/26/11/18-Wed]]
+next:: [[GitP/A/Log/26/11/22-Sun]]
 
 - [[2026-11-19 Thu]]
 	- [[Learned]]
