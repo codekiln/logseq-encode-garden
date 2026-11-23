@@ -36,6 +36,9 @@ preset-synth-file-sha256:: 78651cca9566739838b41a11ff2cd67ad7c171c794ac215d3672c
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: off.
+	- ## Performance and session context
+		- Each note starts high and the [Cycling Envelope]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope]]) sweeps its pitch down, which turns the Harm oscillator into a kick. The main envelope opens the closed, resonant low-pass filter for a moment. Play single low keys; the short decay keeps each hit tight.
+		- In [[GitP/A/Session/26/11/22-Sun]], Kick It is on the first [[Launchpad/Sequencer]] track and is already looping as audio when the episode begins. That take was recorded before Arrangement recording started, so the session MIDI holds no notes or control changes for it. The October capture documents the factory settings.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- [[Microfreak/CLI/Inspect a preset]] preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.

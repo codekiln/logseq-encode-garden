@@ -37,6 +37,10 @@ preset-synth-file-sha256:: 2865f152f3e5b9a9f01153a0b1b9216d2b5b83f68927f6309b848
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: on.
+	- ## Performance and session context
+		- A paraphonic SawX stab: the main envelope opens the closed low-pass filter on each note and closes it again, with no sustain. The [Cycling Envelope]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope]]) pushes Saw Mod, and key position and pressure open the filter further.
+		- In [[GitP/A/Session/26/11/22-Sun]], Tactile Techno is on the third [[Launchpad/Sequencer]] track and is reshaped heavily while its take records, from 02:20 to 04:08. The session MIDI records [Attack]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Attack]]) and [Decay/Release]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Decay Rel]]) from 02:51. Next come the Cycling Envelope's [Amount]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Amount]]), [Fall]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Fall]]), [Rise]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Rise]]) and [Hold]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Hold Sustain]]) by 03:21. Then [Shape]([[Microfreak/UI/Oscillator/Knob/Type/SAWX/Noise]]), [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/SAWX/Shape]]) and [Wave]([[Microfreak/UI/Oscillator/Knob/Type/SAWX/Saw Mod]]) move from 03:33 to the end of the take; on SawX these knobs set Noise, Shape and Saw Mod.
+		- The October capture predates these edits, so it documents the factory starting point rather than the sound in the episode.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- [[Microfreak/CLI/Inspect a preset]] preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.
