@@ -1,0 +1,14 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Cardio]]
+- # Mile Time Trial
+	- Run four laps of a 400-meter track as fast as you can hold, paced so the last lap is the hardest, and record the time.
+	- ## Setup
+		- A 400-meter track. Four laps is 1,600 meters, about nine meters short of a mile.
+		- Warm up with four to six easy laps. On one straight of each lap, pick the pace up to about 60 to 70 percent of an all-out run for 100 meters.
+	- ## Practice
+		- Run the first three laps at about 85 percent of all-out, then push the last lap at about 95 percent.
+	- ## Dose and Progression
+		- One timed run in place of the week's high-intensity cardio session. Huberman tests his mile about once every two months and aims to hold or lower his time.
+	- ## Cues and Variations
+		- Pace the first three laps so you don't sprint them and then have to walk or jog the rest. Learning the pace for each lap takes a few weeks of practice. Most people push hardest over the final 200 meters.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] offers a best mile time as an option for the third, high-intensity cardiovascular workout of the week, citing Steve Magness on mile time as a correlate of VO₂ max.
