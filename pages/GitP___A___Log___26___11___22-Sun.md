@@ -6,3 +6,4 @@ prev:: [[GitP/A/Log/26/11/19-Thu]]
 	- Playing the MicroFreak from the [[Launchpad/UI/Mode/5-Sequencer/Track]]s, in a Live Set saved as the template `GitP-LPP-Seq`. Its first eight tracks are four MIDI and audio pairs colored after the sequencer tracks. Each sequencer track gets its own preset:
 		- Track 1: [[Microfreak/Preset/296 Kick It]]
 		- Track 2: [[Microfreak/Preset/297 Shiny Hat]]
+		- Track 3: [[Microfreak/Preset/295 Tactile Techno]], highly modified
