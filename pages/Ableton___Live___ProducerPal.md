@@ -1,3 +1,4 @@
+alias:: [[producer-pal]]
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Adam Murray]]
 see-also:: [[Ableton/Max for Live]], [[Ableton/Live/Report/26/09/Open-source options for controlling Live 11 from coding agents]]
