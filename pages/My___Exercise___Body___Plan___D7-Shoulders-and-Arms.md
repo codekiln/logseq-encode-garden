@@ -8,7 +8,7 @@
 			- Or the [[Exercise/Body/Strength/Dumbbell Overhead Press]] Huberman shows. He also names the [[Exercise/Body/Strength/Machine Shoulder Press]].
 		- ### Isolation — lateral raise: 2 work sets of 8–15 reps
 			- {{embed [[Exercise/Body/Strength/Lateral Raise]]}}
-		- ### Rear delts — face pull: 2 work sets of 12–15 reps
+		- ### Rear delts — face pull: 2–3 work sets to failure, 8–15 reps
 			- Use a cable machine or exercise band. Or the [[Exercise/Body/Strength/Rear Delt Fly]] Huberman demonstrates, for 8–15 reps.
 			- {{embed [[Exercise/Body/Strength/Face Pull]]}}
 	- ## Biceps: two exercises
