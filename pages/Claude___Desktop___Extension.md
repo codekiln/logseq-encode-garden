@@ -1,4 +1,5 @@
 title:: Claude/Desktop/Extension
+logseq-entity:: [[Logseq/Entity/Software/Feature]]
 see-also:: [[Claude/Desktop]], [[Claude/Desktop/Connector]], [[MCP]], [[Claude/Desktop/Capability/AI-powered artifacts]]
 date-created:: [[2026/03/16]]
 
@@ -74,3 +75,5 @@ date-created:: [[2026/03/16]]
 		- [Model Context Protocol GitHub](https://github.com/modelcontextprotocol)
 		- [Guide to debugging MCP integrations](https://modelcontextprotocol.io/docs/tools/debugging)
 		- Enterprise deployment: [Deploying enterprise-grade MCP servers with desktop extensions](https://support.claude.com/en/articles/12702546-deploying-enterprise-grade-mcp-servers-with-desktop-extensions)
+	- ## [[My Notes]]
+		- [[2026-11-22 Sun]] installed [[Ableton/Live/ProducerPal]], the first desktop extension I have used
