@@ -1,4 +1,5 @@
 prev:: [[GitP/A/Log/26/11/19-Thu]]
+next:: [[GitP/A/Log/26/11/23-Mon]]
 
 - [[2026-11-22 Sun]]
 	- Upgraded from [[Ableton/Live]] 11 to Live 12 Suite, version 12.4.16.
