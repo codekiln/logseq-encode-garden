@@ -3,5 +3,5 @@
 	- ## Sprint interval: 6–12 rounds of 30 seconds all-out, 60 seconds easy
 		- Warm up for 5–10 minutes at an easy to moderate pace. Then go as hard and fast as you can for 30 seconds, rest or slow down for 60 seconds, and repeat. The hard efforts reach 90–95% of maximum heart rate.
 		- {{embed [[Exercise/Body/Cardio/Sprint Interval]]}}
-	- Other options Huberman gives: the [[Exercise/Body/Cardio/Cooper Test]], twelve minutes of steady hard effort for distance, or the [[Exercise/Body/Cardio/Norwegian 4x4 Interval]].
+	- Other options Huberman gives: the [[Exercise/Body/Cardio/Cooper Test]], twelve minutes of steady hard effort for distance; a best mile time on a 400-meter track, the [[Exercise/Body/Cardio/Mile Time Trial]]; or the [[Exercise/Body/Cardio/Norwegian 4x4 Interval]].
 	- Part of [[My/Exercise/Body/Plan]].
