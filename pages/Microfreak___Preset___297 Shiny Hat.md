@@ -33,6 +33,10 @@ preset-synth-file-sha256:: 86f2110553d788052ee9ef5a480c41ed1cabb5e86b59430097412
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: off.
+	- ## Performance and session context
+		- Rectification and Noise at their maximum on the Harm oscillator, through a high-pass filter with full resonance, give a bright metallic hiss. The main envelope is very short, so each key is a tick.
+		- In [[GitP/A/Session/26/11/22-Sun]], Shiny Hat is on the second [[Launchpad/Sequencer]] track. Its pattern is played into the sequencer from the MicroFreak's [keys]([[Microfreak/UI/Front/Row/05 Keys]]) at 00:43, and the session MIDI records no knob changes during that take.
+		- It returns on the first sequencer track for the second scene at 12:55. During the closing fade, the session MIDI records [Attack]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Attack]]) at 14:48, then a sweep of [Cutoff]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]]) and [Resonance]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Resonance]]) at 15:22. The October capture documents the factory settings, before those moves.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- [[Microfreak/CLI/Inspect a preset]] preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.

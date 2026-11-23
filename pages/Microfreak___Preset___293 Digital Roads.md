@@ -41,6 +41,10 @@ preset-synth-file-sha256:: b5df875a91bde52cb33b0a4672a45a244895af0d534652c0ebcf8
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: on.
+	- ## Performance and session context
+		- A paraphonic Bass oscillator through a resonant band-pass filter. Key position drives cutoff at full depth, so higher notes sound brighter. A sample-and-hold LFO nudges Saturate and the [Cycling Envelope]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope]]) amount, and the Cycling Envelope is routed to Fold.
+		- In [[GitP/A/Session/26/11/22-Sun]], Digital Roads is on the fourth [[Launchpad/Sequencer]] track, and its take records from 05:28 to 09:02. Early in the take, the session MIDI records the Cycling Envelope's [Rise]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Rise]]) and [Fall]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Fall]]), [Attack]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Attack]]), [Decay/Release]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Decay Rel]]) and [Filter Amt]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Filter Amt]]). Then [Shape]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Noise]]), [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Fold]]) and [Wave]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate]]) move by 06:00; on Bass these knobs set Noise, Fold and Saturate. The track's pattern is played in from the MicroFreak's [keys]([[Microfreak/UI/Front/Row/05 Keys]]) between 07:04 and 08:16.
+		- The October capture documents the factory settings, before those moves.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- [[Microfreak/CLI/Inspect a preset]] preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.
