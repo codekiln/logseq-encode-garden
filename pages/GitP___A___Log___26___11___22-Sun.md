@@ -11,3 +11,4 @@ prev:: [[GitP/A/Log/26/11/19-Thu]]
 			- Track 4: [[Microfreak/Preset/293 Digital Roads]]
 		- Scene 2
 			- Track 1: [[Microfreak/Preset/297 Shiny Hat]]
+	- The session became the episode [[GitP/A/Session/26/11/22-Sun]].
