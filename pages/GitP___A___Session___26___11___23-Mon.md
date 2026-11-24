@@ -3,15 +3,38 @@ logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcas
 public:: true
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-11-23 Mon]]
+
 - # Undertow
-	- A held tone on the first track, then a sub bass that sits under everything that follows. Three sequencer tracks trade loops at 58 BPM while the knobs reshape each new voice, and a growling bass takes the floor for the second half.
 	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___23-Mon___Asset___Audio___Episode.mp3)
 	- ## Ceremonial Annotations
-		- Each [[Launchpad/Sequencer]] track drives the [[Microfreak]] through its own MIDI track, and an audio track beside it records the MicroFreak as a loop. Four presets pass through the instrument, one after another, and each new loop keeps the sound the instrument had when it was recorded.
-		- Listen for the sub bass entering under the first loop, for the third track panning right and then left while its sound is reworked, and for the second half getting louder and lower once the growling bass arrives.
+		- [[My Notes]]
+			- sitting down in garden desk
+			  postprandial dark illuminari
+			  equipment magic abound 
+			  yet still the formless field 
+			  of resistance's pulled us 
+			  from entering the sound's
+			  source, at first, 
+			  distractors inferred later, 
+			  includenza's wicked sense 
+			  of doubt about 
+			  boredom's core 
+			  deception.
+			- prev's [[GitP/A/Session/26/11/22-Sun]], 
+			  the temple of [[GitP/A/Template/LPP-Seq]] arose,
+			  helping us tonight to peel away 
+			  at the resistors,
+			  to enter the portal 
+			  of signal's awareness.
+			- four [[GitP/Station]]s on were discovered on the receiver.
 	- ## Chapters
-		- ### 00:00 enter [[Microfreak/Preset/244 Nebem]]
-			- A short take plays on the first sequencer track. At 00:08 a held loop takes its place and runs under the next two chapters.
+		- ### 00:00 enter the station of [[Microfreak/Preset/244 Nebem]]
+			- [[My Notes]]
+				- track 1
+				- a zeld meld arp calling forth
+				  for blessing of bass
+				- this station is a powerful key
+				  when held, but here it's more
 		- ### 00:17 enter [[Microfreak/Preset/245 GivemeSub]]
 			- The second sequencer track records from 00:17, and at 00:33 its take becomes a sub-bass loop.
 			- 00:25 - low F and G alternate on the MicroFreak's keys until 01:02.
@@ -46,7 +69,7 @@ date-created:: [[2026-11-23 Mon]]
 	  collapsed:: true
 		- ### Recording
 			- 09:48 · [[GitP/A/Session/26/11/23-Mon/Asset/Audio/Episode/mp3]] · [Download the MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___23-Mon___Asset___Audio___Episode.mp3)
-			- Recorded November 23, 2026 with the [[Microfreak]] and [[Novation/Launchpad/Pro/Mk3]], from the [[GitP/A/Template/LPP Seq]] template. The [[Ableton/Live]] 12.4.16 set runs at 58.39 BPM. [[GitP/A/Log/26/11/23-Mon]]
+			- Recorded November 23, 2026 with the [[Microfreak]] and [[Novation/Launchpad/Pro/Mk3]], from the [[GitP/A/Template/LPP-Seq]] template. The [[Ableton/Live]] 12.4.16 set runs at 58.39 BPM. [[GitP/A/Log/26/11/23-Mon]]
 			- The episode is mixed from the template's four recording tracks, soloed together, so the volume, pan and send moves of the performance are in it. In the Arrangement, four passages were cut: 33 seconds at 02:59, 29 seconds at 04:15, 23 seconds at 05:12 and 73 seconds at 06:49.
 			- No commentary announces the presets. [[GitP/A/Log/26/11/23-Mon]] names them in the order they were used, and each chapter starts where a new take first carries that sound.
 		- ### Presets

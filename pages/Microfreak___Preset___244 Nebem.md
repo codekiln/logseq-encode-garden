@@ -11,7 +11,11 @@ preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/15
 preset-synth-microfreak-parameter-payload-sha256:: ca6c94828f44af2afd980892c0228285788920cf7d53b2176f879a1157a78a70
 preset-synth-file:: [Nebem — October 25 slot 244 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___244-Nebem___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 83a3d4e0304116abd27d6c6aa2f518eb671979087ba22641e4fea45c52325f78
+
 - # Notes
+	- ## [[My Notes]]
+		- a simple preset:
+			- Sine wave LFO modulating pitch 0.3
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 244 over USB on October 25, 2026 with `mise run microfreak:download --slot 244`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 3.0, Factory 6.0 (Factory 3.0 slot 312, Factory 6.0 slot 125). Comparison used `mise run microfreak:compare`.

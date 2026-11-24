@@ -1,0 +1,4 @@
+- [[2026-11-24 Tue]]
+	- AM
+		- listening through last night's ceremony, [[GitP/A/Log/26/11/23-Mon]], after the overnight acolytes had their hand with drafting it.
+		-
