@@ -1,0 +1,34 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Conference
+	- In this garden, **Conference** pages model an organized gathering with a program of talks by many speakers, held on set dates, and the recurring conference that holds a new edition each year or season.
+	- ## What counts as a Conference
+		- One dated edition, such as [[AI/ES/26/11 Code]], the AI Engineer Code Summit held in San Francisco in November 2026.
+		- A recurring conference known by one name across its editions, such as [[AI/ES]] and [[AI/Engineer/World's Fair]].
+		- A one-time event with its own program, such as [[Conference/ORCwAI]]. In-person, online and hybrid events all count.
+		- Not a Conference: a single talk or workshop, which lives on its own page beneath the edition; a recording of a talk, which is a [[Logseq/Entity/YouTube]] page; the conference's YouTube playlist, which is a [[Logseq/Entity/YouTube/Playlist]] page; the company or group that runs the conference, which is a [[Logseq/Entity/Company]] or [[Logseq/Entity/Organization]] page.
+	- ## Combined with Series
+		- A recurring conference and its editions use [[Logseq/Entity/Series]], following its rules for hubs and members.
+		- The hub for the recurring conference lists Series first: `logseq-entity:: [[Logseq/Entity/Series]], [[Logseq/Entity/Conference]]`.
+		- Each edition lists Conference first: `logseq-entity:: [[Logseq/Entity/Conference]], [[Logseq/Entity/Series]]`.
+		- A one-time event, or an edition whose series has no hub page yet, declares Conference alone.
+	- ## Naming
+		- The hub takes the conference's own short name, as [[AI/ES]] does for the AI Engineer Summit. When the organizer has its own namespace, the hub can sit beneath it: `<Organizer>/Conference/<Name>`.
+		- An edition files beneath its hub by year: `<hub>/<YY>`, as [[AI/Engineer/World's Fair/26]].
+		- When a series holds more than one edition in a year, the edition adds the month and a short edition name: `<hub>/<YY>/<MM> <Edition Name>`, as [[AI/ES/25/11 Code]] and [[AI/ES/26/11 Code]].
+		- The year and month order the editions when paths are sorted, so edition paths carry no `Series` segment or separate ordinal. The conference name already names the run.
+		- Day pages, talk pages and talk videos file beneath their edition, as [[AI/ES/25/11 Code/LEAD/20 Thu]] and [[AI/ES/25/Agent Engineering/YouTube/Barry Zhang Anthropic How We Build Effective Agents]] do.
+		- A one-time event uses `Conference/<Name>`, or `<Organizer>/Conference/<Name>/<YY>` when the organizer has a namespace, as [[YC/Conference/Context Eng/25]].
+	- ## Finding and deduplicating
+		- Search the event site URL, the conference name and its abbreviation, the organizer's namespace, and `*/Conference/*` pages. One hub per recurring conference; one page per edition.
+	- ## Frontmatter
+		- `logseq-entity::` lists [[Logseq/Entity/Conference]], with [[Logseq/Entity/Series]] after it on an edition and before it on a hub.
+		- An edition records `date-created::` as its first day, per [[Logseq/Date]], and `logseq-created-time-year::` as its year.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- **Edition** — an H1 linking the edition's official site. A line under it gives the dates and city, and links the hub and the previous edition. A **Talks** section lists each talk with its title, speakers, organizations and recording, grouped by day and track the way the conference's own program groups them.
+		- **Hub** — an H1 naming the conference, then an **Editions** list linking each edition page in date order.
+	- ## Examples
+		- Hub: [[AI/ES]], with editions [[AI/ES/25]], [[AI/ES/25/11 Code]] and [[AI/ES/26/11 Code]].
+		- Hub: [[AI/Engineer/World's Fair]], with editions [[AI/Engineer/World's Fair/25]] and [[AI/Engineer/World's Fair/26]].
+		- One-time events: [[Conference/ORCwAI]], [[YC/Conference/Context Eng/25]], [[MIT/Conference/IIA/25/04/15]].
