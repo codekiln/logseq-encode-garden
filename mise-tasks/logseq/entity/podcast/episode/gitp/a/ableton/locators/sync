@@ -153,12 +153,14 @@ def read_set(path):
 
 def tempo(live):
     """The Set's tempo; a tempo that changes over the arrangement is refused."""
-    node = live.find('MasterTrack/DeviceChain/Mixer/Tempo')
+    # Live 11 names the track MasterTrack; Live 12 renames it MainTrack.
+    main = next((t for t in (live.find('MasterTrack'), live.find('MainTrack')) if t is not None), None)
+    node = None if main is None else main.find('DeviceChain/Mixer/Tempo')
     if node is None or node.find('Manual') is None:
         raise SyncError('the Set has no master tempo')
     bpm = float(node.find('Manual').get('Value'))
     target = node.find('AutomationTarget')
-    for envelope in live.findall('MasterTrack/AutomationEnvelopes/Envelopes/AutomationEnvelope'):
+    for envelope in main.findall('AutomationEnvelopes/Envelopes/AutomationEnvelope'):
         pointee = envelope.find('EnvelopeTarget/PointeeId')
         if target is None or pointee is None or pointee.get('Value') != target.get('Id'):
             continue
