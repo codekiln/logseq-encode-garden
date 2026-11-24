@@ -31,10 +31,10 @@ date-created:: [[2026-11-23 Mon]]
 		- ### 00:00 enter the station of [[Microfreak/Preset/244 Nebem]]
 			- [[My Notes]]
 				- track 1
-				- a zeld meld arp calling forth
+				- a zeld meld arp calling forth a $$\mathrm{C}^{6}_{5}$$
 				  for blessing of bass
 				- this station is a powerful key
-				  when held, but here it's more [[Music/Term/Staccato]]
+				  when held, but here it's more [[Staccato]]
 		- ### 00:17 enter [[Microfreak/Preset/245 GivemeSub]]
 			- The second sequencer track records from 00:17, and at 00:33 its take becomes a sub-bass loop.
 			- 00:25 - low F and G alternate on the MicroFreak's keys until 01:02.
@@ -43,15 +43,15 @@ date-created:: [[2026-11-23 Mon]]
 			- 01:07 - the second track dips out and returns at 01:16 with a burst of reverb.
 			- 02:20 - the sub-bass loop stops.
 		- ### 01:55 enter [[Microfreak/Preset/247 Laity]]
-			- The third sequencer track's loop begins.
-			- #### 02:33 the sound is reworked
-				- Notes from [[GitP/Acolyte]]
+			- Notes from [[GitP/Acolyte]]
+				- The third sequencer track's loop begins.
+				- #### 02:33 the sound is reworked
 					- The session MIDI records Wave, Timbre and Shape first, then the main envelope's [[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Attack]] and [[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Decay Rel]] from 02:59.
 					- Between 03:34 and 03:44 the [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope]] has its Rise, Fall, Hold and Amount changed. [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Resonance]] and [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]] follow at 03:52.
-			- 02:52 - the third track starts to pan, reaching the right at 03:42, the left at 04:31 and the center at 04:59.
-			- 02:59 - the first track takes a new, brighter loop.
-			- 04:10 - the third track takes a new loop.
-			- 04:44 - Attack and Decay move again, then the cycling envelope's Hold, Amount and Fall until 05:03.
+				- 02:52 - the third track starts to pan, reaching the right at 03:42, the left at 04:31 and the center at 04:59.
+				- 02:59 - the first track takes a new, brighter loop.
+				- 04:10 - the third track takes a new loop.
+				- 04:44 - Attack and Decay move again, then the cycling envelope's Hold, Amount and Fall until 05:03.
 		- ### 05:12 enter [[Microfreak/Preset/248 GrowLing]]
 			- The second sequencer track records a new take while a pattern goes in from the MicroFreak's keys until 05:47. At 05:35 it becomes a loop, and the mix is about 9 dB louder from here on.
 			- 06:18 - Attack, Decay, Timbre, Shape and Wave move.

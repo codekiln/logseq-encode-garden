@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Term]]
+alias:: [[Staccato]]
 
 - # Staccato
 	- A note played staccato is cut short, so a small silence separates it from the next note. The line sounds detached, crisp and bouncing, more like taps or plucks than a sung phrase. The word is Italian for "detached".
