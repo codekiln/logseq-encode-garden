@@ -39,10 +39,10 @@ date-created:: [[2026-11-23 Mon]]
 			- [[My Notes]]
 				- a cool preset; touch detunes and adds vibrato
 			- Notes from [[GitP/Acolyte]]
-				- The second sequencer track records from 00:17, and at 00:33 its take becomes a sub-bass loop.
+				- The second sequencer track records from 00:17, and at 00:33 its take becomes a loop.
 				- 00:25 - low F and G alternate on the MicroFreak's keys until 01:02.
 				- 01:07 - the second track dips out and returns at 01:16 with a burst of reverb.
-				- 02:20 - the sub-bass loop stops.
+				- 02:20 - the second track's loop stops.
 		- ### 01:55 enter [[Microfreak/Preset/247 Laity]]
 			- Notes from [[GitP/Acolyte]]
 				- The third sequencer track's loop begins.
@@ -57,7 +57,7 @@ date-created:: [[2026-11-23 Mon]]
 			- [[My Notes]]
 				- pretty random! very little development
 			- Notes from [[GitP/Acolyte]]
-				- The second sequencer track records a new take while a pattern goes in from the MicroFreak's keys until 05:47. At 05:35 it becomes a loop, and the mix is about 9 dB louder from here on.
+				- The sub enters as the second sequencer track records a new take, while a pattern goes in from the MicroFreak's keys until 05:47. At 05:35 the take becomes a loop, and the mix is about 9 dB louder from here on.
 				- 06:18 - Attack, Decay, Timbre, Shape and Wave move.
 				- #### 06:45 the third track takes the growl
 					- The third track records a new take. From 06:50 its sequencer plays a low C pulse between melody notes until 08:10.
