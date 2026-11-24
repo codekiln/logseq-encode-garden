@@ -17,7 +17,7 @@ preset-synth-file-sha256:: 83a3d4e0304116abd27d6c6aa2f518eb671979087ba22641e4fea
 		- a simple preset
 			- Sine wave LFO modulating pitch 0.3 out of 100 (very slightly), set at a rate of 1.16 Hz, just above once per second. So a slight tape warble gives it that drify authenticity.
 			- Attack is quick, just a few ms, decay is long, roughly 4.5 s, with a sustain at about 64%, just enough to give it some punch of attack.
-			- Envelope Filter Amt is
+			- Envelope Filter Amt is modulating cutoff at 34.1, and cutoff is set at about 814 Hz, with a slight LPF resonance peak at .625.
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 244 over USB on October 25, 2026 with `mise run microfreak:download --slot 244`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 3.0, Factory 6.0 (Factory 3.0 slot 312, Factory 6.0 slot 125). Comparison used `mise run microfreak:compare`.
