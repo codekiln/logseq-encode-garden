@@ -11,7 +11,7 @@ logseq-created-time-year:: [[20/2/6]]
 			- [Full livestream](https://www.youtube.com/watch?v=ZZ19zhYnDKY)
 			- #### Main stage
 				- [What will you build when AI is 10× faster?](https://ai.engineer/code/2026/talks/natalie-serrino) — Natalie Serrino, Gimlet Labs · [livestream at 0:11:26](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=686s)
-				- [Rethinking Claude Code Best Practices](https://ai.engineer/code/2026/talks/lydia-hallie) — Lydia Hallie, Anthropic · [video](https://www.youtube.com/watch?v=vlfCjWuv4es)
+				- [Rethinking Claude Code Best Practices](https://ai.engineer/code/2026/talks/lydia-hallie) — [[Person/Lydia Hallie]], Anthropic · [video](https://www.youtube.com/watch?v=vlfCjWuv4es) · notes: [[AI/ES/26/11 Code/YouTube/Rethinking Claude Code Best Practices]]
 				- [cloudflare is a neolab](https://ai.engineer/code/2026/talks/michelle-chen) — Michelle Chen, Cloudflare · [livestream at 0:40:09](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=2409s)
 				- [All Code Is Slop (Except Mine)](https://ai.engineer/code/2026/talks/lauren-tan) — Lauren Tan, SpaceXSI · [livestream at 1:01:02](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=3662s)
 				- [I deleted 90% of my harness (And It Got Better)](https://ai.engineer/code/2026/talks/philipp-schmid) — Philipp Schmid, Google DeepMind · [livestream at 2:21:16](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=8476s)
