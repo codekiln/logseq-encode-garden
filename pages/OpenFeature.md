@@ -3,3 +3,20 @@
 		- OpenFeature is an open specification that provides a vendor-agnostic, community-driven API for feature flagging
 		- open source CNCF incubating project under the Apache 2 license
 		- One SDK, any backend
+- # Conceptual overview
+	- **What it is:** a standard, vendor-neutral API for checking [[Feature Flags]] from application code. Your code asks OpenFeature whether a flag is on, and a pluggable **provider** answers from whatever flag system is behind it. Switching from one flag vendor to another, or to a self-hosted service, means changing the provider, not the code that checks flags.
+	- **How it relates to [[CNCF]]:** OpenFeature is a [Cloud Native Computing Foundation project](https://www.cncf.io/projects/openfeature/). It joined CNCF's Sandbox on 2022-06-17 and moved to Incubating on 2023-11-21 ([announcement](https://www.cncf.io/blog/2023/12/19/openfeature-becomes-a-cncf-incubating-project/)). As of 2026-11-24 it has not graduated.
+		- It plays the same role for feature flags that [[OpenTelemetry]] plays for telemetry: a neutral API and SDKs under CNCF, with vendors writing the backend plugins. [[OpenTelemetry]] graduated on 2026-05-21.
+		- Being under CNCF means no single vendor owns the spec. Flag vendors such as LaunchDarkly, Flagsmith, Unleash, GrowthBook and DevCycle maintain providers for it.
+	- **Building blocks:**
+		- **Evaluation API** — the calls your code makes, typed by return value: boolean, string, number or object. Each call passes a default value, which is returned if the provider fails.
+		- **Provider** — the adapter between the API and one flag backend. A single application sets one provider, or several for different domains.
+		- **Client** — what your code holds to make evaluations, optionally scoped to one domain.
+		- **Evaluation context** — attributes about the user or request, such as user ID or region, that the backend uses for targeting and percentage rollouts.
+		- **Hooks** — code that runs before and after each evaluation, for logging, metrics, validation or adding context. The OpenTelemetry hook records each evaluation as a trace event.
+		- **Events** — notifications from the provider, such as ready, error or configuration changed.
+		- **Tracking** — sends user actions back to the provider so experiments can measure results.
+	- **Related projects under the OpenFeature umbrella:**
+		- **flagd** — an Apache-2.0 flag daemon that reads flags from files, HTTP or Kubernetes. It works as a minimal self-hosted backend with no UI.
+		- **OFREP**, the OpenFeature Remote Evaluation Protocol — a standard HTTP protocol for evaluating flags remotely, so one generic provider can talk to any backend that implements it.
+	- **When it matters:** when you want to avoid lock-in to a flag vendor, or to start on a self-hosted service and keep the option to move. [[Feature Flags/Q/If I wanted a self-hosted feature flag service, what should I choose?]] compares backends you can put behind it.
