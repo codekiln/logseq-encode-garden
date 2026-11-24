@@ -1,3 +1,5 @@
+logseq-entity:: [[Logseq/Entity/Conference]]
+
 # [Context Engineering SF - August 20th, 2025 - YouTube](https://www.youtube.com/playlist?list=PL5q_lef6zVkb2j0SjbqFWLUdTTvkEnfaL)
 	- 1 -
 	- 2 - [[YC/YouTube/25/08/Advanced Context Engineering for Agents]]

@@ -10,6 +10,9 @@ tags:: [[Readwise]], [[CLI/Tool]]
 			- Supports listing documents with various filters
 			- Example: `rw-cli add <URL>` to save an article
 			- Example: `rw-cli list --location later --category article` to list saved articles
+	- ## Saving a YouTube video
+		- `readwise reader-create-document --url "https://www.youtube.com/watch?v=<id>" --category video` saves a YouTube video to the Reader inbox.
+		- On [[2026-11-24 Tue]] this saved Chetas Joshi's Robinhood talk from [[AI/ES/26/11 Code]] ([YouTube](https://www.youtube.com/watch?v=MQiojLnK-E0)). Reader filed it as a `video` in the inbox (`new`), titled it from YouTube as "60% of Our Data PRs Now Merge With No Human Review - Chetas Joshi, Robinhood", listed a 28-minute listening time, and attached the full transcript as the document's content.
 	- ## Limitations
 		- RSS feed subscriptions cannot be managed from the CLI. There is no subscribe command, because the underlying [Reader API](https://readwise.io/reader_api) only saves and lists documents — feed management is not exposed. Subscribing stays a manual step in the app via [[Readwise/Reader/Preferences/Add to Feed]].
 			- Workaround for a site with no feed: save each URL with `readwise reader-create-document --url <URL>`, driven from the site's `sitemap.xml` if it has one.

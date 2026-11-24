@@ -5,7 +5,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Combined with another entity
 		- Series is not a standalone kind of work. A page that belongs to a sequence declares both types, primary entity first: `logseq-entity:: [[Logseq/Entity/Book]], [[Logseq/Entity/Series]]`.
 		- The hub that names the sequence may declare Series alone, or Series plus the member type when the sequence is also treated as one work.
-		- Any entity type that has ordered installments can combine with Series: books, podcast episodes, talks, courses, essay runs, software version lines, and others.
+		- Any entity type that has ordered installments can combine with Series: books, podcast episodes, talks, courses, conferences, essay runs, software version lines, and others.
 	- ## Naming — `Series` after the member type
 		- By default the `Series` segment sits **after the member type and before the instance**: `…/<Type>/Series/<Series Name>/…`.
 		- Members then share that prefix, so they cluster under the series on disk.
@@ -34,3 +34,4 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Podcast-shaped path, only when the feed numbers episodes: `Person/<Host>/Pod/Series/<Show>/<padded ordinal>/<YY>/<MM> <Episode Title>`.
 		- Talk-shaped path for a numbered lecture run: `Person/<Speaker>/Talk/Series/<Series Name>/<padded ordinal>/<YY>/<Title>`.
 		- Essay-shaped path for a numbered blog run: `Person/<Name>/Blog/Series/<Series Name>/<padded ordinal>/<YY>/<MM>/<slug>`.
+		- Conference editions under a recurring conference's hub: [[AI/ES/26/11 Code]] under [[AI/ES]]. [[Logseq/Entity/Conference]] orders editions by year and month instead of a `Series` segment.
