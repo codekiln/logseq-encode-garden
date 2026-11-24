@@ -1,0 +1,67 @@
+logseq-entity:: [[Logseq/Entity/Conference]], [[Logseq/Entity/Series]]
+date-created:: [[2026-11-10 Tue]]
+logseq-created-time-year:: [[20/2/6]]
+
+- # [AI Engineer Code Summit 2026](https://ai.engineer/code/2026)
+	- [[2026-11-10 Tue]] to [[2026-11-12 Thu]] in San Francisco: a workshop day, then two days of talks. Part of [[AI/ES]]; the previous edition was [[AI/ES/25/11 Code]].
+	- The event named three themes: fighting slop in software factories, building with System One models, and rewriting critical apps.
+	- ## Talks
+		- [The talks, in writing](https://ai.engineer/code/2026/talks) has a reading edition, recording and transcript for each of the 50 sessions, and a [zip of all transcripts](https://ai.engineer/api/code/reading-download/transcripts.zip). Video links below point into each day's livestream unless the talk has its own recording.
+		- ### [[2026-11-11 Wed]]
+			- [Full livestream](https://www.youtube.com/watch?v=ZZ19zhYnDKY)
+			- #### Main stage
+				- [What will you build when AI is 10× faster?](https://ai.engineer/code/2026/talks/natalie-serrino) — Natalie Serrino, Gimlet Labs · [livestream at 0:11:26](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=686s)
+				- [Rethinking Claude Code Best Practices](https://ai.engineer/code/2026/talks/lydia-hallie) — Lydia Hallie, Anthropic · [video](https://www.youtube.com/watch?v=vlfCjWuv4es)
+				- [cloudflare is a neolab](https://ai.engineer/code/2026/talks/michelle-chen) — Michelle Chen, Cloudflare · [livestream at 0:40:09](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=2409s)
+				- [All Code Is Slop (Except Mine)](https://ai.engineer/code/2026/talks/lauren-tan) — Lauren Tan, SpaceXSI · [livestream at 1:01:02](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=3662s)
+				- [I deleted 90% of my harness (And It Got Better)](https://ai.engineer/code/2026/talks/philipp-schmid) — Philipp Schmid, Google DeepMind · [livestream at 2:21:16](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=8476s)
+				- [The Rise of the Agent Workforce: Rethinking Agent Infrastructure](https://ai.engineer/code/2026/talks/ankit-mathur) — Ankit Mathur, Databricks · [livestream at 2:46:35](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=9995s)
+				- [Building a Safe Software Factory](https://ai.engineer/code/2026/talks/andrew-finch) — Andrew Finch, Sonar · [livestream at 3:10:06](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=11406s)
+				- [Earning Autonomy: From Missions to Workstreams](https://ai.engineer/code/2026/talks/luke-alvoeiro) — Luke Alvoeiro, Factory · [livestream at 3:42:45](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=13365s)
+				- [Beyond Better Assistants: Software That Can Make a Decision](https://ai.engineer/code/2026/talks/diogo-almeida) — Diogo Almeida, TypeSafe AI · [livestream at 5:06:58](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=18418s)
+				- [Beyond Generation: Fast, Structured AI Decisions with Jev at Glean](https://ai.engineer/code/2026/talks/chinmay-goyal) — Chinmay Goyal, Glean · [livestream at 5:34:33](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=20073s)
+				- [Your Automation Is Overthinking It](https://ai.engineer/code/2026/talks/uipath) — Chibi Vikram and Kevin Bernstein, UiPath · [livestream at 5:52:15](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=21135s)
+				- [Your Judge Is Hallucinating Too](https://ai.engineer/code/2026/talks/brian-kennedy) — Brian Kennedy, ZoomInfo · [livestream at 6:11:43](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=22303s)
+				- [Autocomplete for Actions: System One from the UI to the DB](https://ai.engineer/code/2026/talks/scott-roberts) — Scott Roberts, Workday · [livestream at 6:24:42](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=23082s)
+				- [What it takes to set intelligence free](https://ai.engineer/code/2026/talks/fabian-hedin) — Fabian Hedin, Lovable · [livestream at 7:26:06](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=26766s)
+				- [How to build an agent that builds the culture](https://ai.engineer/code/2026/talks/zach-bruggeman) — Zach Bruggeman, Ramp · [livestream at 7:48:52](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=28132s)
+				- [Software Factories: Escape from Trash Mountain](https://ai.engineer/code/2026/talks/steve-yegge) — Steve Yegge, Independent · [livestream at 8:06:23](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=29183s)
+				- [2026 in LLMs](https://ai.engineer/code/2026/talks/simon-willison) — Simon Willison, Independent · [livestream at 8:31:08](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=30668s)
+			- #### Online track
+				- [Read the inference state before the agent acts](https://ai.engineer/code/2026/talks/online-inference-security) — speaker not named, Intrinsec AI · [livestream at 1:30:40](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=5440s)
+				- [The harness has to finish the job](https://ai.engineer/code/2026/talks/online-harvey-agent-platform) — Joey Wang, Harvey · [livestream at 1:37:50](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=5870s)
+				- [Specs have bugs too](https://ai.engineer/code/2026/talks/online-aws-specification-analyzer) — Rajath Kotyal, Amazon Web Services · [livestream at 1:50:46](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=6646s)
+				- [From answering the page to sharing the on-call rotation](https://ai.engineer/code/2026/talks/online-meta-oncall) — Chinmay Gandhi, Swaapnika Motapothula and Vlad Tsvang, Meta · [livestream at 1:58:35](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=7115s)
+				- [The Improvement Loop Is the Product](https://ai.engineer/code/2026/talks/online-cline-rsi) — Ara Khan, Cline · [livestream at 3:59:46](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=14386s)
+				- [An Agent's Change Is Not Safe Until Its Recovery Has Been Tested](https://ai.engineer/code/2026/talks/online-undo-button) — Tanmay Sah and Dolly Sah · [livestream at 4:26:17](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=15977s)
+				- [Duolingo's Test-Writing Agent Is a Pull-Request Lifecycle, Not a Prompt](https://ai.engineer/code/2026/talks/online-duolingo-tests) — Kush Agrawal, Duolingo · [livestream at 4:42:54](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=16974s)
+				- [A Skill's Instructions Are Not Its Behavior](https://ai.engineer/code/2026/talks/online-zenity-skills) — Roey Ben Chaim, Zenity · [video](https://www.youtube.com/watch?v=_7P580m4kPY)
+				- [Sub-Agents Are a Distributed System (And Nobody Gave You a Consistency Model)](https://ai.engineer/code/2026/talks/online-subagent-distributed-systems) — Girish Konda, Microsoft · [livestream at 6:37:54](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=23874s)
+				- [Your SKILL.md is 70% of Things the Model Already Knows](https://ai.engineer/code/2026/talks/online-skills-knowledge) — Nikolay Petrov · [livestream at 7:00:53](https://www.youtube.com/watch?v=ZZ19zhYnDKY&t=25253s)
+		- ### [[2026-11-12 Thu]]
+			- [Full livestream](https://www.youtube.com/watch?v=y9JtCCZP2MQ)
+			- #### Main stage
+				- [Ambition in AI](https://ai.engineer/code/2026/talks/jason-liu) — Jason Liu, OpenAI · [livestream at 0:19:40](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=1180s)
+				- [The Software Atelier](https://ai.engineer/code/2026/talks/armin-ronacher) — Armin Ronacher, Earendil · [livestream at 0:40:03](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=2403s)
+				- [Software Engineering Is Becoming Factory Engineering](https://ai.engineer/code/2026/talks/zach-lloyd) — Zach Lloyd, Warp · [livestream at 1:01:22](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=3682s)
+				- [Let's Open Source the World](https://ai.engineer/code/2026/talks/brandon-thomas) — Brandon Thomas, ArtCraft · [livestream at 1:20:53](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=4853s)
+				- [A New Age of Software Engineering](https://ai.engineer/code/2026/talks/walden-yan) — Walden Yan, Cognition · [livestream at 2:33:30](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=9210s)
+				- [What Your AI Doesn't Know](https://ai.engineer/code/2026/talks/jeffrey-pinner) — Jeffrey Pinner, Exa · [livestream at 2:59:08](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=10748s)
+				- [Ship More as a Team of One with Kiro Crew](https://ai.engineer/code/2026/talks/doug-clauson) — Doug Clauson, AWS · [livestream at 3:23:23](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=12203s)
+				- [Exploring Claude's Frontier](https://ai.engineer/code/2026/talks/lance-martin) — Lance Martin, Anthropic · [livestream at 3:48:31](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=13711s)
+				- [Choose the project you can verify](https://ai.engineer/code/2026/talks/jarred-sumner) — Jarred Sumner, Anthropic · [livestream at 5:19:16](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=19156s)
+				- [Judgement is the last job](https://ai.engineer/code/2026/talks/ishaan-dey) — Ishaan Dey, Google DeepMind · [livestream at 6:08:26](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=22106s)
+				- [Brownfield factories keep the promises you already made](https://ai.engineer/code/2026/talks/justin-mccarthy) — Justin McCarthy, Diffusion · [livestream at 6:34:30](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=23670s)
+				- [Train on the engineering work that still fails](https://ai.engineer/code/2026/talks/melvin-johnson) — Melvin Johnson, Google DeepMind · [livestream at 7:35:53](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=27353s)
+				- [Build the company around the agent, not a pilot project](https://ai.engineer/code/2026/talks/quinn-slack) — Quinn Slack, Amp · [livestream at 7:55:24](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=28524s)
+				- [A software factory needs pressure in both directions](https://ai.engineer/code/2026/talks/dexter-horthy) — Dexter Horthy, Factory · [livestream at 8:15:48](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=29748s)
+				- [Keep the human inside the creative loop](https://ai.engineer/code/2026/talks/thariq-shihipar) — Thariq Shihipar, Independent · [livestream at 8:37:57](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=31077s)
+			- #### Online track
+				- [Your agent hates your CLI](https://ai.engineer/code/2026/talks/online-ayush-cli) — Ayush Bhardwaj · [livestream at 1:46:46](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=6406s)
+				- [If You Are Going to Verbally Abuse Your Agents, at Least Label the Outcome](https://ai.engineer/code/2026/talks/online-brian-douglas) — Brian Douglas · [livestream at 1:59:06](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=7146s)
+				- [Searching for a better model-serving recipe](https://ai.engineer/code/2026/talks/online-rohan-optimization) — Rohan Pandey · [livestream at 2:13:37](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=8017s)
+				- [Agents Made Code Free. Maintaining It Didn't Get Cheaper.](https://ai.engineer/code/2026/talks/online-dmitry-maintenance) — Dmitry Buykin, Maersk · [video](https://www.youtube.com/watch?v=oeknLUsN_GE)
+				- [The code still needs someone who cares](https://ai.engineer/code/2026/talks/syntax-lunch) — Scott Tolinski and CJ Reynolds, Syntax · [livestream at 4:11:43](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=15103s)
+				- [Who reviews the bots?](https://ai.engineer/code/2026/talks/online-robinhood-review) — Chetas Joshi, Robinhood · [video](https://www.youtube.com/watch?v=MQiojLnK-E0)
+				- [Green Pull Requests Can Still Break the Trunk](https://ai.engineer/code/2026/talks/online-uber-merging) — Preetam Dwivedi and Manjari Akella, Uber · [video](https://www.youtube.com/watch?v=hX140a5klW0)
+				- [Give the PR writer an evidence packet, not another context dump](https://ai.engineer/code/2026/talks/online-stephen-cassandra) — Stephen Chin, Neo4j; Cassandra Chin, Independent · [livestream at 6:57:39](https://www.youtube.com/watch?v=y9JtCCZP2MQ&t=25059s)

@@ -1,0 +1,2 @@
+- # AI Engineer Summit 2026
+	- [[AI/ES/26/11 Code]] — AI Engineer Code Summit 2026, San Francisco, [[2026-11-10 Tue]] to [[2026-11-12 Thu]]

@@ -1,4 +1,5 @@
 alias:: [[AI Engineer Summit NYC 2025]]
+logseq-entity:: [[Logseq/Entity/Conference]], [[Logseq/Entity/Series]]
 
 - # AI Engineer Summit NYC 2025
 	- ### About The AI Engineer Summit

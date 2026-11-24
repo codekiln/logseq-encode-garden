@@ -1,3 +1,5 @@
+logseq-entity:: [[Logseq/Entity/Conference]]
+
 # [Coding with AI: The End of Software Development As We Know It - May 2025 - O'Reilly Media](https://www.oreilly.com/CodingwithAI/)
 	- See also [[OReilly/Event/25/05/Coding with AI - The End of Software Dev As We Know It]]
 	- ## Event description

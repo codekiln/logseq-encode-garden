@@ -1,3 +1,5 @@
+logseq-entity:: [[Logseq/Entity/Conference]]
+
 # [Business - April 2025 Summit Schedule](https://www.imaginationinaction.co/business-april-2025-summit-schedule)
 	- Pioneer Stage
 	  collapsed:: true
