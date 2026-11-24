@@ -153,6 +153,11 @@ class AbletonLocatorTests(unittest.TestCase):
         self.assertTrue(text.startswith(prefix) and text.endswith(suffix))
         self.assertIn('<Annotation Value="line one&#x0A;line two" />', text)
 
+    def test_live_12_main_track_supplies_the_tempo(self):
+        self.write(live_set(HAND_LOCATOR).replace('MasterTrack>', 'MainTrack>'))
+        self.sync(apply=True)
+        self.assertIn(('374', 'Envelopes, Fold and Noise', PAGE), self.placed())
+
     def test_second_sync_changes_nothing(self):
         self.sync(apply=True)
         written = self.set.read_bytes()
