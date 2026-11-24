@@ -37,6 +37,10 @@ preset-synth-file-sha256:: b9f3976c91b990373094d9af71fbe7be737fe552c0d16e43a92e6
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: off.
+	- ## Performance and session context
+		- A monophonic Harm voice two octaves down through a nearly closed, very resonant low-pass filter. The Cycling Envelope opens the filter on each note, so the sound is a sub bass with a short resonant bloom.
+		- Pressure bends pitch slightly (+0.050) and speeds up the sawtooth LFO through Assign 1 (+0.497). [[GitP/A/Log/26/11/23-Mon]] notes that touch detunes and adds vibrato, which matches those two matrix rows; the LFO's only saved destination is a small amount of cutoff, so the vibrato heard may come from the pitch row rather than the LFO.
+		- In [[GitP/A/Session/26/11/23-Mon]] it is the sub-bass loop on the second sequencer track from 00:17, with low F and G played on the keys from 00:25.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- [[Microfreak/CLI/Inspect a preset]] preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.
