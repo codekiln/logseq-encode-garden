@@ -36,6 +36,9 @@ preset-synth-file-sha256:: 83a3d4e0304116abd27d6c6aa2f518eb671979087ba22641e4fea
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: on.
+	- ## Performance and session context
+		- A paraphonic SawX voice with heavy chorus (Shape 0.666) through a resonant low-pass filter that the main envelope opens. With sustain at 0.665 and no attack, held notes stay steady after a short bright onset.
+		- In [[GitP/A/Session/26/11/23-Mon]] it opens the episode on the first sequencer track and its held loop runs under the next two chapters. The log names it first; no commentary announces it, and the session MIDI records no knob moves before the next preset.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- [[Microfreak/CLI/Inspect a preset]] preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.

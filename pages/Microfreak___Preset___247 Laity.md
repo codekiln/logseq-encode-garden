@@ -42,6 +42,7 @@ preset-synth-file:: [Laity — October 25 slot 247 capture](../assets/.remote/lo
 		- Expression increases cutoff and resonance while reducing chorus amount. The main envelope changes the saw modulation, chorus and filter together.
 		- Paraphonic mode is on in the saved export. The PRESSURE matrix row uses pressure or velocity according to the instrument’s global Utility setting; the export does not establish which expression source was used in the session.
 		- [[GitP/A/Session/26/10/12-Mon]] references this sound. The session context does not identify which recording passages use it.
+		- In [[GitP/A/Session/26/11/23-Mon]] it plays on the third sequencer track from 01:55 and is reworked from 02:33 to 05:03: the session MIDI records Wave, Timbre, Shape, Attack, Decay, cycling-envelope Rise, Fall, Hold and Amount, Resonance and Cutoff. Loops recorded in that stretch differ from the saved settings.
 	- ## Evidence and interpretation
 		- Base controls use normalized 0…1 values unless a stored choice code is shown; matrix amounts use −1…+1. These describe saved base settings, before modulation, and are not OLED percentages, hertz or milliseconds.
 		- [[Microfreak/CLI/Inspect a preset]] preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.

@@ -40,6 +40,10 @@ preset-synth-file-sha256:: 5638d897c103ca14fddf9c4a1a4198ab24fc5c0c7b6ccd7eed565
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: on.
+	- ## Performance and session context
+		- A paraphonic SawX voice an octave down through a band-pass filter. The Cycling Envelope drives Wave and Timbre at full amount and opens the cutoff, and the synced sine LFO moves Wave and cutoff, so each note growls as its harmonics shift.
+		- Pressure lowers Wave and opens the filter, so pressing harder makes the growl brighter and smoother.
+		- In [[GitP/A/Session/26/11/23-Mon]] it carries the second half from 05:12, on the second and third sequencer tracks, and the mix is louder from that point. The session MIDI records Attack, Decay, Wave, Timbre, Shape and cycling-envelope changes at 06:18 and from 07:29 to 07:57, so later loops differ from the saved settings. [[GitP/A/Log/26/11/23-Mon]] calls it pretty random, with very little development.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- [[Microfreak/CLI/Inspect a preset]] preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.
