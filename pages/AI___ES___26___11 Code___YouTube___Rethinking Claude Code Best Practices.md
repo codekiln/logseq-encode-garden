@@ -3,73 +3,27 @@ created-by:: [[Person/Lydia Hallie]]
 date-created:: [[2026-11-11 Wed]]
 logseq-created-time-year:: [[20/2/6]]
 runtime:: 00:17:31
+readwise-link:: https://read.readwise.io/read/01m817wsct0eq9j8a4a0hxak41
 
 - # [Rethinking Claude Code Best Practices — Lydia Hallie, Anthropic](https://www.youtube.com/watch?v=vlfCjWuv4es)
 	- [[Person/Lydia Hallie]] of the [[Claude/Code]] team at [[Anthropic]] gave this talk on the main stage of [[AI/ES/26/11 Code]] on [[2026-11-11 Wed]]. Technical difficulties interrupted the live talk, so she recorded it again at home that day. The AI Engineer channel published the recording.
 	- Lydia starts from a Claude Code session of early 2026 (Opus 4.5, manual approvals, a CLAUDE.md full of "IMPORTANT") and shows, for each step a person used to do, whether the model, the harness, or the environment now does it.
-	- ## Key takeaways
-		- Start from today's defaults: [[Anthropic/Model/Claude/5/5/Opus]] and auto mode, which became the default permission mode in August 2026. [2:46](https://www.youtube.com/watch?v=vlfCjWuv4es&t=166s)
-		- Cut CLAUDE.md down to what Claude can't see from the code. "IMPORTANT" and "never do this!" lines now push the model off track, which means more tool calls and worse results. `/doctor prompt-audit` checks CLAUDE.md and skills for what the current model no longer needs. [3:19](https://www.youtube.com/watch?v=vlfCjWuv4es&t=199s)
-		- When auto mode still blocks routine work, describe your trusted repos, buckets and domains in plain English in the `autoMode` block of your settings. The classifier reads that text. [4:48](https://www.youtube.com/watch?v=vlfCjWuv4es&t=288s)
-		- Auto mode blocked 89% of dangerous commands in Anthropic's August study, against 14% caught by people, so about one in ten still went through. Deny rules are the guarantee: Claude Code checks them before the classifier, which never sees a matching call. [5:46](https://www.youtube.com/watch?v=vlfCjWuv4es&t=346s)
-		- Decide what needs a rule by asking "if Claude gets this wrong once, can I take it back?" Wrong code can be reverted, so leave it to the model. Losing uncommitted changes or exposing a secret can't be taken back, so write a rule. [6:32](https://www.youtube.com/watch?v=vlfCjWuv4es&t=392s)
-		- Permissions decide whether a tool call runs. A sandbox limits what the command and its child processes can read, write and reach, and the operating system enforces it, so a compromised dependency inside `npm test` can't open `.env`. The sandbox covers shell commands only; Read, Edit, WebFetch, MCP servers and hooks run outside it. [7:56](https://www.youtube.com/watch?v=vlfCjWuv4es&t=476s)
-		- Run long sessions in a cloud session ([[Claude/Code/Cloud Session]]). Each one gets its own machine with a fresh copy of the repo and keeps running with the laptop closed. `.env`, SSH keys and the GitHub token aren't there, API keys go in as network secrets, and network access is limited by default. Keep auto mode on and commit deny rules to the repo, because pushed commits and sent messages outlive the disposable machine. [9:10](https://www.youtube.com/watch?v=vlfCjWuv4es&t=550s)
-		- Set up verification points that pass or fail along the way: tests, a build, a screenshot. In the prompt, say what done looks like, ask for tasks that each have a test, and ask to see the test output. [10:54](https://www.youtube.com/watch?v=vlfCjWuv4es&t=654s)
-		- Use hooks for checks that must run: lint after every edit (`PostToolUse`), the changed area's tests when a task completes (`TaskCompleted`), the whole suite at the end (`Stop`). Exit with code 2 to send Claude back to fix it; with exit code 1 the task is marked completed anyway. [12:07](https://www.youtube.com/watch?v=vlfCjWuv4es&t=727s)
-		- Once many sessions run, CI matters most, because it runs the same checks on every PR. CI auto-fix lets Claude fix failing checks, and merge when ready lets GitHub merge low-risk PRs once checks pass. [14:00](https://www.youtube.com/watch?v=vlfCjWuv4es&t=840s)
-		- Tier human review by risk. On her team Claude reviews every PR first, from a fresh context with a separate group of agents to double-check each bug, and then: "smaller changes like docs or copy, they don't need a person ... ordinary product changes just need one reviewer and then risky changes might need two." [14:39](https://www.youtube.com/watch?v=vlfCjWuv4es&t=879s)
-		- Hand session starts to an orchestrator. Claude Code projects (beta) take one request, split it into threads that are new sessions, verify what comes back, and manage context automatically. Use a model that decides and judges, like Fable, for the main session, and one that does the work, like Opus 5.5, for the threads. [15:10](https://www.youtube.com/watch?v=vlfCjWuv4es&t=910s)
-		- To try it, give Claude a task much bigger than usual, make sure CI catches what you care about, configure the cloud environment's network access, secrets and setup script, then start in the cloud and see where sessions get stuck. [17:02](https://www.youtube.com/watch?v=vlfCjWuv4es&t=1022s)
-	- ## [[Readwise]] highlights
-		- From [Reader](https://read.readwise.io/read/01m817wsct0eq9j8a4a0hxak41), quoted as Readwise stored them.
-		- [1:19](https://www.youtube.com/watch?v=vlfCjWuv4es&t=79s)
-			- > So nowadays, at least at Anthropic, our sessions look more like this. So we're running dozens of sessions at the same time, running for hours, verifying their own results along the way, and we even have sessions orchestrate other sessions.
-			  >
-			  > So whereas we used to be in the loop for almost every step and running one or just a couple sessions at a time, we've now essentially become managers for dozens of sessions. We also get a lot more done, though. Now, you may have seen our blog post in October about how Anthropic went from about 2500 changes a day in May to more than 30,000 a day in September. But this also means that we as developers just have to rethink on what we're focused on instead.
-		- [3:37](https://www.youtube.com/watch?v=vlfCjWuv4es&t=217s)
-			- > So nowadays your CLAUDE.md file should only include the things that Claude cannot see from your code.
-			  >
-			  > So for example, maybe you have a service that's still using some legacy source somewhere, but it's not directly referenced in the code. That's still good to keep in there. But everything else like what stack you're on or where to look, you really don't need that anymore.
-			  >
-			  > And we actually have a command for this called doctor prompt audit, which makes it really easy to optimize your environment for a specific model. So if you're on Opus 55 here and you run this command, it will automatically check your CLAUDE.md and your skills to see what the new model no longer needs.
-		- [4:48](https://www.youtube.com/watch?v=vlfCjWuv4es&t=288s)
-			- > Now the defaults should be good in most cases. But if you still notice that you have to approve a lot of commands even in auto mode, the first thing to look at is settings here because you can configure auto mode in your own settings just in plain English. And this is what gets sent to the classifier, which then decides whether to reject or allow certain commands.
-			- [[My Notes]]: Crazy syntax here
-		- [6:01](https://www.youtube.com/watch?v=vlfCjWuv4es&t=361s)
-			- > But about one in 10 of those commands still went through. So if you do want the guarantee, you can only enforce that in the harness. And this is where some of our older best practices still matters and that's permissions.
-			  >
-			  > So for example, if you have a deny rule for a specific tool call in your project, cloud Code looks at this rule before the auto mode classifier even looks at it. In fact, if a tool call matches a deny rule, the classifier never even sees it.
-			  >
-			  > So having deny rules is still the best way to make sure clot actually never does something. But then how do you know what needs to be a rule in your project versus what the model can just know because they've gotten so good at it?
-			  >
-			  > I think it kind of just comes down to if clot gets as wrong once, can I take it back? So if it writes the wrong code, you can still revert that. So you can still leave that to the model, but if it throws away or uncommitted changes or it reads a key that's now in your transcript and you don't want that, that should still be a rule.
-		- [7:56](https://www.youtube.com/watch?v=vlfCjWuv4es&t=476s)
-			- > And permissions only decide if a tool call runs, but they cannot limit what it can reach once it's running.
-			  >
-			  > So we want to make sure that these kinds of scripts can still run because this is just part of you know how cloud can check its own work running tests. So we cannot just block npm tests but we want to limit its side effects. So really we just want to limit the environment that it's running in. So if you're running it locally or on your own machine, you can run commands like that in a sandbox.
-			  >
-			  > So then you have control over which files in a command it can read, which folders it can write to, which hosts it can reach, and the operating system enforces that. Also, this also applies to everything that command then starts, so any child processes.
-		- [8:53](https://www.youtube.com/watch?v=vlfCjWuv4es&t=533s)
-			- > So now when that dependency tries to open our end file, the operating system just doesn't let it. And by default, it can still read most of your machine. So you'd want to add another rule for your SSH keys if you care about that.
-		- [11:58](https://www.youtube.com/watch?v=vlfCjWuv4es&t=718s)
-			- > So that's pretty reasonable. So, if one of these runs would still log everyone out, it doesn't get past that first check and then it just has to find another way. And there's a couple ways to set this up. The easiest one is, of course, just in your prompt. So, you know, you say what done looks like and ask it to split that into tasks so they have their own tests.
-			  >
-			  > And I also like to ask it to show the actual output because you weren't there to see it.
-		- [12:47](https://www.youtube.com/watch?v=vlfCjWuv4es&t=767s)
-			- > So you know if it touched our off code or something, it has to pass the off tests. And when it wants to finish the whole session, we can just run the entire test suite, and if one of those fails, it goes, "Oh, that's still broken." It goes back until it passes so it fixes it.
-			  >
-			  > Now just one thing, when a test fails by default, most tools they exit with a one exit code, but with a one, that task by clock Code just gets marked as completed anyway. So, make sure that your scripts exit with a twoexit code because that's what actually sends Cloud back to fix it.
-		- [14:53](https://www.youtube.com/watch?v=vlfCjWuv4es&t=893s)
-			- > And then how much we review ourselves just depends on the risk. So smaller changes like docer copy, they don't need a person. So once the automated checks are green, we're pretty good to go. Maybe ordinary product changes just need one reviewer and then risky changes might need two.
-		- [15:31](https://www.youtube.com/watch?v=vlfCjWuv4es&t=931s)
-			- > And you can already see this in things like cloud Code projects, which is still in beta, but you just tell it what it needs to be done and the orchestrator splits that up and then starts other sessions for each task and it keeps track of what comes back. So it automatically starts and verifies these threads, which are just new sessions.
-			  >
-			  > So instead of talking to eight sessions, you're just talking to one. And the main session doesn't write the code itself.
-			  >
-			  > So there you want a model that's really good at deciding what to do and judging what comes back. A model like Fable, and if something comes back that isn't actually done, it just, you know, sends it back. So until it's actually done and passes everything.
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=vlfCjWuv4es}}
+			- ### Key takeaways
+				- {{youtube-timestamp 166}} Start from today's defaults: [[Anthropic/Model/Claude/5/5/Opus]] and auto mode, which became the default permission mode in August 2026.
+				- {{youtube-timestamp 199}} Cut CLAUDE.md down to what Claude can't see from the code. "IMPORTANT" and "never do this!" lines now push the model off track, which means more tool calls and worse results. `/doctor prompt-audit` checks CLAUDE.md and skills for what the current model no longer needs.
+				- {{youtube-timestamp 288}} When auto mode still blocks routine work, describe your trusted repos, buckets and domains in plain English in the `autoMode` block of your settings. The classifier reads that text.
+				- {{youtube-timestamp 346}} Auto mode blocked 89% of dangerous commands in Anthropic's August study, against 14% caught by people, so about one in ten still went through. Deny rules are the guarantee: Claude Code checks them before the classifier, which never sees a matching call.
+				- {{youtube-timestamp 392}} Decide what needs a rule by asking "if Claude gets this wrong once, can I take it back?" Wrong code can be reverted, so leave it to the model. Losing uncommitted changes or exposing a secret can't be taken back, so write a rule.
+				- {{youtube-timestamp 476}} Permissions decide whether a tool call runs. A sandbox limits what the command and its child processes can read, write and reach, and the operating system enforces it, so a compromised dependency inside `npm test` can't open `.env`. The sandbox covers shell commands only; Read, Edit, WebFetch, MCP servers and hooks run outside it.
+				- {{youtube-timestamp 550}} Run long sessions in a cloud session ([[Claude/Code/Cloud Session]]). Each one gets its own machine with a fresh copy of the repo and keeps running with the laptop closed. `.env`, SSH keys and the GitHub token aren't there, API keys go in as network secrets, and network access is limited by default. Keep auto mode on and commit deny rules to the repo, because pushed commits and sent messages outlive the disposable machine.
+				- {{youtube-timestamp 654}} Set up verification points that pass or fail along the way: tests, a build, a screenshot. In the prompt, say what done looks like, ask for tasks that each have a test, and ask to see the test output.
+				- {{youtube-timestamp 727}} Use hooks for checks that must run: lint after every edit (`PostToolUse`), the changed area's tests when a task completes (`TaskCompleted`), the whole suite at the end (`Stop`). Exit with code 2 to send Claude back to fix it; with exit code 1 the task is marked completed anyway.
+				- {{youtube-timestamp 840}} Once many sessions run, CI matters most, because it runs the same checks on every PR. CI auto-fix lets Claude fix failing checks, and merge when ready lets GitHub merge low-risk PRs once checks pass.
+				- {{youtube-timestamp 879}} Tier human review by risk. On her team Claude reviews every PR first, from a fresh context with a separate group of agents to double-check each bug, and then: "smaller changes like docs or copy, they don't need a person ... ordinary product changes just need one reviewer and then risky changes might need two."
+				- {{youtube-timestamp 910}} Hand session starts to an orchestrator. Claude Code projects (beta) take one request, split it into threads that are new sessions, verify what comes back, and manage context automatically. Use a model that decides and judges, like Fable, for the main session, and one that does the work, like Opus 5.5, for the threads.
+				- {{youtube-timestamp 1022}} To try it, give Claude a task much bigger than usual, make sure CI catches what you care about, configure the cloud environment's network access, secrets and setup script, then start in the cloud and see where sessions get stuck.
 			- ### {{youtube-timestamp 0}} Evolution of workflow
 				- {{youtube-timestamp 0}} **Slide 01**
 					- ![Slide 01](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___01-00m00s.jpg)
@@ -92,6 +46,10 @@ runtime:: 00:17:31
 					- ![Slide 05](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___05-01m14s.jpg)
 					- acme-web. "This week: the auth migration, the flaky test, dependencies, the cold start crash, docs, the billing retry, the user service rename and a11y." "On it. I'll start a session for each one." Eight cloud sessions (flaky auth test, dependencies, cold start crash, auth migration, docs sweep, billing retry, user service, a11y on settings) run for 6h 30m, each with columns PR, review, merged; dependencies and docs sweep show auto-merge.
 				- {{youtube-timestamp 75}} But as these models got better at taking on bigger tasks, our sessions also changed. So nowadays, at least at Anthropic, our sessions look more like this. So we're running dozens of sessions at the same time, running for hours, verifying their own results along the way, and we even have sessions orchestrate other sessions. So whereas we used to be in the loop for almost every step and running one or just a couple sessions at a time, we've now essentially become managers for dozens of sessions.
+				- {{youtube-timestamp 79}}
+					- [[Person/Lydia Hallie]]
+						- > So nowadays, at least at Anthropic, our sessions look more like this. So we're running dozens of sessions at the same time, running for hours, verifying their own results along the way, and we even have sessions orchestrate other sessions.
+						- > So whereas we used to be in the loop for almost every step and running one or just a couple sessions at a time, we've now essentially become managers for dozens of sessions. We also get a lot more done, though. Now, you may have seen our blog post in October about how Anthropic went from about 2500 changes a day in May to more than 30,000 a day in September. But this also means that we as developers just have to rethink on what we're focused on instead. ([Readwise](https://read.readwise.io/read/01m8186ma3q392aevg6qaf9k9k))
 				- {{youtube-timestamp 103}} **Slide 06**
 					- ![Slide 06](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___06-01m43s.jpg)
 					- 2,500 (May 2026) → 30,000+ (September 2026) code changes merged per day to Anthropic's monorepo. Source: Redesigning source control at Anthropic, October 2026.
@@ -125,6 +83,11 @@ runtime:: 00:17:31
 					- ![Slide 13](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___13-03m36s.jpg)
 					- `/doctor prompt-audit` strikes lines 1 to 4 of CLAUDE.md and keeps "src/legacy still serves our mobile apps".
 				- {{youtube-timestamp 217}} So, nowadays your CLAUDE.md file should only include the things that Claude cannot see from your code. So, for example, maybe you have a service that's still using some legacy source somewhere, but it's not directly referenced in the code. That's still good to keep in there. But everything else, like what stack you're on or where to look, you really don't need that anymore.
+				- {{youtube-timestamp 217}}
+					- [[Person/Lydia Hallie]]
+						- > So nowadays your CLAUDE.md file should only include the things that Claude cannot see from your code.
+						- > So for example, maybe you have a service that's still using some legacy source somewhere, but it's not directly referenced in the code. That's still good to keep in there. But everything else like what stack you're on or where to look, you really don't need that anymore.
+						- > And we actually have a command for this called doctor prompt audit, which makes it really easy to optimize your environment for a specific model. So if you're on Opus 55 here and you run this command, it will automatically check your CLAUDE.md and your skills to see what the new model no longer needs. ([Readwise](https://read.readwise.io/read/01m818ad8jv28zactgkt5j9h6p))
 				- {{youtube-timestamp 234}} And we actually have a command for this called `/doctor prompt-audit`, which makes it really easy to optimize your environment for a specific model. So, if you're on Opus 5.5 here and you run this command, it will automatically check your CLAUDE.md and your [[Claude/Code/Skill]]s to see what the new model no longer needs.
 			- ### {{youtube-timestamp 251}} Managing auto mode
 				- {{youtube-timestamp 251}} **Slide 14**
@@ -153,6 +116,10 @@ runtime:: 00:17:31
 						  }
 						  ~~~
 				- {{youtube-timestamp 288}} Now, the defaults should be good in most cases, but if you still notice that you have to approve a lot of commands even in auto mode, the first thing to look at is settings here, because you can configure auto mode in your own settings just in plain English, and this is what gets sent to the classifier, which then decides whether to reject or allow certain commands. So, here we can just write which repos, buckets, domains we trust and what it should always allow or never do.
+				- {{youtube-timestamp 288}}
+					- [[Person/Lydia Hallie]]
+						- > Now the defaults should be good in most cases. But if you still notice that you have to approve a lot of commands even in auto mode, the first thing to look at is settings here because you can configure auto mode in your own settings just in plain English. And this is what gets sent to the classifier, which then decides whether to reject or allow certain commands. ([Readwise](https://read.readwise.io/read/01m818dchdpwqhmabxbmvhxe2x))
+							- [[My Notes]]: Crazy syntax here
 				- {{youtube-timestamp 313}} Okay, so honestly this was pretty easy by just using today's defaults. We've already gotten rid of most of our in-the-loop stuff, because the model took over the steering and auto mode took over all the approving, so getting out of the loop is easy. But the harder question now is how do we make sure it's okay that we're not there anymore? So, first is keeping it safe and then also verification.
 			- ### {{youtube-timestamp 330}} Safety and environment
 				- {{youtube-timestamp 334}} So, let's start with keeping it safe, because everything so far, so upgrading the model and using auto mode, is just working with a model. And in most cases it does what you tell it to do, but that's not a guarantee.
@@ -164,6 +131,12 @@ runtime:: 00:17:31
 					- ![Slide 18](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___18-06m01s.jpg)
 					- 14% caught by people; 1 in 10 still went through.
 				- {{youtube-timestamp 361}} But about one in 10 of those commands still went through. So, if you do want the guarantee, you can only enforce that in the harness. And this is where some of our older best practices still matter, and that's permissions.
+				- {{youtube-timestamp 361}}
+					- [[Person/Lydia Hallie]]
+						- > But about one in 10 of those commands still went through. So if you do want the guarantee, you can only enforce that in the harness. And this is where some of our older best practices still matters and that's permissions.
+						- > So for example, if you have a deny rule for a specific tool call in your project, cloud Code looks at this rule before the auto mode classifier even looks at it. In fact, if a tool call matches a deny rule, the classifier never even sees it.
+						- > So having deny rules is still the best way to make sure clot actually never does something. But then how do you know what needs to be a rule in your project versus what the model can just know because they've gotten so good at it?
+						- > I think it kind of just comes down to if clot gets as wrong once, can I take it back? So if it writes the wrong code, you can still revert that. So you can still leave that to the model, but if it throws away or uncommitted changes or it reads a key that's now in your transcript and you don't want that, that should still be a rule. ([Readwise](https://read.readwise.io/read/01m818h3y9eq8eg1y6s0v68nzr))
 				- {{youtube-timestamp 364}} **Slide 19**
 					- ![Slide 19](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___19-06m04s.jpg)
 					- Tool call `Bash git reset --hard` → Deny rule: blocked → Auto mode: never sees it. `.claude/settings.json`: `{"permissions": {"deny": ["Bash(git reset --hard *)"]}}`
@@ -182,6 +155,11 @@ runtime:: 00:17:31
 					- What `npm test` runs: `vitest run` (the script in package.json), `src/auth/auth.test.ts`, `node_modules/some-package/index.js` (code you didn't write), which reaches `.env`, `~/.ssh`, and collector.example.
 				- {{youtube-timestamp 445}} But when the script is running, it runs code that you didn't write, like your dependencies. Or maybe Claude runs a script real quick that it wrote just to quickly check something. So, if one of those scripts is compromised, it could just open that same `.env` file or your SSH keys and send those to a server you've never heard of, right? And even if we were still there as humans approving everything, honestly, we would have just clicked allow, because there's nothing to say no to. It's just part of the script that, in this example case, `npm test` runs.
 				- {{youtube-timestamp 476}} And permissions only decide if a tool call runs, but they cannot limit what it can reach once it's running. So, we want to make sure that these kinds of scripts can still run, because this is just part of, you know, how Claude can check its own work, running tests. So we cannot just block `npm test`, but we want to limit its side effects. So really, we just want to limit the environment that it's running in.
+				- {{youtube-timestamp 476}}
+					- [[Person/Lydia Hallie]]
+						- > And permissions only decide if a tool call runs, but they cannot limit what it can reach once it's running.
+						- > So we want to make sure that these kinds of scripts can still run because this is just part of you know how cloud can check its own work running tests. So we cannot just block npm tests but we want to limit its side effects. So really we just want to limit the environment that it's running in. So if you're running it locally or on your own machine, you can run commands like that in a sandbox.
+						- > So then you have control over which files in a command it can read, which folders it can write to, which hosts it can reach, and the operating system enforces that. Also, this also applies to everything that command then starts, so any child processes. ([Readwise](https://read.readwise.io/read/01m818mta27hctye5ghw6hyje9))
 			- ### {{youtube-timestamp 496}} Cloud-based environments
 				- {{youtube-timestamp 497}} **Slide 23**
 					- ![Slide 23](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___23-08m17s.jpg)
@@ -191,6 +169,9 @@ runtime:: 00:17:31
 					- ![Slide 24](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___24-08m38s.jpg)
 					- With the sandbox on and a deny rule for `Read(~/.ssh/**)`: `.env` blocked (deny rule), `~/.ssh` blocked (deny rule), collector.example blocked (host not approved).
 				- {{youtube-timestamp 519}} So on its own, that deny rule gets checked by Claude before the command runs, but all it sees there is `npm test`. So it doesn't see which files that script ends up opening. But with the sandbox on, that same rule gets passed on to the operating system. So now when that dependency tries to open our `.env` file, the operating system just doesn't let it. And by default, it can still read most of your machine, so you'd want to add another rule for your SSH keys if you care about that. And it also cannot reach a host that wasn't approved.
+				- {{youtube-timestamp 533}}
+					- [[Person/Lydia Hallie]]
+						- > So now when that dependency tries to open our end file, the operating system just doesn't let it. And by default, it can still read most of your machine. So you'd want to add another rule for your SSH keys if you care about that. ([Readwise](https://read.readwise.io/read/01m818p1jna0ghsq1rqjhkk8sp))
 				- {{youtube-timestamp 550}} **Slide 25**
 					- ![Slide 25](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___25-09m10s.jpg)
 					- Your machine. In the sandbox: Bash npm test, and its child processes. Not in the sandbox: Read, Edit, WebFetch; MCP servers; Hooks.
@@ -225,6 +206,10 @@ runtime:: 00:17:31
 					- ![Slide 32](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___32-11m36s.jpg)
 					- Verification points along the run: A test (auth.test.ts: nobody gets logged out), A build (`npm run build`), A screenshot (Log in).
 				- {{youtube-timestamp 696}} But it really helps to set up these verification points along the way, so Claude keeps verifying its own results. And those can be anything that comes back as a pass or fail. So tests, a build, a screenshot, whatever you have. So now we just want to make sure that we review these verification points. They're a lot shorter to review than if we just had to, you know, review the whole change at the end. So that's pretty reasonable.
+				- {{youtube-timestamp 718}}
+					- [[Person/Lydia Hallie]]
+						- > So that's pretty reasonable. So, if one of these runs would still log everyone out, it doesn't get past that first check and then it just has to find another way. And there's a couple ways to set this up. The easiest one is, of course, just in your prompt. So, you know, you say what done looks like and ask it to split that into tasks so they have their own tests.
+						- > And I also like to ask it to show the actual output because you weren't there to see it. ([Readwise](https://read.readwise.io/read/01m818w8qd5d7fn3w5spbr5r9c))
 				- {{youtube-timestamp 719}} **Slide 33**
 					- ![Slide 33](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___33-11m59s.jpg)
 					- A run that "logs everyone out" fails the first test (nobody gets logged out) and loops back until the test passes.
@@ -237,6 +222,10 @@ runtime:: 00:17:31
 					- ![Slide 35](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___35-12m24s.jpg)
 					- Hooks: Every edit → lint (`PostToolUse`). Every task → its tests (`TaskCompleted`). The end → all tests (`Stop`). A failed check: "that's still broken".
 				- {{youtube-timestamp 741}} But again, prompting is not a guarantee that a model will do it. So for the ones that have to run, guaranteed run, I would use [[Claude/Code/Hook]]s, which are just, you know, scripts that Claude Code runs at a specific point. And those give you a lot of control, because you decide when they run and what they run and what they check. So for example, every time it edits a file, we can run our linter. Every time it wants to mark a task as complete, we can run the tests for what it changed. So, you know, if it touched our auth code or something, it has to pass the auth tests. And when it wants to finish the whole session, we can just run the entire test suite. And if one of those fails, it goes, oh, that's still broken. It goes back until it passes, so it fixes it.
+				- {{youtube-timestamp 767}}
+					- [[Person/Lydia Hallie]]
+						- > So you know if it touched our off code or something, it has to pass the off tests. And when it wants to finish the whole session, we can just run the entire test suite, and if one of those fails, it goes, "Oh, that's still broken." It goes back until it passes so it fixes it.
+						- > Now just one thing, when a test fails by default, most tools they exit with a one exit code, but with a one, that task by clock Code just gets marked as completed anyway. So, make sure that your scripts exit with a twoexit code because that's what actually sends Cloud back to fix it. ([Readwise](https://read.readwise.io/read/01m818yes6877q5a00t7bewefw))
 				- {{youtube-timestamp 783}} **Slide 36**
 					- ![Slide 36](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___36-13m03s.jpg)
 					- Hooks: exit 2 → goes back to fix it; exit 1 → marked as completed.
@@ -259,12 +248,20 @@ runtime:: 00:17:31
 					- ![Slide 40](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___40-14m53s.jpg)
 					- Smaller changes (like a typo or a lint fix): Claude only. Most changes: one person. Riskiest changes: more than one person.
 				- {{youtube-timestamp 893}} And then how much we review ourselves just depends on the risk. So smaller changes, like docs or copy, they don't need a person. So once the automated checks are green, we're pretty good to go. Maybe ordinary product changes just need one reviewer, and then risky changes might need two.
+				- {{youtube-timestamp 893}}
+					- [[Person/Lydia Hallie]]
+						- > And then how much we review ourselves just depends on the risk. So smaller changes like docer copy, they don't need a person. So once the automated checks are green, we're pretty good to go. Maybe ordinary product changes just need one reviewer and then risky changes might need two. ([Readwise](https://read.readwise.io/read/01m8192a7asq4h0cmmcxj95f3g))
 			- ### {{youtube-timestamp 910}} Orchestration and conclusion
 				- {{youtube-timestamp 909}} **Slide 41**
 					- ![Slide 41](../assets/AI___ES___26___11-Code___YouTube___Rethinking-Claude-Code-Best-Practices___Asset___Slide___41-15m09s.jpg)
 					- Fable decides and judges: the acme-web main session ("This week: the auth migration, the flaky test, dependencies, the cold start crash, docs, the billing retry, the user service rename and a11y." "On it. I'll start a session for each one.") tracks Auth migration (Working…), Flaky auth test, Dependencies, Cold start crash (Done) and 4 more. Opus 5.5 does the work in eight cloud threads.
 				- {{youtube-timestamp 910}} Now, ultimately, kind of where we see things going, and we're already kind of doing more of that at Anthropic, is that you're not really starting all of those sessions yourself either. Because if you're anything like me, I'm terrible at context switching, so having to manage so many sessions at the same time doesn't always go well.
 				- {{youtube-timestamp 927}} So instead, you just have one main session that's your orchestrator, and you can already see this in things like Claude Code projects, which is still in beta. But you just tell it what it needs to be done, and the orchestrator splits that up and then starts other sessions for each task, and it keeps track of what comes back. So it automatically starts and verifies these threads, which are just new sessions. So instead of talking to eight sessions, you're just talking to one.
+				- {{youtube-timestamp 931}}
+					- [[Person/Lydia Hallie]]
+						- > And you can already see this in things like cloud Code projects, which is still in beta, but you just tell it what it needs to be done and the orchestrator splits that up and then starts other sessions for each task and it keeps track of what comes back. So it automatically starts and verifies these threads, which are just new sessions.
+						- > So instead of talking to eight sessions, you're just talking to one. And the main session doesn't write the code itself.
+						- > So there you want a model that's really good at deciding what to do and judging what comes back. A model like Fable, and if something comes back that isn't actually done, it just, you know, sends it back. So until it's actually done and passes everything. ([Readwise](https://read.readwise.io/read/01m8193t3e44mqghc1ya8gngpq))
 				- {{youtube-timestamp 955}} And the main session doesn't write the code itself. So there you want a model that's really good at deciding what to do and judging what comes back, a model like Fable. And if something comes back that isn't actually done, it just, you know, sends it back until it's actually done and passes everything. And the threads need a model that's good at actually doing the work, like Opus 5.5. And you can set those separately. So, you know, one model for the main session and then another one for the threads.
 				- {{youtube-timestamp 980}} And another benefit is that with this setup, with Claude Code projects specifically, we don't manage context anymore. That's all done automatically for us. [We] no longer have to think about, you know, when to compact or clear, all of that stuff.
 				- {{youtube-timestamp 994}} **Slide 42**
