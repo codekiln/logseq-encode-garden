@@ -34,7 +34,7 @@ date-created:: [[2026-11-23 Mon]]
 				- a zeld meld arp calling forth
 				  for blessing of bass
 				- this station is a powerful key
-				  when held, but here it's more
+				  when held, but here it's more [[Music/Term/Staccato]]
 		- ### 00:17 enter [[Microfreak/Preset/245 GivemeSub]]
 			- The second sequencer track records from 00:17, and at 00:33 its take becomes a sub-bass loop.
 			- 00:25 - low F and G alternate on the MicroFreak's keys until 01:02.
