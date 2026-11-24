@@ -1,0 +1,15 @@
+logseq-entity:: [[Logseq/Entity/Software/Feature]]
+- # [ChatGPT Computer Use](https://learn.chatgpt.com/docs/computer-use)
+	- [[ChatGPT/App/Desktop]] can inspect and operate supported desktop applications through screenshots, clicks and keyboard input. This is the capability used for graphical work in applications such as [[Ableton/Live]].
+	- ## Names and permissions
+		- **Computer Use** is the documented feature name. Saying “App Use” or mentioning `@Computer` does not select a different permission system.
+		- **Appshots** attach a view of an application to a chat. A visible screenshot does not establish that Computer Use can control the application.
+		- App approval, macOS Screen Recording and Accessibility permissions, and organization policy are separate controls. The [setup and permissions documentation](https://learn.chatgpt.com/docs/computer-use#permissions-and-approvals) describes the supported controls.
+	- ## Terminal applications are restricted
+		- OpenAI's [safety guidance](https://learn.chatgpt.com/docs/computer-use#safety-guidance), read on [[2026-11-24 Tue]], excludes terminal applications from Computer Use because terminal automation could bypass its security policies. It documents no per-task exception for an owner who wants to inspect colors or test clickable links.
+		- A personal account is therefore unlikely to help with [[Ghostty]]. This is an inference from the product restriction, rather than a comparison tested across accounts. Organizations can add [managed app restrictions](https://learn.chatgpt.com/docs/enterprise/managed-configuration); their effective policy was not available during the investigation.
+	- ## Ghostty color investigation, November 2026
+		- Computer Use rejected access to `com.mitchellh.ghostty` with `Computer Use is not allowed to use the app 'com.mitchellh.ghostty' for safety reasons.` Explicit authorization and a subsequent `@Computer` mention produced the same rejection.
+		- The attached Appshot showed the terminal colors. Shell queries could inspect [[tmux]] capabilities and settings, but neither established that a rendered link was clickable.
+		- Plugin Management did not recognize the bundled Computer plugin reference. That response did not establish whether native Computer Use was installed or explain the Ghostty denial.
+		- The practical gap is visual terminal testing: command output can establish advertised RGB support, while an Appshot can show the rendered colors. Testing an actual click still requires interaction with the terminal application.
