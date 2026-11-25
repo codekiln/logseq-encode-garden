@@ -5,6 +5,7 @@ up:: [[Ableton/Live]]
 	- The reference manual for [[Ableton/Live]] 12, covering every view, device and setting.
 	- [PDF edition of October 1, 2026](https://cdn-resources.ableton.com/resources/pdfs/live-manual/12/2026-10-01/live12-manual-en.pdf)
 	- Live 11 notes: [[Ableton/Manual]]
+	- [[Ableton/Live/v/12]] highlights what changed for Live 11 users and has short MIDI exercises.
 	- ## Sections
 		- [[Ableton/Live/UG/01 Welcome to Live]]
 		- [[Ableton/Live/UG/02 First Steps]]

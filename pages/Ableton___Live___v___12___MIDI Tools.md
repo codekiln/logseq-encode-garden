@@ -1,0 +1,12 @@
+up:: [[Ableton/Live/v/12]]
+- # MIDI Tools
+	- Live 12 adds **Generate** and **Transform** to the MIDI clip editor. A Generator creates notes in the clip. A Transformation reshapes the clip's existing notes. Once applied, the result is editable piano-roll material. [[Ableton/Live/UG/11 MIDI Tools]] describes the clip tools and their controls.
+	- ## Generate a phrase with Seed
+		- In an empty looping MIDI clip, open **Generate** and select **Seed**. Choose a narrow pitch range, set Voices to one, and adjust Density, Duration, and Velocity. Turn off Auto Apply to adjust the controls before pressing **Apply**.
+		- Keep a phrase you like, then select its notes and try **Transform → Ornament** to add grace notes. Play the loop to hear the edited notes. For variation during playback, try [[Ableton/Live/v/12/Note Probability Group]] on some of those notes.
+		- [[Ableton/Live/UG/11 MIDI Tools/03 Generative Tools/02 Seed]] covers the range controls. Seed draws notes within those constraints and offers no control for the probability of the next pitch given the preceding pitch.
+	- ## Make the next phrase depend on the current one
+		- In Session View, put three phrase clips named A, B, and C in consecutive slots on one track. On each clip, enable Follow Actions and set Linked with one play-through. Turn on the global Follow Actions switch.
+		- Give clip A two **Jump** targets, B at 80% and C at 20%. Give clip B two **Jump** targets, A at 60% and C at 40%. In clip C, use **Jump** to B at 90% and **Play Again** at 10%. Jump targets use scene numbers. Launch any clip and listen as the currently playing phrase determines the next set of odds. Launch another clip manually to pick a new current phrase.
+		- Follow Actions already work in Live 11. Each clip supplies the transition probabilities for a first-order Markov chain whose states are phrases. [[Ableton/Live/Action/Follow]] covers the controls, and [Ableton's Live 11 Follow Actions guide](https://help.ableton.com/hc/en-us/articles/360019101360-Updates-to-Follow-Actions-in-Live-11) explains Jump and Linked timing.
+		- For note-level transitions, [Metrosync's gtm.markov transform](https://maxforlive.com/library/device/10836/gtm-markov-transform) is a third-party Max for Live Transformation for monophonic melodies. Its second-order model uses the previous two states. Install the prebuilt tool from the `gtm.markov` Max package and open it in the MIDI clip's Transform tab.
