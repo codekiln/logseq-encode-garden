@@ -1,0 +1,32 @@
+prev:: [[GitP/A/Log/26/11/23-Mon]]
+
+- [[2026-11-25 Wed]]
+	- Still working on a new version of Monday's ceremony, [[GitP/A/Session/26/11/23-Mon]].
+	- Meanwhile, re-evaluating [[GitP/A/Template/LPP-Seq]], the template that ceremony started from.
+		- [[My Notes]]
+			-
+		- Notes from [[GitP/Acolyte]], read from the open Monday Set and the template file
+			- #### Which tracks make the mix
+				- Monday's Set now has the recording tracks on Main and muted, as the TODO on [[GitP/A/Template/LPP-Seq]] asks. The template file still sends them to No Output.
+				- Unmuting the recording tracks alone would double the music. While loops were launched, Live wrote each launch into the Arrangement on mf1 to mf3, so those tracks replay the same loops the recording tracks printed. A mix from the recording tracks also needs mf1 to mf4 muted. Soloing the recording tracks did both in one step.
+				- With the recording tracks muted, the Arrangement plays the mf1 to mf3 loops with their own volume and pan automation. Anything heard only through input monitoring, such as playing on the MicroFreak's keys while no loop was recording, lives only on the recording tracks.
+				- Which tracks is the new version mixed from?
+			- #### What the recording tracks capture
+				- The recording tracks tap mf1 to mf4 at Post Mixer, which [[Ableton/Live/UG/17 Routing and IO/05 Internal Routings/01 Internal Routing Points]] describes as the track's output after volume and pan. Sends leave a track on their way to the returns, so the reverb and delay fed from mf1 to mf4 never reach the recording tracks.
+				- On Monday, mf2 and mf3 carry reverb send automation. A mix of the recording tracks leaves it out. mf2-rec and mf3-rec carry send automation of their own, and that plays back with the mix.
+				- The template page says recording these tracks captures the send moves. That holds only for sends turned on the recording tracks themselves.
+				- The Post Mixer signal also carries each mf track's Glue Compressor. Each recording track then runs its own Glue Compressor with the same "Mastering - Make It Loud" preset, so a mix of the recording tracks is compressed twice. The Compressor after it is switched off on every audio track.
+				- Should the reverb and delay be printed with the rest? A Reverb and a Delay placed on each mf track as devices would land in the Post Mixer signal.
+				- Should the recording tracks keep their Glue Compressor?
+			- #### Sunday's takes
+				- Most tracks in the template carry hidden take lanes holding Sunday's recordings, so every new Set starts with them. Monday's Set keeps them beneath Monday's takes. [[Ableton/Live/UG/21 Comping/01 Take Lanes]]
+				- mf2, mf3 and the recording tracks hold clips named after mf1, such as "mf1 2" and "mf1 5-1", which suggests the take lanes came along when mf1 was duplicated to make those tracks.
+				- Clear the take lanes before the template is saved again?
+			- #### Launchpad faders
+				- mf1-MIDI to mf4-MIDI carry volume automation, and some carry pan or send automation too. A MIDI track without an instrument passes no audio, so that automation changes nothing.
+				- mf1 to mf4 all drop their volume at the same moment near the end. Both patterns fit a sweep across the Launchpad's eight faders, which cover eight tracks in a row. In this track order, every other fader lands on a MIDI track.
+				- Did that automation come from the Launchpad's faders? If so, putting mf1 to mf4 first would give each MicroFreak loop its own fader. The sequencer reaches the MIDI tracks by channel, so their position in the Set doesn't matter to it.
+			- #### Preset changes
+				- The MicroFreak plays one preset at a time, and the Set keeps no record of which one sounded when. Monday's chapters were worked out afterward from the log's list of presets and from where each new take begins.
+				- A MIDI clip can send a bank and program change when it launches, per [[Ableton/Live/UG/08 Clip View/03 Extended Clip Properties/02 MIDI Clip Bank and Program Change Controls]]. The MicroFreak selects a slot from a bank select and a program change, per [[Microfreak/Sequence/Research]]. A clip per preset on a MIDI track routed to the MicroFreak could call up each sound and leave its launch in the Arrangement as a chapter mark.
+				- Worth a test with one of Monday's presets?

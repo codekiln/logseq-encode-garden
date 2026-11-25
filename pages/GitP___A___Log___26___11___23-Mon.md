@@ -1,4 +1,5 @@
 prev:: [[GitP/A/Log/26/11/22-Sun]]
+next:: [[GitP/A/Log/26/11/25-Wed]]
 
 - [[2026-11-23 Mon]]
 	- PM [[GitP/A/Session/26/11/23-Mon]]
