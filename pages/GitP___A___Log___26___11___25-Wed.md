@@ -9,8 +9,23 @@ prev:: [[GitP/A/Log/26/11/23-Mon]]
 			- #### Which tracks make the mix
 				- Monday's Set now has the recording tracks on Main and muted, as the TODO on [[GitP/A/Template/LPP-Seq]] asks. The template file still sends them to No Output.
 				- Unmuting the recording tracks alone would double the music. While loops were launched, Live wrote each launch into the Arrangement on mf1 to mf3, so those tracks replay the same loops the recording tracks printed. A mix from the recording tracks also needs mf1 to mf4 muted. Soloing the recording tracks did both in one step.
-				- With the recording tracks muted, the Arrangement plays the mf1 to mf3 loops with their own volume and pan automation. Anything heard only through input monitoring, such as playing on the MicroFreak's keys while no loop was recording, lives only on the recording tracks.
-				- Which tracks is the new version mixed from?
+				- With the recording tracks muted, the Arrangement plays mf1 to mf3 with their own volume and pan automation. That includes the loops they launched and the MicroFreak they recorded while armed.
+				- The second mix is made from mf1 to mf3, with the recording tracks muted.
+			- #### Are the recording tracks needed?
+				- An armed track records into the Arrangement during Arrangement Record, per [[Ableton/Live/UG/19 Recording New Clips/03 Recording/01 Recording Into the Arrangement]]. With Auto monitoring, an armed track lets its input through only while it plays no clip, per [[Ableton/Live/UG/17 Routing and IO/01 Monitoring]]. Whatever an mf track lets you hear therefore lands in the Arrangement on that track, either as a copy of the loop it launched or as a recording of the MicroFreak.
+				- Monday's Set shows this at every new take. Each of these is a recording of the MicroFreak on the mf track itself, at times in the second mix:
+					- mf1, 00:00 to 00:08, before the opening loop.
+					- mf3, 01:17 to 01:40 and 01:44 to 01:55, before Laity's loop.
+					- mf2, 05:12 to 05:35, GrowLing's sub and the pattern from the keys.
+					- mf3, 06:41 to 07:18, the growl.
+					- mf1, 07:55 to 08:13, a take that never became a Session clip. This is the case the recording tracks were built for: no loop playing, the track armed, the MicroFreak played. mf1 caught it.
+				- The recording tracks repeat that sound, after volume and pan and without the sends. Each wrote one file for the whole pass, 12 minutes and 36 seconds, silence included. mf4 never played in the Arrangement, so mf4-rec is silent from start to end. A 24-bit stereo file at 48 kHz that long takes about 218 MB, so four of them take nearly 900 MB a session.
+				- The recording tracks would catch something mf1 to mf4 miss in only two cases:
+					- An mf track set to monitor In passes its input without being armed, so you hear it and nothing records it. The template sets all four to Auto.
+					- An edit removes a clip from an mf track. Take lanes keep a copy of every recording, because Live puts each take in a take lane and copies the latest one to the main lane, per [[Ableton/Live/UG/21 Comping/03 Recording Takes]].
+				- One spot to check: in the Set now, mf2's main lane has no clip from 00:17 to 00:33, where GivemeSub's first take was recorded. mf2's take lane still holds that recording, and mf2-rec printed it too. Is GivemeSub's first take in the second mix?
+				- A safety copy could come from one track instead of four. An audio track with its input set to Resampling records the Main output, returns included, per [[Ableton/Live/UG/17 Routing and IO/04 Resampling]].
+				- Remove mf1-rec to mf4-rec from the template, with or without a single Resampling track?
 			- #### What the recording tracks capture
 				- The recording tracks tap mf1 to mf4 at Post Mixer, which [[Ableton/Live/UG/17 Routing and IO/05 Internal Routings/01 Internal Routing Points]] describes as the track's output after volume and pan. Sends leave a track on their way to the returns, so the reverb and delay fed from mf1 to mf4 never reach the recording tracks.
 				- On Monday, mf2 and mf3 carry reverb send automation. A mix of the recording tracks leaves it out. mf2-rec and mf3-rec carry send automation of their own, and that plays back with the mix.
