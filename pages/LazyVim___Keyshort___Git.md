@@ -108,6 +108,14 @@ logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 		- [[My Notes]]
 			- Very useful! unfortunately, `<leader>gB` opens markdown files with a link like https://github.com/codekiln/logseq-encode-garden/blob/main/pages/LazyVim___Keyshort___Git.md#L6-L6, which doesn't activate the "code" mode needed to highlight the range. It would need to be something like https://github.com/codekiln/logseq-encode-garden/blob/main/pages/LazyVim___Keyshort___Git.md?plain=1#L6-L7 to work "correctly.
 				- TODO consider filing an issue in my dotfiles to fix this for me - all md file visual selections should link to the version that's going to highlight correctly.
+	- **Next and Previous Hunk** [[Card]]
+		- Description:
+			- Jump between **hunks**, the changed blocks in the current buffer that [[nvim/Plugin/gitsigns.nvim]] marks against the git index. `]H` and `[H` jump to the last and first hunk in the file.
+		- Shortcut:
+			- `]h` — next hunk
+			- `[h` — previous hunk
+				- [[Mnemonic]]
+					- ==h==unk, with `]` forward and `[` back
 	- [[My Note]]
 		- These are pickers over git data; the interactive staging and committing workflow lives in [[Lazygit]] behind `<leader>gg`.
 		- Hunk-level staging inside the buffer comes from [[nvim/Plugin/gitsigns.nvim]] on the `<leader>gh` group, not from these keys.
