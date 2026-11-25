@@ -1,7 +1,7 @@
-logseq-entity:: [[Logseq/Entity/Software/Project]]
+logseq-entity:: [[Logseq/Entity/Software/Feature]]
 created-by:: [[OpenAI]]
 date-created:: [[2026]]
-see-also:: [[OpenAI/Dev/Day/26]], [[ChatGPT/Plugin/Extension]]
+see-also:: [[OpenAI/Dev/Day/26]], [[ChatGPT/Plugin/Extension]], [[Claude/Artifact]]
 
 - # [ChatGPT Sites](https://learn.chatgpt.com/docs/sites)
 	- A feature of ChatGPT that builds, hosts, and shares a website or small web app from a conversation. The user describes the site in chat and ChatGPT generates it and publishes it at a URL.
