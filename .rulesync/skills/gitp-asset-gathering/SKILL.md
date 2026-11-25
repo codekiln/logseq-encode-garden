@@ -19,8 +19,9 @@ project and exported WAV links. Search existing notes before asking for a path.
 
 Read the Podcast/Episode and Asset entity definitions. Create or update the
 session episode under `GitP/A/Session/YY/MM/DD-Day`, linking its source log.
-The episode has one H1 title, a first-child description, and a direct MP3 media
-embed: `![Episode recording](https://…mp3)`. Keep the recording's asset page for
+The episode has one H1 title, a direct MP3 media embed as its first child,
+`![Episode recording](https://…mp3)`, and a Ceremonial Annotations section that
+becomes the feed's show notes. Keep the recording's asset page for
 file metadata and its download URL. Record graph edits in today's journal.
 
 Convert the exported WAV to MP3 without changing the source WAV. The WAV
