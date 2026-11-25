@@ -6,4 +6,5 @@ public:: true
 		- mf3-MIDI has the notes from the third [[Launchpad/Sequencer]] track, which arrive on MIDI channel 3.
 		- MF to LPP has the MicroFreak's own output on channel 1: the notes played on its keys and its knob movements.
 	- The mf1-MIDI and mf2-MIDI clips in the Arrangement are empty, and mf4-MIDI has none.
-	- Clip positions and trims follow the edited Ableton Live arrangement, so the file lines up with the episode recording from its first beat.
+	- Clip positions and trims follow the first mix's edit of the Ableton Live arrangement, so the file lines up with [[GitP/A/Session/26/11/23-Mon/Asset/Audio/Episode/mp3]] from its first beat.
+	- The second mix, [[GitP/A/Session/26/11/23-Mon/Asset/Audio/Episode/v2/mp3]], cuts the arrangement again. The file matches it until 06:40. From 06:49 in the file its events come 8 seconds later than in that recording, and from 08:27 in the file, 32 seconds later.
