@@ -5,7 +5,7 @@ see-also:: [[Logseq/Entity/Proxy/Page/mise/Task/sync]], [[GitP/How To/Draft an E
 	- Prepare the episode in this garden, then mirror it into [[Person/codekiln/GitHub/gitpa]] for publication. The session page supplies the episode text and directly embeds the recording’s MP3 URL.
 	- ## Prepare the session
 		- Create or update the recording's episode page under `GitP/A/Session/YY/MM/DD-Day`. Set `logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcast/Episode]]` in its frontmatter. Link the music-making log and add the supported session details, preset downloads, and recording asset.
-		- Give the page one H1 episode title and a short description as its first child. Embed the MP3 beneath it with `![Episode recording](https://…mp3)`. [[GitP/A/Session/26/10/06-Tue]] is an example.
+		- Give the page one H1 episode title and embed the MP3 as its first child with `![Episode recording](https://…mp3)`. The `## Ceremonial Annotations` section beneath it becomes the episode's show notes in the feed. [[GitP/A/Session/26/10/06-Tue]] is an example.
 		- Write chapter headings as plain timestamps and titles, such as `- ### 14:42 Adapters and input modes`. Keep one full recording on the episode; the published player turns timestamps into seek controls. Separate chapter recordings and waveform embeds are unnecessary.
 		- Follow [[Logseq/Entity/Asset]] for the recording's asset page. The asset page holds file metadata and the audio link; the episode also embeds the MP3 URL directly.
 	- ## Check preset research
@@ -18,5 +18,5 @@ see-also:: [[Logseq/Entity/Proxy/Page/mise/Task/sync]], [[GitP/How To/Draft an E
 		- Edit the episode in this garden and sync again. Sync copies the episode body and `public::` selection from the source. Gitpa keeps `tags::`, `podcast-guid::`, and `podcast-published-at::`.
 	- ## Prepare the publication PR
 		- On the source [[Logseq/Entity/Podcast/Episode/GitP/A]] page in logseq-encode-garden, set `public:: true` to select publication or `public:: false` to exclude the episode from RSS and the website. Re-sync copies that selection to the publishing repository’s proxy. On the proxy, set `podcast-guid::` and `podcast-published-at::`; these identify the RSS release and remain destination-owned.
-		- Run `mise run rss:build`, `mise run rss:check`, and `mise run rss:test` in Gitpa. RSS reads the proxy title, description, and recording link directly; enclosure size comes from the public media response.
+		- Run `mise run rss:build`, `mise run rss:check`, and `mise run rss:test` in Gitpa. RSS reads the proxy title, Ceremonial Annotations, and recording link directly; enclosure size comes from the public media response.
 		- Open a Gitpa PR with the episode title, a direct MP3 link, and the reason to listen: decide whether to publish this recording. The human merges the PR after one listen and a go decision.

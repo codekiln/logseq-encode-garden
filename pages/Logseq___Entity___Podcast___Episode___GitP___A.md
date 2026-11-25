@@ -9,19 +9,19 @@ entity-tasks:: [[Logseq/Entity/Podcast/Episode/GitP/A/mise/Task/ableton/locators
 		- Start with the available recording and session notes. Follow existing source pointers to the project, music-making log, transcript, MIDI, and preset captures when present. A recording may come from a standalone instrument session or a DAW.
 		- Missing optional material leaves the corresponding section absent. A project file, commentary, MIDI export, preset capture, or artwork is not a prerequisite for an episode.
 	- ## Written for participants
-		- An episode page is public. It is written first for [[GitP/Participant]]s, the people who listen on the website or in a [[Podcast/Catcher]], and second for performers who want to find a sound. [[GitP/Vibe]] sets the writing style for the opening description and the Ceremonial Annotations.
+		- An episode page is public. It is written first for [[GitP/Participant]]s, the people who listen on the website or in a [[Podcast/Catcher]], and second for performers who want to find a sound. [[GitP/Vibe]] sets the writing style for the Ceremonial Annotations.
 		- Each section earns its place, per [[My/Principle/Simplify]]. A fact appears once on the page, per [[My/Principle/Simplify/Don't Repeat Yourself DRY]]; the preset, MIDI and asset pages hold the details and the episode links to them.
 		- Page links follow [[My/Pref/Markdown]]: plain wikilinks to garden pages. MIDI controller numbers stay off the page; a control is named by a link to its [[Microfreak]] page.
 	- ## Episode page
 		- Instances carry `logseq-entity::` links to this definition and [[Logseq/Entity/Podcast/Episode]], keeping the generic Episode membership explicit. Creator and recording-date properties follow the generic definition.
 		- One H1 gives the episode title. Its children come in this order:
-			- The recording, as a direct MP3 media embed, so the play button is the first thing a participant meets. The episode embeds the verified public media URL directly; the asset page holds the file metadata. Until [Read the episode description when the recording comes first · Issue #138 · codekiln/gitpa](https://github.com/codekiln/gitpa/issues/138) lands, the Gitpa RSS build reads the show notes from the H1's first child, so published episodes keep the description first and the recording second.
-			- The opening description: a few sentences that become the show notes in the RSS feed and the first words in a podcatcher. It is inviting, weird and curious, and carries no AI flange: no filler facts, hedges or bookkeeping that serve no part of the ceremony.
+			- The recording, as a direct MP3 media embed, so the play button is the first thing a participant meets. The episode embeds the verified public media URL directly; the asset page holds the file metadata.
 			- `## Ceremonial Annotations`
 			- `## Chapters`
 			- `## Ceremonial Artifacts`, last.
 	- ## Ceremonial Annotations
 		- The official notes of the episode, in the voice of [[GitP/Vibe]]: what the ceremony was, what was summoned, and what a performer or participant might listen for.
+		- The whole section becomes the episode's show notes in the RSS feed, the first words in a [[Podcast/Catcher]]. A page link there points to that page on the Gitpa website when the page is public, and reads as plain text otherwise.
 		- Artwork appears here when available.
 	- ## Chapters
 		- Chapters follow the recording in time order. Each H3 is one preset's entry, written `### MM:SS enter [[Microfreak/Preset/<number> <name>]]`, and the blocks nested under it are about that preset. A passage with no preset change stays nested under the preset that is sounding.
