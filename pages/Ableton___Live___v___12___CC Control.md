@@ -1,0 +1,8 @@
+up:: [[Ableton/Live/v/12]]
+- # CC Control
+	- Live 11 could send MIDI CC through clip envelopes, and Max for Live devices could expose custom dials. Live 12 adds **CC Control**, a stock MIDI effect with named dials for automation or live control. Ableton made it available in all editions with 12.0.5. [Ableton's guide to sending MIDI CC](https://help.ableton.com/hc/en-us/articles/360010389480-Using-MIDI-CC-in-Live) · [Live 12 release notes](https://www.ableton.com/en/release-notes/live-12/)
+	- ## Automate MicroFreak cutoff
+		- Enable **Track** on the MicroFreak's MIDI output port in Live's MIDI settings. On a MIDI track, set **MIDI To** to the MicroFreak port and match its receive channel. Monitor the synth's audio through your interface or directly from the hardware. [Ableton's MIDI routing reference](https://www.ableton.com/en/live-manual/12/routing-and-i-o/#midi-routing)
+		- Drop CC Control on that MIDI track. Set a Custom B–M dial's **CC Type** to CC 23 and name it **Cutoff**. Play a sustained note and turn the dial to hear the filter move. [Arturia's MicroFreak MIDI implementation chart](https://support.arturia.com/hc/en-us/articles/4405748052626-MicroFreak-General-Questions)
+		- Show automation in Arrangement View and draw a sweep for the Cutoff dial. To play it by hand, map an incoming controller to the dial using Live's MIDI Map Mode and enable **Remote** for that controller's input. The incoming mapping controls the dial in Live, and the dial sends CC 23 to the synth. [Ableton's MIDI mapping reference](https://help.ableton.com/hc/en-us/articles/360000038859-Making-custom-MIDI-Mappings)
+	- [[Ableton/Live/UG/30 MIDI Effect Reference/02 CC Control]] explains the custom controls, Learn, and Send.

@@ -1,0 +1,11 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Software Version
+	- In this garden, **Software Version** pages model a release or a family of releases of a [[Logseq/Entity/Software/Project]].
+	- ## Naming and identity
+		- The owning project and the version together identify the page. Dotted version components become segments under the project's `v` namespace. For example, [[Logseq/v/0/10/15]] records Logseq 0.10.15.
+		- Like [[Logseq/Entity/Time/Year]], the namespace supports broader pages that have content of their own. [[Ableton/Live/v/12]] covers the Live 12 family, and [[Py/v/3/13]] names the Python 3.13 series. A shorter path can also name an individual release when that is the vendor's version, as in [[CursorAI/v/0/46]].
+		- Create pages at the depth the notes need. A parent can summarize its release family and link to more specific versions as they are documented. Search for the existing split path, dotted spelling, and aliases before creating a page. Legacy spellings such as [[tmux/v/3.7b]] remain usable.
+	- ## Page shape
+		- Set `logseq-entity::` to this definition and use `up::` for the owning project or a documented parent version. Use the vendor's version label in the heading and link to its release notes when available. See [[Logseq/Frontmatter]] for shared conventions.
+		- Record what was introduced, changed, fixed, or removed at the relevant scope. Give the comparison baseline when it matters, such as Live 11 for a Live 12 upgrade guide. State the specific release or edition when it affects whether someone can follow the notes.
+		- A version overview can link to topic pages below it, like a table of contents. An embed can bring a short section into the overview where reading it inline helps. Topic pages describe the change and link to the lasting capability's [[Logseq/Entity/Software/Feature]] page or manual section when one exists.
