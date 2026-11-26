@@ -1,6 +1,6 @@
 tags:: [[Idea]]
 date-created:: [[2026-11-26 Thu]]
-see-also:: [[Ableton/Live/Idea/Keep Live Projects as DVC Assets]], [[Ableton/Live/Idea/Declare a Live Set in Logseq]]
+see-also:: [[Ableton/Live/Idea/Keep Live Projects as DVC Assets]], [[Ableton/Live/Idea/Declare a Live Set in Logseq]], [[Ableton/Live/Idea/Keep-Commentary-in-Live-Sets]]
 
 - # Store Ableton in the Garden
 	- [[My Note]]

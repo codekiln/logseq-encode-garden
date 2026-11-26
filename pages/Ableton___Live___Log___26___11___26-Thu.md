@@ -10,3 +10,4 @@ see-also:: [[GitP/A/Log/26/11/26-Thu]]
 			- [[Ableton/Live/Q/When I use Transform and Generate on a MIDI clip, how do I make them use a particular scale?]]
 				- [[AI/Response]] The clip's ♭♯ Scale button was off, so Shape chose from all twelve notes. With the button on, generated notes stay in the clip's scale.
 	- I want to experiment with how best to store my Ableton files in this garden: [[Ableton/Live/Idea/Store-Ableton-in-the-Garden]]
+	- I need a consistent way to keep comments on my Sets: [[Ableton/Live/Idea/Keep-Commentary-in-Live-Sets]]
