@@ -6,14 +6,14 @@
 		- Launchpad to MicroFreak carries live playing to the synth. MicroFreak to Launchpad preserves the existing return route. The commentary microphone uses external inputs 1/2.
 		- Arm the active Pattern audio/MIDI pair to capture a loop. Keep Performance Audio, Performance MIDI, commentary, and the MIDI bridges armed for Arrangement recording. Disarm the completed Pattern pair before recording the other.
 		- Audio and MIDI monitoring follow the existing template. Check the interface inputs before recording.
-	- [Live 11 base Set](../assets/GitP___A___Template___Pattern%20A%20and%20B.als)
+	- [Live 11 base Set](../assets/.remote/logseq-encode-garden/GitP___A___Template___Pattern-A-and-B___Asset___Set.als)
 	- ## Declare and compile
 		- An episode selects this setup with the page property `ableton-template::` linking here. Its Ableton Session block overrides tempo or replaces a complete Tracks, Scenes, Locators, or Controls section.
 		- [[GitP/mise/Task/ableton/sync]] compiles the declaration into a new Live Set.
 	- Ableton Session
 	  spec-version:: 1
 	  live-version:: 11
-	  base-template:: assets/GitP___A___Template___Pattern A and B.als
+	  base-template:: assets/.remote/logseq-encode-garden/GitP___A___Template___Pattern-A-and-B___Asset___Set.als
 	  tempo:: 120
 	  time-signature:: 4/4
 		- Tracks

@@ -6,7 +6,7 @@ public:: true
   tempo:: 120
   time-signature:: 4/4
   source:: 26.11.06.als
-	- ![Session View of the 26.11.06 Set](../assets/GitP___A___Session___26___11___06-Fri___Set___Asset___Image___Session-View.png)
+	- ![Session View of the 26.11.06 Set](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Set___Asset___Image___Session-View.png)
 		- The Session View mixer after the session, with the transport stopped at bar 35. Twenty-one tracks run left to right in the order of the embeds below; the two return tracks and the Main track sit off the right edge.
 		- Most clip slots hold clips named "silence". The takes from the session sit on the four layers: three "1A-Aud" clips on 1A-Audio, two on 1B-Audio, two on 2A-Audio and three on 2B-Audio.
 		- An orange box outlines the first eight tracks and eight scenes, the part of the grid the [[Novation/Launchpad/Pro/Mk3]] shows on its pads.
