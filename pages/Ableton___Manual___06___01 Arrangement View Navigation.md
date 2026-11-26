@@ -36,7 +36,7 @@
 				  card-last-reviewed:: 2026-04-12T08:19:03.936Z
 				  card-last-score:: 1
 					- little buttons located next to [[Ableton/Arrangement View/Overview]] in the top right, very small: `[ H ]  [ W ]`.
-					- Both of the #Keyshort `H` and `W` can be **toggled** to quickly display the entirety of the left-right or top-bottom extents of all tracks in the arrangement view, respectively.
+					- Both of the #Keyshort `H` and `W` can be **toggled** to quickly display the entirety of the top-bottom or left-right extents of all tracks in the arrangement view, respectively.
 		- ## 6-8 [[Ableton/Arrangement View/Overview]]
 			- ### 6 - Arrangement Overview (Bird's-Eye View)
 				- > The Arrangement Overview is like a "bird's-eye view" of your music. It always shows the complete piece, from start to end. The black rectangular outline represents the part of the Arrangement that is currently displayed in the Arrangement display below. To scroll the display, click within the outline and drag left or right; to zoom out and in, drag up and down. You can also resize the Arrangement Overview vertically by dragging up and down.

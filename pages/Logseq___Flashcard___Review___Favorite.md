@@ -3,7 +3,7 @@ alias:: [[LFRF]]
 - # Favorite Flashcards
 	- foregrounds flashcard scopes for my [[Logseq/Favorite]]s ([[Logseq/Queries]]).
 	- ## All Favorite Flashcards
-		- {{cards (and (or [[LazyVim]] [[Obsidian]] [[Codex]] [[chezmoi]] [[DevContainer]] [[mise]] [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]]) (not [[oh-my-tmux]])) }}
+		- {{cards (and (or [[LazyVim]] [[Obsidian]] [[Codex]] [[chezmoi]] [[DevContainer]] [[mise]] [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]] [[Ableton/Live]] [[Ableton]] [[Ableton/Arrangement View]]) (not [[oh-my-tmux]])) }}
 		  favorite-deck:: aggregate
 		  deck-exclude:: [[oh-my-tmux]]
 			- Summary: 19 items, 19 review counts [[2026-06-26 Fri]]
@@ -14,7 +14,7 @@ alias:: [[LFRF]]
 				- Forgotten :   18 (18%)
 	- ## Background / Non-Favorite
 	  collapsed:: true
-		- {{cards (not (or [[LazyVim]] [[Obsidian]] [[Codex]] [[chezmoi]] [[DevContainer]] [[mise]] [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]])) }}
+		- {{cards (not (or [[LazyVim]] [[Obsidian]] [[Codex]] [[chezmoi]] [[DevContainer]] [[mise]] [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]] [[Ableton/Live]] [[Ableton]] [[Ableton/Arrangement View]])) }}
 		  favorite-deck:: background
 		  query-properties:: [:block]
 	- ## By Favorite

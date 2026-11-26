@@ -161,3 +161,18 @@ see-also:: [[Ableton/Live/Idea/Keep Live Projects as DVC Assets]], [[Ableton/Liv
 			- TODO Decide what to do about home-folder paths in Sets, including the two templates in the public bucket.
 			- TODO Add a private bucket and mount for recordings, and let the `asset:*` tasks take a mount name.
 			- TODO Write the "bigger things behind a login" principle under [[My/Principle]].
+	- [[My Note]] follow-ups on [[2026-11-26 Thu]]
+		- ## Sample paths in Sets
+			- Must every sample reference in a Set hold an absolute path containing my username? It seems like Ableton has a feature called Collect All and Save. I need to be able to move Ableton Sets, or maybe Ableton projects, to different drives.
+			- [[AI/Response]] No, Live doesn't need the absolute path to find a file, but it writes one anyway.
+				- Each file reference in a Set's XML holds a relative path and an absolute one. In the LPP-Seq template, for example, a recording appears as `<RelativePathType Value="6" />`, `<RelativePath Value="Samples/Recorded/mf1 0001 [2026-10-24 163409]-3.aif" />` and `<Path Value="~/Music/Ableton/User Library/Samples/Recorded/mf1 0001 [2026-10-24 163409]-3.aif" />`, with the home folder shortened to `~` here. Even its project-relative references carry an absolute `Path` beside the relative one.
+				- Collect All and Save copies the files a Set uses into its Project folder, so the relative paths point inside the Project. That is what lets a Project move to another drive and still open.
+				- So moving between drives works through the relative paths, but every save writes the absolute path again, username included. A clean filter could rewrite each `Path` value, for example to `~`, before git stores the XML. Whether Live then opens the Set without asking to locate files needs testing on a copy.
+		- ## Launchpad custom modes and Set templates
+			- I think you've uncovered a need that I have for something to also be able to declare in the Logseq garden my expectations for customizations to my Launchpad Pro, and then to be able to have those common customizations be shared by multiple custom modes.
+			- It would probably use an AI through the web interface to maintain this and verify it. It may also be that someone out there has made an API to talk to the Launchpad Pro to load custom modes without using the Novation Components web UI.
+			- LPP-Seq is the one I've been using more recently. Another agent brought the same point up earlier.
+			- I need some way to maintain a correspondence between the Launchpad custom mode and the Ableton Set template.
+			- [[AI/Response]] The Stop mismatch above is the first case: [[Launchpad/Custom/1/Ableton-Ctrl]] sends Stop as CC 114 on channel 16, and the [[GitP/A/Template/LPP-Seq]] Set listens for CC 116 on channel 1. A trait page that both the custom mode's page and each template's page link would hold the expected CC and channel for each transport and locator control, so a check can compare the two.
+				- TODO Find whether the Launchpad Pro MK3 can receive a Custom Mode over SysEx, from Novation's programmer's reference or community tools, so a Custom Mode can be loaded without Novation Components.
+
