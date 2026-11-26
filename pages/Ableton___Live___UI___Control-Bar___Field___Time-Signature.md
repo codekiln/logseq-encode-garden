@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Ableton/Live/UI/Control Bar]]
+up:: [[Ableton/Live/UI/Control-Bar]]
 
 - # Time Signature fields
 	- Numerator and denominator fields that change the time signature at the current play location. An automation LED shows when the Arrangement has time signature changes.

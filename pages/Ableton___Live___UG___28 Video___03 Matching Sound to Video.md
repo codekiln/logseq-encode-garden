@@ -10,5 +10,5 @@ next:: [[Ableton/Live/UG/28 Video/04 Video Trimming Tricks]]
 		- Drag an audio clip into the drop area to create its own track, and unfold both tracks.
 		- Double-click the video clip, make sure Warp is on in its Audio tab, and set Leader so the rest of the Set follows the video's normal speed.
 		- Add and move Warp Markers on the video clip to set sync points; the waveform updates as you go.
-		- Optionally loop a section with the [[Ableton/Live/UI/Control Bar/Toggle/Arrangement Loop]].
+		- Optionally loop a section with the [[Ableton/Live/UI/Control-Bar/Toggle/Arrangement-Loop]].
 		- Finish with File → Export Audio/Video, which mixes the audio to one file and can also export the video.

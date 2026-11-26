@@ -7,7 +7,7 @@ next:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/02 Warping/04 Warping 
 	- Double-click the upper half of the Sample Editor to add one, or press `Cmd+I` (Mac) / `Ctrl+I` (Win) to add one at the insert marker. Move markers with the arrow keys or by dragging.
 	- With a marker selected, `Shift`-drag moves the waveform under it to fine-tune the start point.
 	- Double-click a marker, or select its time and press `Delete` (Mac) / `Backspace` (Win), to remove it.
-	- [[Ableton/Live/UI/Control Bar/Switch/Follow]] scrolls the editor during playback; it pauses on edits.
+	- [[Ableton/Live/UI/Control-Bar/Switch/Follow]] scrolls the editor during playback; it pauses on edits.
 	- ## 9.2.3.1 Transients and Pseudo-Warp Markers
 		- Live finds [[Ableton/Transients]] on load: amplitude peaks where notes or beats begin, shown as small gray markers at the top of the editor, and usually good spots for Warp Markers.
 		- Add or remove transients from the Create menu, or with `Cmd+Shift+I` and `Cmd+Shift+Delete` (Mac) / `Ctrl+Shift+I` and `Ctrl+Shift+Backspace` (Win). Reset Transients removes the ones you added.

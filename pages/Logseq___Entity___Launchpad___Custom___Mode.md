@@ -24,6 +24,6 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 			- **Message** — note, CC number or Program Change, and MIDI channel.
 			- **Behavior** — the [[Launchpad/Custom/Pad/Mode]] value, with on and off values.
 			- **Colour** — the pad's colour as Components names or shows it.
-			- **Controls** — the [[Logseq/Entity/UI/Control]] page it is mapped to in Live, such as [[Ableton/Live/UI/Control Bar/Button/Stop]], and the Live Set or template that holds the mapping.
+			- **Controls** — the [[Logseq/Entity/UI/Control]] page it is mapped to in Live, such as [[Ableton/Live/UI/Control-Bar/Button/Stop]], and the Live Set or template that holds the mapping.
 		- `## Mode settings` — the shared on colour and anything set in Components' Custom Mode Settings.
 		- `## Backup` — a link to a `.syx` export in `assets/`, when one exists.

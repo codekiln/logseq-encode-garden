@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Ableton/Live/UI/Arrangement View]]
+up:: [[Ableton/Live/UI/Arrangement-View]]
 
 - # Previous Locator button
 	- Jumps playback to the previous locator, or the Arrangement start after the first locator.

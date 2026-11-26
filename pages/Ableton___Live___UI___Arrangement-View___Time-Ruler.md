@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Area]]
-up:: [[Ableton/Live/UI/Arrangement View]]
+up:: [[Ableton/Live/UI/Arrangement-View]]
 
 - # Time ruler
 	- Shows time in minutes-seconds-milliseconds; drag in it to scroll left or right.

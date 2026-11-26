@@ -1,5 +1,5 @@
 - [[2026-10-28 Wed]]
-	- ## Research [[Ableton/Live/UI/Arrangement View]] and recording.
+	- ## Research [[Ableton/Live/UI/Arrangement-View]] and recording.
 		- ### [[Ghost Gardener]] requests
 			- DONE please import youtube video entity, person entity / music technology maker entity and my readwise notes from [Ableton Live 11 Tutorial - Recording Clips from the Session View to the Arrangement View | Readwise](https://read.readwise.io/new/read/01m60w6e03481pprtet867xr5e)  using the readwise CLI and link it here.
 			  id:: 6ae1bff3-1855-4d7a-9a99-c490201f4665

@@ -1,8 +1,8 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Ableton/Live/UI/Control Bar]]
+up:: [[Ableton/Live/UI/Control-Bar]]
 
 - # Quantization menu
-	- Sets the global launch quantization, which also quantizes jumps in the [[Ableton/Live/UI/Arrangement View/Scrub Area]], new locators and locator jumps.
+	- Sets the global launch quantization, which also quantizes jumps in the [[Ableton/Live/UI/Arrangement-View/Scrub-Area]], new locators and locator jumps.
 	- **Behavior** — selector.
 	- ## Source
 		- [[Ableton/Live/UG/06 Arrangement View]]

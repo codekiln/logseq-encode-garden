@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Ableton/Live/UI/Arrangement View]]
+up:: [[Ableton/Live/UI/Arrangement-View]]
 
 - # Automation Mode toggle
 	- Shows or hides automation lanes.

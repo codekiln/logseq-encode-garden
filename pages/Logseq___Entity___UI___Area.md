@@ -3,12 +3,12 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 - # UI Area
 	- In this garden, **UI Area** pages model one named region of a product's interface — a panel section on hardware, or a view or bar in software — and list the controls and smaller areas inside it.
 	- ## What counts
-		- A region the product's own documentation names and that holds controls: [[Microfreak/UI/Oscillator]], [[Ableton/Live/UI/Control Bar]], [[Ableton/Live/UI/Arrangement View]].
+		- A region the product's own documentation names and that holds controls: [[Microfreak/UI/Oscillator]], [[Ableton/Live/UI/Control-Bar]], [[Ableton/Live/UI/Arrangement-View]].
 		- `<Item>/UI` is the root area for an item and covers its whole interface, the way `<Item>/UG` holds its [[Logseq/Entity/Book/User Guide]].
 		- A single knob, button, pad or field is a [[Logseq/Entity/UI/Control]], not an area.
-		- A small group of controls stays a heading on its area page rather than becoming a page, even when the documentation names it, such as the Transport Controls section of [[Ableton/Live/UI/Control Bar]].
+		- A small group of controls stays a heading on its area page rather than becoming a page, even when the documentation names it, such as the Transport Controls section of [[Ableton/Live/UI/Control-Bar]].
 	- ## Atomic Design stages
-		- A UI Area corresponds to an [[UX/Design/Atomic/L3 - Organism]]; a root `<Item>/UI` page or a full view such as [[Ableton/Live/UI/Arrangement View]] corresponds to an [[UX/Design/Atomic/L4 - Template]].
+		- A UI Area corresponds to an [[UX/Design/Atomic/L3 - Organism]]; a root `<Item>/UI` page or a full view such as [[Ableton/Live/UI/Arrangement-View]] corresponds to an [[UX/Design/Atomic/L4 - Template]].
 		- A [[Logseq/Entity/UI/Control]] corresponds to an [[UX/Design/Atomic/L1 - Atom]]. A preset or a saved Live Set, which fills the interface with real values, corresponds to an [[UX/Design/Atomic/L5 - Page]] and is modeled by its own entity.
 	- ## Identity and names
 		- Place an area at `<Item>/UI/<Area>`, nesting a smaller area under the area that holds it: `<Item>/UI/<Area>/<Sub-area>`.
@@ -16,7 +16,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Inside an area, each item takes a number, counting left to right along a row or top to bottom down a column: `1-Track-Select`, `2-Track-Control`. A numbered group of controls is an area, such as [[Launchpad/UI/Area/4-Bottom/1-Track-Select]]; a numbered single control is a [[Logseq/Entity/UI/Control]].
 		- The MicroFreak front panel has the older form `<Item>/UI/Front/Row/<NN Row>`, with spaces and two-digit numbers: [[Microfreak/UI/Front/Row/01 Top/01 Matrix]].
 		- When a device's surface changes with mode, place each mode at `<Item>/UI/Mode/<N>-<Mode>`, numbered in the order of its mode buttons, such as [[Launchpad/UI/Mode/5-Sequencer]]. Views and controls that exist only in that mode sit beneath it.
-		- Use the name printed on the panel or used in the manual, in Title Case: `Oscillator`, `Control Bar`, `Arrangement View`, `Scrub Area`.
+		- Use the name printed on the panel or used in the manual, in Title Case: `Oscillator`, `Control-Bar`, `Arrangement-View`, `Scrub-Area`.
 		- New names join their words with hyphens, per [[My/Pref/Logseq/Namespaces/Should-be/Slugified]]: `6-Fixed-Length-Button`, `8-Print-to-Clip-Button`.
 		- Search `<Item>/UI` and the item's older pages before creating an area. When the garden already has a page for the same region under another name, link it from the area page, and list the older name in `alias::` when codekiln asks for it, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 	- ## Page shape
@@ -28,5 +28,5 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Examples
 		- [[Microfreak/UI]] → [[Microfreak/UI/Oscillator]]
 		- [[Microfreak/UI/Front]] → [[Microfreak/UI/Front/Row/01 Top]] → [[Microfreak/UI/Front/Row/01 Top/01 Matrix]]
-		- [[Ableton/Live/UI]] → [[Ableton/Live/UI/Arrangement View]] and [[Ableton/Live/UI/Control Bar]]
+		- [[Ableton/Live/UI]] → [[Ableton/Live/UI/Arrangement-View]] and [[Ableton/Live/UI/Control-Bar]]
 		- [[Launchpad/UI]] → [[Launchpad/UI/Area/0-Top]] and [[Launchpad/UI/Mode/5-Sequencer]]

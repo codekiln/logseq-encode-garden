@@ -3,18 +3,18 @@ up:: [[Ableton/Live/UG/41 Accessibility and Keyboard Nav/04 Navigating in Live]]
 - # [41.4.1 Navigate Menu](https://www.ableton.com/en/live-manual/12/accessibility-and-keyboard-navigation/#navigate-menu)
 	- The Navigate menu reaches every main view, and most entries have a shortcut. Open it with `VO+M` then `N` under VoiceOver (Mac), or `Alt+N` (Win).
 	- ## 41.4.1.1 Control Bar — `Option+0` (Mac) / `Alt+0` (Win)
-		- The [[Ableton/Live/UI/Control Bar]] groups project settings, transport, tools and status views. `Tab` through the groups with Speak Help Text on to hear what each does. Focus returns to the last control used.
+		- The [[Ableton/Live/UI/Control-Bar]] groups project settings, transport, tools and status views. `Tab` through the groups with Speak Help Text on to hear what each does. Focus returns to the last control used.
 	- ## 41.4.1.2 Session View — `Option+1` (Mac) / `Alt+1` (Win)
 		- **Track title bars** — left and right arrows move between them; right-click for track commands.
-		- **Clip slots** — tracks run top to bottom, scenes left to right. `Cmd+Shift+M` (Mac) / `Ctrl+Shift+M` (Win) inserts an empty MIDI clip; `Enter` launches the selected clip, following the [[Ableton/Live/UI/Control Bar/Menu/Quantization]] setting. Return tracks show slots that cannot hold clips.
+		- **Clip slots** — tracks run top to bottom, scenes left to right. `Cmd+Shift+M` (Mac) / `Ctrl+Shift+M` (Win) inserts an empty MIDI clip; `Enter` launches the selected clip, following the [[Ableton/Live/UI/Control-Bar/Menu/Quantization]] setting. Return tracks show slots that cannot hold clips.
 		- **Scenes** — up and down arrows move between Main track scene numbers; `Enter` launches a scene.
 		- **Mixer** — choose which mixer sections show from View → Mixer Controls or the menu by the Mixer view control at the bottom right. Crossfader, track options and performance impact are hidden by default.
 		- `Tab` / `Shift+Tab` move from slots to the mixer and through a track's mixer controls. Next Neighbor and Previous Neighbor, `Option+Tab` / `Option+Shift+Tab` (Mac), move to the same control on another track. `Esc` returns to the track's title bar.
 	- ## 41.4.1.3 Arrangement View — `Option+2` (Mac) / `Alt+2` (Win)
-		- In [[Ableton/Live/UI/Arrangement View]]:
+		- In [[Ableton/Live/UI/Arrangement-View]]:
 		- **Tracks** — up and down arrows move between tracks; `Option+Tab` (Mac) moves between track mixers, and `Tab` / `Shift+Tab` through a mixer's controls.
 		- **Timeline** — left and right arrows step by the grid; `+` and `-` widen or narrow the grid; `Option` plus left or right (Mac) jumps to the previous or next clip edge or locator.
-		- **Locators** — arrow to a spot, `Tab` to [[Ableton/Live/UI/Arrangement View/Button/Set Locator]] and press `Enter`; `Tab` / `Shift+Tab` move between locators; `Delete` removes one.
+		- **Locators** — arrow to a spot, `Tab` to [[Ableton/Live/UI/Arrangement-View/Button/Set-Locator]] and press `Enter`; `Tab` / `Shift+Tab` move between locators; `Delete` removes one.
 		- **Content** — `Shift` plus arrows selects; arrows move the selection; `Cmd+X`, `Cmd+C`, `Cmd+V`, `Cmd+D` and `Delete` cut, copy, paste, duplicate and delete (`Ctrl` on Windows).
 		- **Clip edges** — put the insert marker on an edge, press `Enter`, adjust with the arrows, then `Enter` to confirm or `Esc` to cancel.
 		- **Export** — select a region and press `Cmd+R` (Mac) / `Ctrl+R` (Win); the Main track renders by default.

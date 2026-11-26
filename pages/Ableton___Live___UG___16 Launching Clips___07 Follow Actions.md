@@ -24,7 +24,7 @@ prev:: [[Ableton/Live/UG/16 Launching Clips/06 Clip Offset and Nudging]]
 	- Clips and scenes with Follow Actions show a striped launch button.
 		- ![A clip launch button with a Follow Action assigned](https://ableton-production.imgix.net/live-manual/12/ClipLaunchButtonFollowAction.png?auto=&w=314)
 	- Follow Actions bypass global quantization but respect clip quantization other than None or Global.
-	- The **Enable Follow Actions Globally** button, next to [[Ableton/Live/UI/Arrangement View/Button/Back to Arrangement]], turns every Follow Action in the Set on or off, which is handy for editing a running clip. It is greyed out when the Set has none.
+	- The **Enable Follow Actions Globally** button, next to [[Ableton/Live/UI/Arrangement-View/Button/Back-to-Arrangement]], turns every Follow Action in the Set on or off, which is handy for editing a running clip. It is greyed out when the Set has none.
 		- ![The Enable Follow Actions Globally button](https://ableton-production.imgix.net/live-manual/12/EnableFollowActionsGloballyButton.png?auto=&w=214)
 	- Clip Follow Actions keep running when a scene Follow Action is scheduled, but scene Follow Actions win once they fire.
 	- Follow Actions let loop-based music repeat yet still surprise; recording the results gives new material.

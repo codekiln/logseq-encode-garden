@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Ableton/Live/UI/Control Bar]]
+up:: [[Ableton/Live/UI/Control-Bar]]
 
 - # Arrangement Record button
 	- Records into the Arrangement: armed tracks record their input as new clips, and Session clips launched, their property changes, and mixer and device automation are written to the Arrangement.
