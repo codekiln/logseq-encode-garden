@@ -1,5 +1,9 @@
 - Shortcuts in [[Ableton/Live/UG/42 Keyboard Shortcuts]] without a card of their own on an [[Ableton/Live/Keyshort]] page.
 - # Same in every Mac app
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/01 Showing and Hiding Views]]:
+		- **Toggle Full Screen Mode** — `Ctrl+Cmd+F`.
+		- **Open the Settings** — `Cmd+,`.
+		- **Close Window/Dialog** — `Esc`.
 	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]]:
 		- **Select Neighboring Clip/Slot** — arrow keys.
 		- **Select All Clips/Slots** — `Cmd+A`.
@@ -34,3 +38,4 @@
 	- **Switch Between Notes/Envelopes/MPE Tabs** — `Option+Tab`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/10 Clip View Editor View Modes]]: [[Ableton/Live/Keyshort/Switch-Between-Sample-Envelopes-Tabs]].
 	- **Zoom In Time Ruler** — `+`, and **Zoom Out Time Ruler** — `-`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/09 Zooming Display and Selections]]: [[Ableton/Live/Keyshort/Zoom-In-Out-Horizontally]].
 	- **Load Selected Device from Browser** — `Enter`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/04 Working with Devices and Plug-Ins]], and **Add Device from Browser** — `Enter`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Load-Selected-Item-from-Browser]].
+	- **Hot-Swap Selected Device** — `Q`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/04 Working with Devices and Plug-Ins]]: [[Ableton/Live/Keyshort/Toggle-Hot-Swap-Mode]].
