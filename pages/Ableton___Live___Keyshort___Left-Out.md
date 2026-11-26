@@ -1,0 +1,12 @@
+- Shortcuts in [[Ableton/Live/UG/42 Keyboard Shortcuts]] without a card of their own on an [[Ableton/Live/Keyshort]] page.
+- # Already a card on another page
+	- **Optimize Arrangement Height** — `H`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/16 Arrangement View]]: the `#card` on `H` and `W` in [[Ableton/Manual/06/01 Arrangement View Navigation]].
+	- **Zoom to Arrangement Time Selection** — `Z`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/16 Arrangement View]]: the `#card` in [[Ableton/Menu/View/Zoom/Arrangement Time Selection/To]].
+	- **Scroll Display Left/Right of Selection** — `Cmd+Option`-drag, from [[Ableton/Live/UG/42 Keyboard Shortcuts/16 Arrangement View]], listed in [[Ableton/Live/UG/42 Keyboard Shortcuts/09 Zooming Display and Selections]] as Pan Left/Right of Selection: the `#card` on panning in [[Ableton/Manual/06/01 Arrangement View Navigation]].
+	- **Scroll Display to Follow Playback** — `Option+Shift+F`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/16 Arrangement View]] and the Zooming and Clip View sections: the `#card` on Follow in [[Ableton/Manual/06/01 Arrangement View Navigation]]. That card gives Live 11's `Cmd+Shift+F`, which in Live 12 shows the MIDI Note Filters in the MIDI Note Editor and runs a similarity search in the Browser.
+- # Listed under another name
+	- **Momentarily Toggle Fade Controls** — `F`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/07 Commands for Breakpoint Envelopes]]: [[Ableton/Live/Keyshort/Momentarily-Toggle-Fade-Handles]].
+	- **Shorten/Lengthen Loop** — `Cmd+Left` / `Cmd+Right`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/08 Loop Brace and Start-End Markers]]: [[Ableton/Live/Keyshort/Adjust-Loop-Brace-Length]].
+	- **Select Material in Loop** — `Cmd+Shift+L`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/08 Loop Brace and Start-End Markers]]: [[Ableton/Live/Keyshort/Select-Loop-Brace-Contents]].
+	- **Collapse/Expand Grouped Tracks** — `U`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Fold-Unfold-Selected-Tracks]].
+	- **Deactivate Selected Clip** — `0`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]], and **Deactivate Selected Track** — `0`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Deactivate-Selection]].
