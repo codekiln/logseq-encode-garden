@@ -4,22 +4,60 @@
 		- **Toggle Full Screen Mode** — `Ctrl+Cmd+F`.
 		- **Open the Settings** — `Cmd+,`.
 		- **Close Window/Dialog** — `Esc`.
-	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]]:
-		- **Select Neighboring Clip/Slot** — arrow keys.
-		- **Select All Clips/Slots** — `Cmd+A`.
-		- **Copy Clips** — `Option`-drag.
-		- **Move Up/Down Between Scenes (One at a Time)** — `Up` / `Down`.
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/02 Keyboard Focus and Navigation]]:
+		- **Move to Next Focusable Control** — `Tab`.
+		- **Move to Previous Focusable Control** — `Shift+Tab`.
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/03 Working with Sets and the Program]]:
+		- **New Live Set** — `Cmd+N`.
+		- **Open Live Set** — `Cmd+O`.
+		- **Save Live Set** — `Cmd+S`.
+		- **Save Live Set As…** — `Cmd+Shift+S`.
+		- **Quit Live** — `Cmd+Q`.
+		- **Hide Live** — `Cmd+H`.
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/04 Working with Devices and Plug-Ins]]:
+		- **Add Device(s) to Selection** — `Shift`-click.
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/05 Editing]]:
+		- **Cut** — `Cmd+X`.
+		- **Copy** — `Cmd+C`.
+		- **Paste** — `Cmd+V`.
+		- **Delete** — `Delete`.
+		- **Undo** — `Cmd+Z`.
+		- **Redo** — `Cmd+Shift+Z`.
+		- **Select All** — `Cmd+A`.
+		- **Select Multiple Items** — `Cmd`-click.
+		- **Select Multiple Items by First and Last Item** — `Shift`-click.
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/06 Adjusting Values]]:
+		- **Cancel Value Entry** — `Esc`.
+		- **Confirm Value Entry** — `Enter`.
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/09 Zooming Display and Selections]]:
+		- **Scroll Left/Right** — `Shift`-scroll.
+		- **Add Items to a Selection** — `Shift`-click or drag.
+		- **Add Adjacent Clips/Tracks/Scenes to Multi-Selection** — `Shift`-click.
+		- **Add Nonadjacent Clips/Tracks/Scenes to a Multi-Selection** — `Cmd`-click.
 	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/11 Clip View Sample Editor]]:
 		- **Delete Warp Marker** — `Delete`.
 	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/12 Clip View MIDI Note Editor]]:
 		- **Select All Notes** — `Cmd+A`.
 		- **Copy Notes** — `Option`-drag.
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]]:
+		- **Select Neighboring Clip/Slot** — arrow keys.
+		- **Select All Clips/Slots** — `Cmd+A`.
+		- **Copy Clips** — `Option`-drag.
+		- **Move Up/Down Between Scenes (One at a Time)** — `Up` / `Down`.
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]:
+		- **Delete Track from Track Title Bar** — `Delete`.
 	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/22 Browser]]:
 		- **Scroll Down/Up** — `Down` / `Up`.
 		- **Close/Open Folders** — `Left` / `Right`.
 		- **Search in Browser** — `Cmd+F`.
 		- **Browser History Back** — `Cmd+[`.
 		- **Browser History Forward** — `Cmd+]`.
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/26 General Keyboard Navigation and Workflow/02 Navigating Between Controls in the Settings Menu]]:
+		- `Tab` and `Shift+Tab` between options, `Up` / `Down` to change one, and `Enter` to flip a toggle.
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/28 Accessing Menus]]:
+		- `Cmd+?` to search the menus, which is the macOS Help menu.
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/29 Using Live's Context Menu]]:
+		- `Ctrl`-click for a context menu, and `VO+Shift+M` under VoiceOver.
 - # Already a card on another page
 	- **Toggle Follow Actions for Selected Clips** — `Shift+Enter`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]]: [[Ableton/Live/Action/Follow/Keyshort/Toggle for Selected Clips]].
 	- **Create Follow Action Chain** — `Cmd+Shift+Enter`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]]: [[Ableton/Live/Action/Follow/Chain/Keyshort/Create from Selected Clips]].
@@ -28,14 +66,29 @@
 	- **Scroll Display Left/Right of Selection** — `Cmd+Option`-drag, from [[Ableton/Live/UG/42 Keyboard Shortcuts/16 Arrangement View]], listed in [[Ableton/Live/UG/42 Keyboard Shortcuts/09 Zooming Display and Selections]] as Pan Left/Right of Selection: the `#card` on panning in [[Ableton/Manual/06/01 Arrangement View Navigation]].
 	- **Scroll Display to Follow Playback** — `Option+Shift+F`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/16 Arrangement View]] and the Zooming and Clip View sections: the `#card` on Follow in [[Ableton/Manual/06/01 Arrangement View Navigation]]. That card gives Live 11's `Cmd+Shift+F`, which in Live 12 shows the MIDI Note Filters in the MIDI Note Editor and runs a similarity search in the Browser.
 - # Listed under another name
+	- **Hot-Swap Selected Device** — `Q`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/04 Working with Devices and Plug-Ins]]: [[Ableton/Live/Keyshort/Toggle-Hot-Swap-Mode]].
+	- **Load Selected Device from Browser** — `Enter`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/04 Working with Devices and Plug-Ins]], and **Add Device from Browser** — `Enter`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Load-Selected-Item-from-Browser]].
+	- **Return to Default** — `Delete`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/06 Adjusting Values]]: [[Ableton/Live/Keyshort/Reset-Parameter-Value]].
 	- **Momentarily Toggle Fade Controls** — `F`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/07 Commands for Breakpoint Envelopes]]: [[Ableton/Live/Keyshort/Momentarily-Toggle-Fade-Handles]].
 	- **Shorten/Lengthen Loop** — `Cmd+Left` / `Cmd+Right`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/08 Loop Brace and Start-End Markers]]: [[Ableton/Live/Keyshort/Adjust-Loop-Brace-Length]].
 	- **Select Material in Loop** — `Cmd+Shift+L`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/08 Loop Brace and Start-End Markers]]: [[Ableton/Live/Keyshort/Select-Loop-Brace-Contents]].
-	- **Collapse/Expand Grouped Tracks** — `U`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Fold-Unfold-Selected-Tracks]].
+	- **Zoom In Time Ruler** — `+`, and **Zoom Out Time Ruler** — `-`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/09 Zooming Display and Selections]]: [[Ableton/Live/Keyshort/Zoom-In-Out-Horizontally]].
+	- **Switch Between Notes/Envelopes/MPE Tabs** — `Option+Tab`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/10 Clip View Editor View Modes]]: [[Ableton/Live/Keyshort/Switch-Between-Sample-Envelopes-Tabs]].
+	- **Bypass Snapping While Dragging** — `Cmd`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/13 Grid Snapping and Drawing]]: [[Ableton/Live/Keyshort/Ignore-Grid-Quantization-When-Dragging]].
 	- **Deactivate Selected Clip** — `0`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]], and **Deactivate Selected Track** — `0`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Deactivate-Selection]].
 	- **Solo Selected Chain** — `S`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]]: [[Ableton/Live/Keyshort/Solo-Selected-Tracks]].
+	- **Duplicate Selected Take Lane** — `Cmd+D`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/17 Comping]]: [[Ableton/Live/Keyshort/Duplicate]].
+	- **Rename Selected Track** — `Cmd+R`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Rename]].
+	- **Go to Next Track When Renaming** — `Tab`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Move-to-Next-Track-Scene-When-Renaming]].
+	- **Collapse/Expand Grouped Tracks** — `U`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Fold-Unfold-Selected-Tracks]].
 	- **Move Nonadjacent Tracks Without Collapsing** — `Cmd` with the arrow keys, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Move-Selected-Track-Left-Right]].
-	- **Switch Between Notes/Envelopes/MPE Tabs** — `Option+Tab`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/10 Clip View Editor View Modes]]: [[Ableton/Live/Keyshort/Switch-Between-Sample-Envelopes-Tabs]].
-	- **Zoom In Time Ruler** — `+`, and **Zoom Out Time Ruler** — `-`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/09 Zooming Display and Selections]]: [[Ableton/Live/Keyshort/Zoom-In-Out-Horizontally]].
-	- **Load Selected Device from Browser** — `Enter`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/04 Working with Devices and Plug-Ins]], and **Add Device from Browser** — `Enter`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Load-Selected-Item-from-Browser]].
-	- **Hot-Swap Selected Device** — `Q`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/04 Working with Devices and Plug-Ins]]: [[Ableton/Live/Keyshort/Toggle-Hot-Swap-Mode]].
+	- `Option+Tab` along a mixer row, from [[Ableton/Live/UG/42 Keyboard Shortcuts/26 General Keyboard Navigation and Workflow/01 Using Tab for Navigation]]: [[Ableton/Live/Keyshort/Move-to-Next-Neighbor-of-Current-Control]] and [[Ableton/Live/Keyshort/Move-to-Previous-Neighbor-of-Current-Control]].
+- # Replaced by Bounce Track in Place
+	- **Freeze/Unfreeze Tracks** — `Cmd+Option+Shift+F`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]. [[Ableton/Live/UG/20 Bounce to Audio/01 Bouncing Individual Tracks]] says Bounce Track in Place replaces Freeze and Flatten from earlier versions.
+- # Settings rather than shortcuts
+	- **Wrap Tab Navigation** and **Move Clips with Arrow Keys**, from [[Ableton/Live/UG/42 Keyboard Shortcuts/26 General Keyboard Navigation and Workflow/01 Using Tab for Navigation]].
+- # No shortcuts of its own
+	- [[Ableton/Live/UG/42 Keyboard Shortcuts/27 Editing Automation and Modulation Envelopes with the Keyboard]] points to [[Ableton/Live/UG/41 Accessibility and Keyboard Nav/05 Editing Automation and Modulation Envelopes]].
+- # Windows only
+	- `Alt` with a menu's first letter, from [[Ableton/Live/UG/42 Keyboard Shortcuts/28 Accessing Menus]].
+	- `Menu` or `Shift+F10` for a context menu, from [[Ableton/Live/UG/42 Keyboard Shortcuts/29 Using Live's Context Menu]].
