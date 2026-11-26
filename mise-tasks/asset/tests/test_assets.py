@@ -20,6 +20,7 @@ class Names(unittest.TestCase):
     def test_characters_a_file_name_cannot_hold_are_left_out(self):
         self.assertEqual(assets.filename("Topic/Q/Why X?/Asset/Image/Y/png"), "Topic___Q___Why-X___Asset___Image___Y.png")
         self.assertEqual(assets.filename('Course/Asset/A:Z "B"/mp3'), "Course___Asset___AZ-B.mp3")
+        self.assertEqual(assets.filename("Course/Asset/Take #2 at 100%/mp3"), "Course___Asset___Take-2-at-100.mp3")
 
     def test_ambiguous_names_rejected(self):
         for page in ["Course/Asset/../wav", "Course/Asset/a___b/mp3", "Course//Asset/mp3", "Course/Asset/?/mp3", "Course/Asset/..?/mp3", "Course/Asset/MP3", "Owner/Asset/mp3", "Asset/Owner/Purpose/mp3"]:

@@ -47,7 +47,7 @@ def hashes(source: Path) -> tuple[int, str, str]:
     return size, sha1.hexdigest(), sha256.hexdigest()
 
 
-FILE_UNSAFE = re.compile(r'[\x00-\x1f\x7f<>:"\\|?*]')
+FILE_UNSAFE = re.compile(r'[\x00-\x1f\x7f<>:"\\|?*#%]')
 
 
 def asset_name(garden: Path, page: str) -> tuple[str, str]:

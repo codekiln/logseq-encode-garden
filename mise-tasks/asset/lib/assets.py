@@ -16,7 +16,7 @@ import mounts  # noqa: E402
 ROOT = Path(__file__).resolve().parents[3]
 
 
-FILE_UNSAFE = re.compile(r'[<>:"\\|?*\x00-\x1f\x7f]')
+FILE_UNSAFE = re.compile(r'[<>:"\\|?*#%\x00-\x1f\x7f]')
 
 
 def file_segments(page):

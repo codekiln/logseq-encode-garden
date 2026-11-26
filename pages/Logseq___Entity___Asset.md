@@ -13,7 +13,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Valid names
 		- Namespace separators become `___`; an asset filename contains no `/` or directory structure.
 		- `___` is reserved for namespace boundaries and cannot occur inside a page segment. Empty segments and `.` or `..` segments are invalid. The format segment contains lowercase letters or digits.
-		- A file name leaves out the characters a file path can't hold: control characters and `<`, `>`, `:`, `"`, `\`, `|`, `?`, `*`. The page keeps them, so `Topic/Q/Why X?/Asset/Image/Y/png` stores `Topic___Q___Why-X___Asset___Image___Y.png`. Agents apply this without asking or mentioning it.
+		- A file name leaves out the characters a file path or its public URL can't hold: control characters and `<`, `>`, `:`, `"`, `\`, `|`, `?`, `*`, `#`, `%`. The page keeps them, so `Topic/Q/Why X?/Asset/Image/Y/png` stores `Topic___Q___Why-X___Asset___Image___Y.png`. Agents apply this without asking or mentioning it.
 		- A page name that breaks the other rules needs a valid name before the asset is stored.
 		- Hyphens keep multiword asset purposes readable. Spaces in an owner's namespace also become hyphens, so a file name needs no URL encoding. Files uploaded before 2026-11-11 keep spaces in their names until the B2 link migration copies them to hyphenated names.
 	- ## Frontmatter and body
