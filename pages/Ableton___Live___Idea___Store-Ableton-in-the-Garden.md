@@ -33,3 +33,131 @@ see-also:: [[Ableton/Live/Idea/Keep Live Projects as DVC Assets]], [[Ableton/Liv
 		- ## Offloading
 			- I also want to be able to offload things from my computer. I don't need every single Ableton set on my computer at all times.
 			- Ideally I would have a dedicated media backup service, but I could use B2 for backing that up and then also back it up to a drive.
+	- [[AI/Response]]
+		- ## Recommendation
+			- Keep Sets in logseq-encode-garden, and store each `.als` in git as XML through a clean/smudge filter. Keep recordings and samples in DVC, in a new private bucket. Try the filter on one template Set in a scratch clone before changing the garden.
+		- ## Sets as XML through a clean/smudge filter
+			- ### How it works
+				- A `.gitattributes` line such as `*.als filter=als -merge` names a filter driver for every Set. Git runs the driver's clean command on `git add` and stores its output. On checkout it runs the smudge command and writes that output to the working tree. [[git/attributes/filter]] · [gitattributes: filter](https://git-scm.com/docs/gitattributes#_filter)
+				- For a Set, clean is `gzip -dcf` and smudge is `gzip -9cn`. The repository holds XML, and Live opens a gzip file. With `-f`, gzip passes XML through unchanged, so running clean on its own output changes nothing, which git's documentation asks of a clean command.
+				- `-merge` makes git stop with a conflict when two branches both changed a Set. A line merge of two Sets can produce valid XML that Live can't load, because of the internal IDs [[Ableton/Live/Idea/Declare a Live Set in Logseq]] warns about. [[git/attributes]]
+			- ### What each clone configures
+				- The filter's commands live in git configuration, which git never commits. A clone that lacks them still checks out: a missing driver passes content through, so that clone gets the XML itself at the `.als` path.
+				- On your Macs, the global gitconfig in [codekiln/dotfiles chezmoi/dot_gitconfig](https://github.com/codekiln/dotfiles/blob/main/chezmoi/dot_gitconfig) (private) already defines the Git LFS filter, and a `[filter "als"]` section can sit beside it. Every clone and linked worktree on those Macs then gets the filter. The other way is a committed `.gitconfig` that each clone includes with `git config include.path ../.gitconfig`. [git-config: Includes](https://git-scm.com/docs/git-config#_includes)
+				- The [Publish workflow](https://github.com/codekiln/logseq-encode-garden/blob/main/.github/workflows/gh-pages.yml) clones without the filter, so the site build reads XML.
+				- Leave `filter.als.required` off. With it on, a clone without the commands fails to check out.
+				- A Git client launched from the Dock may not have mise's tools on its `PATH`, a problem the [ableton-live-git-hooks CLI UX briefing](https://github.com/codekiln/ableton-live-git-hooks/blob/main/ableton-live-git-hooks-docs/pages/Project___Brief___CLI%20UX%20Briefing.md) raised. `/usr/bin/gzip` avoids it.
+			- ### Determinism
+				- Decompressing is deterministic, so the stored XML depends only on what Live saved.
+				- A gzip header records a file name and a modification time. Live fills both: the header of Live's own `DefaultLiveSet.als` names that file and a save date. Two saves of the same Set are therefore different gzip files. `gzip -n` leaves both fields out, so smudge writes the same file in every clone. [RFC 1952: Member format](https://www.rfc-editor.org/rfc/rfc1952#section-2.3)
+				- The garden's compiler already writes Sets this way: `write_new` in [compiler.py](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/ableton/lib/compiler.py) passes `mtime=0` and an empty file name to gzip.
+				- Git compares a working Set with the index by running clean on it, so a re-saved Set shows no change only when its XML is unchanged. The XML holds view state, such as `CurrentTime`, `HighlightedTrackIndex` and a `ScrollerTimePreserver` per clip, so saving after scrolling or moving the playhead probably shows a diff. How large a plain save's diff is decides how useful the history will be.
+			- ### What a scratch test showed
+				- On [[2026-11-26 Thu]] I set up the filter above in a scratch repository with git 2.56.1 and the [[GitP/A/Template/Pattern A and B]] Set. The stored blob was the Set's XML. `git status` stayed clean after a checkout and after `touch`. Renaming a track in the working Set showed one changed `<UserName>` line in `git diff`. A clone without the filter got plain XML, and two clones with it got identical files.
+				- Four versions of the [[GitP/A/Template/LPP-Seq]] Set, each renaming one more track, took about 0.7 MB of git storage as XML and 2.6 MB as gzip. Git stored the later XML versions as small deltas. A gzip file changes throughout when one track name changes, so each gzip version cost its full size.
+			- ### textconv instead
+				- `diff=als` with `diff.als.textconv` shows XML in `git diff` and `git log -p` while the repository keeps the gzip file. Ableton's [maxdiff](https://github.com/Ableton/maxdevtools/tree/main/maxdiff) ships [als_textconv.py](https://github.com/Ableton/maxdevtools/blob/main/maxdiff/als_textconv.py) for this, and [[Ableton/File/.als]] suggests it. [Performing text diffs of binary files](https://git-scm.com/docs/gitattributes#_performing_text_diffs_of_binary_files)
+				- textconv helps review only. Each version is still stored as a full gzip file, and the conversion is one-way. With the filter, `git diff` already compares XML.
+			- ### DVC alongside the filter
+				- Each file is tracked by git or by DVC, and git's filter applies only to files git tracks. Both GitP template Sets are DVC files in the public bucket today, as [[GitP/A/Template/LPP-Seq/Asset/Set/als]] shows.
+				- A Live project folder can be split between them. Git tracks `<Set>.als` through the filter, and `dvc add Samples` tracks the recordings folder: DVC writes `Samples.dvc` for git and adds `/Samples` to the project's `.gitignore`. [dvc add](https://dvc.org/doc/command-reference/add) Live's `Backup/` folder goes in `.gitignore`.
+				- Samples need a private bucket, because the garden's DVC remote is inside its public bucket. [[Logseq/Entity/Asset/B2]]
+				- The project folder can't sit in `assets/.remote/`, where git ignores everything except `.dvc` files. A top-level folder such as `ableton/<project>/` works. How lsg treats a page link to a `.als` there needs checking.
+				- [[My/AI/Rule/Logseq/Store binary files in B2 through DVC]] lists Ableton Sets among the binaries that go to B2. Sets stored as XML would be an exception to write on that page.
+			- ### Which Live files are XML
+				- Checked on [[2026-11-26 Thu]] against Live 12 Suite's Core Library and the User Library on your Mac:
+					- `.als` Set, `.alc` clip, `.adg` rack preset and `.adv` device preset: gzip-compressed XML with an `<Ableton>` root element. Every `.adv` sampled from both libraries was gzip; one factory preset in Live's `Misc` folder uses a binary format whose files start with `ab1e`.
+					- `.agr` groove: uncompressed XML in grooves saved by Live 10 and 11, and the `ab1e` binary format in the older Core Library grooves. None is gzip. [[Ableton/File/.agr]] calls the format binary, which holds only for the older grooves.
+					- `.ask` theme: uncompressed XML. `.ascl` tuning: plain text.
+					- `.xmp` in `Ableton Project Info` and `Ableton Folder Info`: uncompressed XMP, which is XML.
+					- `.amxd` Max for Live device: a binary container starting with `ampf` that holds the patcher. maxdiff's `amxd_textconv.py` reads it.
+					- `.alp` pack and `.asd` analysis file: binary.
+					- `.ams`: no file on this Mac to check.
+				- The same filter works for `.alc`, `.adg` and `.adv`. `.agr`, `.ask` and `.xmp` files that are XML need no filter.
+		- ## Prior art in your repositories
+			- ### ableton-live-git-hooks
+				- [codekiln/ableton-live-git-hooks](https://github.com/codekiln/ableton-live-git-hooks), from May 2025 ([[GitHub/codekiln/ableton-live-git-hooks]]), has an `alhook` CLI. Its pre-commit hook writes a `.als.xml` or `.alc.xml` sidecar beside each staged Set or clip and stages it. Its post-checkout hook rebuilds every binary from its sidecar.
+				- [converter.py](https://github.com/codekiln/ableton-live-git-hooks/blob/main/ableton_live_git_hooks/als_git/converter.py) recompresses with Python's `gzip` and no fixed `mtime`, so each rebuild writes a different file. Unit tests cover the converter.
+				- The repository's docs then planned a filter. The [CLI UX briefing](https://github.com/codekiln/ableton-live-git-hooks/blob/main/ableton-live-git-hooks-docs/pages/Project___Brief___CLI%20UX%20Briefing.md) proposes `alhook install-filter`, which would write `*.als filter=ableton` and a `[filter "ableton"]` section. The [requirements document](https://github.com/codekiln/ableton-live-git-hooks/blob/main/ableton-live-git-hooks-docs/pages/Project___Requirements___Document.md) renames the tool `algit`. [cli.py](https://github.com/codekiln/ableton-live-git-hooks/blob/main/ableton_live_git_hooks/cli.py) has none of the filter commands.
+				- The [2025-05-20 journal](https://github.com/codekiln/ableton-live-git-hooks/blob/main/ableton-live-git-hooks-docs/journals/2025_05_20.md) stalled on a hook problem: a pre-commit hook never sees a Set you haven't staged. A clean filter has no such problem, because `git add Set.als` does the conversion.
+			- ### Other repositories
+				- [codekiln/maxdevtools](https://github.com/codekiln/maxdevtools) is a fork of Ableton's repository with no commits of its own. It carries maxdiff's textconv scripts for `.als`, `.amxd` and `.maxpat`.
+				- [codekiln/minilab_mkII_ableton](https://github.com/codekiln/minilab_mkII_ableton) (private, 2021) modifies Live 9's MIDI Remote Script for the Arturia MiniLab mkII. A Remote Script maps a controller in every Set, which the traits section below compares with mappings saved in each Set.
+				- [codekiln/alits](https://github.com/codekiln/alits) and kebricide work with a running Live through Max for Live and never read Set files.
+			- ### In this garden
+				- [[GitP/mise/Task/ableton/sync]] compiles a Set from a page's `Ableton Session` block onto a `base-template` Set. A page inherits a template's declaration through `ableton-template::`, and a `Controls` section sets Arrangement Record and locator MIDI mappings. Its [README](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/ableton/README.md) lists what it supports.
+				- [`ableton:set:import`](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/ableton/set/import) reads a Set and writes [[Logseq/Entity/Ableton/Set]] pages for the Set and each group and track.
+				- [[Person/codekiln/GitHub/logseq-gardener]]'s `ableton-set` plugin draws its track view from those pages' block properties and never opens the `.als`. [First-Party Plugins: ableton-set](https://github.com/codekiln/logseq-gardener/blob/main/logseq-gardener-docs/pages/lsg___Ref___First-Party%20Plugins.md)
+				- Rendering a stored Set therefore means running `ableton:set:import` on it, by hand as today or as a build step. With the XML in git, the Publish workflow's checkout holds every Set, so a build step needs no B2 access.
+				- [[Ableton/Live/Idea/Keep Live Projects as DVC Assets]] compared logseq-garden with a dedicated repository on 2026-11-23, before you settled on Sets in this garden.
+		- ## A dedicated repository or this garden
+			- ### Recommendation: this garden
+				- Claude's file access is the same in both. Each checkout sits under `~/ghq`, outside the folders macOS protects, as [[Ableton/Live/Idea/Keep Live Projects as DVC Assets]] describes. This session also read Live's User Library in `~/Music/Ableton`, where templates are saved, without a prompt.
+				- The website favors the garden. The garden publishes its pages, and Set pages already render through the `ableton-set` plugin. A dedicated repository would need its Set pages proxied into the garden, or pages linking its files by absolute path, which doesn't resolve on another machine.
+				- Size and clone time stay manageable. The garden's history is already large, and the Publish workflow clones it with `filter: blob:none`, which skips old file contents. Set XML adds little per version, going by the scratch test. Recordings stay in DVC in either repository.
+				- DVC and B2 favor the garden. It has the `asset:*` tasks, a fnox profile and a mount, which a dedicated repository would set up again. Either way, recordings need a new private bucket.
+				- The gitpa proxy sync needs care. [[Logseq/Entity/Proxy/Page/mise/Task/sync]] copies files a page links under `../assets/`, and borrows mounts for files under `assets/.remote/`. A Set page proxied to gitpa should link no git-tracked `.als` under `assets/`, or gitpa would commit the gzip working file as a binary.
+				- Worktrees favor git-tracked Sets. A Set in git appears in every linked worktree, so an agent can change a Set on a branch and you can review its XML diff in the PR. A DVC Set is missing from worktrees, because git ignores `assets/.remote/`. Live should still save only into the primary checkout, since a worktree is deleted after its PR merges.
+			- ### What would change it
+				- Plain saves that produce large diffs from view state. The XML history would be noisy, and its storage advantage smaller.
+				- Wanting a Set private. Git history is permanent: a Set committed to this public repository stays public after it's removed, while a B2 object can be deleted.
+				- Many sketches that belong to no garden page. Those fit a separate private repository.
+		- ## Traits for Sets
+			- ### What a Set stores
+				- A Set's MIDI and computer-key mappings live in its XML as `KeyMidi`-shaped blocks, as [[Ableton/File/.als]] describes. A trait is a list of those blocks a Set must contain.
+				- Both GitP templates hold the same locator and record mappings:
+					- [[Ableton/Live/UI/Control-Bar/Button/Arrangement-Record]]: CC 119 on channel 16.
+					- [[Ableton/Live/UI/Arrangement-View/Button/Set-Locator]]: CC 116 on channel 16, and the `;` key.
+					- [[Ableton/Live/UI/Arrangement-View/Button/Previous-Locator]]: CC 117 on channel 16, and `j`.
+					- [[Ableton/Live/UI/Arrangement-View/Button/Next-Locator]]: CC 118 on channel 16, and `k`.
+				- They differ on [[Ableton/Live/UI/Control-Bar/Button/Stop]]. [[Launchpad/Custom/1/Ableton-Ctrl]] sends Stop as CC 114 on channel 16. The LPP-Seq Set maps Stop to CC 116 on channel 1, and the Pattern A and B Set maps no MIDI message to Stop. Both map Stop to the `<` key. A trait check would report both templates.
+				- The custom modes on [[Launchpad/Custom/1/Ableton-Ctrl]] and [[Launchpad/Custom/1/Arrangement]] are Launchpad Pro MK3 modes. A Launchpad Mini needs its own custom mode page listing the CC numbers it sends.
+			- ### A trait page
+				- A trait page could reuse the compiler's `Controls` syntax and add `key::` for the computer key:
+				  ~~~
+				  - Ableton Trait
+				    trait-key:: arrangement-controls
+				    controller:: [[Launchpad/Custom/1/Ableton-Ctrl]]
+				    - Controls
+				      - Stop
+				        action:: stop
+				        cc:: 114
+				        channel:: 16
+				        key:: <
+				      - Set Locator
+				        action:: set-locator
+				        cc:: 116
+				        channel:: 16
+				        key:: ;
+				  ~~~
+				- A template page lists the traits it adopts, such as `ableton-traits:: [[Ableton/Live/Trait/Arrangement-Controls]]`, beside `ableton-template::`.
+				- Applying: the compiler adds a trait's controls to every template that lists it. The compiler already rejects a mapping whose MIDI message another mapping uses, which also catches two traits claiming one CC.
+				- Checking: a task reads a saved `.als` and reports each expectation as met or missing, so a Set saved by hand in Live, such as LPP-Seq, can be held to the trait. With Sets in git, CI can run the check on every changed Set.
+				- The compiler handles `record` and the three locator actions today. A Stop action needs it to write `Transport/StopKeyMidi`, and `key::` needs it to write `PersistentKeyString`, which it now leaves as the base Set has it. [README](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/ableton/README.md)
+				- The page makes the template declare its traits, as a Rust type declares the traits it implements. The check confirms the Set file has the members, as a type checker does for a Python Protocol.
+			- ### What a trait can't put in a Set
+				- The custom mode is stored on the Launchpad, and enabling Remote for its MIDI input is a Live preference. A trait can list both as manual steps, as the compiler README does.
+				- A Remote Script maps a controller in every Set without per-Set mappings. Mappings saved in the Set are visible in the XML, readable by agents, and travel with the Set to another Mac.
+		- ## Large files, logins and offloading
+			- ### WAVs private now
+				- The garden owns one mount, `logseq-encode-garden`. Its bucket is public, and its DVC backups sit in the same bucket under `dvc/`, so they are public too. That's why [[Asset/mise/Task/add]] refuses WAV, AIFF and FLAC files. [[Logseq/Entity/Asset/B2]]
+				- A second mount with its own private bucket and DVC remote, declared without `public`, would hold recordings. `mise run site:build` already stops when a page links into a mount without `public`, so a recording can't be published by accident. [[Asset/Mount]] The `asset:*` tasks keep files in the one mount the garden owns, so they would need to take a mount name.
+				- Sets carry absolute paths from your home folder. Each sample reference holds a `RelativePath` and an absolute `Path`, such as `/Users/<user>/Music/Ableton/User Library/Samples/Recorded/…` in LPP-Seq. As XML in git those paths become plain text in a public repository. The identity guard in [lefthook.yml](https://github.com/codekiln/logseq-encode-garden/blob/main/lefthook.yml) scans the working file, which is gzip, so it would likely miss them. The two GitP templates in the public bucket carry such paths today.
+				- Collect All and Save copies samples into the project folder ([[Ableton/Live/UG/05 Managing Files and Sets/07 Collecting External Files]]), and the absolute `Path` then points inside the project, which still sits in your home folder. Whether Live opens a Set whose clean filter rewrote those paths is untested.
+			- ### A login later
+				- A static site can't check who is reading, so a login needs a small service. It checks the reader and returns a short-lived download link to a file in the private bucket. B2's [b2_get_download_authorization](https://www.backblaze.com/apidocs/b2-get-download-authorization) issues a token limited to a file-name prefix and a duration. The site build would then link a private-mount file to that service instead of stopping. A shop is the same service with a payment step before the link.
+			- ### Bigger things behind a login
+				- The garden already draws this line by format: `asset:add` refuses WAV, AIFF and FLAC, and `site:build` refuses links to them. Wording that matches the code:
+					- **Publish every page and a compressed copy of every recording. Keep uncompressed audio, and other source files too large to serve for free, behind a login.**
+				- It sits beside [[My/Principle/Balance/Risk vs Reward/wrt Privacy - Make Things As Public As They Can Be]]. Sets and pages stay public, and the private files are the uncompressed sources a shop could sell.
+			- ### Offloading Sets from the Mac
+				- DVC keeps a copy in `.dvc/cache` of every file the current commit references, 2.2 GB in this garden today. `dvc gc --workspace` keeps every file the workspace still references, so it never frees a finished project. [dvc gc](https://dvc.org/doc/command-reference/gc)
+				- Offloading a project needs a small task: check with `dvc status --cloud` that B2 has it, then delete its working files and their cache entries. [[Asset/mise/Task/fetch]] brings a file back on demand.
+				- With Sets in git, the Set stays on the Mac and only its `Samples` folder is offloaded.
+				- A drive copy can be a second DVC remote. `dvc remote add --local drive /Volumes/<drive>/dvc` keeps the drive's path in `.dvc/config.local`, outside git, and `dvc push -r drive` copies the objects B2 holds. [dvc remote add](https://dvc.org/doc/command-reference/remote/add)
+		- ## Next steps
+			- TODO In a scratch clone of the garden with the `als` filter, add the [[GitP/A/Template/Pattern A and B]] Set as XML. Open the smudged Set in Live 12, save it without changes, and read the XML diff. In the same sitting, check whether Live opens an uncompressed `.als`.
+			- TODO Write a trait page for the Launchpad Arrangement controls and a task that checks a saved Set against it. Run it on both GitP templates.
+			- TODO Decide what to do about home-folder paths in Sets, including the two templates in the public bucket.
+			- TODO Add a private bucket and mount for recordings, and let the `asset:*` tasks take a mount name.
+			- TODO Write the "bigger things behind a login" principle under [[My/Principle]].
