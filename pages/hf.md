@@ -7,4 +7,4 @@ logseq-entity:: [[Logseq/Entity/Software/Project]]
 		- `hf download <owner>/<model>` fetches a model's files into the shared cache at `~/.cache/huggingface/hub`, where the Python libraries look for them.
 		- `hf version` prints the installed version.
 	- ## Install
-		- My dotfiles install it for every machine through [[mise]], as the tool `pipx:huggingface_hub` in the global [[mise/Config/mise.toml]].
+		- My dotfiles install it for every machine through [[mise]], as the tool `pipx:huggingface_hub` in [[mise/Config/mise.toml/Global]].
