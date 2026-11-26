@@ -11,4 +11,5 @@ next:: [[GitP/A/Log/26/11/25-Wed]]
 			- [[Microfreak/Preset/248 GrowLing]]
 				- pretty random! very little development
 		- Started from the [[GitP/A/Template/LPP-Seq]] template made yesterday with [[Ableton/Live/ProducerPal]]. The full improvisation came from its recording tracks: they were soloed together to make the mix, and a few passages were cut.
-			- TODO Update [[GitP/A/Template/LPP-Seq]] so the recording tracks output to Main and start muted.
+			- CANCELED Update [[GitP/A/Template/LPP-Seq]] so the recording tracks output to Main and start muted.
+				- [[2026-11-26 Thu]] The recording tracks were removed from the template instead. [[GitP/A/Log/26/11/25-Wed]]

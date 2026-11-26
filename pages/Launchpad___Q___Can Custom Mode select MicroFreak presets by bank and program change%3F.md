@@ -1,0 +1,15 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+up:: [[Launchpad/Custom]]
+see-also:: [[GitP/A/Template/LPP-Seq]], [[Microfreak/CLI/Upload a preset]]
+
+- # Can Launchpad Custom Mode select MicroFreak presets by bank and program change?
+	- ## [[AI Answer]]
+		- Yes, a Custom Mode can send the messages needed for preset selection. Use a CC button to select a bank and a Program Change pad to choose a preset within that bank. This takes two pad presses when changing banks. A single pad sending both messages has not been established in the Components documentation.
+		- ### Set up the controls
+			- In [[Novation/Components]], create or edit a Custom Mode. Add CC Button widgets with CC number `0`, Trigger behavior, and on values `0`, `1`, `2`, and `3` for the four banks. Add Program Change widgets for the desired presets. Set their MIDI channels to the MicroFreak's input channel. Novation documents separate CC and Program Change widgets and their channel settings in its [Custom Mode editor guide](https://support.novationmusic.com/hc/en-gb/articles/360009860380-Launchpad-Components-Custom-Mode-Editor-Guide).
+			- For a preset in slot `N`, select bank `(N − 1) // 128`, then program `(N − 1) % 128`. For example, slot 323 uses CC 0 value 2, followed by program 66. [[Microfreak/CLI/Upload a preset]] records a successful selection of slot 323 using those messages. The bank and program numbers here are MIDI values starting at zero; check the numbering shown in Components when setting up a pad.
+			- Factory Custom 5 sends programs 0–63 and Custom 6 sends 64–127 ([[Launchpad/UG/08 Custom Modes/02 Default Custom Modes]]). A tailored layout can keep bank buttons and chosen programs together, but check and back up the current Custom Mode before replacing it.
+		- ### Routing and recording
+			- For a direct hardware test, connect Launchpad MIDI Out 1 to MicroFreak MIDI In using each device's appropriate adapter and a MIDI cable, and match the output channel to the MicroFreak input channel. [[Launchpad/UG/02 Getting Up and Running/05 Standalone]] describes Custom Mode output through the MIDI ports. Verify the exact cabling and channel in the current setup before changing connections.
+			- The [[GitP/A/Template/LPP-Seq]] already routes Launchpad sequencer channels through Live to the MicroFreak. A Custom Mode's MIDI channel and input port must also reach the MicroFreak. Verify both messages with a MIDI monitor and check the selected preset on the MicroFreak; the existing route has not been tested with this Custom Mode.
+			- Sending the messages directly changes the sound, but does not by itself establish a chapter marker in Live's Arrangement. Test what the chosen routing records. For a named, repeatable chapter marker, a separate approach is to MIDI-map a Custom pad to a Session clip that has its bank and program settings filled in. Ableton says the clip sends its bank and program when launched ([Ableton's Program Change guide](https://help.ableton.com/hc/en-us/articles/209070489-Sending-Program-Change-messages-from-Ableton-Live)). Check Live's displayed bank and program numbering against the MicroFreak before relying on it.

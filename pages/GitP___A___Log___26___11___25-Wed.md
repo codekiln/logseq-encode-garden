@@ -11,7 +11,7 @@ next:: [[GitP/A/Log/26/11/26-Thu]]
 				- With the recording tracks muted, the Arrangement plays mf1 to mf3 with their own volume and pan automation. That includes the loops they launched and the MicroFreak they recorded while armed.
 				- The second mix is made from mf1 to mf3, with the recording tracks muted.
 			- #### Are the recording tracks needed?
-				- [[AI/Response]] Keep the recording tracks until the Session recording case is tested
+				- [[AI/Response]] Earlier assessment, superseded by the test below
 				  collapsed:: true
 					- An armed track records into the Arrangement during Arrangement Record, per [[Ableton/Live/UG/19 Recording New Clips/03 Recording/01 Recording Into the Arrangement]]. With Auto monitoring, an armed track lets its input through while it plays no clip, per [[Ableton/Live/UG/17 Routing and IO/01 Monitoring]]. The manual does not establish what the Arrangement contains while a new Session clip is still being recorded; see the question below.
 					- Monday's Set contains these recordings of the MicroFreak on the mf tracks at times in the second mix:
@@ -43,6 +43,8 @@ next:: [[GitP/A/Log/26/11/26-Thu]]
 								- B-C - in session mode, recording a clip
 								- C-D - playing the recorded clip
 								- there is content from 0-D just as I heard it.
+						- [[AI/Response]] Your test resolves the Session recording case above: the Arrangement contained the input while the clip waited and recorded, then the clip playback. The earlier recommendation to keep the recording tracks pending this test is superseded. Your test supports removing them for this workflow.
+				- [[AI/Response]] [[2026-11-26 Thu]] Removed mf1-rec to mf4-rec from the template, both in Live's Templates folder and in the garden's copy on [[GitP/A/Template/LPP-Seq]]. Nothing else in the Set referred to them. Sets made from the template before today, Monday's included, still have them.
 			- #### What the recording tracks capture
 			  collapsed:: true
 				- The recording tracks tap mf1 to mf4 at Post Mixer, which [[Ableton/Live/UG/17 Routing and IO/05 Internal Routings/01 Internal Routing Points]] describes as the track's output after volume and pan. Sends leave a track on their way to the returns, so the reverb and delay fed from mf1 to mf4 never reach the recording tracks.
@@ -59,6 +61,8 @@ next:: [[GitP/A/Log/26/11/26-Thu]]
 					- Clear the take lanes before the template is saved again?
 				- [[My/Response]]
 					- Yes, we should clear those take lanes! That's quite wasteful! We should really have some kind of automated way to "garbage collect" any unreferenced audio material in an ableton live set template
+						- [[AI/Response]] Live has a built-in cleanup workflow. In a copy of the template, right-click each affected track header and choose **Delete All Take Lanes** after checking that its takes are unwanted. Save the Set, then use **File → Manage Files → Manage Project → Unused Files → Show** to review the files Live finds. Take lanes still reference their audio until removed, so finding unused files alone will not clear those takes. [Ableton: Managing Audio Clips and Samples](https://help.ableton.com/hc/en-us/articles/5068208334226-Managing-Audio-Clips-and-Samples) · [[Ableton/Live/UG/21 Comping/02 Inserting and Managing Take Lanes]] · [[Ableton/Live/UG/05 Managing Files and Sets/08 Finding Unused Files]]
+							- Live considers references within the current Project; another Project can still use a file listed as unused. Collect external files into the Projects that need them before deleting, and review the list. The saved template’s location and Project ownership need checking before applying this to it. Live finds candidates, and deletion is a separate manual step. [Ableton: Finding Unused Files](https://www.ableton.com/en/live-manual/12/managing-files-and-sets/#finding-unused-files)
 			- #### Launchpad faders
 				- [[AI Notes]]
 					- mf1-MIDI to mf4-MIDI carry volume automation, and some carry pan or send automation too. A MIDI track without an instrument passes no audio, so that automation changes nothing.
@@ -66,10 +70,12 @@ next:: [[GitP/A/Log/26/11/26-Thu]]
 					- Did that automation come from the Launchpad's faders? If so, putting mf1 to mf4 first would give each MicroFreak loop its own fader. The sequencer reaches the MIDI tracks by channel, so their position in the Set doesn't matter to it.
 				- [[My Note]]
 					- I think this is talking about when I used the [[Launchpad/UG/05 Session Mode/04 Track Controls/04 Volume]] across all the tracks at once. But I'm not sure why AI is interested in this, or what this means: "In this track order, every other fader lands on a MIDI track." I think AI is confused about the difference between [[Launchpad/UI/Mode/1-Session]] and [[Launchpad/UI/Mode/5-Sequencer]]
+						- [[AI/Response]] You are describing Session mode’s Volume view. My observation concerned those Live mixer faders, not the Launchpad’s Sequencer mode. The template lists alternating MIDI and audio tracks; if that same order is in the visible Session window, alternating faders control MIDI and audio tracks. The automation on MIDI tracks may simply be a consequence of your sweep. I cannot tell from the saved automation alone which control produced it, and there is no need to reorder tracks unless you want adjacent faders for the audio tracks. [[Launchpad/UG/05 Session Mode/04 Track Controls/04 Volume]] · [[GitP/A/Template/LPP-Seq]]
 			- #### Preset changes
 				- [[AI Notes]]
 					- The MicroFreak plays one preset at a time, and the Set keeps no record of which one sounded when. Monday's chapters were worked out afterward from the log's list of presets and from where each new take begins.
 					- A MIDI clip can send a bank and program change when it launches, per [[Ableton/Live/UG/08 Clip View/03 Extended Clip Properties/02 MIDI Clip Bank and Program Change Controls]]. The MicroFreak selects a slot from a bank select and a program change, per [[Microfreak/Sequence/Research]]. A clip per preset on a MIDI track routed to the MicroFreak could call up each sound and leave its launch in the Arrangement as a chapter mark.
 					- Worth a test with one of Monday's presets?
 				- [[My/Response]]
-					- TODO I'd prefer to devise some method using [[Launchpad/Custom]] to send these bank and program change messages, if that's an option. Can you look into that?
+					- DONE I'd prefer to devise some method using [[Launchpad/Custom]] to send these bank and program change messages, if that's an option. Can you look into that?
+						- [[AI/Response]] Yes. A Custom Mode can use CC 0 trigger pads to select a bank and Program Change pads to select presets. Changing banks takes two presses; the documented controls do not establish a single pad that sends both messages. Factory Custom Modes 5 and 6 already send Program Changes. The existing Live routing needs a test, as does whether the messages leave a useful Arrangement record. [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and program change?]] has the setup, an example, and a clip-based alternative for named chapter markers.
