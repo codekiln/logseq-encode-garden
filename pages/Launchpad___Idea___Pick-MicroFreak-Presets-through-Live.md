@@ -153,3 +153,40 @@ see-also:: [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and p
 			- TODO Time the MicroFreak: send a preset, then a note after 10, 50, 100 and 250 ms, and listen for the first delay at which the new sound plays whole.
 			- TODO Write a mise task that builds the device's preset table from the `Microfreak/Preset/*` pages and the GitP session pages.
 			- TODO Extend `ableton:set:import` to read the `presets` clips onto the session's Set pages, beside the `notes` clips from [[Ableton/Live/Idea/Keep-Commentary-in-Live-Sets]].
+	- [[AI/Response]] [[2026-11-26 Thu]]
+		- ### Prototype
+			- #### Custom Mode 3
+				- Custom Mode 3 on the Launchpad now holds [[Launchpad/Custom/3/MF-Number-Pad]], also saved under My Custom Modes in [[Novation/Components]]. Reading slot 3 back from the Launchpad in Components showed the same twelve pads, notes, channel and colours.
+				- It replaced `71-78VertFadeCh2`, a mode of eight vertical faders that is still saved under My Custom Modes. Custom Modes 1 and 2 are unchanged.
+				- The pads sit in rows 3 to 6 and columns 3 to 5, counted from the top left. Each one is a Momentary Midi Note on channel 16:
+				  ~~~
+				  pad          note
+				  7  8  9      67 68 69
+				  4  5  6      64 65 66
+				  1  2  3      61 62 63
+				  C  0  E      70 60 71
+				  ~~~
+				- Digits are white, Clear (C) is red and Enter (E) is green. A pad turns yellow while held.
+				- Custom Modes 1 and 2 send only CCs and Program Changes on channel 16, so notes 60 to 71 on that channel come from Custom Mode 3 alone.
+			- #### The device
+				- [[Launchpad/Idea/Pick-MicroFreak-Presets-through-Live/Asset/Device/MF-Number-Pad/amxd]] is a Max MIDI Effect named MF Number Pad. A copy sits in Live's User Library at `Presets/MIDI Effects/Max MIDI Effect/MF Number Pad.amxd`. [[Launchpad/Idea/Pick-MicroFreak-Presets-through-Live/Asset/Device/MF-Number-Pad/maxpat]] holds its patcher as JSON.
+				- Each digit pressed is added to the end of the slot number, up to three digits. A fourth digit is ignored. 0 1 6 and 1 6 both mean slot 16, so [[Microfreak/Preset/016 Voidom]] can be typed as its page name writes it.
+				- Clear empties the number.
+				- Enter with a number from 1 to 512 sends CC 0 = `(N − 1) // 128`, then Program Change `(N − 1) % 128`, on MIDI channel 1, and empties the number. For 259 that is CC 0 = 2 and program 2. Enter with nothing typed, with 0, or with a number above 512 only empties it.
+				- The device keeps every note-on, note-off and poly aftertouch message out of its output, so pad presses never play the MicroFreak. All other MIDI passes through unchanged, including the bank and Program Change pads of Custom Mode 2.
+				- The device shows `Slot:` with the number typed so far and `Sent:` with the last slot it sent.
+				- The device reads notes 60 to 71 on any channel. The Max for Live guide says MIDI Effects receive on channel 1 by convention ([Creating MIDI Effects](https://docs.cycling74.com/userguide/m4l/live_midieffects/)), so the track's MIDI From does the channel filtering.
+				- The logic is JavaScript in a `v8.codebox` between `midiin` and `midiout`. Open the device in Max to edit it. `v8.codebox` needs Max 9, and Live 12.4 bundles Max 9.1.
+				- Checked without Max or Live: the patcher JSON parses, and the length in the `.amxd` header matches the JSON after it. The JavaScript, run in Node with Max's `outlet` stubbed, sent the right bank and program for slots 1, 128, 129, 151, 259 and 512, sent nothing for 0 and 513, kept notes back, and passed CCs, Program Changes, pitch bend, SysEx and clock.
+			- #### Set up Live
+				- 1. On a MIDI track, `LPP CM2 to MF` if the Set has it or a new one, set MIDI From to `Launchpad Pro MK3 (LPProMK3 MIDI)` and `Ch. 16`, Monitor to `In`, and MIDI To to `Arturia MicroFreak (unknown mididevice)` and `Ch. 1`.
+				- 2. Drag MF Number Pad from the browser's User Library, under Presets › MIDI Effects › Max MIDI Effect, onto that track.
+			- #### Test
+				- 1. On the Launchpad, press Custom, then the third button of the bottom row, to open Custom Mode 3.
+				- 2. Press 2 5 9 Enter. The device should show `Sent: 259`, and the MicroFreak should show [[Microfreak/Preset/259 Infini Pad]].
+				- 3. Press 1 5 1 Enter. The MicroFreak should show [[Microfreak/Preset/151 The Unstable]], which is in bank 1.
+				- 4. Hold a digit pad down and press it hard. The MicroFreak should stay silent and keep its sound.
+			- #### Not yet tried
+				- Whether Live loads the `.amxd`. Its header follows Live's own `Max MIDI Effect.amxd` template, but nothing here ran in Max or Live. If Live refuses it, opening the `.maxpat` in Max shows the error in the Max Console.
+				- Whether CC 0 and Program Change sent by a Max for Live device reach the MicroFreak through the track's MIDI To. If the device shows `Sent: 259` and the MicroFreak keeps its preset, the messages stopped between the device and the MicroFreak.
+				- Whether the swallowed notes leak. With the device switched off, Live could pass the pad notes straight to the MicroFreak. Hard presses may also send aftertouch: the device keeps poly aftertouch back and passes channel aftertouch, which the MicroFreak may treat as pressure. The held pad in the test checks both.

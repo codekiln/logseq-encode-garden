@@ -10,3 +10,5 @@ up:: [[Launchpad]]
 		- Slot 1
 			- [[Launchpad/Custom/1/Ableton-Ctrl]] — on the Launchpad since [[2026-11-19 Thu]].
 			- [[Launchpad/Custom/1/Arrangement]]
+		- Slot 3
+			- [[Launchpad/Custom/3/MF-Number-Pad]] — on the Launchpad since [[2026-11-26 Thu]].
