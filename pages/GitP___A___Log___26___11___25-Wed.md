@@ -1,4 +1,5 @@
 prev:: [[GitP/A/Log/26/11/23-Mon]]
+next:: [[GitP/A/Log/26/11/26-Thu]]
 
 - [[2026-11-25 Wed]]
 	- Still working on a new version of Monday's ceremony, [[GitP/A/Session/26/11/23-Mon]].
