@@ -1,5 +1,13 @@
 - Shortcuts in [[Ableton/Live/UG/42 Keyboard Shortcuts]] without a card of their own on an [[Ableton/Live/Keyshort]] page.
+- # Same in every Mac app
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]]:
+		- **Select Neighboring Clip/Slot** — arrow keys.
+		- **Select All Clips/Slots** — `Cmd+A`.
+		- **Copy Clips** — `Option`-drag.
+		- **Move Up/Down Between Scenes (One at a Time)** — `Up` / `Down`.
 - # Already a card on another page
+	- **Toggle Follow Actions for Selected Clips** — `Shift+Enter`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]]: [[Ableton/Live/Action/Follow/Keyshort/Toggle for Selected Clips]].
+	- **Create Follow Action Chain** — `Cmd+Shift+Enter`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]]: [[Ableton/Live/Action/Follow/Chain/Keyshort/Create from Selected Clips]].
 	- **Optimize Arrangement Height** — `H`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/16 Arrangement View]]: the `#card` on `H` and `W` in [[Ableton/Manual/06/01 Arrangement View Navigation]].
 	- **Zoom to Arrangement Time Selection** — `Z`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/16 Arrangement View]]: the `#card` in [[Ableton/Menu/View/Zoom/Arrangement Time Selection/To]].
 	- **Scroll Display Left/Right of Selection** — `Cmd+Option`-drag, from [[Ableton/Live/UG/42 Keyboard Shortcuts/16 Arrangement View]], listed in [[Ableton/Live/UG/42 Keyboard Shortcuts/09 Zooming Display and Selections]] as Pan Left/Right of Selection: the `#card` on panning in [[Ableton/Manual/06/01 Arrangement View Navigation]].
@@ -10,3 +18,5 @@
 	- **Select Material in Loop** — `Cmd+Shift+L`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/08 Loop Brace and Start-End Markers]]: [[Ableton/Live/Keyshort/Select-Loop-Brace-Contents]].
 	- **Collapse/Expand Grouped Tracks** — `U`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Fold-Unfold-Selected-Tracks]].
 	- **Deactivate Selected Clip** — `0`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]], and **Deactivate Selected Track** — `0`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Deactivate-Selection]].
+	- **Solo Selected Chain** — `S`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]]: [[Ableton/Live/Keyshort/Solo-Selected-Tracks]].
+	- **Move Nonadjacent Tracks Without Collapsing** — `Cmd` with the arrow keys, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Move-Selected-Track-Left-Right]].
