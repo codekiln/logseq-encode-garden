@@ -7,8 +7,8 @@
 	- ## Proposed behaviors
 		- ### Buttons
 			- **Momentary** — on while held, off when released.
-			- **Trigger** — fires one event when pressed and keeps no state, such as [[Ableton/Live/UI/Arrangement View/Button/Set Locator]].
-			- **Toggle** — alternates between two states on each press, such as [[Ableton/Live/UI/Control Bar/Button/Arrangement Record]].
+			- **Trigger** — fires one event when pressed and keeps no state, such as [[Ableton/Live/UI/Arrangement-View/Button/Set-Locator]].
+			- **Toggle** — alternates between two states on each press, such as [[Ableton/Live/UI/Control-Bar/Button/Arrangement-Record]].
 			- **Multi-state toggle** — steps through three or more states in a fixed cycle on each press.
 		- ### Continuous controls
 			- **Unipolar** — a value from zero up to a maximum, such as 0–127 or 0–100%.
@@ -16,7 +16,7 @@
 			- **Relative (endless)** — sends increments and decrements with no fixed end; the device keeps the value.
 		- ### Stepped controls
 			- **Selector** — moves through a fixed list of named positions, such as [[Microfreak/UI/Oscillator/Knob/Type]].
-			- **Numeric field** — holds a number typed in or dragged, such as [[Ableton/Live/UI/Control Bar/Field/Arrangement Position]].
+			- **Numeric field** — holds a number typed in or dragged, such as [[Ableton/Live/UI/Control-Bar/Field/Arrangement-Position]].
 		- ### Combined controls
 			- **Encoder with push** — a rotary control whose press acts as a separate button.
 			- **Pressure** — adds a continuous value to a pad or key while held, such as aftertouch.

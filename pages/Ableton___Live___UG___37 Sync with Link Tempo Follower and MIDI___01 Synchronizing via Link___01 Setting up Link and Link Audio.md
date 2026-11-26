@@ -4,7 +4,7 @@ next:: [[Ableton/Live/UG/37 Sync with Link Tempo Follower and MIDI/01 Synchroniz
 - # [37.1.1 Setting up Link and Link Audio](https://www.ableton.com/en/live-manual/12/synchronizing-with-link-tempo-follower-and-midi/#setting-up-link-and-link-audio)
 	- Link and Link Audio have their own Link tab in [[Ableton/Settings]].
 		- ![The Link Tab in Live's Settings](https://ableton-production.imgix.net/live-manual/12/LinkSettingsL12.png)
-	- The Link toggle sits in the [[Ableton/Live/UI/Control Bar]]. Set Show Link Toggle to Hide to remove it.
+	- The Link toggle sits in the [[Ableton/Live/UI/Control-Bar]]. Set Show Link Toggle to Hide to remove it.
 	- The menu beside the toggle switches Link and Link Audio on or off, lists connected Link Audio peers, and opens the settings with Configure Link….
 	- Settings on the Link tab:
 		- **Start Stop Sync** — share start and stop between peers that also turn it on.

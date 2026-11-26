@@ -8,11 +8,11 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 		- Row 1, column 2 (purple)
 			- **Message:** CC 114, channel 16. Moved from CC 116 on [[2026-11-19 Thu]], which it shared with the Set Locator pad.
 			- **Behavior:** [[Launchpad/Custom/Pad/Mode]] Momentary; on value 127, off value 0.
-			- **Controls:** [[Ableton/Live/UI/Control Bar/Button/Stop]].
+			- **Controls:** [[Ableton/Live/UI/Control-Bar/Button/Stop]].
 		- Row 1, column 3 (magenta)
 			- **Message:** CC 119, channel 16.
 			- **Behavior:** Toggle; on value 127, off value 0.
-			- **Controls:** [[Ableton/Live/UI/Control Bar/Button/Arrangement Record]] (Global Record in Live's MIDI Mappings list).
+			- **Controls:** [[Ableton/Live/UI/Control-Bar/Button/Arrangement-Record]] (Global Record in Live's MIDI Mappings list).
 		- Row 1, column 6 (cyan)
 			- **Message:** CC 117, channel 16.
 			- **Behavior:** Trigger; value 127.
@@ -20,7 +20,7 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 		- Row 1, column 7 (yellow)
 			- **Message:** CC 116, channel 16.
 			- **Behavior:** Trigger; value 127.
-			- **Controls:** [[Ableton/Live/UI/Arrangement View/Button/Set Locator]] (Add Locator in Live's MIDI Mappings list).
+			- **Controls:** [[Ableton/Live/UI/Arrangement-View/Button/Set-Locator]] (Add Locator in Live's MIDI Mappings list).
 		- Row 1, column 8 (blue)
 			- **Message:** CC 118, channel 16.
 			- **Behavior:** Trigger; value 127.

@@ -18,7 +18,7 @@ readwise-link:: https://read.readwise.io/read/01m60w6e03481pprtet867xr5e
 				- Drop MIDI clips on MIDI tracks and audio clips on audio tracks; aim for the same track the clip came from.
 			- ### {{youtube-timestamp 66}} Grayed-out tracks and Back to Arrangement
 				- A grayed-out track in Arrangement View is set to play from Session View. Each track plays from one view or the other, never both.
-				- The orange [[Ableton/Live/UI/Arrangement View/Button/Back to Arrangement]] button in the upper right of the timeline returns every track to the Arrangement.
+				- The orange [[Ableton/Live/UI/Arrangement-View/Button/Back-to-Arrangement]] button in the upper right of the timeline returns every track to the Arrangement.
 				- "Session view will always overwrite arrangement view": launching a scene grays the tracks out again.
 				- Each track also has its own small play-shaped Back to Arrangement button that switches only that track.
 				- #### [[My Notes]]
@@ -36,8 +36,8 @@ readwise-link:: https://read.readwise.io/read/01m60w6e03481pprtet867xr5e
 						- #[[Tip/Great]]
 						- Another first for me - if you click and drag on a Scene in Session view, then you can drag its clips to Arrangement view. Wow!
 			- ### {{youtube-timestamp 213}} Record scenes into the Arrangement in real time
-				- The method he prefers: press [[Ableton/Live/UI/Control Bar/Button/Arrangement Record]] and launch scenes while Live records them onto the timeline.
-				- Set a two-bar count-in from the [[Ableton/Live/UI/Control Bar/Switch/Metronome]] menu in the upper left.
+				- The method he prefers: press [[Ableton/Live/UI/Control-Bar/Button/Arrangement-Record]] and launch scenes while Live records them onto the timeline.
+				- Set a two-bar count-in from the [[Ableton/Live/UI/Control-Bar/Switch/Metronome]] menu in the upper left.
 				- Press Stop so the playhead sits at 1.1.1, press Record, and launch the first scene during the count-in.
 				- He plays A, B, C and D for four bars each, then returns to B, C and D.
 				- #### [[My Notes]]

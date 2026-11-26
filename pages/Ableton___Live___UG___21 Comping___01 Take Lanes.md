@@ -9,4 +9,4 @@ next:: [[Ableton/Live/UG/21 Comping/02 Inserting and Managing Take Lanes]]
 	- Show or hide them with Show Take Lanes in the track header's context menu, the toggle on the main lane, or `Cmd+Option+U` (Mac) / `Ctrl+Alt+U` (Windows).
 		- ![The Show/Hide Take Lanes toggle](https://ableton-production.imgix.net/live-manual/12/CompingShowHideTakeLanesToggleL12.png?auto=&w=320)
 	- The left arrow key moves from a take lane to the main lane and folds the take lanes.
-	- Take lanes are hidden in [[Ableton/Live/UI/Arrangement View/Toggle/Automation Mode]]; showing or inserting them leaves that mode.
+	- Take lanes are hidden in [[Ableton/Live/UI/Arrangement-View/Toggle/Automation-Mode]]; showing or inserting them leaves that mode.

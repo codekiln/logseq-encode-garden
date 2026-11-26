@@ -1,8 +1,8 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Ableton/Live/UI/Control Bar]]
+up:: [[Ableton/Live/UI/Control-Bar]]
 
 - # Arrangement Position field
-	- Shows and sets the play position in bars-beats-sixteenths; changing it moves the [[Ableton/Live/UI/Arrangement View/Marker/Insert Marker]]. Drag up or down, type a number and press Enter, or use the up and down arrow keys.
+	- Shows and sets the play position in bars-beats-sixteenths; changing it moves the [[Ableton/Live/UI/Arrangement-View/Marker/Insert-Marker]]. Drag up or down, type a number and press Enter, or use the up and down arrow keys.
 	- Shows a recording count-in in blue.
 	- **Behavior** — numeric field.
 	- ## Source

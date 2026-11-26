@@ -1,8 +1,8 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Ableton/Live/UI/Control Bar]]
+up:: [[Ableton/Live/UI/Control-Bar]]
 
 - # Arrangement Loop toggle
-	- Repeats the section under the [[Ableton/Live/UI/Arrangement View/Marker/Loop Brace]]. With nothing selected, the brace covers the whole Arrangement. Cmd+L (Mac) / Ctrl+L (Win) loops the current selection.
+	- Repeats the section under the [[Ableton/Live/UI/Arrangement-View/Marker/Loop-Brace]]. With nothing selected, the brace covers the whole Arrangement. Cmd+L (Mac) / Ctrl+L (Win) loops the current selection.
 	- **Behavior** — toggle.
 	- ## Source
 		- [[Ableton/Live/UG/06 Arrangement View]]

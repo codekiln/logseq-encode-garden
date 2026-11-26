@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Ableton/Live/UI/Control Bar]]
+up:: [[Ableton/Live/UI/Control-Bar]]
 
 - # Follow switch
 	- Scrolls the Arrangement display to follow the song position. Follow pauses after an edit, a horizontal scroll or a click in the beat-time ruler, and resumes when playback stops or restarts or when the Arrangement or clip scrub area is clicked.

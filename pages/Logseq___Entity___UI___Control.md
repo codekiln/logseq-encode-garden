@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 - # UI Control
 	- In this garden, **UI Control** pages model one thing a person operates on a product's interface — a knob, button, pad, fader, switch, field or slider — so any control can be linked by name.
 	- ## What counts
-		- A control the product labels or its documentation names: [[Microfreak/UI/Oscillator/Knob/Timbre]], [[Ableton/Live/UI/Control Bar/Button/Arrangement Record]].
+		- A control the product labels or its documentation names: [[Microfreak/UI/Oscillator/Knob/Timbre]], [[Ableton/Live/UI/Control-Bar/Button/Arrangement-Record]].
 		- On hardware, a physical control; in software, an on-screen control, including draggable markers such as a loop brace or a locator.
 		- A menu command with no control on screen belongs under the item's menu pages, such as [[Ableton/Menu/Options/Follow]], and a keyboard shortcut is a [[Logseq/Entity/Keyshort]]. A control page links to both when they exist.
 		- A control corresponds to an [[UX/Design/Atomic/L1 - Atom]].
@@ -29,5 +29,5 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 			- **Source** — the user guide or manual section that describes it.
 	- ## Examples
 		- MicroFreak: [[Microfreak/UI/Oscillator/Knob/Type]], [[Microfreak/UI/Oscillator/Knob/Timbre]]
-		- Ableton Live: [[Ableton/Live/UI/Control Bar/Button/Arrangement Record]], [[Ableton/Live/UI/Arrangement View/Button/Set Locator]]
+		- Ableton Live: [[Ableton/Live/UI/Control-Bar/Button/Arrangement-Record]], [[Ableton/Live/UI/Arrangement-View/Button/Set-Locator]]
 		- Launchpad: [[Launchpad/UI/Area/0-Top/8-Projects-Button]], [[Launchpad/UI/Area/2-Grid/Pad]]; [[Launchpad/Custom/1/Arrangement]] describes one pad set up as a toggle.

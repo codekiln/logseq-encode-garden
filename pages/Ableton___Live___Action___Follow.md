@@ -9,8 +9,8 @@ tags:: [[Term]]
 	- A [[Ableton/Live/Action/Follow/Chain]] sets up several selected clips to play one after another in a loop.
 	- ## Controls
 		- A clip's Follow Action controls sit in the Clip View ([[Ableton/Live/UG/08 Clip View/03 Extended Clip Properties/01 Follow Action and Launch Controls]]). A scene's sit in the lower section of the Scene View ([[Ableton/Live/UG/07 Session View/02 Tracks and Scenes/02 Scene View]]).
-		- The Enable Follow Actions Globally button, next to the [[Ableton/Live/UI/Arrangement View/Button/Back to Arrangement]], turns every Follow Action in the Set on or off.
-		- The [Follow switch]([[Ableton/Live/UI/Control Bar/Switch/Follow]]) in the Control Bar is a separate control that scrolls the Arrangement with playback.
+		- The Enable Follow Actions Globally button, next to the [[Ableton/Live/UI/Arrangement-View/Button/Back-to-Arrangement]], turns every Follow Action in the Set on or off.
+		- The [Follow switch]([[Ableton/Live/UI/Control-Bar/Switch/Follow]]) in the Control Bar is a separate control that scrolls the Arrangement with playback.
 	- ## Keyboard shortcuts
 		- [[Ableton/Live/Action/Follow/Keyshort/Toggle for Selected Clips]] — `Shift+Enter`
 		- [[Ableton/Live/Action/Follow/Chain/Keyshort/Create from Selected Clips]] — `Cmd+Shift+Enter` (Win `Ctrl+Shift+Enter`)

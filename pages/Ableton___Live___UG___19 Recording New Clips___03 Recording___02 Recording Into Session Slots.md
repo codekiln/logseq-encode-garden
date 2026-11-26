@@ -5,7 +5,7 @@ next:: [[Ableton/Live/UG/19 Recording New Clips/03 Recording/03 Overdub Recordin
 
 - # [19.3.2 Recording Into Session Slots](https://www.ableton.com/en/live-manual/12/recording-new-clips/#recording-into-session-slots)
 	- ![Recording into the Session View](https://ableton-production.imgix.net/live-manual/12/RecordingNewClipsIntoSessionViewSlots.png?auto=&w=320)
-	- Set Global [[Ableton/Live/UI/Control Bar/Menu/Quantization]] to anything but None so clips are cut on time.
+	- Set Global [[Ableton/Live/UI/Control-Bar/Menu/Quantization]] to anything but None so clips are cut on time.
 	- Arm the tracks; empty slots on armed tracks show Clip Record buttons.
 	- **Session Record** records into the selected scene on every armed track; the new clips' launch buttons turn red. Press it again to switch straight to looped playback.
 	- Or click one Clip Record button to record a single slot, and press the clip's Launch button to loop it.

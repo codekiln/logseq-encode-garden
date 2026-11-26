@@ -1,8 +1,8 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Ableton/Live/UI/Control Bar]]
+up:: [[Ableton/Live/UI/Control-Bar]]
 
-- # Play button
-	- Starts Arrangement playback from the [[Ableton/Live/UI/Arrangement View/Marker/Insert Marker]]. The space bar toggles playback; Shift+space continues from where playback last stopped.
+- # Stop button
+	- Stops playback. Double-click it to return the insert marker to the start of the Arrangement.
 	- **Behavior** — trigger.
 	- ## Source
 		- [[Ableton/Live/UG/06 Arrangement View]]

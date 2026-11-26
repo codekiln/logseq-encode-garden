@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Ableton/Live/UI/Control Bar]]
+up:: [[Ableton/Live/UI/Control-Bar]]
 
 - # Metronome switch
 	- Turns the metronome on. The pull-down menu next to it sets the count-in for recording, the tick sound and rhythm, and Enable Only While Recording.

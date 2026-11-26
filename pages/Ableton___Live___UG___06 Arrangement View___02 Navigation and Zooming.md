@@ -8,4 +8,4 @@ next:: [[Ableton/Live/UG/06 Arrangement View/03 Transport and Playback]]
 	- `Z` zooms fully to the selection ([[Ableton/Menu/View/Zoom/Arrangement Time Selection/To]]); `X` steps back, once per `Z` ([[Ableton/Menu/View/Zoom/Arrangement Time Selection/Back]]).
 	- Selecting time in an Arrangement clip also zooms the Clip View editor to it.
 	- `Option`-scroll (Mac) / `Alt`-scroll (Win) in a main lane zooms the track vertically, or every track with selected content.
-	- [[Ableton/Live/UI/Control Bar/Switch/Follow]], or Options → Follow ([[Ableton/Menu/Options/Follow]]), scrolls with the song position. It pauses when you edit, scroll sideways or click the beat-time ruler, and resumes on stop, restart, or a click in a scrub area.
+	- [[Ableton/Live/UI/Control-Bar/Switch/Follow]], or Options → Follow ([[Ableton/Menu/Options/Follow]]), scrolls with the song position. It pauses when you edit, scroll sideways or click the beat-time ruler, and resumes on stop, restart, or a click in a scrub area.

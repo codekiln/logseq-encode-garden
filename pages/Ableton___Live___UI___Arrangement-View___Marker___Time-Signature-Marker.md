@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Ableton/Live/UI/Arrangement View]]
+up:: [[Ableton/Live/UI/Arrangement-View]]
 
 - # Time signature marker
 	- Changes the time signature from its position onward. Markers sit just below the beat-time ruler and are hidden when a Set has no meter changes.

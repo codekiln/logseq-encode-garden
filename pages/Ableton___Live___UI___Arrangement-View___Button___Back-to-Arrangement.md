@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Ableton/Live/UI/Arrangement View]]
+up:: [[Ableton/Live/UI/Arrangement-View]]
 
 - # Back to Arrangement button
 	- Resumes Arrangement playback after a Session clip has taken over a track. It lights up while what plays differs from the Arrangement, and appears in both the Session View and the Arrangement View.
