@@ -9,3 +9,4 @@ see-also:: [[GitP/A/Log/26/11/26-Thu]]
 				- ![Shape clip with the Scale button on](../assets/.remote/logseq-encode-garden/Ableton___Live___Log___26___11___26-Thu___Asset___Image___Shape-Clip-Scale-On.png)
 			- [[Ableton/Live/Q/When I use Transform and Generate on a MIDI clip, how do I make them use a particular scale?]]
 				- [[AI/Response]] The clip's ♭♯ Scale button was off, so Shape chose from all twelve notes. With the button on, generated notes stay in the clip's scale.
+	- I want to experiment with how best to store my Ableton files in this garden: [[Ableton/Live/Idea/Store-Ableton-in-the-Garden]]
