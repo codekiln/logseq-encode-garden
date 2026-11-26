@@ -5,6 +5,11 @@
 		- **Select All Clips/Slots** — `Cmd+A`.
 		- **Copy Clips** — `Option`-drag.
 		- **Move Up/Down Between Scenes (One at a Time)** — `Up` / `Down`.
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/11 Clip View Sample Editor]]:
+		- **Delete Warp Marker** — `Delete`.
+	- From [[Ableton/Live/UG/42 Keyboard Shortcuts/12 Clip View MIDI Note Editor]]:
+		- **Select All Notes** — `Cmd+A`.
+		- **Copy Notes** — `Option`-drag.
 - # Already a card on another page
 	- **Toggle Follow Actions for Selected Clips** — `Shift+Enter`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]]: [[Ableton/Live/Action/Follow/Keyshort/Toggle for Selected Clips]].
 	- **Create Follow Action Chain** — `Cmd+Shift+Enter`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]]: [[Ableton/Live/Action/Follow/Chain/Keyshort/Create from Selected Clips]].
@@ -20,3 +25,5 @@
 	- **Deactivate Selected Clip** — `0`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]], and **Deactivate Selected Track** — `0`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Deactivate-Selection]].
 	- **Solo Selected Chain** — `S`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/15 Session View]]: [[Ableton/Live/Keyshort/Solo-Selected-Tracks]].
 	- **Move Nonadjacent Tracks Without Collapsing** — `Cmd` with the arrow keys, from [[Ableton/Live/UG/42 Keyboard Shortcuts/19 Commands for Tracks]]: [[Ableton/Live/Keyshort/Move-Selected-Track-Left-Right]].
+	- **Switch Between Notes/Envelopes/MPE Tabs** — `Option+Tab`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/10 Clip View Editor View Modes]]: [[Ableton/Live/Keyshort/Switch-Between-Sample-Envelopes-Tabs]].
+	- **Zoom In Time Ruler** — `+`, and **Zoom Out Time Ruler** — `-`, from [[Ableton/Live/UG/42 Keyboard Shortcuts/09 Zooming Display and Selections]]: [[Ableton/Live/Keyshort/Zoom-In-Out-Horizontally]].
