@@ -16,21 +16,31 @@ import mounts  # noqa: E402
 ROOT = Path(__file__).resolve().parents[3]
 
 
-def filename(page):
+FILE_UNSAFE = re.compile(r'[<>:"\\|?*\x00-\x1f\x7f]')
+
+
+def file_segments(page):
+    """The page's segments before its format, without the characters a file name can't hold."""
     segments = page.split("/")
     if len(segments) < 4 or "Asset" not in segments[1:-2]:
         raise ValueError("use an asset page name ending in its format")
-    if any(not p or p in (".", "..") or "___" in p or re.search(r'[<>:"\\|?*\x00-\x1f\x7f]', p) for p in segments):
-        raise ValueError("invalid asset page segment")
     if not re.fullmatch(r"[a-z0-9]+", segments[-1]):
         raise ValueError("format must contain lowercase letters or digits")
-    return "___".join(segments[:-1]).replace(" ", "-") + "." + segments[-1]
+    kept = [FILE_UNSAFE.sub("", p).strip() for p in segments[:-1]]
+    if any(not p or p in (".", "..") or "___" in p for p in segments + kept):
+        raise ValueError("invalid asset page segment")
+    return kept, segments[-1]
+
+
+def filename(page):
+    kept, extension = file_segments(page)
+    return "___".join(kept).replace(" ", "-") + "." + extension
 
 
 def spaced_filename(page):
     """The page's file name with its spaces kept, as the asset tasks wrote it until they switched to hyphens."""
-    segments = page.split("/")
-    return "___".join(segments[:-1]) + "." + segments[-1]
+    kept, extension = file_segments(page)
+    return "___".join(kept) + "." + extension
 
 
 def owned_mount_folder():

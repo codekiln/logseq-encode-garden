@@ -50,6 +50,12 @@ class MediaUploadTests(unittest.TestCase):
                      'contentLength': self.source.stat().st_size,
                      'contentSha1': hashlib.sha1(self.source.read_bytes()).hexdigest(), 'contentType': 'image/gif'}
 
+    def test_page_with_reserved_punctuation_is_found_and_its_file_name_leaves_it_out(self):
+        page = 'Topic/Q/Why X?/Asset/Diagram/gif'
+        (self.root / 'pages' / 'Topic___Q___Why X%3F___Asset___Diagram___gif.md').write_text(
+            'logseq-entity:: [[Logseq/Entity/Asset/B2]]\n- # Diagram\n')
+        self.assertEqual(asset_name(self.root, page), ('Topic___Q___Why-X___Asset___Diagram.gif', 'gif'))
+
     def test_additive_asset_entity_markers_are_accepted(self):
         self.page_path.write_text('tags:: [[Existing]]\nlogseq-entity:: [[Logseq/Entity/Asset/B2]], [[Logseq/Entity/Other]]\n- # Diagram\n')
         self.assertEqual(asset_name(self.root, self.page), (self.filename, 'gif'))
@@ -121,7 +127,7 @@ class MediaUploadTests(unittest.TestCase):
         self.assertEqual(client.uploads, 1)
 
     def test_invalid_names_pages_and_formats_stop_before_network(self):
-        for name in ['../Asset/Diagram/gif', 'Course/Asset/a___b/gif', 'Course/Asset/Bad:Name/gif',
+        for name in ['../Asset/Diagram/gif', 'Course/Asset/a___b/gif', 'Course/Asset/?/gif',
                      'Course//Asset/Diagram/gif', 'Course/Asset/Diagram/GIF']:
             with self.subTest(name=name), self.assertRaises(ValueError):
                 asset_name(self.root, name)

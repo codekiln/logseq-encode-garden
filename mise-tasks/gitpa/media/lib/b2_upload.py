@@ -47,15 +47,22 @@ def hashes(source: Path) -> tuple[int, str, str]:
     return size, sha1.hexdigest(), sha256.hexdigest()
 
 
+FILE_UNSAFE = re.compile(r'[\x00-\x1f\x7f<>:"\\|?*]')
+
+
 def asset_name(garden: Path, page: str) -> tuple[str, str]:
     parts = page.split('/')
+    kept = [FILE_UNSAFE.sub('', part).strip() for part in parts[:-1]]
     if (len(parts) < 4 or 'Asset' not in parts[1:-2]
-            or any(not part or part in {'.', '..'} or '___' in part
-                   or re.search(r'[\x00-\x1f\x7f<>:"\\|?*]', part) for part in parts)
+            or any(not part or part in {'.', '..'} or '___' in part for part in parts + kept)
             or not re.fullmatch('[a-z0-9]+', parts[-1])):
         raise ValueError('Use an existing Owner/Asset/Purpose/format page with valid asset segments')
-    path = garden / 'pages' / (page.replace('/', '___') + '.md')
-    if not path.is_file() or path.resolve().parent != (garden / 'pages').resolve():
+    stem = page.replace('/', '___')
+    # Logseq writes reserved punctuation in a page's file name as %XX, such as %3F for '?'.
+    encoded = re.sub(r'[<>:"\\|?*]', lambda match: f'%{ord(match.group()):02X}', stem)
+    pages = garden / 'pages'
+    path = next((pages / (name + '.md') for name in (stem, encoded) if (pages / (name + '.md')).is_file()), None)
+    if path is None or path.resolve().parent != pages.resolve():
         raise ValueError('Asset page must exist directly in this garden pages directory')
     entity_types = set()
     for line in path.read_text().splitlines():
@@ -66,7 +73,7 @@ def asset_name(garden: Path, page: str) -> tuple[str, str]:
             entity_types.update(re.findall(r'\[\[([^]\n]+)\]\]', property_line.group(2)))
     if 'Logseq/Entity/Asset/B2' not in entity_types:
         raise ValueError('Target page must be a Logseq/Entity/Asset/B2 instance')
-    return '___'.join(parts[:-1]).replace(' ', '-') + '.' + parts[-1], parts[-1]
+    return '___'.join(kept).replace(' ', '-') + '.' + parts[-1], parts[-1]
 
 
 def media_type(source: Path, extension: str) -> str:
