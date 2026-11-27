@@ -3,8 +3,8 @@ see-also:: [[git/attributes]]
 
 - # [gitattributes: filter](https://git-scm.com/docs/gitattributes#_filter)
 	- The `filter` attribute names a filter driver that converts a file between its form in the working tree and the form [[git]] stores.
-	- The driver's **clean** command runs on check-in. `git add` feeds it the working file on standard input and stores its standard output as the blob.
-	- The driver's **smudge** command runs on checkout. Git feeds it the blob and writes its output to the working tree.
+	- The driver's [[git/attributes/filter/clean]] command runs on check-in. `git add` feeds it the working file on standard input and stores its standard output as the blob.
+	- The driver's [[git/attributes/filter/smudge]] command runs on checkout. Git feeds it the blob and writes its output to the working tree.
 	- Either command can be left out.
 	- ## Configuration
 		- [[git/attributes]] assigns a driver to paths, such as `*.als filter=als`. The commands are defined in git configuration, which each clone sets for itself:
