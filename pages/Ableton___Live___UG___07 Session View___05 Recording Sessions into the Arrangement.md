@@ -10,4 +10,4 @@ prev:: [[Ableton/Live/UG/07 Session View/04 Setting Up the Session View Grid]]
 	- Move clips between views with Copy and Paste, by dragging onto the view selectors, or between windows with a Second Window (`Cmd+Shift+W` on Mac / `Ctrl+Shift+W` on Windows).
 	- Pasting Arrangement material into the Session lays clips out top to bottom in time order, so stepping down the scenes rebuilds the arrangement.
 	- Create → Consolidate Time to New Scene turns a selected Arrangement range into one clip per track in a new scene, writing new samples for audio tracks.
-	- Related: [[Ableton/Arrangement View/Q/Can I record in Arrangement View while playing Session View clips?]] and [[Launchpad/Custom/1/Arrangement]].
+	- Related: [[Ableton/Arrangement View/Q/Can I record in Arrangement View while playing Session View clips?]] and [[Launchpad/Custom/Available/1-Arrangement]].

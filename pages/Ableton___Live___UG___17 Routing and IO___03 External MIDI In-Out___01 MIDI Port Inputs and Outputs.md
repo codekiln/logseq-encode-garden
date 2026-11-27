@@ -21,5 +21,5 @@ next:: [[Ableton/Live/UG/17 Routing and IO/03 External MIDI In-Out/02 Playing MI
 			- ![The Resync External Hardware button in the Control Bar](https://ableton-production.imgix.net/live-manual/12/ResyncExternalHardwareIndicator.png?auto=&w=320)
 	- ## 17.3.1.3 Remote
 		- Lets a controller map to Live's parameters, and sends feedback back to it.
-		- Input: for custom MIDI mappings, or to launch clips from a keyboard. [[Launchpad/Custom/1/Arrangement]] needs Remote on for the Launchpad's input.
+		- Input: for custom MIDI mappings, or to launch clips from a keyboard. [[Launchpad/Custom/Available/1-Arrangement]] needs Remote on for the Launchpad's input.
 		- Output: for controllers whose LEDs or motorised faders show the state of mapped parameters.

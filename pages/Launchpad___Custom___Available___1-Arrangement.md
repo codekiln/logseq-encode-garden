@@ -6,8 +6,8 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 	- ## Pad
 		- Position: top-left pad of the main grid (row 1, column 1).
 		- Message: MIDI CC **119**, channel **16**.
-		- Behaviour: **Toggle**; on value **127**, off value **0**.
-		- Pad colour: red; on colour: green.
+		- Behavior: **Toggle**; on value **127**, off value **0**.
+		- Pad color: red; on color: green.
 		- [Arrangement Record Custom Mode in Novation Components](https://components.novationmusic.com/launchpad-pro-mk3/custom-modes/780760).
 	- ## Live mapping
 		- Enable Remote for the Launchpad MIDI input in Live's MIDI preferences.

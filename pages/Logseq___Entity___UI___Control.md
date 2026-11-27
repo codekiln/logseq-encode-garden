@@ -30,4 +30,4 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Examples
 		- MicroFreak: [[Microfreak/UI/Oscillator/Knob/Type]], [[Microfreak/UI/Oscillator/Knob/Timbre]]
 		- Ableton Live: [[Ableton/Live/UI/Control-Bar/Button/Arrangement-Record]], [[Ableton/Live/UI/Arrangement-View/Button/Set-Locator]]
-		- Launchpad: [[Launchpad/UI/Area/0-Top/8-Projects-Button]], [[Launchpad/UI/Area/2-Grid/Pad]]; [[Launchpad/Custom/1/Arrangement]] describes one pad set up as a toggle.
+		- Launchpad: [[Launchpad/UI/Area/0-Top/8-Projects-Button]], [[Launchpad/UI/Area/2-Grid/Pad]]; [[Launchpad/Custom/Available/1-Arrangement]] describes one pad set up as a toggle.

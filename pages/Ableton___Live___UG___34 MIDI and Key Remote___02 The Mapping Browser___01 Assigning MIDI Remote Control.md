@@ -9,4 +9,4 @@ next:: [[Ableton/Live/UG/34 MIDI and Key Remote/02 The Mapping Browser/02 Mappin
 		- 2. Click the Live control to map.
 		- 3. Move a knob or press a key or pad on the controller. The new mapping appears in the Mapping Browser.
 		- 4. Press the MIDI switch again to leave MIDI Map Mode. Entering it again shows the mappings.
-	- [[Launchpad/Custom/1/Arrangement]] maps a Launchpad pad to Arrangement Record this way.
+	- [[Launchpad/Custom/Available/1-Arrangement]] maps a Launchpad pad to Arrangement Record this way.

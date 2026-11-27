@@ -12,6 +12,6 @@
 			- I realized that I shouldn't distract myself with trying to replace Live when I have other, more interesting problems to work on, …
 		- ### AI notes ([[Anthropic/Model/Claude/5/5/Opus]])
 			- Published [[GitP/A/Session/26/10/26-Mon]].
-			- Turning on Arrangement Record from [[Launchpad/Custom/1/Arrangement]] records every track into Arrangement View, so the extra catch-all tracks in the [[GitP/A/Template]] may no longer be needed.
+			- Turning on Arrangement Record from [[Launchpad/Custom/Available/1-Arrangement]] records every track into Arrangement View, so the extra catch-all tracks in the [[GitP/A/Template]] may no longer be needed.
 			- Listening back while dictating to [[ChatGPT]] voice mode gives timestamped notes for a comment track.
 			- Decision: keep [[Ableton/Live]] rather than spend time replacing it.
