@@ -1,29 +1,35 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
 
 - # Launchpad Custom Mode
-	- In this garden, **Launchpad Custom Mode** pages document one Custom Mode built in [Novation Components](https://components.novationmusic.com/) for the [[Novation/Launchpad/Pro/Mk3]]: what each pad sends, how it behaves, and what it controls.
+	- In this garden, **Launchpad Custom Mode** pages document one named Custom Mode built in [Novation Components](https://components.novationmusic.com/) for the [[Novation/Launchpad/Pro/Mk3]]: what each pad sends, how it behaves, and what it controls.
+	- ## Modes and slots
+		- Components' "My Custom Modes" list holds every saved mode. Each has one page at `Launchpad/Custom/Available/<Name>`, whether or not a slot holds it now.
+		- The Launchpad holds eight modes, one per slot. Each slot has a [[Logseq/Entity/Launchpad/Custom/Slot]] page at `Launchpad/Custom/Slot/<N>` that points to the mode it holds and keeps the slot's history. [[Launchpad/Custom/Slot]] shows all eight.
+		- Sending a mode to a slot changes the slot's page only: add a History entry there and point it at the mode. Mode pages are never renamed.
 	- ## Examples
-		- [[Launchpad/Custom/1/Arrangement]]
-		- [[Launchpad/Custom/1/Ableton-Ctrl]]
+		- [[Launchpad/Custom/Available/1-Ableton-Ctrl]], held by [[Launchpad/Custom/Slot/1]].
+		- [[Launchpad/Custom/Available/3-MF-Number-Pad]], held by [[Launchpad/Custom/Slot/3]], which needs [[Ableton/Live/Device/Max/MF-Number-Pad]].
+		- [[Launchpad/Custom/Available/1-Arrangement]], saved in Components and held by no slot since [[2026-11-19 Thu]].
 	- ## When a page is a Launchpad Custom Mode
 		- The page's subject is one named mode from the Components "My Custom Modes" list, which can be sent to one of the Launchpad's Custom Mode slots ([[Launchpad/UG/08 Custom Modes]]).
-		- Not this entity: the factory Custom Modes described in [[Launchpad/UG/11 Appendix/01 Default MIDI Mappings]], or pages about a Custom Mode setting in general, such as [[Launchpad/Custom/Pad/Mode]].
+		- Not this entity: the factory Custom Modes described in [[Launchpad/UG/11 Appendix/01 Default MIDI Mappings]], a slot on the device, or pages about a Custom Mode setting in general, such as [[Launchpad/Custom/Pad/Mode]].
 	- ## Naming
-		- `Launchpad/Custom/<Slot>/<Name>`. `<Slot>` is the Custom Mode slot the mode is made for, 1 to 8, which is also the leading number in its Components name. `<Name>` is the rest of the Components name with its words joined by hyphens: Components' `1 Ableton Ctrl` is `Launchpad/Custom/1/Ableton-Ctrl`.
-		- [[Launchpad/Custom]] explains the slots and lists the modes made for each.
+		- `Launchpad/Custom/Available/<Name>`, where `<Name>` is the mode's Components name with its words joined by hyphens, keeping its leading number: `1 Ableton Ctrl` is [[Launchpad/Custom/Available/1-Ableton-Ctrl]]. The number is the slot the mode was made for, which need not be the slot that holds it.
 	- ## Finding and deduplicating
-		- Search `pages/Launchpad___Custom___*` and the mode's name. Two Components modes with the same name get one page each only if both are in use; otherwise update the existing page.
+		- Search `pages/Launchpad___Custom___Available___*` and the mode's name. One page per Components mode.
 	- ## Frontmatter
 		- Set `logseq-entity` to [[Logseq/Entity/Launchpad/Custom/Mode]].
 		- Set `launchpad-custom-mode-url` to the mode's [address in Components](https://components.novationmusic.com/launchpad-pro-mk3/custom-modes/786076).
 		- Shared conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- H1 with the mode's name, then one sentence on what the mode is for.
+		- `## Depends on` — when the mode only works with a device in Live, a link to that device's page, such as an [[Logseq/Entity/Ableton/Device/Max]] page. The device page links back under `## Used by`.
 		- `## Pads` — one child per assigned pad or button, giving:
 			- **Position** — grid row and column counted from 1 at the top left, or the button's [[Launchpad/UI]] page for an edge button.
 			- **Message** — note, CC number or Program Change, and MIDI channel.
 			- **Behavior** — the [[Launchpad/Custom/Pad/Mode]] value, with on and off values.
-			- **Colour** — the pad's colour as Components names or shows it.
+			- **Color** — the pad's color as Components names or shows it.
 			- **Controls** — the [[Logseq/Entity/UI/Control]] page it is mapped to in Live, such as [[Ableton/Live/UI/Control-Bar/Button/Stop]], and the Live Set or template that holds the mapping.
-		- `## Mode settings` — the shared on colour and anything set in Components' Custom Mode Settings.
+		- `## How it works` — optional, collapsed: what the pads do together, when that takes more than the Pads list.
+		- `## Mode settings` — the shared on color and anything set in Components' Custom Mode Settings.
 		- `## Backup` — a link to a `.syx` export in `assets/`, when one exists.

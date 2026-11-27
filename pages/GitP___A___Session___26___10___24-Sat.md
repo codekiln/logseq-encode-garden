@@ -15,7 +15,7 @@ date-created:: [[2026-10-24 Sat]]
 	- ## Setup
 		- Recorded at the library, with USB cables only for MIDI. A single USB hub with all the other cables plugged into it worked well.
 		- The MicroFreak takes its clock from USB only. The Launchpad receives clock but does not send it. Ableton Live's MIDI output settings send clock to both devices and take no clock input from them. [[Launchpad/UG/10 Setup/05 MIDI Settings]] · [[Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab]]
-		- Arrangement Record was armed from [[Launchpad/Custom/1/Arrangement]], used here for the first time.
+		- Arrangement Record was armed from [[Launchpad/Custom/Available/1-Arrangement]], used here for the first time.
 		- Still to try: separate the headphone output from the audio sent to the [[Zoom H5]], so the cue mix goes to the headphones and the rendered mix to the recorder. [[Zoom H5/Q/How can I record the line out on a MacBook or iPhone while monitoring on the headphone jack?]]
 	- ## Preset
 		- [[Microfreak/Preset/151 The Unstable]] — Pad, V.Analog, paraphonic. The saved slot matched the factory payload after the session, so the edits heard here were not saved.
@@ -30,7 +30,7 @@ date-created:: [[2026-10-24 Sat]]
 	- ## Chapters
 		- ### 00:00 Arrangement Record from a custom mode
 			- A short remark from the end of the session opens the episode: the first use of a Launchpad custom mode to arm Arrangement Record.
-			- [[Launchpad/Custom/1/Arrangement]]
+			- [[Launchpad/Custom/Available/1-Arrangement]]
 			- Transcript
 				- **codekiln** · 00:00:02 — All right, that was cool. Hey, by the way, this is also the first time when I used my [[Launchpad/UG/08 Custom Modes]] to be able to enable the recording. Unfortunately I think it's inverted from what I want. I think it's a bright green when I'm recording and then if I…
 			- [[My Notes]]

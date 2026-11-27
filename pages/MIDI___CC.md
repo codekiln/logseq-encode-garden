@@ -8,5 +8,5 @@ alias:: [[MIDI/Control Change]]
 	- **RPN and NRPN.** Controllers 101 and 100 (RPN) or 99 and 98 (NRPN) pick a parameter, and Data Entry, 6 and 38, sets its value. RPN 0 sets the [[MIDI/Pitch Bend]] range.
 	- **Channel mode messages.** 120–127 are reserved: All Sound Off (120), Reset All Controllers (121), Local Control (122), All Notes Off (123), Omni Off and On (124, 125), Mono (126) and Poly (127).
 	- The numbers the spec leaves undefined, and so free for custom mappings, are on [[MIDI/Q/Which MIDI CC numbers are free for custom mappings?]].
-	- In this garden: [[Microfreak/UG/17 Ext Gear/09 MIDI CC Control]], [[Microfreak/UG/21 Appendix D - CC Values]], [[Launchpad/Custom/1/Arrangement]].
+	- In this garden: [[Microfreak/UG/17 Ext Gear/09 MIDI CC Control]], [[Microfreak/UG/21 Appendix D - CC Values]], [[Launchpad/Custom/Available/1-Arrangement]].
 	- Source: [MIDI 1.0 Control Change Messages](https://midi.org/midi-1-0-control-change-messages)

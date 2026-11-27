@@ -30,6 +30,6 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 			- **Behavior:** Horizontal Bipolar Fader across the row.
 			- **Controls:** the crossfader ([[Ableton/Live/UG/18 Mixing/05 Using Live's Crossfader]]), listed as Master | Mixer, Crossfader Center in Live's MIDI Mappings list.
 	- ## Mode settings
-		- On colour: white.
+		- On color: white.
 	- ## Live mappings
 		- The Controls lines above come from the MIDI mappings saved in the `26.11.18-Wed` Live Set on [[2026-11-19 Thu]], read from its `.als` file ([[Ableton/File/.als]]).

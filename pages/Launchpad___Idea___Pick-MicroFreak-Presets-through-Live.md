@@ -129,7 +129,7 @@ see-also:: [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and p
 				- CC 0 and Program Change sent by a Max for Live MIDI effect reach the MicroFreak through the track's MIDI To.
 				- The device can keep the pad notes from passing through to the MicroFreak.
 				- Max's `pgmout` counts programs from 1 unless its `zerobased` attribute is on ([pgmout](https://docs.cycling74.com/reference/pgmout/)). The device must send program `(N − 1) % 128` counted from 0.
-				- [[Launchpad/Custom/1/Ableton-Ctrl]] also sends on channel 16. Its CCs arrive at this track too, and the device should drop them.
+				- [[Launchpad/Custom/Available/1-Ableton-Ctrl]] also sends on channel 16. Its CCs arrive at this track too, and the device should drop them.
 				- Two devices on different tracks can pass colour messages with Max's `send` and `receive`. The limitations page rules that out for audio and says nothing about messages.
 				- `create_midi_clip` works on an unarmed track while Arrangement Record is on and the Arrangement plays, and how late the clip lands after the press. The Track page gives no Live version for the function; Producer Pal already creates Arrangement clips in your Live 12.
 				- Whether a Max for Live device can send SysEx. With it, the device could send Select Layout after Enter and put the Launchpad back on the sequencer ([[Launchpad/PRG/03 MIDI/03 Selecting Layouts]]).
@@ -156,7 +156,7 @@ see-also:: [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and p
 	- [[AI/Response]] [[2026-11-26 Thu]]
 		- ### Prototype
 			- #### Custom Mode 3
-				- Custom Mode 3 on the Launchpad now holds [[Launchpad/Custom/3/MF-Number-Pad]], also saved under My Custom Modes in [[Novation/Components]]. Reading slot 3 back from the Launchpad in Components showed the same twelve pads, notes, channel and colours.
+				- Custom Mode 3 on the Launchpad now holds [[Launchpad/Custom/Available/3-MF-Number-Pad]], also saved under My Custom Modes in [[Novation/Components]]. Reading slot 3 back from the Launchpad in Components showed the same twelve pads, notes, channel and colours.
 				- It replaced `71-78VertFadeCh2`, a mode of eight vertical faders that is still saved under My Custom Modes. Custom Modes 1 and 2 are unchanged.
 				- The pads sit in rows 3 to 6 and columns 3 to 5, counted from the top left. Each one is a Momentary Midi Note on channel 16:
 				  ~~~
