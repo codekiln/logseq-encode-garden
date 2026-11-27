@@ -35,3 +35,14 @@
 			- Margin doodle: a cross-hatched cloud or hat over a small face.
 		- ### AI notes ([[Anthropic/Model/Claude/5/5/Opus]])
 			- The AI-drafted set template is probably [[GitP/A/Template/Pattern A and B]], which [[Making/Music/Log/26/11/01-Sun]] says an agent drafted "the other day"; it only partly worked.
+	- ## Performing with the laptop lid closed
+		- I prefer to perform from the Launchpad with my MacBook lid closed. The first Session row needs empty clips with vivid, distinct colors matching the track colors, so I can recognize the layout without looking at Live.
+		- Reserve the top row for orientation and record loops in the rows below it. Keep the color layout in the reusable template and in future Sets generated from the garden.
+	- ## Private click and cue monitoring
+		- I want the MacBook headphone jack to carry the private cue output and click track. The Zoom H5 should carry the audience mix, with the cue excluded.
+		- During performance, the H5 can feed a mixer or speakers. Headphones connected to the H5 should hear the audience mix; monitoring headphones connected to the MacBook should use the separate cue route.
+		- The intended setup combines the H5 and MacBook headphones in an Audio MIDI Setup aggregate device, with separate output pairs selected in Live. The headphone connection and output separation need a listening check before performance.
+		- During setup, switching macOS Sound Output from H5 to External Headphones made Live’s click audible through the MacBook headphones. Live was following the system output and still had no audio input device selected; the MicroFreak remained audible through the H5.
+		- [[Ableton/Live/UG/18 Mixing/06 Soloing and Cueing]]
+	- ## Instruments and reference
+		- The MicroFreak can stay connected by USB while the template is edited. Loading a revised Live Set can briefly interrupt monitoring.

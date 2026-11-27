@@ -16,6 +16,9 @@ see-also:: [[GitP/A/Template/Pattern A and B]], [[Launchpad/UI/Mode/5-Sequencer/
 	- ## Making the episode mix
 		- Mix from mf1 to mf4. They replay the loops and takes Live wrote into the Arrangement, with their volume, pan and send automation, and the reverb and delay returns are part of the mix.
 		- The first mix of [[GitP/A/Session/26/11/23-Mon]] soloed the four recording tracks together. Its second mix was made from mf1 to mf3.
+	- ## Ideas
+		- TODO Reserve the top Session row for empty clips in each track's color, so the layout reads from the Launchpad with the laptop lid closed. Record loops in the rows below. From [[Music/Making/Log/26/10/29 Thu - GitP Halloween event prep]].
+		- TODO Send the click and cue to headphones on the MacBook and only the audience mix to the Zoom H5, with an aggregate device in Audio MIDI Setup and separate output pairs in Live. From the same log.
 	- ## Episodes
 		- [[GitP/A/Session/26/11/22-Sun]]
 		- [[GitP/A/Session/26/11/23-Mon]]
