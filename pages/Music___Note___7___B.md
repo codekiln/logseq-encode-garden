@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Music/Note]]
 alias:: [[B7]]
 midi-note:: 107
-prev:: [[Music/Note/7/A#]]
+prev:: [[Music/Note/7/A-sharp]]
 next:: [[Music/Note/8/C]]
 
 - # B7

@@ -1,8 +1,8 @@
 logseq-entity:: [[Logseq/Entity/Music/Note]]
 alias:: [[D7]]
 midi-note:: 98
-prev:: [[Music/Note/7/C#]]
-next:: [[Music/Note/7/D#]]
+prev:: [[Music/Note/7/C-sharp]]
+next:: [[Music/Note/7/D-sharp]]
 
 - # D7
 	- MIDI note 98, about 2349.32 Hz at A440. Ableton Live and Arturia name it D6.
