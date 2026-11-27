@@ -2,17 +2,17 @@ logseq-entity:: [[Logseq/Entity/Diataxis/Reference]]
 see-also:: [[Music/Concept/Scientific Pitch Notation]], [[Logseq/Entity/Music/Note]]
 
 - # Music Notes
-	- Every MIDI note from C-1 to G9, in [[Music/Concept/Scientific Pitch Notation]]. Middle C is [C4]([[Music/Note/4/C]]), MIDI note 60.
-	- | Octave | C | C# | D | D# | E | F | F# | G | G# | A | A# | B |
+	- Every MIDI note from C-1 to G9, in [[Music/Concept/Scientific Pitch Notation]]. Middle C is [[C4]], MIDI note 60.
+	- | Octave | C | C-sharp | D | D-sharp | E | F | F-sharp | G | G-sharp | A | A-sharp | B |
 	  |---|---|---|---|---|---|---|---|---|---|---|---|---|
-	  | -1 | [C-1]([[Music/Note/-1/C]]) | [C#-1]([[Music/Note/-1/C#]]) | [D-1]([[Music/Note/-1/D]]) | [D#-1]([[Music/Note/-1/D#]]) | [E-1]([[Music/Note/-1/E]]) | [F-1]([[Music/Note/-1/F]]) | [F#-1]([[Music/Note/-1/F#]]) | [G-1]([[Music/Note/-1/G]]) | [G#-1]([[Music/Note/-1/G#]]) | [A-1]([[Music/Note/-1/A]]) | [A#-1]([[Music/Note/-1/A#]]) | [B-1]([[Music/Note/-1/B]]) |
-	  | 0 | [C0]([[Music/Note/0/C]]) | [C#0]([[Music/Note/0/C#]]) | [D0]([[Music/Note/0/D]]) | [D#0]([[Music/Note/0/D#]]) | [E0]([[Music/Note/0/E]]) | [F0]([[Music/Note/0/F]]) | [F#0]([[Music/Note/0/F#]]) | [G0]([[Music/Note/0/G]]) | [G#0]([[Music/Note/0/G#]]) | [A0]([[Music/Note/0/A]]) | [A#0]([[Music/Note/0/A#]]) | [B0]([[Music/Note/0/B]]) |
-	  | 1 | [C1]([[Music/Note/1/C]]) | [C#1]([[Music/Note/1/C#]]) | [D1]([[Music/Note/1/D]]) | [D#1]([[Music/Note/1/D#]]) | [E1]([[Music/Note/1/E]]) | [F1]([[Music/Note/1/F]]) | [F#1]([[Music/Note/1/F#]]) | [G1]([[Music/Note/1/G]]) | [G#1]([[Music/Note/1/G#]]) | [A1]([[Music/Note/1/A]]) | [A#1]([[Music/Note/1/A#]]) | [B1]([[Music/Note/1/B]]) |
-	  | 2 | [C2]([[Music/Note/2/C]]) | [C#2]([[Music/Note/2/C#]]) | [D2]([[Music/Note/2/D]]) | [D#2]([[Music/Note/2/D#]]) | [E2]([[Music/Note/2/E]]) | [F2]([[Music/Note/2/F]]) | [F#2]([[Music/Note/2/F#]]) | [G2]([[Music/Note/2/G]]) | [G#2]([[Music/Note/2/G#]]) | [A2]([[Music/Note/2/A]]) | [A#2]([[Music/Note/2/A#]]) | [B2]([[Music/Note/2/B]]) |
-	  | 3 | [C3]([[Music/Note/3/C]]) | [C#3]([[Music/Note/3/C#]]) | [D3]([[Music/Note/3/D]]) | [D#3]([[Music/Note/3/D#]]) | [E3]([[Music/Note/3/E]]) | [F3]([[Music/Note/3/F]]) | [F#3]([[Music/Note/3/F#]]) | [G3]([[Music/Note/3/G]]) | [G#3]([[Music/Note/3/G#]]) | [A3]([[Music/Note/3/A]]) | [A#3]([[Music/Note/3/A#]]) | [B3]([[Music/Note/3/B]]) |
-	  | 4 | [C4]([[Music/Note/4/C]]) | [C#4]([[Music/Note/4/C#]]) | [D4]([[Music/Note/4/D]]) | [D#4]([[Music/Note/4/D#]]) | [E4]([[Music/Note/4/E]]) | [F4]([[Music/Note/4/F]]) | [F#4]([[Music/Note/4/F#]]) | [G4]([[Music/Note/4/G]]) | [G#4]([[Music/Note/4/G#]]) | [A4]([[Music/Note/4/A]]) | [A#4]([[Music/Note/4/A#]]) | [B4]([[Music/Note/4/B]]) |
-	  | 5 | [C5]([[Music/Note/5/C]]) | [C#5]([[Music/Note/5/C#]]) | [D5]([[Music/Note/5/D]]) | [D#5]([[Music/Note/5/D#]]) | [E5]([[Music/Note/5/E]]) | [F5]([[Music/Note/5/F]]) | [F#5]([[Music/Note/5/F#]]) | [G5]([[Music/Note/5/G]]) | [G#5]([[Music/Note/5/G#]]) | [A5]([[Music/Note/5/A]]) | [A#5]([[Music/Note/5/A#]]) | [B5]([[Music/Note/5/B]]) |
-	  | 6 | [C6]([[Music/Note/6/C]]) | [C#6]([[Music/Note/6/C#]]) | [D6]([[Music/Note/6/D]]) | [D#6]([[Music/Note/6/D#]]) | [E6]([[Music/Note/6/E]]) | [F6]([[Music/Note/6/F]]) | [F#6]([[Music/Note/6/F#]]) | [G6]([[Music/Note/6/G]]) | [G#6]([[Music/Note/6/G#]]) | [A6]([[Music/Note/6/A]]) | [A#6]([[Music/Note/6/A#]]) | [B6]([[Music/Note/6/B]]) |
-	  | 7 | [C7]([[Music/Note/7/C]]) | [C#7]([[Music/Note/7/C#]]) | [D7]([[Music/Note/7/D]]) | [D#7]([[Music/Note/7/D#]]) | [E7]([[Music/Note/7/E]]) | [F7]([[Music/Note/7/F]]) | [F#7]([[Music/Note/7/F#]]) | [G7]([[Music/Note/7/G]]) | [G#7]([[Music/Note/7/G#]]) | [A7]([[Music/Note/7/A]]) | [A#7]([[Music/Note/7/A#]]) | [B7]([[Music/Note/7/B]]) |
-	  | 8 | [C8]([[Music/Note/8/C]]) | [C#8]([[Music/Note/8/C#]]) | [D8]([[Music/Note/8/D]]) | [D#8]([[Music/Note/8/D#]]) | [E8]([[Music/Note/8/E]]) | [F8]([[Music/Note/8/F]]) | [F#8]([[Music/Note/8/F#]]) | [G8]([[Music/Note/8/G]]) | [G#8]([[Music/Note/8/G#]]) | [A8]([[Music/Note/8/A]]) | [A#8]([[Music/Note/8/A#]]) | [B8]([[Music/Note/8/B]]) |
-	  | 9 | [C9]([[Music/Note/9/C]]) | [C#9]([[Music/Note/9/C#]]) | [D9]([[Music/Note/9/D]]) | [D#9]([[Music/Note/9/D#]]) | [E9]([[Music/Note/9/E]]) | [F9]([[Music/Note/9/F]]) | [F#9]([[Music/Note/9/F#]]) | [G9]([[Music/Note/9/G]]) |  |  |  |  |
+	  | -1 | [[C-1]] | [[C-sharp--1]] | [[D-1]] | [[D-sharp--1]] | [[E-1]] | [[F-1]] | [[F-sharp--1]] | [[G-1]] | [[G-sharp--1]] | [[A-1]] | [[A-sharp--1]] | [[B-1]] |
+	  | 0 | [[C0]] | [[C-sharp-0]] | [[D0]] | [[D-sharp-0]] | [[E0]] | [[F0]] | [[F-sharp-0]] | [[G0]] | [[G-sharp-0]] | [[A0]] | [[A-sharp-0]] | [[B0]] |
+	  | 1 | [[C1]] | [[C-sharp-1]] | [[D1]] | [[D-sharp-1]] | [[E1]] | [[F1]] | [[F-sharp-1]] | [[G1]] | [[G-sharp-1]] | [[A1]] | [[A-sharp-1]] | [[B1]] |
+	  | 2 | [[C2]] | [[C-sharp-2]] | [[D2]] | [[D-sharp-2]] | [[E2]] | [[F2]] | [[F-sharp-2]] | [[G2]] | [[G-sharp-2]] | [[A2]] | [[A-sharp-2]] | [[B2]] |
+	  | 3 | [[C3]] | [[C-sharp-3]] | [[D3]] | [[D-sharp-3]] | [[E3]] | [[F3]] | [[F-sharp-3]] | [[G3]] | [[G-sharp-3]] | [[A3]] | [[A-sharp-3]] | [[B3]] |
+	  | 4 | [[C4]] | [[C-sharp-4]] | [[D4]] | [[D-sharp-4]] | [[E4]] | [[F4]] | [[F-sharp-4]] | [[G4]] | [[G-sharp-4]] | [[A4]] | [[A-sharp-4]] | [[B4]] |
+	  | 5 | [[C5]] | [[C-sharp-5]] | [[D5]] | [[D-sharp-5]] | [[E5]] | [[F5]] | [[F-sharp-5]] | [[G5]] | [[G-sharp-5]] | [[A5]] | [[A-sharp-5]] | [[B5]] |
+	  | 6 | [[C6]] | [[C-sharp-6]] | [[D6]] | [[D-sharp-6]] | [[E6]] | [[F6]] | [[F-sharp-6]] | [[G6]] | [[G-sharp-6]] | [[A6]] | [[A-sharp-6]] | [[B6]] |
+	  | 7 | [[C7]] | [[C-sharp-7]] | [[D7]] | [[D-sharp-7]] | [[E7]] | [[F7]] | [[F-sharp-7]] | [[G7]] | [[G-sharp-7]] | [[A7]] | [[A-sharp-7]] | [[B7]] |
+	  | 8 | [[C8]] | [[C-sharp-8]] | [[D8]] | [[D-sharp-8]] | [[E8]] | [[F8]] | [[F-sharp-8]] | [[G8]] | [[G-sharp-8]] | [[A8]] | [[A-sharp-8]] | [[B8]] |
+	  | 9 | [[C9]] | [[C-sharp-9]] | [[D9]] | [[D-sharp-9]] | [[E9]] | [[F9]] | [[F-sharp-9]] | [[G9]] |  |  |  |  |

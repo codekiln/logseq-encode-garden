@@ -1,8 +1,8 @@
 logseq-entity:: [[Logseq/Entity/Music/Note]]
-alias:: [[D#5]]
+alias:: [[D-sharp-5]]
 midi-note:: 75
 prev:: [[Music/Note/5/D]]
 next:: [[Music/Note/5/E]]
 
-- # D\#5
-	- MIDI note 75, about 622.25 Hz at A440. Also spelled Eb5. Ableton Live and Arturia name it D\#4.
+- # D-sharp-5
+	- MIDI note 75, about 622.25 Hz at A440. Also spelled E-flat-5. Ableton Live and Arturia name it D-sharp-4.

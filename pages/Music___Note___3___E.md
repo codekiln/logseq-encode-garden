@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Music/Note]]
 alias:: [[E3]]
 midi-note:: 52
-prev:: [[Music/Note/3/D#]]
+prev:: [[Music/Note/3/D-sharp]]
 next:: [[Music/Note/3/F]]
 
 - # E3
