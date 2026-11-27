@@ -8,21 +8,22 @@ created-by:: [[Person/codekiln]]
 		- In the case of [[Blitzy]], this involves work on internal, private codebases.
 	- ## #[[Mermaid Diagram]]
 		-
-		- ```mermaid
-		  flowchart TD
-		      Note["Used by: Blitzy, Devin"]
-		      A[Arch Doc Agent]
-		      B[Analyze Library]
-		      C[Condensed, high-quality context for AI]
-		      D[Code Planning Agent]
-		      E[Coding Agent]
-		      F[Code]
-		  
-		      Note --> A
-		      A --> B
-		      B -->|output| C
-		      C -->|input| D
-		      D --> E
-		      E --> F
-		      E -->|update| A
-		  ```
+		- {{renderer :mermaid_6891bd99-2b46-40d9-ace0-95d5f40c74b1, 4}}
+			- ```mermaid
+			  flowchart TD
+			      Note["Used by: Blitzy, Devin"]
+			      A[Arch Doc Agent]
+			      B[Analyze Library]
+			      C[Condensed, high-quality context for AI]
+			      D[Code Planning Agent]
+			      E[Coding Agent]
+			      F[Code]
+			  
+			      Note --> A
+			      A --> B
+			      B -->|output| C
+			      C -->|input| D
+			      D --> E
+			      E --> F
+			      E -->|update| A
+			  ```
