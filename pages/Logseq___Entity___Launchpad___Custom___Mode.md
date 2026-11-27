@@ -1,25 +1,22 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
 
 - # Launchpad Custom Mode
-	- In this garden, **Launchpad Custom Mode** pages document one Custom Mode built in [Novation Components](https://components.novationmusic.com/) for the [[Novation/Launchpad/Pro/Mk3]]: what each pad sends, how it behaves, and what it controls.
-	- ## Loaded and available
-		- The Launchpad holds eight Custom Modes, one per slot. Components' "My Custom Modes" list can hold many more. The namespace tells the two apart:
-			- `Launchpad/Custom/<Slot>-<Name>` — the mode loaded in that slot now. At most one page per slot, so there are never more than eight.
-			- `Launchpad/Custom/Available/<Name>` — a mode saved in Components and not loaded in any slot.
-		- This mirrors `Microfreak/Preset/<slot> <name>`, which models the presets on the MicroFreak now ([[Logseq/Entity/Preset/Synth/Microfreak]]).
-		- Sending a mode to a slot moves pages: rename the slot's old page to `Launchpad/Custom/Available/<Name>`, and rename the new mode's page from `Available` to `Launchpad/Custom/<Slot>-<Name>`. [[Launchpad/Custom]] lists what each slot holds and since when.
+	- In this garden, **Launchpad Custom Mode** pages document one named Custom Mode built in [Novation Components](https://components.novationmusic.com/) for the [[Novation/Launchpad/Pro/Mk3]]: what each pad sends, how it behaves, and what it controls.
+	- ## Modes and slots
+		- Components' "My Custom Modes" list holds every saved mode. Each has one page at `Launchpad/Custom/Available/<Name>`, whether or not a slot holds it now.
+		- The Launchpad holds eight modes, one per slot. Each slot has a [[Logseq/Entity/Launchpad/Custom/Slot]] page at `Launchpad/Custom/Slot/<N>` that points to the mode it holds and keeps the slot's history. [[Launchpad/Custom/Slot]] shows all eight.
+		- Sending a mode to a slot changes the slot's page only: add a History entry there and point it at the mode. Mode pages are never renamed.
 	- ## Examples
-		- [[Launchpad/Custom/1-Ableton-Ctrl]], loaded in slot 1.
-		- [[Launchpad/Custom/3-MF-Number-Pad]], loaded in slot 3, which needs [[Ableton/Live/Device/Max/MF-Number-Pad]].
-		- [[Launchpad/Custom/Available/1-Arrangement]], saved in Components and not loaded.
+		- [[Launchpad/Custom/Available/1-Ableton-Ctrl]], held by [[Launchpad/Custom/Slot/1]].
+		- [[Launchpad/Custom/Available/3-MF-Number-Pad]], held by [[Launchpad/Custom/Slot/3]], which needs [[Ableton/Live/Device/Max/MF-Number-Pad]].
+		- [[Launchpad/Custom/Available/1-Arrangement]], saved in Components and held by no slot since [[2026-11-19 Thu]].
 	- ## When a page is a Launchpad Custom Mode
 		- The page's subject is one named mode from the Components "My Custom Modes" list, which can be sent to one of the Launchpad's Custom Mode slots ([[Launchpad/UG/08 Custom Modes]]).
-		- Not this entity: the factory Custom Modes described in [[Launchpad/UG/11 Appendix/01 Default MIDI Mappings]], or pages about a Custom Mode setting in general, such as [[Launchpad/Custom/Pad/Mode]].
+		- Not this entity: the factory Custom Modes described in [[Launchpad/UG/11 Appendix/01 Default MIDI Mappings]], a slot on the device, or pages about a Custom Mode setting in general, such as [[Launchpad/Custom/Pad/Mode]].
 	- ## Naming
-		- `<Name>` is the mode's Components name with its words joined by hyphens. Components names start with the slot the mode was made for, so `1 Ableton Ctrl` loaded in slot 1 is `Launchpad/Custom/1-Ableton-Ctrl`, and `1 Arrangement` saved but not loaded is `Launchpad/Custom/Available/1-Arrangement`.
-		- If a mode is loaded in a slot other than the one its name starts with, the page name starts with the slot it's loaded in.
+		- `Launchpad/Custom/Available/<Name>`, where `<Name>` is the mode's Components name with its words joined by hyphens, keeping its leading number: `1 Ableton Ctrl` is [[Launchpad/Custom/Available/1-Ableton-Ctrl]]. The number is the slot the mode was made for, which need not be the slot that holds it.
 	- ## Finding and deduplicating
-		- Search `pages/Launchpad___Custom___*` and the mode's name. One page per Components mode: when it moves between a slot and Available, rename the page rather than making a new one.
+		- Search `pages/Launchpad___Custom___Available___*` and the mode's name. One page per Components mode.
 	- ## Frontmatter
 		- Set `logseq-entity` to [[Logseq/Entity/Launchpad/Custom/Mode]].
 		- Set `launchpad-custom-mode-url` to the mode's [address in Components](https://components.novationmusic.com/launchpad-pro-mk3/custom-modes/786076).

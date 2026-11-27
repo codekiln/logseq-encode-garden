@@ -110,14 +110,14 @@ see-also:: [[Ableton/Live/Idea/Keep Live Projects as DVC Assets]], [[Ableton/Liv
 					- [[Ableton/Live/UI/Arrangement-View/Button/Set-Locator]]: CC 116 on channel 16, and the `;` key.
 					- [[Ableton/Live/UI/Arrangement-View/Button/Previous-Locator]]: CC 117 on channel 16, and `j`.
 					- [[Ableton/Live/UI/Arrangement-View/Button/Next-Locator]]: CC 118 on channel 16, and `k`.
-				- They differ on [[Ableton/Live/UI/Control-Bar/Button/Stop]]. [[Launchpad/Custom/1-Ableton-Ctrl]] sends Stop as CC 114 on channel 16. The LPP-Seq Set maps Stop to CC 116 on channel 1, and the Pattern A and B Set maps no MIDI message to Stop. Both map Stop to the `<` key. A trait check would report both templates.
-				- The custom modes on [[Launchpad/Custom/1-Ableton-Ctrl]] and [[Launchpad/Custom/Available/1-Arrangement]] are Launchpad Pro MK3 modes. A Launchpad Mini needs its own custom mode page listing the CC numbers it sends.
+				- They differ on [[Ableton/Live/UI/Control-Bar/Button/Stop]]. [[Launchpad/Custom/Available/1-Ableton-Ctrl]] sends Stop as CC 114 on channel 16. The LPP-Seq Set maps Stop to CC 116 on channel 1, and the Pattern A and B Set maps no MIDI message to Stop. Both map Stop to the `<` key. A trait check would report both templates.
+				- The custom modes on [[Launchpad/Custom/Available/1-Ableton-Ctrl]] and [[Launchpad/Custom/Available/1-Arrangement]] are Launchpad Pro MK3 modes. A Launchpad Mini needs its own custom mode page listing the CC numbers it sends.
 			- ### A trait page
 				- A trait page could reuse the compiler's `Controls` syntax and add `key::` for the computer key:
 				  ~~~
 				  - Ableton Trait
 				    trait-key:: arrangement-controls
-				    controller:: [[Launchpad/Custom/1-Ableton-Ctrl]]
+				    controller:: [[Launchpad/Custom/Available/1-Ableton-Ctrl]]
 				    - Controls
 				      - Stop
 				        action:: stop
@@ -173,6 +173,6 @@ see-also:: [[Ableton/Live/Idea/Keep Live Projects as DVC Assets]], [[Ableton/Liv
 			- It would probably use an AI through the web interface to maintain this and verify it. It may also be that someone out there has made an API to talk to the Launchpad Pro to load custom modes without using the Novation Components web UI.
 			- LPP-Seq is the one I've been using more recently. Another agent brought the same point up earlier.
 			- I need some way to maintain a correspondence between the Launchpad custom mode and the Ableton Set template.
-			- [[AI/Response]] The Stop mismatch above is the first case: [[Launchpad/Custom/1-Ableton-Ctrl]] sends Stop as CC 114 on channel 16, and the [[GitP/A/Template/LPP-Seq]] Set listens for CC 116 on channel 1. A trait page that both the custom mode's page and each template's page link would hold the expected CC and channel for each transport and locator control, so a check can compare the two.
+			- [[AI/Response]] The Stop mismatch above is the first case: [[Launchpad/Custom/Available/1-Ableton-Ctrl]] sends Stop as CC 114 on channel 16, and the [[GitP/A/Template/LPP-Seq]] Set listens for CC 116 on channel 1. A trait page that both the custom mode's page and each template's page link would hold the expected CC and channel for each transport and locator control, so a check can compare the two.
 				- TODO Find whether the Launchpad Pro MK3 can receive a Custom Mode over SysEx, from Novation's programmer's reference or community tools, so a Custom Mode can be loaded without Novation Components.
 

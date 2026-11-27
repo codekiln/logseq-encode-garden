@@ -13,4 +13,4 @@ logseq-entity:: [[Logseq/Entity/Launchpad/Custom/Mode]]
 		- Color shows how many [[GitP/A/Session]] days used the preset: red three, yellow two, blue one.
 		- **Controls:** no Live mapping. A MIDI track listening to the Launchpad's `LPProMK3 MIDI` port on channel 16 passes the messages to the MicroFreak.
 	- ## Status
-		- Not tested yet. [[Launchpad/Custom/3-MF-Number-Pad]] reaches any of the 512 slots in one entry and worked on [[2026-11-27 Fri]].
+		- Not tested yet. [[Launchpad/Custom/Available/3-MF-Number-Pad]] reaches any of the 512 slots in one entry and worked on [[2026-11-27 Fri]].

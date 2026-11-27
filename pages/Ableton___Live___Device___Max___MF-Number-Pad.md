@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Ableton/Device/Max]]
 - # MF Number Pad
 	- Max MIDI Effect that turns a slot number typed on a Launchpad into the bank select and Program Change that load that preset on the [[Microfreak]].
 	- ## Used by
-		- [[Launchpad/Custom/3-MF-Number-Pad]], whose twelve pads send the digits, Clear and Enter.
+		- [[Launchpad/Custom/Available/3-MF-Number-Pad]], held by [[Launchpad/Custom/Slot/3]], whose twelve pads send the digits, Clear and Enter.
 	- ## Set up in Live
 		- 1. On a MIDI track, such as `LPP CM2 to MF`, set MIDI From to `Launchpad Pro MK3 (LPProMK3 MIDI)` and `Ch. 16`, Monitor to `In`, and MIDI To to `Arturia MicroFreak (unknown mididevice)` and `Ch. 1`.
 		- 2. Drag MF Number Pad from the browser's User Library, under Presets › MIDI Effects › Max MIDI Effect, onto that track.
