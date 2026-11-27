@@ -99,7 +99,7 @@ see-also:: [[Ableton/Live/Idea/Store-Ableton-in-the-Garden]], [[Ableton/Live/Pro
 				- Quote a `notes` heading there as a timestamp-led bullet, such as `- 00:32 · Second voice enters`. The locator sync turns every timed H3–H6 on the episode page into a locator and leaves bullets out, so a note written as a heading would come back as a locator. Bullets will seek the recording once [Make timestamp-led bullets in chapter notes seek the recording · Issue #139 · codekiln/gitpa](https://github.com/codekiln/gitpa/issues/139) lands.
 				- Chapters then pass from the episode page into the Set's locators, and notes pass from the Set's `notes` clips onto its pages. Neither task rewrites the other's text.
 			- ### With Sets stored as XML
-				- With the clean/smudge filter from [[Ableton/Live/Idea/Store-Ableton-in-the-Garden]], renaming a `notes` clip or editing its info text shows in `git diff` as one changed `Name` or `Annotation` line, so a PR shows what a comment said before and after.
+				- With the [[git/attributes/filter/clean]] and [[git/attributes/filter/smudge]] filter from [[Ableton/Live/Idea/Store-Ableton-in-the-Garden]], renaming a `notes` clip or editing its info text shows in `git diff` as one changed `Name` or `Annotation` line, so a PR shows what a comment said before and after.
 				- The Publish workflow's checkout would hold every Set's XML, so the import could run as a build step.
 				- Producer Pal's project context is hex inside the device's blob, so its changes don't read in a diff. The `Producer Pal Project Context.md` copy in the Project folder does.
 		- ## Publishing Sets with compressed audio

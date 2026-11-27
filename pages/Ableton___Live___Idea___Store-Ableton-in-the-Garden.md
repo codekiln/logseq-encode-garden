@@ -35,10 +35,10 @@ see-also:: [[Ableton/Live/Idea/Keep Live Projects as DVC Assets]], [[Ableton/Liv
 			- Ideally I would have a dedicated media backup service, but I could use B2 for backing that up and then also back it up to a drive.
 	- [[AI/Response]]
 		- ## Recommendation
-			- Keep Sets in logseq-encode-garden, and store each `.als` in git as XML through a clean/smudge filter. Keep recordings and samples in DVC, in a new private bucket. Try the filter on one template Set in a scratch clone before changing the garden.
+			- Keep Sets in logseq-encode-garden, and store each `.als` in git as XML through a [[git/attributes/filter/clean]] and [[git/attributes/filter/smudge]] filter. Keep recordings and samples in DVC, in a new private bucket. Try the filter on one template Set in a scratch clone before changing the garden.
 		- ## Sets as XML through a clean/smudge filter
 			- ### How it works
-				- A `.gitattributes` line such as `*.als filter=als -merge` names a filter driver for every Set. Git runs the driver's clean command on `git add` and stores its output. On checkout it runs the smudge command and writes that output to the working tree. [[git/attributes/filter]] · [gitattributes: filter](https://git-scm.com/docs/gitattributes#_filter)
+				- A `.gitattributes` line such as `*.als filter=als -merge` names a filter driver for every Set. Git runs the driver's [[git/attributes/filter/clean]] command on `git add` and stores its output. On checkout it runs the [[git/attributes/filter/smudge]] command and writes that output to the working tree. [[git/attributes/filter]] · [gitattributes: filter](https://git-scm.com/docs/gitattributes#_filter)
 				- For a Set, clean is `gzip -dcf` and smudge is `gzip -9cn`. The repository holds XML, and Live opens a gzip file. With `-f`, gzip passes XML through unchanged, so running clean on its own output changes nothing, which git's documentation asks of a clean command.
 				- `-merge` makes git stop with a conflict when two branches both changed a Set. A line merge of two Sets can produce valid XML that Live can't load, because of the internal IDs [[Ableton/Live/Idea/Declare a Live Set in Logseq]] warns about. [[git/attributes]]
 			- ### What each clone configures
