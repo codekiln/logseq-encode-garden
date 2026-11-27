@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Music/Note]]
 alias:: [[E0]]
 midi-note:: 16
-prev:: [[Music/Note/0/D♯]]
+prev:: [[Music/Note/0/D#]]
 next:: [[Music/Note/0/F]]
 
 - # E0
