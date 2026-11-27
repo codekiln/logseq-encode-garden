@@ -4,7 +4,7 @@ see-also:: [[Logseq/Pref/Page/Name]], [[My/Principle/Referential-Transparency]]
 	- A namespace segment that is an identifier keeps the identifier's spelling, including its case and whether it is plural. Title Case and singular titles apply to the words the garden chooses for itself.
 	- ## What counts as an identifier
 		- A string you type into a terminal, a configuration file or a source file, where a piece of software reads it and acts on it. That software is the identifier's reader: [[git]] reads the key `filter.als.clean` in a git configuration file, [[mise]] reads `tasks add` in `mise tasks add`, and [[Logseq]] reads a frontmatter key such as `see-also::`.
-		- Spell the segment the way the reader's documentation does, even where the reader would accept another spelling. Git accepts `filter.als.Clean`, but its documentation writes `clean`.
+		- Spell the segment the way the reader's documentation does. Some readers ignore case, so another spelling would work just as well. Git treats `filter.als.Clean` and `filter.als.clean` as the same key, but its documentation writes `clean`, so the page is `clean`.
 		- Examples in this garden:
 			- An executable: [[git]], [[tmux]].
 			- A subcommand or flag: [[mise/cache/clear]], [[mise/tasks/add]], [[git/clean/--force]].
