@@ -11,8 +11,8 @@ see-also:: [[Logseq/Pref/Page/Name]], [[My/Principle/Referential-Transparency]]
 		- A Logseq property such as `see-also::` gets a page ending in `Frontmatter/see-also`, as [[Logseq/Entity/Frontmatter/Definition]] describes.
 		- An image's file extension ends its asset page name, as in `Asset/Image/Shape-Clip/png`, per [[Logseq/Entity/Asset]].
 	- ## Why
-		- When the page name matches what you type, knowing the command is enough to find its page, and the page name shows you what to type. This applies [[My/Principle/Referential-Transparency]].
+		- When the page name matches what you type, knowing the command is enough to find its page, and the page name shows you what to type. [[My/Principle/Referential-Transparency]] holds that a name should read the same everywhere it shows up.
 	- ## Words the garden chooses still use Title Case
 		- In [[git/How To/Discard Changes to Working Dir]], `git` is the command and `How To` is the garden's own words.
 		- A property name keeps its documented spelling under the Title Case `Frontmatter` before it.
-		- Labels printed on hardware use Title Case, as [[Logseq/Entity/UI/Area]] asks, because nobody types them into software.
+		- Labels printed on hardware use Title Case because nobody types them into software. [[Logseq/Entity/UI/Area]] names the areas of a hardware panel this way.

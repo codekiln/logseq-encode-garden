@@ -34,3 +34,5 @@ see-also:: [[My/Pref/Writing/Be specific and explicit]], [[My/Pref/Writing/Use P
 			- → Check whether the DevOps team deploys a build that includes the developer's work.
 		- > for a ticket that ships nothing
 			- → for a ticket with no areas for QA to test. "Shipping nothing" is weird and unnecessary.
+		- > The page name matches what you type, as [[My/Principle/Referential-Transparency]] asks.
+			- → When the page name matches what you type, you can find the page from the command. A principle or a page never asks; name what it holds, or name the person who wants it.
