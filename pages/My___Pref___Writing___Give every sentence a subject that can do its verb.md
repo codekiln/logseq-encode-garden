@@ -35,4 +35,4 @@ see-also:: [[My/Pref/Writing/Be specific and explicit]], [[My/Pref/Writing/Use P
 		- > for a ticket that ships nothing
 			- → for a ticket with no areas for QA to test. "Shipping nothing" is weird and unnecessary.
 		- > The page name matches what you type, as [[My/Principle/Referential-Transparency]] asks.
-			- → When the page name matches what you type, you can find the page from the command. A principle or a page never asks; name what it holds, or name the person who wants it.
+			- → A page name that matches the command lets a person or an AI agent find the page from the command alone. A principle or a page never asks; name what it holds, or name the person who wants it.

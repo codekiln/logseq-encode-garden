@@ -2,4 +2,4 @@
 	- Hub for cross-cutting **preferences** about how this encode garden names pages, structures namespaces, and defaults editorial choices—without duplicating full entity or frontmatter specifications.
 	- ## Pages
 		- [[Logseq/Pref/Page/Name]] — Canonical page title shape (singular, Title Case segments, aliases).
-		- [[Logseq/Pref/Page/Name/Identifier]] — Names you type into software keep the spelling their documentation uses.
+		- [[Logseq/Pref/Page/Name/Identifier]] — Names that software reads as input keep the spelling from their documentation.

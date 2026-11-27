@@ -1,7 +1,7 @@
 see-also:: [[Logseq/Pref/Page/Name]], [[My/Principle/Referential-Transparency]]
 
 - # Spell names that software reads the way its documentation does
-	- Most page names in this garden use Title Case and singular nouns, per [[Logseq/Pref/Page/Name]]. The exception is a name you type at a command line or into a settings file, such as a command, a flag, a setting or a file extension. Spell that part of the page name the way the software's documentation spells it, including lowercase letters and plurals.
+	- Most page names in this garden use Title Case and singular nouns, per [[Logseq/Pref/Page/Name]]. The exception is a name that software reads as input: a command, a flag, a setting or a file extension. That part of the page name keeps the spelling from the software's documentation, including lowercase letters and plurals.
 	- Programmers call these names identifiers, which is where this page gets its name.
 	- ## Examples
 		- The command `git` has the page [[git]], and `tmux` has [[tmux]].
@@ -11,8 +11,8 @@ see-also:: [[Logseq/Pref/Page/Name]], [[My/Principle/Referential-Transparency]]
 		- A Logseq property such as `see-also::` gets a page ending in `Frontmatter/see-also`, as [[Logseq/Entity/Frontmatter/Definition]] describes.
 		- An image's file extension ends its asset page name, as in `Asset/Image/Shape-Clip/png`, per [[Logseq/Entity/Asset]].
 	- ## Why
-		- When the page name matches what you type, knowing the command is enough to find its page, and the page name shows you what to type. [[My/Principle/Referential-Transparency]] holds that a name should read the same everywhere it shows up.
+		- A page name that matches the command lets a person or an AI agent find the page from the command alone, and shows them the spelling the software expects. [[My/Principle/Referential-Transparency]] holds that a name should read the same everywhere it shows up.
 	- ## Words the garden chooses still use Title Case
 		- In [[git/How To/Discard Changes to Working Dir]], `git` is the command and `How To` is the garden's own words.
 		- A property name keeps its documented spelling under the Title Case `Frontmatter` before it.
-		- Labels printed on hardware use Title Case because nobody types them into software. [[Logseq/Entity/UI/Area]] names the areas of a hardware panel this way.
+		- Labels printed on hardware use Title Case because no software reads them as input. [[Logseq/Entity/UI/Area]] names the areas of a hardware panel this way.
