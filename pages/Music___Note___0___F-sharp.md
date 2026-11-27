@@ -5,4 +5,4 @@ prev:: [[Music/Note/0/F]]
 next:: [[Music/Note/0/G]]
 
 - # F-sharp-0
-	- MIDI note 18, about 23.12 Hz at A440. Also spelled G-flat-0. Ableton Live and Arturia name it F-sharp--1.
+	- MIDI note 18, about 23.12 Hz at A440. Also spelled G-flat-0. Ableton Live and Arturia name it F-sharp-minus-1.

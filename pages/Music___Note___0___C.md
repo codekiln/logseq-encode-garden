@@ -5,4 +5,4 @@ prev:: [[Music/Note/-1/B]]
 next:: [[Music/Note/0/C-sharp]]
 
 - # C0
-	- MIDI note 12, about 16.35 Hz at A440. Ableton Live and Arturia name it C-1.
+	- MIDI note 12, about 16.35 Hz at A440. Ableton Live and Arturia name it C-minus-1.
