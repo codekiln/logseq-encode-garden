@@ -30,22 +30,20 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 		- **Controls:** no Live mapping. The device reads the notes on a MIDI track whose MIDI From is the Launchpad on channel 16.
 	- ## What the keys do
 		- Clear is red, bottom left. Enter is green, bottom right. The [[Launchpad/Idea/Pick-MicroFreak-Presets-through-Live/Asset/Device/MF-Number-Pad/amxd]] device gives the pads these meanings.
-		- {{renderer :mermaid_d711e75d-08da-4a47-8fc5-5b5d9c561dce, 4}}
-		  collapsed:: true
-			- ```mermaid
-			  flowchart TD
-			      D["Digit 0 to 9, white"] --> A["Add digit, max 3"]
-			      C["Clear, red, left"] --> X["Empty the number"]
-			      E["Enter, green, right"] --> Q{"1 to 512?"}
-			      Q -->|yes| S["Send bank and program"]
-			      S --> X
-			      Q -->|no| X
-			      S --> M["MicroFreak loads slot"]
-			      classDef red fill:#e05252,color:#fff,stroke:#a33
-			      classDef green fill:#3fae5a,color:#fff,stroke:#2a7a3e
-			      class C red
-			      class E green
-			  ```
+		- ```mermaid
+		  flowchart TD
+		      D["Digit 0 to 9, white"] --> A["Add digit, max 3"]
+		      C["Clear, red, left"] --> X["Empty the number"]
+		      E["Enter, green, right"] --> Q{"1 to 512?"}
+		      Q -->|yes| S["Send bank and program"]
+		      S --> X
+		      Q -->|no| X
+		      S --> M["MicroFreak loads slot"]
+		      classDef red fill:#e05252,color:#fff,stroke:#a33
+		      classDef green fill:#3fae5a,color:#fff,stroke:#2a7a3e
+		      class C red
+		      class E green
+		  ```
 		- Enter sends CC 0 = `(N − 1) // 128` for the bank, then Program Change `(N − 1) % 128`, on channel 1. With nothing typed, 0, or a number above 512, it only empties the number. Example: 2 5 9 Enter sends CC 0 = 2 and program 2, which loads [[Microfreak/Preset/259 Infini Pad]].
 	- ## Mode settings
 		- On colour: yellow.
