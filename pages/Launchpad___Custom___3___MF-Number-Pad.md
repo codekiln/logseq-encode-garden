@@ -31,6 +31,7 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 	- ## What the keys do
 		- Clear is red, bottom left. Enter is green, bottom right. The [[Launchpad/Idea/Pick-MicroFreak-Presets-through-Live/Asset/Device/MF-Number-Pad/amxd]] device gives the pads these meanings.
 		- {{renderer :mermaid_d711e75d-08da-4a47-8fc5-5b5d9c561dce, 4}}
+		  collapsed:: true
 			- ```mermaid
 			  flowchart TD
 			      D["Digit 0 to 9, white"] --> A["Add digit, max 3"]
