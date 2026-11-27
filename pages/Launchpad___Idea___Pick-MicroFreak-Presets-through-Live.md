@@ -187,7 +187,7 @@ see-also:: [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and p
 				- 3. Press 1 5 1 Enter. The MicroFreak should show [[Microfreak/Preset/151 The Unstable]], which is in bank 1.
 				- 4. Hold a digit pad down and press it hard. The MicroFreak should stay silent and keep its sound.
 			- #### Result
-				- [[My Note]] [[2026-11-27 Fri]] It worked. In Custom Mode 3 I pressed 2 5 9 and green Enter, the device showed `Sent: 259`, and the MicroFreak switched to [[Microfreak/Preset/259 Infini Pad]].
+				- [[2026-11-27 Fri]] It worked. In Custom Mode 3, codekiln pressed 2 5 9 and green Enter; the device showed `Sent: 259`, and the MicroFreak switched to [[Microfreak/Preset/259 Infini Pad]].
 				- So Live loads the `.amxd`, and CC 0 and Program Change from the device reach the MicroFreak through the track's MIDI To. Still untried: 1 5 1 Enter for a preset in another bank, and the hard-press check for leaking notes and aftertouch.
 			- #### Not yet tried
 				- Whether Live loads the `.amxd`. Its header follows Live's own `Max MIDI Effect.amxd` template, but nothing here ran in Max or Live. If Live refuses it, opening the `.maxpat` in Max shows the error in the Max Console.
