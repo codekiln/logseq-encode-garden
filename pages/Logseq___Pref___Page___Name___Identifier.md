@@ -1,8 +1,8 @@
 see-also:: [[Logseq/Pref/Page/Name]], [[My/Principle/Referential-Transparency]]
 
-- # Spell names that software reads the way its documentation does
-	- Most page names in this garden use Title Case and singular nouns, per [[Logseq/Pref/Page/Name]]. The exception is a name that software reads as input: a command, a flag, a setting or a file extension. That part of the page name keeps the spelling from the software's documentation, including lowercase letters and plurals.
-	- Programmers call these names identifiers, which is where this page gets its name.
+- # Commands, flags, settings and file extensions keep their documented spelling
+	- Most page names in this garden use Title Case and singular nouns, per [[Logseq/Pref/Page/Name]]. The exception is a command, a flag, a setting or a file extension. That part of the page name keeps the spelling from the software's documentation, including lowercase letters and plurals.
+	- Programmers call these names identifiers.
 	- ## Examples
 		- The command `git` has the page [[git]], and `tmux` has [[tmux]].
 		- The command `mise tasks add` has the page [[mise/tasks/add]]. The documentation writes `tasks`, so the page name keeps the plural.
@@ -15,4 +15,4 @@ see-also:: [[Logseq/Pref/Page/Name]], [[My/Principle/Referential-Transparency]]
 	- ## Words the garden chooses still use Title Case
 		- In [[git/How To/Discard Changes to Working Dir]], `git` is the command and `How To` is the garden's own words.
 		- A property name keeps its documented spelling under the Title Case `Frontmatter` before it.
-		- Labels printed on hardware use Title Case because no software reads them as input. [[Logseq/Entity/UI/Area]] names the areas of a hardware panel this way.
+		- Labels printed on hardware use Title Case, because they never appear in a command or a settings file. [[Logseq/Entity/UI/Area]] names the areas of a hardware panel this way.
