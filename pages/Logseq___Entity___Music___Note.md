@@ -8,18 +8,18 @@ see-also:: [[Music/Concept/Scientific Pitch Notation]], [[Music/Note]]
 		- A pitch class without an octave, such as the F of an F-minor chord, stays plain text. Scales have pages of their own under [[Logseq/Entity/Music/Scale]].
 	- ## Naming and placement
 		- A note lives at `Music/Note/<octave>/<letter>` under [[Music/Note]], named in [[Music/Concept/Scientific Pitch Notation]]. MIDI note 60 is [[Music/Note/4/C]], middle C.
-		- A black key takes its sharp spelling, written with an ASCII `#`: [[Music/Note/4/C#]]. The page body gives the flat spelling with a `b`, as `Db4`. On disk Logseq writes the `#` as `%23`, so that page is `Music___Note___4___C%23.md`. Outside a link, a `#` before a letter or digit starts a tag, so the H1 and body text write it as `\#`: `- # C\#4`.
+		- A black key takes its sharp spelling, written as the letter, a hyphen and the word `sharp`: [[Music/Note/4/C-sharp]]. The page body gives the flat spelling the same way, as `D-flat-4`. The page name, the file name `Music___Note___4___C-sharp.md` and the site URL `Music/Note/4/C-sharp/` all read the same, which [[My/Principle/Referential-Transparency]] asks of a name. A `#` would be percent-encoded as `%23` on disk and in the URL, and would start a tag in body text.
 		- The lowest octave is `-1`. MIDI note 0 is [[Music/Note/-1/C]].
 	- ## Alias — the note name
-		- Every instance takes its letter and octave as its `alias::`, so `[[G8]]` links [[Music/Note/8/G]] and `[[C#4]]` links [[Music/Note/4/C#]].
+		- Every instance takes its note name as its `alias::`: the letter and octave for a white key, so `[[G8]]` links [[Music/Note/8/G]], and the letter, `-sharp-` and the octave for a black key, so `[[C-sharp-4]]` links [[Music/Note/4/C-sharp]]. In octave `-1` the minus sign follows the hyphen: `[[C-sharp--1]]`.
 	- ## Names from Ableton Live and Arturia
-		- [[Ableton/Live]] and Arturia's MicroFreak manual name MIDI note 60 C3, so their octave numbers run one lower. Add one to their octave number before linking a note: a drum pad Live labels D\#2 is [[D#3]].
+		- [[Ableton/Live]] and Arturia's MicroFreak manual name MIDI note 60 C3, so their octave numbers run one lower. Add one to their octave number before linking a note: a drum pad Live labels `D#2` is [[D-sharp-3]]. Write their names in the same style on a note page: `D-sharp-2`.
 		- [[Microfreak/UI/Front/Row/03 Bottom/01 Octave/Ref/Key Range]] gives the MicroFreak's keys in both namings at each octave shift.
 	- ## Frontmatter
 		- The page carries `logseq-entity:: [[Logseq/Entity/Music/Note]]` and the `alias::` above.
 		- [[Logseq/Entity/Music/Note/Frontmatter/midi-note]] records the MIDI note number.
 		- `prev::` and `next::` link the notes a semitone below and above.
 	- ## Page shape
-		- One H1 with the note name, then one line giving the MIDI note number, the frequency at A440, the flat spelling of a black key, and the name Live and Arturia use.
+		- One H1 with the note name as the alias spells it, then one line giving the MIDI note number, the frequency at A440, the flat spelling of a black key, and the name Live and Arturia use.
 	- ## Examples
 		- [[Music/Note/4/A]], the 440 Hz tuning note. [[Music/Note/7/G]], the low-battery chirp of [[Microfreak/Preset/399 FireAlarmLoBat]]. [[Music/Note/9/G]], MIDI note 127, the top of the range.
