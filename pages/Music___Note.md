@@ -2,10 +2,10 @@ logseq-entity:: [[Logseq/Entity/Diataxis/Reference]]
 see-also:: [[Music/Concept/Scientific Pitch Notation]], [[Logseq/Entity/Music/Note]]
 
 - # Music Notes
-	- Every MIDI note from C-1 to G9, in [[Music/Concept/Scientific Pitch Notation]]. Middle C is [[C4]], MIDI note 60.
+	- Every MIDI note from C-minus-1 to G9, in [[Music/Concept/Scientific Pitch Notation]]. Middle C is [[C4]], MIDI note 60.
 	- | Octave | C | C-sharp | D | D-sharp | E | F | F-sharp | G | G-sharp | A | A-sharp | B |
 	  |---|---|---|---|---|---|---|---|---|---|---|---|---|
-	  | -1 | [[C-1]] | [[C-sharp--1]] | [[D-1]] | [[D-sharp--1]] | [[E-1]] | [[F-1]] | [[F-sharp--1]] | [[G-1]] | [[G-sharp--1]] | [[A-1]] | [[A-sharp--1]] | [[B-1]] |
+	  | -1 | [[C-minus-1]] | [[C-sharp-minus-1]] | [[D-minus-1]] | [[D-sharp-minus-1]] | [[E-minus-1]] | [[F-minus-1]] | [[F-sharp-minus-1]] | [[G-minus-1]] | [[G-sharp-minus-1]] | [[A-minus-1]] | [[A-sharp-minus-1]] | [[B-minus-1]] |
 	  | 0 | [[C0]] | [[C-sharp-0]] | [[D0]] | [[D-sharp-0]] | [[E0]] | [[F0]] | [[F-sharp-0]] | [[G0]] | [[G-sharp-0]] | [[A0]] | [[A-sharp-0]] | [[B0]] |
 	  | 1 | [[C1]] | [[C-sharp-1]] | [[D1]] | [[D-sharp-1]] | [[E1]] | [[F1]] | [[F-sharp-1]] | [[G1]] | [[G-sharp-1]] | [[A1]] | [[A-sharp-1]] | [[B1]] |
 	  | 2 | [[C2]] | [[C-sharp-2]] | [[D2]] | [[D-sharp-2]] | [[E2]] | [[F2]] | [[F-sharp-2]] | [[G2]] | [[G-sharp-2]] | [[A2]] | [[A-sharp-2]] | [[B2]] |
