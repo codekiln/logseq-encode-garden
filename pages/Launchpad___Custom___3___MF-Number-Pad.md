@@ -33,13 +33,13 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 		- {{renderer :mermaid_d711e75d-08da-4a47-8fc5-5b5d9c561dce, 4}}
 			- ```mermaid
 			  flowchart TD
-			      D["Digit 0 to 9<br/>white"] --> A["Add the digit<br/>up to 3 digits"]
-			      C["Clear<br/>red, bottom left"] --> X["Empty the number"]
-			      E["Enter<br/>green, bottom right"] --> Q{"1 to 512?"}
-			      Q -->|yes| S["Send bank<br/>and program"]
+			      D["Digit 0 to 9, white"] --> A["Add digit, max 3"]
+			      C["Clear, red, left"] --> X["Empty the number"]
+			      E["Enter, green, right"] --> Q{"1 to 512?"}
+			      Q -->|yes| S["Send bank and program"]
 			      S --> X
 			      Q -->|no| X
-			      S --> M["MicroFreak<br/>loads the slot"]
+			      S --> M["MicroFreak loads slot"]
 			      classDef red fill:#e05252,color:#fff,stroke:#a33
 			      classDef green fill:#3fae5a,color:#fff,stroke:#2a7a3e
 			      class C red
