@@ -5,3 +5,23 @@ see-also:: [[My/Pref/Logseq/Namespaces/Should-be/Slugified]], [[My/Principle/Dis
 		- Where possible, things should be named in such a way that those names are valid in multiple contexts.
 		- In the static site that's rendered, it's very important to me that the URL to a Logseq namespace be the same as the Logseq namespace name.
 		- Example: `Music/Note/4/G#` is stored as `Music___Note___4___G%23.md` and published at `Music/Note/4/G%23/`. That's not as useful to me as `G-sharp`, because from my phone it's easier to anticipate how to construct the URL from that.
+	- [[AI/Response]] from [[Anthropic/Model/Claude/5/5/Opus]] [[2026-11-27 Fri]]
+		- ## What it means
+			- A name should read the same everywhere it shows up. In this garden a page name shows up in four places: the `[[link]]` in Logseq, the file name in `pages/`, the URL on the published site, and the words you say or type when you go looking for the page.
+			- When the four agree, knowing the name in one place is enough to write it in the others. When they disagree, you have to look up how one form maps to another, and from a phone you usually can't.
+		- ## How to test a name
+			- Write the page name, the file name on disk and the site URL side by side, then say the name out loud and type it as you said it. The name passes when all four match, apart from `/` becoming `___` on disk.
+			- [[Example]] `Music/Note/4/G-sharp` is stored as `pages/Music___Note___4___G-sharp.md` and published at `Music/Note/4/G-sharp/`, and you say "G sharp, octave four". `Music/Note/4/G#` fails the test: the file is `Music___Note___4___G%23.md`, the URL is `Music/Note/4/G%23/`, and nothing in "G sharp" tells you to type `%23`.
+		- ## What it rules out
+			- Characters Logseq percent-encodes when it writes a page's file. In Logseq 0.10.9 the function `tri-lb-file-name-sanity` in `src/main/frontend/util/fs.cljs` encodes:
+				- `#` as `%23`, `?` as `%3F`, `:` as `%3A`, `*` as `%2A`, `"` as `%22`, `<` as `%3C`, `>` as `%3E`, `|` as `%7C` and `\` as `%5C`. These are the characters it lists as reserved on at least one file system.
+				- `%` followed by two hex digits, as `%25`, so that it isn't read back as an encoded character.
+				- A `.` at the start of a name, as `%2E`, so the file isn't hidden.
+				- `_` beside a namespace `/` or in a run of three, as `%5F`, so it can't be mistaken for the `___` separator.
+				- The Windows reserved names `CON`, `PRN`, `AUX`, `NUL`, `COM1` to `COM9` and `LPT1` to `LPT9`, and any name ending in `.`, by adding `___` to the end.
+			- Characters the site encodes in the URL even though the file name keeps them, such as a space becoming `%20`.
+			- Symbols that aren't on a phone keyboard, such as `♯` and `♭`. Logseq keeps them in the file name, but you can't type them when you build the URL.
+		- ## How it relates to slugified namespaces
+			- [[My/Pref/Logseq/Namespaces/Should-be/Slugified]] applies this principle to spaces: a hyphen in place of a space keeps a namespace usable as a URL path. This principle asks the same of every character in a name, and adds the spoken and typed form as a fourth place the name has to work.
+		- ## Where it applies in the garden
+			- [[Logseq/Entity/Music/Note]] names a black key `Music/Note/<octave>/<letter>-sharp`, with an alias such as `G-sharp-4`.
