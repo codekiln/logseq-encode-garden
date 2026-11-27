@@ -16,15 +16,15 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 		- | Pad | Row, column | Note | Colour |
 		  |---|---|---|---|
 		  | 7 | 3, 3 | 67 [[G4]] | white |
-		  | 8 | 3, 4 | 68 [[G♯4]] | white |
+		  | 8 | 3, 4 | 68 [[G#4]] | white |
 		  | 9 | 3, 5 | 69 [[A4]] | white |
 		  | 4 | 4, 3 | 64 [[E4]] | white |
 		  | 5 | 4, 4 | 65 [[F4]] | white |
-		  | 6 | 4, 5 | 66 [[F♯4]] | white |
-		  | 1 | 5, 3 | 61 [[C♯4]] | white |
+		  | 6 | 4, 5 | 66 [[F#4]] | white |
+		  | 1 | 5, 3 | 61 [[C#4]] | white |
 		  | 2 | 5, 4 | 62 [[D4]] | white |
-		  | 3 | 5, 5 | 63 [[D♯4]] | white |
-		  | Clear | 6, 3 | 70 [[A♯4]] | red |
+		  | 3 | 5, 5 | 63 [[D#4]] | white |
+		  | Clear | 6, 3 | 70 [[A#4]] | red |
 		  | 0 | 6, 4 | 60 [[C4]] | white |
 		  | Enter | 6, 5 | 71 [[B4]] | green |
 		- **Controls:** no Live mapping. The device reads the notes on a MIDI track whose MIDI From is the Launchpad on channel 16.
