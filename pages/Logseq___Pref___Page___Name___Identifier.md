@@ -3,7 +3,8 @@ see-also:: [[Logseq/Pref/Page/Name]], [[My/Principle/Referential-Transparency]]
 - # Identifier segments keep their spelling
 	- A namespace segment that is an identifier keeps the identifier's spelling, including its case and whether it is plural. Title Case and singular titles apply to the words the garden chooses for itself.
 	- ## What counts as an identifier
-		- A string you type for a program to read, in a terminal, a configuration file or a source file. Spell it the way that program's documentation does, even where the program would accept another spelling.
+		- A string you type into a terminal, a configuration file or a source file, where a piece of software reads it and acts on it. That software is the identifier's reader: [[git]] reads the key `filter.als.clean` in a git configuration file, [[mise]] reads `tasks add` in `mise tasks add`, and [[Logseq]] reads a frontmatter key such as `see-also::`.
+		- Spell the segment the way the reader's documentation does, even where the reader would accept another spelling. Git accepts `filter.als.Clean`, but its documentation writes `clean`.
 		- Examples in this garden:
 			- An executable: [[git]], [[tmux]].
 			- A subcommand or flag: [[mise/cache/clear]], [[mise/tasks/add]], [[git/clean/--force]].
@@ -15,4 +16,4 @@ see-also:: [[Logseq/Pref/Page/Name]], [[My/Principle/Referential-Transparency]]
 		- Segments the garden adds below an identifier go back to Title Case, as in [[git/How To/Discard Changes to Working Dir]].
 		- An identifier keeps its spelling under a Title Case parent, as a `Frontmatter/<literal-key>` segment does.
 	- ## What is not an identifier
-		- A name people read but no program reads, such as a label printed on a hardware panel. It follows Title Case, as [[Logseq/Entity/UI/Area]] asks for area names.
+		- A name people read but no software reads, such as a label printed on a hardware panel. It follows Title Case, as [[Logseq/Entity/UI/Area]] asks for area names.
