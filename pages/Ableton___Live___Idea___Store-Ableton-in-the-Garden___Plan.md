@@ -24,13 +24,29 @@ see-also:: [[Ableton/Live/Idea/Store-Ableton-in-the-Garden/Plan/Discussion]]
 			- `mise run ableton:set:import --als <file> --performance '<owner>'` already writes `<owner>/Set` and its `<owner>/Set/Track/...` pages per [[Logseq/Entity/Ableton/Set]]. Its `source::` property would hold the Set's path from the repository root, so a reader can open the file from the page.
 			- A Set page names its file in `source::` as text. A Markdown link to a git-tracked `.als` under `assets/` would make [[Logseq/Entity/Proxy/Page/mise/Task/sync]] copy the gzip working file into gitpa.
 			- Live saves only into the primary checkout. A linked worktree holds the Sets but no `Samples/`, so an agent can edit a Set's XML on a branch and the PR shows the diff.
+		- ## Experiment results
+			- Run on [[2026-11-28 Sat]] in [codekiln/making-music](https://github.com/codekiln/making-music) (private), tracked in [making-music#1 Experiments for keeping Live projects in git and DVC](https://github.com/codekiln/making-music/issues/1).
+			- ### Home-swap filter
+				- [making-music#2 Clean/smudge filter that swaps the home folder](https://github.com/codekiln/making-music/issues/2): on the LPP-Seq and Pattern A and B templates and two session Sets, clean then smudge gave back Live's XML unchanged. Clean twice changed nothing, two clones wrote the same `.als`, and a clone with another `$HOME` got that home folder in every path.
+				- After clean, no username was left in the four Sets. Before clean they held it on 48, 0, 274 and 463 lines, all in `FileRef/Path`.
+				- Seven saved versions of one session Set took 1.5 MB of git storage through the filter and 7.2 MB as Live's gzip files.
+				- A plain `git clone` with the filter configured fails when the smudge script is a file in the same repository: git writes the Sets before the script. The filter commands have to live outside the repository, in the dotfiles gitconfig or a script installed by mise.
+			- ### Leak check
+				- [making-music#3 Pre-commit check for gzip and home-folder leaks in staged Sets](https://github.com/codekiln/making-music/issues/3): the check reads staged blobs and refuses gzip, non-XML, the current `$HOME` and the username, including the username as a folder name in a `RelativePath`.
+				- A rule against every `/Users/<name>` path refused all four real Sets: each holds three paths from factory presets naming the home folders of people at Ableton. [making-music#9](https://github.com/codekiln/making-music/pull/9) dropped that rule. CI runs as another user, so it sees a username only through a `SET_LEAK_NAMES` repository secret.
+			- ### DVC with two keys
+				- [making-music#4 DVC Samples folder routed to a private B2 remote](https://github.com/codekiln/making-music/issues/4) used the logseq-garden bucket as the private remote and logseq-encode-garden as the public one, each with its own key, under `experiments/making-music/dvc/`.
+				- A stub `Samples.dvc` keeps `remote: private` through `dvc add` and a re-add. `dvc add` writes `/Samples` to the project's `.gitignore`, and the `.als` stays tracked. `*.asd` in `.dvcignore` keeps analysis files out.
+				- With one key per bucket, a plain `dvc push` or `dvc pull` fails with a 403 on the other bucket. Every task names its `.dvc` targets and its remote. An untargeted `dvc pull -r public` still reads the private `.dir` object and fails.
+				- `dvc status -c` reports a private object in sync when it is missing. `dvc data status --not-in-remote --granular` with `-r private` finds it.
+				- B2 keeps a deleted object as a hidden version, so deleting from a bucket means deleting every version.
 		- ## Steps
 			- ### Private bucket and credentials
 				- TODO Create the B2 bucket `logseq-encode-garden-private` with private access, and an application key restricted to it. Store the key in [[1Password]] and add a [[fnox]] profile for it beside `assets` in `fnox.toml`.
 				- TODO Add the remote to `.dvc/config`: `['remote "private"']`, `url = s3://logseq-encode-garden-private/dvc/`, `endpointurl = https://s3.us-east-005.backblazeb2.com`. Leave `core.remote = garden`; the 835 existing `.dvc` files rely on it.
 			- ### The `ableton` filter
 				- TODO Add a root `.gitattributes`: `assets/Ableton/Project/**/*.als filter=ableton -merge`, and the same line for `.alc`, `.adg` and `.adv`. `-merge` makes two branches that both changed a Set stop with a conflict, since a line merge can produce XML Live can't load.
-				- TODO Define `[filter "ableton"]` with `clean = /usr/bin/gzip -dcf` and `smudge = /usr/bin/gzip -cn` in the global gitconfig in [codekiln/dotfiles chezmoi/dot_gitconfig](https://github.com/codekiln/dotfiles/blob/main/chezmoi/dot_gitconfig), and add a mise task, `ableton:filter:install`, that sets the same two keys in one clone. Leave `filter.ableton.required` off, so the Publish workflow's clone, which has no filter, checks out plain XML.
+				- TODO Install the clean and smudge scripts from [making-music experiments/2-home-swap-filter](https://github.com/codekiln/making-music/tree/main/experiments/2-home-swap-filter) outside the repository, and define `[filter "ableton"]` to run them in the global gitconfig in [codekiln/dotfiles chezmoi/dot_gitconfig](https://github.com/codekiln/dotfiles/blob/main/chezmoi/dot_gitconfig), and add a mise task, `ableton:filter:install`, that sets the same two keys in one clone. Leave `filter.ableton.required` off, so the Publish workflow's clone, which has no filter, checks out plain XML.
 				- TODO Add a [[lefthook]] pre-commit check that every staged blob for those four extensions starts with `<?xml`. A clone without the filter would otherwise commit gzip.
 				- TODO Point the identity guard in `lefthook.yml` at the staged XML (`git show :<path>`). It reads the working file, which is gzip, so it misses the home-folder paths each `<Path Value=...>` holds.
 			- ### Project tasks
