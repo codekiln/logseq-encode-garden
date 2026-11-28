@@ -1,22 +1,27 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 up:: [[Launchpad/Custom]]
-see-also:: [[GitP/A/Template/LPP-Seq]], [[Microfreak/CLI/Upload a preset]]
+see-also:: [[Launchpad/Custom/Available/2-MF-Presets]], [[GitP/A/Template/LPP-Seq]], [[Microfreak/CLI/Upload a preset]]
 
 - # Can Launchpad Custom Mode select MicroFreak presets by bank and program change?
 	- ## [[AI Answer]]
 		- Yes, a Custom Mode can send the messages needed for preset selection. Use a CC button to select a bank and a Program Change pad to choose a preset within that bank. This takes two pad presses when changing banks. A single pad sending both messages has not been established in the Components documentation.
 		- ### Set up the controls
+		  collapsed:: true
 			- In [[Novation/Components]], create or edit a Custom Mode. Add CC Button widgets with CC number `0`, Trigger behavior, and on values `0`, `1`, `2`, and `3` for the four banks. Add Program Change widgets for the desired presets. Set their MIDI channels to the MicroFreak's input channel. Novation documents separate CC and Program Change widgets and their channel settings in its [Custom Mode editor guide](https://support.novationmusic.com/hc/en-gb/articles/360009860380-Launchpad-Components-Custom-Mode-Editor-Guide).
 			- For a preset in slot `N`, select bank `(N − 1) // 128`, then program `(N − 1) % 128`. For example, slot 323 uses CC 0 value 2, followed by program 66. [[Microfreak/CLI/Upload a preset]] records a successful selection of slot 323 using those messages. The bank and program numbers here are MIDI values starting at zero; check the numbering shown in Components when setting up a pad.
 			- Factory Custom 5 sends programs 0–63 and Custom 6 sends 64–127 ([[Launchpad/UG/08 Custom Modes/02 Default Custom Modes]]). A tailored layout can keep bank buttons and chosen programs together, but check and back up the current Custom Mode before replacing it.
 		- ### Routing and recording
+		  collapsed:: true
 			- For a direct hardware test, connect Launchpad MIDI Out 1 to MicroFreak MIDI In using each device's appropriate adapter and a MIDI cable, and match the output channel to the MicroFreak input channel. [[Launchpad/UG/02 Getting Up and Running/05 Standalone]] describes Custom Mode output through the MIDI ports. Verify the exact cabling and channel in the current setup before changing connections.
 			- The [[GitP/A/Template/LPP-Seq]] already routes Launchpad sequencer channels through Live to the MicroFreak. A Custom Mode's MIDI channel and input port must also reach the MicroFreak. Verify both messages with a MIDI monitor and check the selected preset on the MicroFreak; the existing route has not been tested with this Custom Mode.
 			- Sending the messages directly changes the sound, but does not by itself establish a chapter marker in Live's Arrangement. Test what the chosen routing records. For a named, repeatable chapter marker, a separate approach is to MIDI-map a Custom pad to a Session clip that has its bank and program settings filled in. Ableton says the clip sends its bank and program when launched ([Ableton's Program Change guide](https://help.ableton.com/hc/en-us/articles/209070489-Sending-Program-Change-messages-from-Ableton-Live)). Check Live's displayed bank and program numbering against the MicroFreak before relying on it.
 	- [[AI/Response]] [[2026-11-26 Thu]]
 		- ### Experiment
 			- #### Custom Mode 2
-				- Custom Mode 2 on the Launchpad now holds `2 MF Presets`, which is also saved under My Custom Modes in [[Novation/Components]]. Reading the mode back from the Launchpad in Components showed the same pads and values.
+				- Custom Mode 2 on the Launchpad now holds [[Launchpad/Custom/Available/2-MF-Presets]], which is also saved under My Custom Modes in [[Novation/Components]]. Reading the mode back from the Launchpad in Components showed the same pads and values.
+				- ![2 MF Presets in the Components editor](../assets/.remote/logseq-encode-garden/Launchpad___Custom___Available___2-MF-Presets___Asset___Components-editor.png)
+				- Transcription: [[Launchpad/Custom/Available/2-MF-Presets/Asset/Components-editor/png]]
+				- Each of the four left columns is one MicroFreak bank. Press the white pad at the top of a column to choose that bank, then a coloured pad lower in the same column to load that preset. Under the MIDI standard a bank select changes no sound by itself; it applies to the next Program Change. Whether the MicroFreak keeps the bank across several coloured-pad presses hasn't been tested, so pressing the white pad before each coloured pad is the safe order.
 				- Every pad sends on MIDI channel 16. The Launchpad's sequencer tracks play on channels 1 to 4, so `mf1-MIDI` to `mf4-MIDI` don't pick these messages up.
 				- The top row holds four white bank pads. Each is a CC Button set to Trigger that sends CC 0, with values 0, 1, 2 and 3 from left to right.
 				- Below each bank pad, starting two rows down, a column of Program Change pads holds presets from that bank. Rows count from the top of the grid.
