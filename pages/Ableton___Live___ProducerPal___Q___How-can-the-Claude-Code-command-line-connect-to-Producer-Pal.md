@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 via:: [[GitP/A/Log/26/11/28-Sat]]
 
-- # How can the [[Claude Code]] command line connect to [[Ableton/Live/ProducerPal]]?
+- # How can the [[Claude/Code]] command line connect to [[Ableton/Live/ProducerPal]]?
 	- ## [[AI Answer]]
 		- [[Answer/Official]] from [Claude Code · Producer Pal](https://producer-pal.org/installation/claude-code), [Ableton Live Agent Skills · Producer Pal](https://producer-pal.org/guide/skills) and [Ableton Live REST API · Producer Pal](https://producer-pal.org/guide/rest-api)
 		- **Short answer:** register Producer Pal as an MCP server with `claude mcp add`, or install Producer Pal's Agent Skill. Either way the Producer Pal device has to be running in the open Live Set, and its server listens on port 3350.
