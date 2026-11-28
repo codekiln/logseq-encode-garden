@@ -15,8 +15,11 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 			- Bank 3: [[Microfreak/Preset/399 FireAlarmLoBat]], program 14, blue.
 		- Color shows how many [[GitP/A/Session]] days used the preset: red three, yellow two, blue one.
 		- **Controls:** no Live mapping. A MIDI track listening to the Launchpad's `LPProMK3 MIDI` port on channel 16 passes the messages to the MicroFreak.
-	- ## Rendering on the page
+	- ## Related Idea - Render Launchpad Custom Modes
 		- [[Person/codekiln/GitHub/logseq-gardener/Idea/Custom-Block-and-Static-Site-Rendering]] proposes drawing this grid from data on the page instead of a screenshot.
-	- ## Status
-		- Worked on [[2026-11-28 Sat]]: codekiln loaded recent [[GitP/A/Session]] presets with the bank and Program Change pads ([[GitP/A/Log/26/11/28-Sat]]).
-		- [[Launchpad/Custom/Available/3-MF-Number-Pad]] reaches any of the 512 slots in one entry and also worked on [[2026-11-27 Fri]].
+	- ## Log
+		- [[2026-11-28 Sat]]
+			- I loaded recent [[GitP/A/Session]] presets with the bank and Program Change pads ([[GitP/A/Log/26/11/28-Sat]]).
+		- [[2026-11-27 Fri]]
+			- This Launchpad custom mode was created, but not tested.
+			- [[Launchpad/Custom/Available/3-MF-Number-Pad]] was created at a similar time, for a similar but complementary purpose. While [[Launchpad/Custom/Available/2-MF-Presets]] is designed so that I can access a previously saved, known [[Microfreak/Preset]], the 3-number-pad approach lets me key in a number for any of the 512 slots.  in one entry and also worked on [[2026-11-27 Fri]].
