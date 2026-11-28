@@ -14,7 +14,7 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 			- Bank 2: [[Microfreak/Preset/259 Infini Pad]] (2, red), [[Microfreak/Preset/297 Shiny Hat]] (40, blue).
 			- Bank 3: [[Microfreak/Preset/399 FireAlarmLoBat]], program 14, blue.
 		- Color shows how many [[GitP/A/Session]] days used the preset: red three, yellow two, blue one.
-		- **Controls:** nothing in Live. No pad is mapped to a Live button or knob. Live only forwards the pad messages to the MicroFreak.
+		- **Controls:** nothing in [[Ableton/Live]]. No pad is mapped to a Live button or knob. Live only forwards the pad messages to the MicroFreak.
 			- The Launchpad and the MicroFreak each connect to the Mac by USB, not to each other, so a pad message reaches the MicroFreak only if something on the Mac passes it along.
 			- That something is a MIDI track in Live. On [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and program change?]] it is named `LPP CM2 to MF`:
 				- MIDI From: `Launchpad Pro MK3 (LPProMK3 MIDI)`, `Ch. 16` — the track hears the Launchpad's pads ([[Launchpad/MIDI/Port/LPProMK3 MIDI]]), but only on channel 16.
@@ -22,7 +22,6 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 				- MIDI To: `Arturia MicroFreak`, `Ch. 1` — the track sends the messages on to the MicroFreak, switched to channel 1, the channel the MicroFreak listens on ([[Microfreak/UG/17 Ext Gear/06 MIDI Channels]]).
 			- Channel 16 keeps the pads apart from the Launchpad's sequencer, whose tracks play on channels 1 to 4. Tracks that listen on those channels ignore the pads, and this track ignores the sequencer.
 	- ## How it works
-	  collapsed:: true
 		- The MicroFreak stores 512 presets in numbered slots ([[Microfreak/UG/04 Presets/01 Load Presets]]). Slots 1 to 128 hold the factory presets.
 		- The message that switches presets, a [[MIDI/Program Change]], carries a single number that stops at 127. So one Program Change can pick among 128 presets, and can't name slot 259 ([[MIDI/Q/Why can a Program Change only reach 128 presets?]]).
 		- The fix is to split the 512 slots into four **banks** of 128, like four shelves in a cupboard ([[MIDI/Q/What is a MIDI bank?]]):
