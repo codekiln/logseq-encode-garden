@@ -1,4 +1,5 @@
 prev:: [[GitP/A/Log/26/11/26-Thu]]
+next:: [[GitP/A/Log/26/11/28-Sat]]
 
 - [[2026-11-27 Fri]]
 	- Following up on picking MicroFreak presets from the Launchpad, [#501](https://github.com/codekiln/logseq-encode-garden/issues/501).
