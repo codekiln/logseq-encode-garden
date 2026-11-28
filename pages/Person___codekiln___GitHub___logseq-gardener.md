@@ -14,6 +14,8 @@ tags:: [[CLI/Tool]]
 		- A project that uses lsg writes the same line under `[tools]` in its `mise.toml`, and mise runs the globally installed version there. This garden's `mise.toml` does so.
 	- ## Project proposal
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal]] — purpose, use cases, technical design, and starting tasks for `lsg`.
+	- ## Ideas
+		- [[Person/codekiln/GitHub/logseq-gardener/Idea/Custom-Block-and-Static-Site-Rendering]] - embedded web apps on garden pages, and renderers for single blocks chosen by page frontmatter.
 	- ## Earlier drafts
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]]
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]]
