@@ -72,7 +72,7 @@ see-also:: [[Launchpad/Custom/Available/3-MF-Number-Pad]], [[Launchpad/Custom/Av
 	- [[AI/Response]] [[2026-11-28 Sat]]
 		- ## Demo on Custom Mode 8
 			- [[Launchpad/Custom/Slot/8]] now holds Factory Custom Mode 8 from [[Novation/Components]]: all 64 pads are momentary notes, 11 at the bottom left to 88 at the top right, unlit until Live lights them.
-			- Two MIDI tracks in `26.11.25-wed-live-12-experiments`, made through [[Ableton/Live/ProducerPal]]. The Set isn't saved.
+			- Two MIDI tracks in `26.11.25-wed-live-12-experiments`, made through [[Ableton/Live/ProducerPal]]. The Set is saved at `~/Documents/ableton/GitP/26.11.25-wed-live-12-experiments Project/26.11.25-wed-live-12-experiments.als`.
 			- ### LPP CM8 Lights
 				- MIDI From No Input, MIDI To `Launchpad Pro MK3 (LPProMK3 MIDI)` on channel 1. Each Session clip is an animation: a note's pitch picks the pad, its velocity picks the colour, and its length is how long the pad stays lit.
 				- Smiley: one frame held for a bar. Yellow face, blue eyes, red mouth.

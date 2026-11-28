@@ -6,7 +6,15 @@ prev:: [[GitP/A/Log/26/11/27-Fri]]
 			- [[My Notes]] Treat the Custom Mode as an 8x8 display that a Max for Live device draws on: a number pad in the centre, presets around the edges, arrows in the lower right corner, and maybe a small game. The main idea needs a visual explanation.
 				- [[AI/Response]] Added a screenshot of Custom Mode 3 from [[Novation/Components]] to [[Launchpad/Custom/Available/3-MF-Number-Pad]]. The idea page draws both layouts as colour grids and lists what to test on the hardware first: whether Live can light a Custom Mode 3 pad at all.
 		- DONE Load Factory Custom Mode 8 onto the Launchpad and use [[Ableton/Live/ProducerPal]] to show what Live can draw on it
-			- [[AI/Response]] [[Launchpad/Custom/Slot/8]] holds Factory Custom Mode 8. Two new tracks in the Set: `LPP CM8 Lights` plays animation clips onto the grid (Smiley, Rainbow, Bounce, Scroll GitP, Sparkle), and `LPP CM8 Paint` echoes each press back as a plus shape through Chord, Velocity and Note Length. Both worked on the hardware. The Set isn't saved. Details on [[Launchpad/Custom/Idea/Control-Rendering-With-Ableton-and-MIDI]].
+			- [[AI/Response]] [[Launchpad/Custom/Slot/8]] holds Factory Custom Mode 8. Two new tracks in the Set: `LPP CM8 Lights` plays animation clips onto the grid (Smiley, Rainbow, Bounce, Scroll GitP, Sparkle), and `LPP CM8 Paint` echoes each press back as a plus shape through Chord, Velocity and Note Length. Both worked on the hardware. Details on [[Launchpad/Custom/Idea/Control-Rendering-With-Ableton-and-MIDI]].
+			- [[My Notes]] I saved the Set: `~/Documents/ableton/GitP/26.11.25-wed-live-12-experiments Project/26.11.25-wed-live-12-experiments.als`.
+			- [[AI/Response]] How it was done:
+				- In [[Novation/Components]], in Chrome, sent Factory Custom Mode 8 from Novation Custom Modes to slot 8.
+				- This Claude Code session had no Producer Pal tools, so it sent requests by hand to the Producer Pal device's server at `http://localhost:3350/mcp`. Through it, it created the two tracks, routed them to `Launchpad Pro MK3 (LPProMK3 MIDI)`, wrote the clip notes from a Python script, and added and set Chord, Velocity and Note Length.
+				- Each clip's notes encode one frame per step: pitch 10 × row + column picks the pad, velocity picks the palette colour.
+	- ## [[Ableton/Live/ProducerPal]]
+		- ### [[Ableton/Live/ProducerPal/Q/How-can-the-Claude-Code-command-line-connect-to-Producer-Pal]]
+			- [[AI/Response]] `claude mcp add producer-pal npx producer-pal@latest`, then start a new session, or install Producer Pal's Agent Skill into `~/.claude/skills/`. Both reach the device's server on port 3350.
 	- ## Picking MicroFreak presets with [[Launchpad/Custom/Available/2-MF-Presets]]
 		- ((6b095748-8c0d-445b-a09d-e3c09fa0b6f7))
 			- [[My Notes]] The experiment in [[Launchpad/Q/Can-Custom-Mode-select-MicroFreak-presets-by-bank-and-program-change]] was successful: I was able to load presets that I've recently used in [[GitP/A/Session]]s.
