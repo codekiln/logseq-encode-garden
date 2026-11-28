@@ -3,7 +3,12 @@ see-also:: [[MIDI/Bank-Select-and-Program-Change]]
 
 - # What is a [[MIDI]] bank?
 	- ## [[AI Answer]]
-		- **Short answer:** a group of up to 128 presets. A [[MIDI/Program Change]] can only count from 0 to 127, so an instrument with more presets splits them into banks, and a Bank Select message on [[MIDI/CC]] 0 says which bank the next Program Change reads from.
-		- What a bank holds is up to the instrument. On the [[Microfreak]], the four banks are ranges of its 512 slots: bank 0 is slots 1 to 128, bank 1 is 129 to 256, bank 2 is 257 to 384 and bank 3 is 385 to 512.
-		- The wavetable and sample banks in MIDI Control Center are folders, unrelated to Bank Select ([[Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management]]).
+		- **Short answer:** a bank is a number sent just before a [[MIDI/Program-Change]], so the program number can reach more than 128 sounds. Bank Select travels as [[MIDI/CC]] 0, CC 32, or both.
+		- The MIDI standard leaves it to each receiving instrument to decide what a bank number corresponds to. [[MIDI/Bank]] has examples:
+			- The Sequential OB-6 and Korg minilogue xd use banks as blocks of 100 programs.
+			- The [[Microfreak]] uses them as blocks of 128 slots.
+			- Roland GS modules use the bank number to pick a variation of the same instrument.
+			- Yamaha XG modules use it to choose between ordinary instruments, sound effects and drum kits.
+			- The Korg monologue has only 100 programs and ignores Bank Select.
+		- The bank number changes no sound by itself. It takes effect at the next Program Change ([[MIDI/Q/How-do-Bank-Select-and-Program-Change-messages-work-together]]).
 		- [[Answer/Official]] from [MIDI 1.0 Control Change Messages](https://midi.org/midi-1-0-control-change-messages): controller 0 is Bank Select, and controller 32 is its fine value.

@@ -24,7 +24,7 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 	- ## How it works
 		- **This is standard MIDI, not a MicroFreak or Launchpad feature.** The pads send two messages defined in the MIDI 1.0 specification, Bank Select and Program Change. Any instrument that follows the specification reads them the same way. Novation's part is only that a Custom Mode pad can send them. Arturia's part is only how the MicroFreak lays out its presets across banks.
 		- **What the MIDI standard defines** ([[MIDI/Bank-Select-and-Program-Change]]):
-			- A [[MIDI/Program Change]] switches to a preset by number. The number runs from 0 to 127, because every MIDI 1.0 data value stops at 127, so one Program Change can only reach 128 presets ([[MIDI/Q/Why-can-a-Program-Change-only-reach-128-presets]]).
+			- A [[MIDI/Program-Change]] switches to a preset by number. The number runs from 0 to 127, because every MIDI 1.0 data value stops at 127, so one Program Change can only reach 128 presets ([[MIDI/Q/Why-can-a-Program-Change-only-reach-128-presets]]).
 			- A **bank** is a group of up to 128 presets ([[MIDI/Q/What-is-a-MIDI-bank]]). Bank Select picks the bank. It is [[MIDI/CC]] number 0, and its value is the bank number.
 			- Bank Select changes no sound. The instrument holds the bank number and applies it when the next Program Change arrives, so the bank goes first and the program second ([[MIDI/Q/How-do-Bank-Select-and-Program-Change-messages-work-together]]).
 		- **What each instrument decides:** how many banks it has, which presets sit in each, and which MIDI channel it listens on. The standard carries the numbers and leaves the layout to the manufacturer.

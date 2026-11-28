@@ -18,7 +18,7 @@ see-also:: [[Logseq/Entity/MIDI/Port]]
 			- [[MIDI/Note]] — Note On (90h–9Fh) and Note Off (80h–8Fh): which key, and how hard.
 			- [[MIDI/Aftertouch]] — pressure on a key after it bottoms out, per key (A0h–AFh) or one value for the channel (D0h–DFh).
 			- [[MIDI/CC]] — Control Change (B0h–BFh): a controller number and its value, for knobs, faders and pedals.
-			- [[MIDI/Program Change]] — (C0h–CFh): select preset 0–127.
+			- [[MIDI/Program-Change]] — (C0h–CFh): select preset 0–127.
 			- [[MIDI/Pitch Bend]] — (E0h–EFh): the bend wheel's position, 0–16,383.
 		- ### Channel mode messages
 			- Control Change numbers 120–127 change how a channel behaves rather than a sound parameter: All Sound Off, Reset All Controllers, Local Control, All Notes Off, and the Omni, Mono and Poly modes. [[MIDI/CC]] lists them.

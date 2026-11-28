@@ -3,8 +3,8 @@ tags:: [[Diataxis/Concept]]
 
 - # MIDI Bank Select and Program Change
 	- ## Overview
-		- A [[MIDI/Program Change]] tells an instrument to switch to another preset. It carries one number from 0 to 127, so on its own it reaches 128 presets.
-		- A **bank** is a group of up to 128 presets. A **Bank Select** message picks the group, and the Program Change that follows picks the preset inside it. Together the two numbers name one preset out of many more than 128.
+		- A [[MIDI/Program-Change]] tells an instrument to switch to another preset. It carries one number from 0 to 127, so on its own it reaches 128 presets.
+		- A **Bank Select** message sends a [[MIDI/Bank]] number, and the Program Change that follows picks a program under that bank. Together the two numbers can reach many more than 128 sounds. What a bank number corresponds to is up to the receiving instrument: on the MicroFreak it is a block of 128 slots.
 	- ## Context
 		- Every data value in a MIDI 1.0 message stops at 127 ([[MIDI/Message]]). That is why a Program Change can't count higher, and why an instrument with more presets needs a second number.
 		- The [[Microfreak]] has 512 preset slots ([[Microfreak/UG/04 Presets/01 Load Presets]]), so it splits them into four banks of 128.
@@ -13,7 +13,7 @@ tags:: [[Diataxis/Concept]]
 		- **Bank Select changes no sound by itself.** The instrument holds the bank number and uses it when the next Program Change arrives.
 		- **Order matters.** Send Bank Select first, then Program Change. In the other order, the instrument loads the preset from the bank it already had.
 		- **Both numbers count from 0 in the message.** Menus often show programs as 1 to 128 and banks as 1 and up, so a number read off a screen may be one higher than the number sent.
-		- **The instrument decides what a bank holds.** MIDI only carries the numbers. A manufacturer chooses how banks map to its memory, and some instruments ignore Bank Select.
+		- **Each receiving instrument decides what a bank number corresponds to.** MIDI only carries the number. One instrument treats it as a block of memory, another as a variation of a sound, and another ignores it ([[MIDI/Bank]]).
 	- ## Mechanism
 		- On the MicroFreak, bank `b` and program `p` select slot `b × 128 + p + 1`:
 			- Bank 0 holds slots 1 to 128, the factory presets.
@@ -31,7 +31,7 @@ tags:: [[Diataxis/Concept]]
 		- A MIDI clip in Ableton Live can send a bank and program when it launches ([[Ableton/Live/UG/08 Clip View/03 Extended Clip Properties/02 MIDI Clip Bank and Program Change Controls]]).
 	- ## Misconceptions
 		- **A bank is not a separate store of sounds.** On the MicroFreak, a bank is a range of slot numbers. The panel and the manual count slots from 1 to 512 and never mention banks.
-		- **MIDI Control Center's wavetable and sample banks are something else.** Those are folders of wavetables or samples ([[Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management]]) and have nothing to do with Bank Select.
+		- **Not every "bank" is a MIDI bank.** Arturia's MIDI Control Center app calls a named collection of wavetables or samples a bank. Those collections hold sound material, not presets, and Bank Select doesn't reach them. [[MIDI/Bank]] explains both under Other uses of the word.
 		- **Pressing a bank pad should change the sound.** It doesn't. Nothing changes until a Program Change arrives.
 	- ## Source
 		- [MIDI 1.0 Control Change Messages](https://midi.org/midi-1-0-control-change-messages), MIDI Association — controller 0 is Bank Select, controller 32 its fine value.
