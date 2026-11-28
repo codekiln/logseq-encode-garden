@@ -156,6 +156,7 @@ see-also:: [[Ableton/Live/Idea/Keep Live Projects as DVC Assets]], [[Ableton/Liv
 				- With Sets in git, the Set stays on the Mac and only its `Samples` folder is offloaded.
 				- A drive copy can be a second DVC remote. `dvc remote add --local drive /Volumes/<drive>/dvc` keeps the drive's path in `.dvc/config.local`, outside git, and `dvc push -r drive` copies the objects B2 holds. [dvc remote add](https://dvc.org/doc/command-reference/remote/add)
 		- ## Next steps
+			- [[Ableton/Live/Idea/Store-Ableton-in-the-Garden/Plan]] covers the folder convention, the private bucket and the filter.
 			- TODO In a scratch clone of the garden with the `als` filter, add the [[GitP/A/Template/Pattern A and B]] Set as XML. Open the smudged Set in Live 12, save it without changes, and read the XML diff. In the same sitting, check whether Live opens an uncompressed `.als`.
 			- TODO Write a trait page for the Launchpad Arrangement controls and a task that checks a saved Set against it. Run it on both GitP templates.
 			- TODO Decide what to do about home-folder paths in Sets, including the two templates in the public bucket.
