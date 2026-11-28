@@ -1,6 +1,10 @@
 prev:: [[GitP/A/Log/26/11/27-Fri]]
 
 - [[2026-11-28 Sat]]
+	- ## Thinking a bit more about expanding [[Launchpad/Custom/Available/3-MF-Number-Pad]]
+		- [[Launchpad/Custom/Idea/Control-Rendering-With-Ableton-and-MIDI]]
+			- [[My Notes]] Treat the Custom Mode as an 8x8 display that a Max for Live device draws on: a number pad in the centre, presets around the edges, arrows in the lower right corner, and maybe a small game. The main idea needs a visual explanation.
+				- [[AI/Response]] Added a screenshot of Custom Mode 3 from [[Novation/Components]] to [[Launchpad/Custom/Available/3-MF-Number-Pad]]. The idea page draws both layouts as colour grids and lists what to test on the hardware first: whether Live can light a Custom Mode 3 pad at all.
 	- ## Picking MicroFreak presets with [[Launchpad/Custom/Available/2-MF-Presets]]
 		- ((6b095748-8c0d-445b-a09d-e3c09fa0b6f7))
 			- [[My Notes]] The experiment in [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and program change?]] was successful: I was able to load presets that I've recently used in [[GitP/A/Session]]s.

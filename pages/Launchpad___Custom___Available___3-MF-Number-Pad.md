@@ -4,6 +4,8 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 - # 3 MF Number Pad
 	- [[Launchpad]] Custom Mode for keying in a [[Microfreak]] preset slot number, which a device in Live turns into a bank select and Program Change.
 	- Twelve pads in rows 3 to 6 and columns 3 to 5 form a calculator layout. Every other pad and all edge buttons have nothing assigned.
+	- ![3 MF Number Pad in the Components editor](../assets/.remote/logseq-encode-garden/Launchpad___Custom___Available___3-MF-Number-Pad___Asset___Components-editor.png)
+		- Transcription: [[Launchpad/Custom/Available/3-MF-Number-Pad/Asset/Components-editor/png]]
 	- ## Depends on
 		- [[Ableton/Live/Device/Max/MF-Number-Pad]], on a MIDI track that listens to the Launchpad on channel 16 and sends to the MicroFreak.
 	- ## Pads
@@ -52,3 +54,5 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 		- Enter sends CC 0 = `(N − 1) // 128` for the bank, then Program Change `(N − 1) % 128`, on channel 1. With nothing typed, 0, or a number above 512, it only empties the number. Example: 2 5 9 Enter sends CC 0 = 2 and program 2, which loads [[Microfreak/Preset/259 Infini Pad]].
 	- ## Mode settings
 		- On color: yellow.
+	- ## Related Idea - Use the grid as a display
+		- [[Launchpad/Custom/Idea/Control-Rendering-With-Ableton-and-MIDI]] proposes letting a Max for Live device light the pads, so this mode could show presets around the number pad, or run a small game.
