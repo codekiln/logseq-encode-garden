@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-see-also:: [[MIDI/Bank Select and Program Change]]
+see-also:: [[MIDI/Bank-Select-and-Program-Change]]
 
 - # How do [[MIDI]] Bank Select and [[MIDI/Program Change]] messages work together?
 	- ## [[AI Answer]]

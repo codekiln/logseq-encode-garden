@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 up:: [[Launchpad/Custom]]
-see-also:: [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and program change?]]
+see-also:: [[Launchpad/Q/Can-Custom-Mode-select-MicroFreak-presets-by-bank-and-program-change]]
 
 - # Do [[Launchpad]] Custom Modes have pagination for selecting more [[Microfreak]] presets?
 	- The Launchpad Pro has eight Custom Modes, picked from the bottom row, and the arrow buttons do nothing in a Custom Mode. With Custom Mode 1 kept for controlling [[Ableton/Live]], Custom Modes 2 to 8 have 448 pads, 64 in each, for selecting MicroFreak presets.
@@ -26,7 +26,7 @@ see-also:: [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and p
 			- With the four bank pads repeated in each mode, 60 program pads fit beside them. Custom Modes 2 and 3 can then hold programs 0 to 119 and Custom Mode 4 the last eight, which reaches every slot and leaves Custom Modes 5 to 8 free. A slot in the current bank takes one press; a slot in another bank takes a bank press and then a program press.
 			- A fader reaches presets only through software, because Custom Mode faders send CC. A [[Ableton/Max for Live]] device on the track that feeds the MicroFreak could turn each fader value into a bank select and a program change, so one fader could step through a list such as every Bass preset. This is untested.
 			- A fader on CC 0 sent straight to the MicroFreak makes a poor bank control. It sweeps up to the highest CC value while the MicroFreak has banks 0 to 3, and a bank select changes nothing until the next program change. The CC Button pads send the exact bank values.
-			- One press for any of the 512 slots needs a pad that sends a bank select and a program change together, and the editor guide lists no such control. [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and program change?]] describes mapping a pad to a Live clip that sends both.
+			- One press for any of the 512 slots needs a pad that sends a bank select and a program change together, and the editor guide lists no such control. [[Launchpad/Q/Can-Custom-Mode-select-MicroFreak-presets-by-bank-and-program-change]] describes mapping a pad to a Live clip that sends both.
 		- ### Still open
 			- Whether the MicroFreak keeps the last bank select for later program changes. The two-press layout depends on it, and [[Microfreak/CLI/Upload a preset]] sent a bank select right before each program change.
 			- How many distinct values a Custom Mode fader sends across its eight pads. That number sets how many presets one fader could step through, and Novation's guides leave it out.

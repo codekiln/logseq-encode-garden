@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Launchpad/Custom/Mode]]
 launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-mk3/custom-modes/795113
 
 - # 2 MF Presets
-	- [[Launchpad]] Custom Mode for choosing a [[Microfreak]] preset with a bank pad and then a Program Change pad, made for [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and program change?]].
+	- [[Launchpad]] Custom Mode for choosing a [[Microfreak]] preset with a bank pad and then a Program Change pad, made for [[Launchpad/Q/Can-Custom-Mode-select-MicroFreak-presets-by-bank-and-program-change]].
 	- ![2 MF Presets in the Components editor](../assets/.remote/logseq-encode-garden/Launchpad___Custom___Available___2-MF-Presets___Asset___Components-editor.png)
 		- Transcription: [[Launchpad/Custom/Available/2-MF-Presets/Asset/Components-editor/png]]
 	- ## Pads
@@ -16,26 +16,27 @@ launchpad-custom-mode-url:: https://components.novationmusic.com/launchpad-pro-m
 		- Color shows how many [[GitP/A/Session]] days used the preset: red three, yellow two, blue one.
 		- **Controls:** nothing in [[Ableton/Live]]. No pad is mapped to a Live button or knob. Live only forwards the pad messages to the MicroFreak.
 			- The Launchpad and the MicroFreak each connect to the Mac by USB, not to each other, so a pad message reaches the MicroFreak only if something on the Mac passes it along.
-			- That something is a MIDI track in Live. On [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and program change?]] it is named `LPP CM2 to MF`:
+			- That something is a MIDI track in Live. On [[Launchpad/Q/Can-Custom-Mode-select-MicroFreak-presets-by-bank-and-program-change]] it is named `LPP CM2 to MF`:
 				- MIDI From: `Launchpad Pro MK3 (LPProMK3 MIDI)`, `Ch. 16` — the track hears the Launchpad's pads ([[Launchpad/MIDI/Port/LPProMK3 MIDI]]), but only on channel 16.
 				- Monitor: `In` — the track passes what it hears straight through, without being armed or recording.
 				- MIDI To: `Arturia MicroFreak`, `Ch. 1` — the track sends the messages on to the MicroFreak, switched to channel 1, the channel the MicroFreak listens on ([[Microfreak/UG/17 Ext Gear/06 MIDI Channels]]).
 			- Channel 16 keeps the pads apart from the Launchpad's sequencer, whose tracks play on channels 1 to 4. Tracks that listen on those channels ignore the pads, and this track ignores the sequencer.
 	- ## How it works
-		- The MicroFreak stores 512 presets in numbered slots ([[Microfreak/UG/04 Presets/01 Load Presets]]). Slots 1 to 128 hold the factory presets.
-		- The message that switches presets, a [[MIDI/Program Change]], carries a single number that stops at 127. So one Program Change can pick among 128 presets, and can't name slot 259 ([[MIDI/Q/Why can a Program Change only reach 128 presets?]]).
-		- The fix is to split the 512 slots into four **banks** of 128, like four shelves in a cupboard ([[MIDI/Q/What is a MIDI bank?]]):
-			- Bank 0: slots 1 to 128
+		- **This is standard MIDI, not a MicroFreak or Launchpad feature.** The pads send two messages defined in the MIDI 1.0 specification, Bank Select and Program Change. Any instrument that follows the specification reads them the same way. Novation's part is only that a Custom Mode pad can send them. Arturia's part is only how the MicroFreak lays out its presets across banks.
+		- **What the MIDI standard defines** ([[MIDI/Bank-Select-and-Program-Change]]):
+			- A [[MIDI/Program Change]] switches to a preset by number. The number runs from 0 to 127, because every MIDI 1.0 data value stops at 127, so one Program Change can only reach 128 presets ([[MIDI/Q/Why-can-a-Program-Change-only-reach-128-presets]]).
+			- A **bank** is a group of up to 128 presets ([[MIDI/Q/What-is-a-MIDI-bank]]). Bank Select picks the bank. It is [[MIDI/CC]] number 0, and its value is the bank number.
+			- Bank Select changes no sound. The instrument holds the bank number and applies it when the next Program Change arrives, so the bank goes first and the program second ([[MIDI/Q/How-do-Bank-Select-and-Program-Change-messages-work-together]]).
+		- **What each instrument decides:** how many banks it has, which presets sit in each, and which MIDI channel it listens on. The standard carries the numbers and leaves the layout to the manufacturer.
+		- **What the MicroFreak decides:** its 512 slots ([[Microfreak/UG/04 Presets/01 Load Presets]]) sit in four banks of 128.
+			- Bank 0: slots 1 to 128, the factory presets
 			- Bank 1: slots 129 to 256
 			- Bank 2: slots 257 to 384
 			- Bank 3: slots 385 to 512
-		- Picking a preset then takes two messages: one that says which shelf, and one that says which spot on the shelf ([[MIDI/Q/How do Bank Select and Program Change messages work together?]]).
-			- The white pad sends the shelf. It is a Bank Select, which MIDI sends as Control Change number 0 ([[MIDI/CC]]); its value is the bank number. The sound doesn't change yet. The MicroFreak remembers the bank and waits.
-			- The coloured pad sends the spot: a Program Change counted from 0. The MicroFreak combines it with the remembered bank and loads that slot.
-		- The slot is bank × 128 + program + 1. For [[Microfreak/Preset/259 Infini Pad]]: the third white pad sends bank 2, the red pad below it sends program 2, and 2 × 128 + 2 + 1 = 259.
+			- So slot = bank × 128 + program + 1, with bank and program counted from 0.
+			- The MicroFreak user guide counts slots from 1 to 512 and doesn't describe banks or Program Change. The evidence for this layout is [[Microfreak/CLI/Upload a preset]], where CC 0 = 2 and program 66 selected slot 323, and Elektroid, which selects MicroFreak presets the same way.
+		- **What the pads do:** a white pad sends Bank Select, and a coloured pad sends Program Change. For [[Microfreak/Preset/259 Infini Pad]], the third white pad sends bank 2, the red pad below it sends program 2, and 2 × 128 + 2 + 1 = 259.
 		- Press the white pad before each coloured pad. Whether the MicroFreak keeps the bank across several coloured-pad presses hasn't been tested.
-		- The MicroFreak user guide counts slots from 1 to 512 and doesn't describe banks or Program Change. The evidence that it follows these messages is [[Microfreak/CLI/Upload a preset]], where CC 0 = 2 and program 66 selected slot 323.
-		- The longer explanation is [[MIDI/Bank Select and Program Change]].
 	- ## Related Idea - Render Launchpad Custom Modes
 		- [[Person/codekiln/GitHub/logseq-gardener/Idea/Custom-Block-and-Static-Site-Rendering]] proposes drawing this grid from data on the page instead of a screenshot.
 	- ## Log

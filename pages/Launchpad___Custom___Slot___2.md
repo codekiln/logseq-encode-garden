@@ -5,4 +5,4 @@ current-custom-mode:: [[Launchpad/Custom/Available/2-MF-Presets]]
 - ## History
   collapsed:: true
 	- Before [[2026-11-26 Thu]]: not recorded.
-	- [[2026-11-26 Thu]] [[Launchpad/Custom/Available/2-MF-Presets]], for [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and program change?]].
+	- [[2026-11-26 Thu]] [[Launchpad/Custom/Available/2-MF-Presets]], for [[Launchpad/Q/Can-Custom-Mode-select-MicroFreak-presets-by-bank-and-program-change]].

@@ -15,5 +15,5 @@ next:: [[GitP/A/Log/26/11/27-Fri]]
 			- I think first we need to see if it's even possible to send the types of messages that the MicroFreak needs in the custom mode.
 		- ### Colors and pad behavior
 			- Ideally I'd have a different color for any preset that I've actually explored in detail in my various Ghost in the Patch episodes, and the colors should be more distinct the more times I use it. I'm not sure what type of button press it should be. I imagine it should be a toggle, but I don't know how to make the toggle correspond correctly.
-		- [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and program change?]] · [#501 Record which MicroFreak preset is playing in GitP Sets, from Launchpad Custom Modes](https://github.com/codekiln/logseq-encode-garden/issues/501)
+		- [[Launchpad/Q/Can-Custom-Mode-select-MicroFreak-presets-by-bank-and-program-change]] · [#501 Record which MicroFreak preset is playing in GitP Sets, from Launchpad Custom Modes](https://github.com/codekiln/logseq-encode-garden/issues/501)
 		- Launchpad Custom Modes could pick MicroFreak presets through a Max for Live device in Live, such as a number pad with Enter: [[Launchpad/Idea/Pick-MicroFreak-Presets-through-Live]]

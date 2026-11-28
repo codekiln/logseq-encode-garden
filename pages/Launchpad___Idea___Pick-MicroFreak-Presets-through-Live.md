@@ -1,6 +1,6 @@
 tags:: [[Idea]]
 date-created:: [[2026-11-26 Thu]]
-see-also:: [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and program change?]], [[Launchpad/Q/Do Custom Modes have pagination for selecting more MicroFreak presets?]], [[Ableton/Live/Idea/Keep-Commentary-in-Live-Sets]], [[Ableton/Max for Live]], [[GitP/A/Log/26/11/26-Thu]]
+see-also:: [[Launchpad/Q/Can-Custom-Mode-select-MicroFreak-presets-by-bank-and-program-change]], [[Launchpad/Q/Do Custom Modes have pagination for selecting more MicroFreak presets?]], [[Ableton/Live/Idea/Keep-Commentary-in-Live-Sets]], [[Ableton/Max for Live]], [[GitP/A/Log/26/11/26-Thu]]
 
 - # Pick MicroFreak Presets through Live
 	- [[My Note]]
@@ -26,7 +26,7 @@ see-also:: [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and p
 				- The pads carry no meaning of their own. The device decides what each pad does, so trying another design means changing the device and leaving the Custom Mode alone.
 				- Notes also make the pads lightable. Live can light a Custom Mode pad by sending the Launchpad a note with the pad's number, and the velocity picks the colour ([[Launchpad/UG/08 Custom Modes/05 Lighting Pads with External MIDI]]). Novation's guides describe lighting by note number and CC number only, so a Program Change pad probably stays in the colour Components gave it.
 			- ### A device turns a press into bank and program
-				- The device is a Max for Live MIDI effect on the `LPP CM2 to MF` track from [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and program change?]]: MIDI From the Launchpad on channel 16, Monitor In, MIDI To the MicroFreak on channel 1.
+				- The device is a Max for Live MIDI effect on the `LPP CM2 to MF` track from [[Launchpad/Q/Can-Custom-Mode-select-MicroFreak-presets-by-bank-and-program-change]]: MIDI From the Launchpad on channel 16, Monitor In, MIDI To the MicroFreak on channel 1.
 				- For slot N it sends CC 0 with value `(N − 1) // 128`, then Program Change `(N − 1) % 128`, the pair that selected slot 323 in [[Microfreak/CLI/Upload a preset]]. It sends the bank every time, so one press reaches a slot in any bank.
 				- The device keeps the pad notes to itself. Passed on, they would play the MicroFreak.
 				- Ableton says Max for Live devices can send Program Change ([Sending Program Change messages from Ableton Live](https://help.ableton.com/hc/en-us/articles/209070489-Sending-Program-Change-messages-from-Ableton-Live)). Cycling '74 says a device's MIDI is "limited to those messages that Live will recognize and pass between devices" ([Max for Live Limitations](https://docs.cycling74.com/userguide/m4l/live_limitations/)). Whether CC 0 and Program Change from a device reach the MicroFreak is the first thing to try.
@@ -111,7 +111,7 @@ see-also:: [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and p
 				- **Translation:** a category press changes what the `p` pads mean and sends nothing. A `p` press sends that preset's bank and program.
 				- **Live use:** colour answers "give me a pad" in one press, and choosing a category makes no sound. Within a category the pads are unlabelled, so finding one known preset among 43 SFX pads means remembering its place. It also depends on the lights more than any other design: with the pads dark it cannot be used.
 			- ### Session presets on one press
-				- The `S` and `R` pads from the number pad sketch also work alone: a grid of the presets GitP has used, in category colours that grow brighter with the number of sessions. Custom Mode 2 holds eight of these today as Program Change pads behind four bank pads ([[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and program change?]]). Through the device, each pad sends bank and program together, and the table from the garden fills the pads, so a preset used in a new session appears without a trip to Components.
+				- The `S` and `R` pads from the number pad sketch also work alone: a grid of the presets GitP has used, in category colours that grow brighter with the number of sessions. Custom Mode 2 holds eight of these today as Program Change pads behind four bank pads ([[Launchpad/Q/Can-Custom-Mode-select-MicroFreak-presets-by-bank-and-program-change]]). Through the device, each pad sends bank and program together, and the table from the garden fills the pads, so a preset used in a new session appears without a trip to Components.
 				- **Presses:** one, for the 30 presets session pages link today. Every other slot needs one of the designs above beside it.
 		- ## Why the number pad
 			- It depends least on what is still untested. Digit columns, browsing and the category grid all need Live to light the pads. The number pad needs only notes in and bank and program out.
@@ -122,7 +122,7 @@ see-also:: [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and p
 			- You pick presets by sound more often than by number. Category first then earns a place as a second layout in the same device, switched by one pad.
 			- You mostly move between neighbouring slots, as when comparing a run of factory presets. Digit columns do that in one press and show the slot all the time.
 			- Three or four presses feels slow in a session. The `S` and `R` pads then matter more than the number pad, and the grid should give them more room.
-			- Live keeps CC 0 or Program Change from a device away from the MicroFreak. The pads would go back to Program Change pads in the Custom Mode, or to Session clips that carry bank and program, as [[Launchpad/Q/Can Custom Mode select MicroFreak presets by bank and program change?]] describes.
+			- Live keeps CC 0 or Program Change from a device away from the MicroFreak. The pads would go back to Program Change pads in the Custom Mode, or to Session clips that carry bank and program, as [[Launchpad/Q/Can-Custom-Mode-select-MicroFreak-presets-by-bank-and-program-change]] describes.
 			- Lighting a Custom Mode from Live proves unreliable. Programmer Mode lights every pad and button by note, including the arrow buttons ([[Launchpad/PRG/05 Software Integration/10 Programmer Mode]]), at the cost of leaving the Custom Modes while picking.
 		- ## Check before building
 			- ### In Live

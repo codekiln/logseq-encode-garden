@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-see-also:: [[MIDI/Bank Select and Program Change]]
+see-also:: [[MIDI/Bank-Select-and-Program-Change]]
 
 - # Why can a [[MIDI/Program Change]] only reach 128 presets?
 	- ## [[AI Answer]]
