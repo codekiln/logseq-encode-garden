@@ -66,6 +66,27 @@ see-also:: [[Launchpad/Custom/Available/3-MF-Number-Pad]], [[Launchpad/Custom/Av
 			- Which channel lights a pad that sends on channel 16, and whether a lights track can send on channel 1 while the pads send on 16.
 			- Whether a Max for Live device can send SysEx at all. If it can, one message draws a frame, and it may light the edge buttons, which do nothing in a Custom Mode ([[Launchpad/Q/Do Custom Modes have pagination for selecting more MicroFreak presets?]]).
 		- ## Next steps
-			- TODO Light one pad of Custom Mode 3 from Live: on a MIDI track with MIDI To `Launchpad Pro MK3 (LPProMK3 MIDI)` on channel 1, play a clip with note 60 at velocity 5 and see whether the 0 pad turns red. Then try a note for an unassigned pad.
+			- TODO Light one pad of Custom Mode 3 from Live: on a MIDI track with MIDI To `Launchpad Pro MK3 (LPProMK3 MIDI)` on channel 1, play a clip with note 60 at velocity 5 and see whether the 0 pad turns red. Then try a note for an unassigned pad. The `LPP CM8 Lights` track from the Custom Mode 8 demo below can play the clip.
 			- TODO If that works, make a copy of Custom Mode 3 in Components with all 64 pads as Momentary Midi Notes 11 to 88 on channel 16, keeping the number pad's colours.
 			- TODO Build a toy in a Max for Live device: one lit pixel that the four direction pads move around the grid.
+	- [[AI/Response]] [[2026-11-28 Sat]]
+		- ## Demo on Custom Mode 8
+			- [[Launchpad/Custom/Slot/8]] now holds Factory Custom Mode 8 from [[Novation/Components]]: all 64 pads are momentary notes, 11 at the bottom left to 88 at the top right, unlit until Live lights them.
+			- Two MIDI tracks in `26.11.25-wed-live-12-experiments`, made through [[Ableton/Live/ProducerPal]]. The Set isn't saved.
+			- ### LPP CM8 Lights
+				- MIDI From No Input, MIDI To `Launchpad Pro MK3 (LPProMK3 MIDI)` on channel 1. Each Session clip is an animation: a note's pitch picks the pad, its velocity picks the colour, and its length is how long the pad stays lit.
+				- Smiley: one frame held for a bar. Yellow face, blue eyes, red mouth.
+				- Rainbow: eight colour bands moving diagonally, one frame per sixteenth note.
+				- Bounce: a white ball with a two-pad blue trail bouncing off the walls.
+				- Scroll GitP: the letters GITP in cyan and a red heart scrolling right to left, one column per eighth note.
+				- Sparkle: every pad has a 7% chance of a random colour on each sixteenth, using note probability.
+			- ### LPP CM8 Paint
+				- MIDI From `Launchpad Pro MK3 (LPProMK3 MIDI)` on all channels, Monitor In, MIDI To the same port on channel 1, so each press comes back to the Launchpad as a colour.
+				- Three of Live's own MIDI effects sit between input and output:
+					- Chord adds notes +1, −1, +10 and −10, the pads to the right, left, above and below, at 60% velocity, so the neighbours show a different colour.
+					- Velocity adds randomness, so the colour also changes with how hard the pad is hit.
+					- Note Length holds each note for 0.7 s, so the shape stays after the pad is released.
+			- ### Result
+				- codekiln saw the smiley on the hardware, and tapping a pad lit a plus shape that faded after release.
+				- So a clip on a track routed to the Launchpad's MIDI port draws on a Custom Mode whose pads are Midi Note pads, and a track that echoes the pads back makes the grid react to presses without any Max for Live code.
+				- The animations are fixed clips and the Paint track can only transform each press. A game needs state, such as where the snake is, so it still needs a Max for Live device.
