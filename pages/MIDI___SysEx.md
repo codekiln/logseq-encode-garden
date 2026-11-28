@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Abbreviation]], [[Logseq/Entity/Term]]
-alias:: [[MIDI/System Exclusive]]
+alias:: [[MIDI/System-Exclusive]]
 
 - # MIDI SysEx
 	- **System Exclusive** — a [[MIDI/Message]] whose content a manufacturer defines. It opens with F0h and a manufacturer ID, carries any number of data values from 0 to 127, and closes with F7h.

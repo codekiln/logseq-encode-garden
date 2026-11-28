@@ -12,14 +12,14 @@ see-also:: [[Logseq/Entity/MIDI/Port]]
 	- ## Key Principles
 		- **A status value, then data.** Each message opens with a status value from 80h to FFh that names the message type, and for a channel message the channel too. Zero, one or two data values from 0 to 127 follow. That range is why so many MIDI settings stop at 127.
 		- **Channels count from 1 in menus and from 0 in the message.** The last hex digit of the status value is the channel: 90h is Note On on channel 1, 9Fh is Note On on channel 16.
-		- **Two data values make a finer range.** Where 128 steps is too coarse, MIDI pairs two values into a range of 0–16,383. [[MIDI/Pitch Bend]] always does this, and [[MIDI/CC]] can.
+		- **Two data values make a finer range.** Where 128 steps is too coarse, MIDI pairs two values into a range of 0–16,383. [[MIDI/Pitch-Bend]] always does this, and [[MIDI/CC]] can.
 	- ## Mechanism
 		- ### Channel voice messages
 			- [[MIDI/Note]] — Note On (90h–9Fh) and Note Off (80h–8Fh): which key, and how hard.
 			- [[MIDI/Aftertouch]] — pressure on a key after it bottoms out, per key (A0h–AFh) or one value for the channel (D0h–DFh).
 			- [[MIDI/CC]] — Control Change (B0h–BFh): a controller number and its value, for knobs, faders and pedals.
 			- [[MIDI/Program-Change]] — (C0h–CFh): select preset 0–127.
-			- [[MIDI/Pitch Bend]] — (E0h–EFh): the bend wheel's position, 0–16,383.
+			- [[MIDI/Pitch-Bend]] — (E0h–EFh): the bend wheel's position, 0–16,383.
 		- ### Channel mode messages
 			- Control Change numbers 120–127 change how a channel behaves rather than a sound parameter: All Sound Off, Reset All Controllers, Local Control, All Notes Off, and the Omni, Mono and Poly modes. [[MIDI/CC]] lists them.
 		- ### System common messages
