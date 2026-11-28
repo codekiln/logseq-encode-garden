@@ -1,0 +1,51 @@
+author:: [[Anthropic/Model/Claude/5/5/Opus]]
+see-also:: [[Ableton/File/.als]], [[Ableton/Live/UG/05 Managing Files and Sets/07 Collecting External Files]]
+
+- # Swap the home folder for a tilde in the filter and restore it on checkout
+	- ## Where the username appears
+		- Live 11 and 12 write two locations for every file a Set references: a `RelativePath` with a `RelativePathType` saying what it is relative to, and an absolute `Path`. Live has no setting, in Collect All and Save, Create Pack or the Library settings, that saves a Set without the absolute `Path`.
+		- A scan of the Sets, racks, clips and device presets on this Mac on [[2026-11-28 Sat]] found the home folder in 66 of 72 project Sets and in most User Library files. Nearly every hit is a `FileRef`'s `Path`:
+			- `SampleRef/FileRef/Path`, the sample a clip or Simpler plays: about 6,700 references in project Sets.
+			- `OriginalFileRef/FileRef/Path`, the file a sample was first imported from, such as a folder inside `~/Library/Application Support/Ableton/Cloud Manager/`.
+			- `FilePresetRef`, `AbletonDefaultPresetRef`, `MxPatchRef` and `MxDPatchRef`: the preset, default preset or Max for Live device a track loaded, such as `Producer_Pal.amxd` in the User Library.
+		- Two other places hold it:
+			- `SourceContext/BrowserContentPath`, which records where in the browser a file came from, as a `userfolder:` URI with the home folder in it.
+			- A `RelativePath` that passes through a folder whose own name contains the username. Swapping the home folder prefix leaves that name in place.
+		- What each `RelativePathType` value is relative to, read from these files (Ableton doesn't document the values):
+			- 1: the Set's own folder, such as `../../field_recordings/microfreak/...`.
+			- 3: the Live Project folder, such as `Samples/Recorded/mf1 0002 [...].aif`. Its `Path` still holds the full home-folder path.
+			- 5: the Core Library or a Pack. Core Library paths are inside `/Applications/` and hold no username; Factory Pack paths are under `~/Music/Ableton/Factory Packs/` and do.
+			- 6: the User Library, `~/Music/Ableton/User Library/`.
+			- 7: Live's built-in devices inside the application.
+		- These hold no username: the Live 9 `<Data>` alias blobs, the `Ableton Project Info` folders (all 37 under `~/Documents/ableton/GitP` are empty), and the User Library's `.cfg` and `.xmp` files.
+		- Factory presets carry the home folders of the people at Ableton who saved them, and a third-party pack project carries its author's. That is other people's text, published by them, and it stays as Live wrote it.
+	- ## A Set already public
+		- The DVC copy of [[GitP/A/Template/LPP-Seq]]'s Set, saved by Live 12.4.16, holds the username on 48 lines: User Library samples and `Producer_Pal.amxd`, all `RelativePathType` 6. It sits in the public bucket, both as a DVC backup under `dvc/` and as a named copy if one was uploaded. The [[GitP/A/Template/Pattern A and B]] Set, saved by Live 11.3.43, holds none.
+	- ## How Live finds a file
+		- [abletoolz](https://github.com/elixirbeats/abletoolz)'s `sample_ref.py` reports that Live tries `RelativePath` first, and that a stale `RelativePath` next to a new `Path` loads the old sample. It also reports Live calling a type 3 reference missing when the project file was gone and the absolute file still existed. The two observations point the same way: for a sample inside the Project, `RelativePath` decides.
+		- A third-party pack on this Mac ships type 3 references whose `Path` names its author's home folder, and a sold pack has to open for buyers. That also points to `RelativePath` doing the work, though nobody here has opened it in Live to check.
+		- What Live does with a blank or rewritten `Path` is untested. Whether Live stores a symlinked folder's path or the resolved path is also untested.
+	- ## Options
+		- ### Swap the home folder in the filter (recommended)
+			- The clean filter replaces the home folder with `~` wherever it starts a path in an attribute value: `Value="$HOME/` becomes `Value="~/`, and `userfolder:$HOME/` becomes `userfolder:~/`. The smudge filter puts the checkout's own `$HOME` back before compressing.
+			- Live only ever reads the smudged file, which holds a real absolute path for the Mac it is on. Nothing depends on how Live treats a blank or invented `Path`.
+			- On this Mac the round trip is lossless. On another Mac, or for another user, the smudged paths point into that user's home folder, which is where the User Library and Packs would be.
+			- Clean stays idempotent: XML that already holds `~/` has no home folder left to swap. Smudge stays deterministic per checkout.
+			- The filter becomes a short script beside the plan's `gzip -dcf` and `gzip -cn`, using `sed` with the anchors above. Writing `$HOME` into the pattern keeps the username out of the script itself.
+			- It leaves the folder name inside a `RelativePath` alone, so a pre-commit check stays necessary.
+		- ### Collect All and Save before every commit
+			- Collect All and Save copies every external file into the Project, so references become type 3 and the samples land in `Samples/`, which DVC backs up to the private bucket. [[Ableton/Live/UG/05 Managing Files and Sets/07 Collecting External Files]]
+			- It makes a project complete on another Mac, and it removes the `../../` paths through the Documents folder. Each `Path` still names the home folder, so it pairs with the filter.
+		- ### Keep Live's files outside the home folder
+			- `Library.cfg` in `~/Library/Preferences/Ableton/Live 12.4.16/` stores the User Library and Packs locations as plain absolute paths, and `/Users/Shared` is writable by every user. Moving the User Library, the Packs and the garden checkout there would keep the username out of most paths.
+			- It changes where [[ghq/root]] lives, it doesn't cover Cloud Manager or Downloads, and Live accepting a User Library outside the home folder is untested. The filter covers every one of those cases with no change to the Mac.
+		- ### Blank the `Path` of project references
+			- Dropping `Path` from type 3 references depends on the untested behavior above, and loses information that the smudge filter can't restore.
+	- ## Checks
+		- A pre-commit check refuses a staged Set, clip, rack or device preset whose XML still contains the home folder or the username, read from the staged blob with `git show :<path>`. The identity guard in `lefthook.yml` reads the gzip working file and can't see either.
+		- The same check runs in CI on every `.als` under `assets/Ableton/Project/`, since the Publish workflow's clone has no filter and reads the stored XML directly.
+	- ## Tests in Live
+		- TODO Copy the [[GitP/A/Template/LPP-Seq]] project into a scratch clone with the swap filter, check it out, open the smudged Set in Live 12 and check that every sample and `Producer_Pal.amxd` load. Save it unchanged and check that `git diff` shows no `Path` lines.
+		- TODO Open the same scratch Set with `~/` left in every `Path`, to learn whether Live finds type 3 and type 6 references through `RelativePath` alone.
+		- TODO Rename the folder under `~/Documents/ableton` whose name contains the username, before any project that references it is collected.
+		- TODO Replace the LPP-Seq Set in the public bucket with a filtered copy, then delete the old object from the bucket by its MD5 path under `dvc/files/md5/`, along with any named copy at the bucket root. `dvc gc -c` would also delete the old versions of every other asset.

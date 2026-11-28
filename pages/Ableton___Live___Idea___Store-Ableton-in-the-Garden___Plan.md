@@ -1,3 +1,5 @@
+see-also:: [[Ableton/Live/Idea/Store-Ableton-in-the-Garden/Plan/Discussion]]
+
 - [[2026-11-28 Sat]]
 	- [[AI/Response]] from [[Anthropic/Model/Claude/5/5/Opus]]
 		- Plan for keeping whole Live projects in this garden under `assets/Ableton/Project/`, carrying out the recommendation on [[Ableton/Live/Idea/Store-Ableton-in-the-Garden]]. Sets and presets go in git as XML through a clean/smudge filter. Each project's `Samples/` folder goes to a new private [[Backblaze/B2]] bucket, `logseq-encode-garden-private`, through [[dvc]]. Rendered MP3s and images stay asset pages in the public bucket, `logseq-encode-garden`, as [[Logseq/Entity/Asset/B2]] describes.
@@ -45,7 +47,7 @@
 				- TODO Move [[GitP/A/Template/LPP-Seq]] the same way, then `dvc remove` both `GitP___A___Template___*___Asset___Set.als.dvc` files and update their asset pages.
 				- TODO Move one session project out of `~/Documents/ableton/GitP/`, run `ableton:project:add` and `ableton:set:import`, and push its samples.
 		- ## Open questions
-			- Should the clean filter rewrite each absolute `Path` to `~/...` before git stores it? The username lands in a public repository otherwise. Whether Live then opens the Set without asking to locate files needs a test on a copy.
+			- The clean filter swaps the home folder for `~` and the smudge filter restores it, per [[Ableton/Live/Idea/Store-Ableton-in-the-Garden/Plan/Discussion/Analysis/Opus/26/11/28/0738 ET Swap the home folder for a tilde in the filter and restore it on checkout]]. Two Live tests on that page remain.
 			- Should `Ableton Project Info/` be tracked? It was empty in the temporary projects on this Mac and held one `.cfg` file in a third-party pack project.
 			- Should samples imported from factory packs go to the private bucket, or stay ignored, since Live can restore them from the pack?
 			- Does the loose-recording private mount on [[dvc/Q/Can DVC keep files with certain extensions in a different remote from the rest, so lossless audio goes to a private B2 bucket?]] still need building once projects carry their own samples? The WAV behind the `dvc.yaml` MP3 stage is the one file that needs it today.
