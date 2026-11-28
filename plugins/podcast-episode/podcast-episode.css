@@ -1,0 +1,53 @@
+/* lsg first-party plugin podcast-episode: the player that stays at the bottom of the window. */
+body.lsg-has-episode-player { padding-bottom: 7rem; }
+.lsg-episode-recording-origin { list-style: none; }
+.lsg-episode-player {
+  position: fixed;
+  z-index: 20;
+  inset: auto 0 0;
+  box-sizing: border-box;
+  padding: .5rem max(1rem, env(safe-area-inset-right)) max(.5rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+  color: var(--lsg-text);
+  background: var(--lsg-surface);
+  border-top: 1px solid var(--lsg-border);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, .12);
+}
+.lsg-episode-player-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .25rem 1rem;
+  max-width: 810px;
+  margin: 0 auto;
+  font-size: .9rem;
+  overflow-wrap: anywhere;
+}
+.lsg-episode-player-title { font-weight: 600; color: var(--lsg-link); }
+/* A chapter bullet's title can be a long note; the trail keeps to two lines. */
+.lsg-episode-player-chapter {
+  flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+.lsg-episode-player-chapter > span { margin: 0 .35rem; color: var(--lsg-muted); }
+.lsg-episode-seek { font-variant-numeric: tabular-nums; }
+.lsg-episode-player-status, .lsg-episode-player-recording { font-size: .8rem; }
+.lsg-episode-player-status { color: var(--lsg-muted); }
+.lsg-episode-player audio { display: block; width: 100%; max-width: 810px; height: 40px; margin: .35rem auto 0; }
+.lsg-episode-play {
+  padding: .45rem .8rem;
+  color: var(--lsg-text);
+  background: var(--lsg-surface);
+  border: 1px solid var(--lsg-border);
+  border-radius: .3rem;
+  font: inherit;
+  cursor: pointer;
+}
+.lsg-episode-play:focus-visible, .lsg-episode-seek:focus-visible { outline: 2px solid var(--lsg-focus); outline-offset: 2px; }
+@media (max-width: 600px) {
+  .lsg-episode-player-chapter { flex-basis: 100%; order: 2; }
+  .lsg-episode-player-chapter:empty { display: none; }
+}
